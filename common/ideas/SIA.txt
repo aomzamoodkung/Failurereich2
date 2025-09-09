@@ -20,4 +20,24 @@ ideas = {
 
 		    }
 	    }
+
+		country = {
+		    SIA_a_royal_marriage = {
+			picture = GFX_idea_SIA_young_king
+			
+			    allowed = {
+				        original_tag = SIA
+	            }
+
+			    allowed_civil_war = {
+				        always = yes
+		            }
+			    removal_cost = -1
+			
+			    modifier = {
+				       
+			    }
+
+		    }
+	    }
 }	
