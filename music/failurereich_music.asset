@@ -1,0 +1,20 @@
+music = {
+	name = "la_marseillaise"
+	file = "la_marseillaise.ogg"
+}
+music = {
+	name = "chant_du_depart"
+	file = "chant_du_depart.ogg"
+}
+music = {
+	name = "chant_des_partisans"
+	file = "chant_des_partisans.ogg"
+}
+music = {
+    name = "heil_dir_im_siegerkranz"
+	file = "heil_dir_im_siegerkranz.ogg"
+}
+music = {
+    name = "i_love_you_california"
+	file = "i_love_you_california.ogg"
+}

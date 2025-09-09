@@ -1,0 +1,16 @@
+version="0.2"
+tags={
+	"Alternative History"
+	"National Focuses"
+}
+name="Failurereich: Stalemate - GitHub"
+picture="thumbnail.png"
+replace_path="common/decisions"
+replace_path="common/ideologies"
+replace_path="common/national_focus"
+replace_path="common/ai_strategy_plans"
+replace_path="map/strategicregions"
+replace_path="map/supplyareas"
+replace_path="events"
+supported_version="1.16.9"
+remote_file_id="2077121121"
