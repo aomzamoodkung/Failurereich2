@@ -2424,7 +2424,7 @@ focus_tree = {
 
 focus = {
     id = FRA_right_win
-    icon = GFX_goal_generic_political_right
+    icon = GFX_right_win
     text = "Rightist Victory"
     prerequisite = { focus = FRA_hold_election }
     mutually_exclusive = { focus = FRA_left_win }
