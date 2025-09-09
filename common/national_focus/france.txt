@@ -1328,6 +1328,7 @@ focus_tree = {
 			promote_character = FRA_regency
 			remove_ideas = FRA_military_junta_1
 			remove_ideas = FRA_military_constitution
+			set_country_flag = FRA_monarchist_path_chosen
 			set_party_name = { 
 				ideology = reactionary
 				long_name = "Regency"
@@ -1652,6 +1653,7 @@ focus_tree = {
 				    ruling_party = left
 				    elections_allowed = yes
 			    }
+				set_country_flag = FRA_democrat_path_chosen
 			    set_party_name = {
                         ideology = left
                         long_name = "RP"
