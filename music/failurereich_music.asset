@@ -18,3 +18,7 @@ music = {
     name = "i_love_you_california"
 	file = "i_love_you_california.ogg"
 }
+music = {
+    name = "country_roads"
+	file = "country_roads.ogg"
+}
