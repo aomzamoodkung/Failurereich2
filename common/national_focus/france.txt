@@ -2446,10 +2446,10 @@ focus = {
         create_country_leader = {
             name = "André Tardieu"
             desc = "POLITICS_ANDRE_TARDIEU_DESC"
-            picture = GFX_portrait_andre_tardieu
+            picture = gfx/leaders/FRA/GFX_portrait_andre_tardieu.dds
             expire = "1965.1.1"
             ideology = democratic
-            traits = { conservative_reformer defender_of_democracy }
+            traits = { conservative_reformer }
         }
     }
 }
@@ -2512,7 +2512,11 @@ focus = {
     search_filters = { FOCUS_FILTER_WAR_SUPPORT }
     ai_will_do = { factor = 1 }
     available = { has_government = democratic is_puppet = no }
-    completion_reward = { add_war_support = 0.03 army_experience = 3 }
+    completion_reward = { 
+	        add_war_support = 0.03 
+			army_experience = 3
+			set_country_flag = FRA_public_order_flag
+	}
 }
 
 # --- Economy Strand ---
@@ -2640,7 +2644,11 @@ focus = {
     search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 1 }
     available = { has_government = democratic }
-    completion_reward = { add_political_power = 50 }
+    completion_reward = { 
+	    add_political_power = 50
+		add_war_support = 0.02
+		add_ideas = FRA_concordat_spirit
+	}
 }
 
 focus = {
