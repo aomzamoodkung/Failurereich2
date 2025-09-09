@@ -16,7 +16,8 @@
   FRA_fascism_party_long: "Pétainistes - Fascistes"
 
   ### IDEAS AND TOOLTIPS ###
-  FRA_military_junta: "Military Junta"
+  FRA_military_junta_1: "Martial law"
+  FRA_military_junta_2: "état d’urgence"
   FRA_sns: "National Statistics Service" 
   FRA_sncf: "French National Railway Company"
   FRA_hold_election_tt: "§RWe will hold election in france.§!"
@@ -58,6 +59,7 @@
   FRA_fascist_economic_bloc: "Fascist Economic Bloc"
   FRA_pact_with_the_netherlands: "Pact with [HOL.GetNameDef]"
   FRA_luxembourg: "Annex [LUX.GetNameDef]"
+  FRA_military_constitution: "Petainism Constitution"
   FRA_belgium: "Annex Wallonia"
   FRA_doriot: "National Syndicalism"
   FRA_social_reforms: "Social Reforms"

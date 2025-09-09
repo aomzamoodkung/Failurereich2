@@ -116,4 +116,18 @@ characters={
 			id = -1
 		}
 	}
+	FRA_andre_tardieu={
+		name="André Tardieu"
+		portraits={
+			civilian={
+				large="GFX/leaders/FRA/FRA_andre_tardieu.dds"
+			}
+		}
+		country_leader = {
+			ideology = democratic
+			traits = { conservative_reformer }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
 }
