@@ -774,6 +774,93 @@ ideas = {
 			}
 		}
 
+    FRA_civic_renewal_spirit = {
+        allowed = { original_tag = FRA }
+        picture = GFX_goal_generic_political_reform
+        modifier = { stability_factor = 0.05 political_power_gain = 0.05 }
+    }
+
+    FRA_civic_guidance = {
+        allowed = { original_tag = FRA }
+        modifier = { stability_factor = 0.03 }
+    }
+
+    FRA_concordat_compromise = {
+        allowed = { original_tag = FRA }
+        modifier = { stability_factor = 0.02 war_support_factor = 0.02 }
+    }
+
+    FRA_balanced_press = {
+        allowed = { original_tag = FRA }
+        modifier = { political_power_gain = 0.05 compliance_growth_on_our_occupied_states = 0.02 }
+    }
+
+    FRA_security_reform = {
+        allowed = { original_tag = FRA }
+        modifier = { resistance_growth_on_our_occupied_states = -0.03 suppression_factor = 0.05 }
+    }
+
+    FRA_business_charters_idea = {
+        allowed = { original_tag = FRA }
+        modifier = { civilian_factory_use = -0.02 industrial_capacity_factory = 0.02 }
+    }
+
+    FRA_labor_mediation_service = {
+        allowed = { original_tag = FRA }
+        modifier = { stability_factor = 0.02 consumer_goods_expected_value = -0.01 }
+    }
+
+    FRA_industry_tax_relief = {
+        allowed = { original_tag = FRA }
+        modifier = { industrial_capacity_dockyard = 0.01 industrial_capacity_factory = 0.03 }
+    }
+
+    FRA_public_private_partnerships = {
+        allowed = { original_tag = FRA }
+        modifier = { production_speed_industrial_complex_factor = 0.1 }
+    }
+
+    FRA_private_industry_boost_idea = {
+        allowed = { original_tag = FRA }
+        modifier = { production_speed_industrial_complex_factor = 0.05 production_speed_infrastructure_factor = 0.05 }
+    }
+
+    FRA_industrial_mobilization_right_idea = {
+        allowed = { original_tag = FRA }
+        modifier = { war_support_factor = 0.03 production_factory_efficiency_gain_factor = 0.03 }
+    }
+
+    FRA_constitutional_revision = {
+        allowed = { original_tag = FRA }
+        modifier = { political_power_gain = 0.05 }
+    }
+
+    FRA_empowered_senate = {
+        allowed = { original_tag = FRA }
+        modifier = { stability_factor = -0.10 }
+    }
+
+    FRA_strong_presidency = {
+        allowed = { original_tag = FRA }
+        modifier = { political_power_cost = -0.20 stability_factor = -0.20 }
+    }
+
+    FRA_crisis_clause = {
+        allowed = { original_tag = FRA }
+        modifier = { war_support_factor = 0.02 }
+    }
+
+    FRA_conference_remilitarization = {
+        allowed = { original_tag = FRA }
+        modifier = { army_org = 5 }
+    }
+
+    FRA_acp_commitments = {
+        allowed = { original_tag = FRA }
+        modifier = { army_org_recovery = 0.02 operative_slot = 1 }
+    }
+
+
 		VIC_guest_workers = {
 			picture = generic_exploit_mines
 			allowed = {

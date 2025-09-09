@@ -160,4 +160,187 @@
   FRA_catholic_path: "The Government Has Appeal to the Catholic Church"
   FRA_democrat_path_chosen: "Must choose democrat path"
   FRA_monarchist_path_chosen: "Must choose Monarchist path"
-  
+  FRA_right_win:0 "Rightist Victory"
+  FRA_right_win_desc:0 "A conservative republican coalition has won the election, pledging order, growth, and constitutional governance."
+
+  FRA_national_morality:0 "Civic Renewal Campaign"
+  FRA_national_morality_desc:0 "Launch a nationwide push for civic responsibility, volunteerism, and public service."
+
+  FRA_concordat:0 "Church–State Understanding"
+  FRA_concordat_desc:0 "Establish a pragmatic understanding between the Republic and religious institutions to reduce social tension."
+
+  FRA_press_law:0 "Balanced Press Law"
+  FRA_press_law_desc:0 "Guarantee a free press while setting fair standards against incitement and political intimidation."
+
+  FRA_public_order_act:0 "Community Security Reform"
+  FRA_public_order_act_desc:0 "Modernize community policing and national coordination to reduce unrest and improve public safety."
+
+  FRA_business_charters:0 "National Business Charters"
+  FRA_business_charters_desc:0 "Formalize cooperation between government, chambers of commerce, and labor for stability and growth."
+
+  FRA_break_general_strike:0 "Resolve the General Strike"
+  FRA_break_general_strike_desc:0 "Appoint neutral mediators and emergency arbiters to end the strike and reopen the economy."
+
+  FRA_tax_relief_industry:0 "Industrial Tax Relief"
+  FRA_tax_relief_industry_desc:0 "Targeted relief to firms that reinvest in jobs, modernization, and export capacity."
+
+  FRA_industrial_partnerships:0 "State–Industry Partnerships"
+  FRA_industrial_partnerships_desc:0 "Public credit lines and private commitments for strategic sectors and regional development."
+
+  FRA_private_industry_boost:0 "Private Industry Boost"
+  FRA_private_industry_boost_desc:0 "Make credit more accessible to competitive firms and accelerate factory upgrades."
+
+  FRA_industrial_mobilization_right:0 "Industrial Mobilization"
+  FRA_industrial_mobilization_right_desc:0 "Prepare industry for crises with rapid retooling protocols and reserve capacity."
+
+  FRA_fate_luxembourg_right:0 "Deal with Luxembourg"
+  FRA_fate_luxembourg_right_desc:0 "Open a diplomatic channel with Luxembourg regarding security, transit, and mutual guarantees."
+
+  FRA_write_con_right:0 "Draft a Conservative Constitution"
+  FRA_write_con_right_desc:0 "Convene a constitutional convention to balance efficient governance with democratic safeguards."
+
+  FRA_senate_empowered:0 "Empower the Senate"
+  FRA_senate_empowered_desc:0 "Reinforce the upper chamber’s oversight to moderate sudden policy swings."
+
+  FRA_strengthen_presidency:0 "Strengthen the Presidency"
+  FRA_strengthen_presidency_desc:0 "Clarify executive powers and responsibilities within the republican framework."
+
+  FRA_emergency_powers:0 "Crisis Management Clause"
+  FRA_emergency_powers_desc:0 "Define limited, supervised emergency measures with strict time limits and parliamentary review."
+
+  FRA_pardon_petain:0 "Pardon Pétain"
+  FRA_pardon_petain_desc:0 "Consider a conditional pardon aimed at national reconciliation, without erasing accountability."
+
+  FRA_remilitarize_conference:0 "Remilitarize by Conference"
+  FRA_remilitarize_conference_desc:0 "Pursue legal remilitarization through an international conference rather than unilateral action."
+
+  FRA_invite_britain:0 "Invite Britain"
+  FRA_invite_britain_desc:0 "Seek British participation in a continental security framework."
+
+  FRA_invite_italy:0 "Invite Italy"
+  FRA_invite_italy_desc:0 "Sound out Italy for a pragmatic understanding on borders and maritime issues."
+
+  FRA_anti_communist_pact:0 "Anti-Communist Pact"
+  FRA_anti_communist_pact_desc:0 "Coordinate intelligence and security measures with partners against subversive movements."
+
+  # =====
+  # Ideas
+  # =====
+  FRA_civic_renewal_spirit:0 "Civic Renewal"
+  FRA_civic_renewal_spirit_desc:0 "A mandate for public service, duty, and social cohesion."
+
+  FRA_civic_guidance:0 "Civic Guidance"
+  FRA_civic_guidance_desc:0 "Community programs encourage public-spirited conduct."
+
+  FRA_concordat_compromise:0 "Concordat Compromise"
+  FRA_concordat_compromise_desc:0 "Church and state agree to mutual restraint in the public sphere."
+
+  FRA_balanced_press:0 "Balanced Press"
+  FRA_balanced_press_desc:0 "A free press supported by safeguards against coercion and incitement."
+
+  FRA_security_reform:0 "Security Reform"
+  FRA_security_reform_desc:0 "Better coordination and training help contain unrest without collective punishment."
+
+  FRA_business_charters_idea:0 "Business Charters"
+  FRA_business_charters_idea_desc:0 "Firms commit to reinvestment and fair practice in exchange for predictable policy."
+
+  FRA_labor_mediation_service:0 "Labor Mediation Service"
+  FRA_labor_mediation_service_desc:0 "Permanent arbitration panels defuse industrial conflicts early."
+
+  FRA_industry_tax_relief:0 "Industry Tax Relief"
+  FRA_industry_tax_relief_desc:0 "Targeted tax measures favor productive investment."
+
+  FRA_public_private_partnerships:0 "Public–Private Partnerships"
+  FRA_public_private_partnerships_desc:0 "Capital and oversight for strategic infrastructure and industry upgrades."
+
+  FRA_private_industry_boost_idea:0 "Private Industry Boost"
+  FRA_private_industry_boost_idea_desc:0 "Credit and permits fast-track modernization across key regions."
+
+  FRA_industrial_mobilization_right_idea:0 "Industrial Mobilization"
+  FRA_industrial_mobilization_right_idea_desc:0 "Ready the economy for rapid scale-up under parliamentary control."
+
+  FRA_constitutional_revision:0 "Constitutional Revision"
+  FRA_constitutional_revision_desc:0 "Redrafted institutions improve decisiveness without abandoning checks."
+
+  FRA_empowered_senate:0 "Empowered Senate"
+  FRA_empowered_senate_desc:0 "The upper chamber provides continuity and scrutiny."
+
+  FRA_strong_presidency:0 "Strong Presidency"
+  FRA_strong_presidency_desc:0 "A clarified executive improves responsibility and accountability."
+
+  FRA_crisis_clause:0 "Crisis Management Clause"
+  FRA_crisis_clause_desc:0 "Time-limited measures under parliamentary supervision."
+
+  FRA_conference_remilitarization:0 "Conference Remilitarization"
+  FRA_conference_remilitarization_desc:0 "International recognition grants legitimacy to defensive deployments."
+
+  FRA_acp_commitments:0 "Anti-Communist Commitments"
+  FRA_acp_commitments_desc:0 "Coordinated security arrangements against subversion."
+
+  # ======
+  # Events
+  # ======
+  france_right.ok:0 "OK"
+
+  france_right.1.t:0 "Rightists Triumph at the Polls"
+  france_right.1.d:0 "A conservative republican coalition has secured a working majority, promising order, growth, and constitutional governance."
+
+  france_right.2.t:0 "Civic Renewal Campaign"
+  france_right.2.d:0 "A nationwide effort promotes volunteerism, public service, and civic education."
+
+  france_right.3.t:0 "Church–State Understanding"
+  france_right.3.d:0 "Representatives agree on mutual restraint and cooperation for social peace."
+
+  france_right.4.t:0 "Balanced Press Law Debated"
+  france_right.4.d:0 "Parliament approves standards that protect free expression while curbing intimidation."
+
+  france_right.5.t:0 "Community Security Reform"
+  france_right.5.d:0 "New training and oversight aim to lower unrest and improve trust in law enforcement."
+
+  france_right.6.t:0 "National Business Charters Signed"
+  france_right.6.d:0 "Industry and government codify commitments to reinvestment and productivity."
+
+  france_right.7.t:0 "General Strike Resolved"
+  france_right.7.d:0 "Mediation yields a settlement, restoring production and pay with limited concessions."
+
+  france_right.8.t:0 "Industrial Tax Relief Passed"
+  france_right.8.d:0 "Targeted reductions aim to spur modernization and exports."
+
+  france_right.9.t:0 "Public–Private Partnerships Launched"
+  france_right.9.d:0 "Strategic sectors receive capital under shared oversight."
+
+  france_right.10.t:0 "Credit Lines Opened"
+  france_right.10.d:0 "Banks and the state coordinate new facilities for industrial upgrades."
+
+  france_right.11.t:0 "Industrial Mobilization Decree"
+  france_right.11.d:0 "Standardized retooling protocols prepare the economy for emergencies."
+
+  france_right.12.t:0 "Note to Luxembourg"
+  france_right.12.d:0 "France proposes talks on transit, security coordination, and mutual guarantees."
+
+  france_right.13.t:0 "Constitutional Convention Convenes"
+  france_right.13.d:0 "Delegates gather to redraft the Republic’s institutions."
+
+  france_right.14.t:0 "The Senate Empowered"
+  france_right.14.d:0 "The upper chamber gains tools to moderate sudden swings in policy."
+
+  france_right.15.t:0 "Presidency Powers Clarified"
+  france_right.15.d:0 "Reforms define executive responsibility within the republican framework."
+
+  france_right.16.t:0 "Crisis Management Clause Adopted"
+  france_right.16.d:0 "Time-limited emergency measures face strict oversight and automatic sunset."
+
+  france_right.17.t:0 "The Pétain Question"
+  france_right.17.d:0 "A conditional pardon is debated as a step toward reconciliation."
+
+  france_right.18.t:0 "Conference on Remilitarization"
+  france_right.18.d:0 "Delegates consider limited deployments under international recognition."
+
+  france_right.19.t:0 "British Reply Received"
+  france_right.19.d:0 "London acknowledges the initiative and weighs participation."
+
+  france_right.20.t:0 "Italian Reply Received"
+  france_right.20.d:0 "Rome signals interest in practical arrangements on borders and maritime issues."
+
+  france_right.21.t:0 "Anti-Communist Pact Signed"
+  france_right.21.d:0 "France enters coordinated commitments against subversive threats."

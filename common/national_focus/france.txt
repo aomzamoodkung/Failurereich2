@@ -2439,12 +2439,11 @@ focus = {
 
     completion_reward = {
         set_politics = { ruling_party = democratic elections_allowed = yes }
-        set_party_name = { ideology = democratic long_name = "Alliance Républicaine-M" name = "AR" }
-        add_popularity = { ideology = democratic popularity = 0.12 }
+        set_party_name = { ideology = democratic long_name = "Alliance Républicaine" name = "AR" }
+        add_popularity = { ideology = democratic popularity = 0.35 }
         add_popularity = { ideology = reactionary popularity = 0.05 }
-        remove_ideas = FRA_military_junta_1
-        remove_ideas = FRA_military_constitution
         add_stability = 0.05
+        country_event = { id = france_right.1 days = 1 } # "Rightists win the election"
     }
 }
 
@@ -2461,7 +2460,12 @@ focus = {
     search_filters = { FOCUS_FILTER_STABILITY }
     ai_will_do = { factor = 1 }
     available = { has_government = democratic }
-    completion_reward = { add_stability = 0.05 add_political_power = 25 }
+    completion_reward = {
+        add_stability = 0.05
+        add_political_power = 25
+        add_ideas = FRA_civic_guidance
+        country_event = { id = france_right.2 days = 1 } # Messaging campaign
+    }
 }
 
 focus = {
@@ -2476,7 +2480,12 @@ focus = {
     search_filters = { FOCUS_FILTER_STABILITY }
     ai_will_do = { factor = 1 }
     available = { has_government = democratic }
-    completion_reward = { add_stability = 0.03 add_war_support = 0.02 }
+    completion_reward = {
+        add_stability = 0.03
+        add_war_support = 0.02
+        add_ideas = FRA_concordat_compromise
+        country_event = { id = france_right.3 days = 1 } # Concordat compromise text
+    }
 }
 
 focus = {
@@ -2491,7 +2500,12 @@ focus = {
     search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 1 }
     available = { has_government = democratic }
-    completion_reward = { add_political_power = 75 add_stability = 0.02 }
+    completion_reward = {
+        add_political_power = 75
+        add_stability = 0.02
+        add_ideas = FRA_balanced_press
+        country_event = { id = france_right.4 days = 1 } # Press law debate
+    }
 }
 
 focus = {
@@ -2506,11 +2520,12 @@ focus = {
     search_filters = { FOCUS_FILTER_WAR_SUPPORT }
     ai_will_do = { factor = 1 }
     available = { has_government = democratic is_puppet = no }
-    completion_reward = { 
-	        add_war_support = 0.03 
-			army_experience = 3
-			set_country_flag = FRA_public_order_flag
-	}
+    completion_reward = {
+        add_war_support = 0.03
+        army_experience = 3
+        add_ideas = FRA_security_reform
+        country_event = { id = france_right.5 days = 1 } # Security reform rollout
+    }
 }
 
 # --- Economy Strand ---
@@ -2525,7 +2540,12 @@ focus = {
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_INDUSTRY }
     ai_will_do = { factor = 1 }
-    completion_reward = { add_political_power = 50 add_stability = 0.02 }
+    completion_reward = {
+        add_political_power = 50
+        add_stability = 0.02
+        add_ideas = FRA_business_charters_idea
+        country_event = { id = france_right.6 days = 1 } # Chambers sign charters
+    }
 }
 
 focus = {
@@ -2540,7 +2560,12 @@ focus = {
     search_filters = { FOCUS_FILTER_MANPOWER }
     ai_will_do = { factor = 1 }
     available = { has_government = democratic }
-    completion_reward = { add_manpower = 40000 add_stability = 0.02 }
+    completion_reward = {
+        add_manpower = 40000
+        add_stability = 0.02
+        add_ideas = FRA_labor_mediation_service
+        country_event = { id = france_right.7 days = 1 } # Mediation agreement
+    }
 }
 
 focus = {
@@ -2554,7 +2579,11 @@ focus = {
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_INDUSTRY }
     ai_will_do = { factor = 1 }
-    completion_reward = { add_political_power = 50 }
+    completion_reward = {
+        add_political_power = 50
+        add_ideas = FRA_industry_tax_relief
+        country_event = { id = france_right.8 days = 1 } # Tax bill passes
+    }
 }
 
 focus = {
@@ -2569,10 +2598,12 @@ focus = {
     search_filters = { FOCUS_FILTER_INDUSTRY }
     ai_will_do = { factor = 1 }
     completion_reward = {
+        add_ideas = FRA_public_private_partnerships
         random_owned_state = {
             add_extra_state_shared_building_slots = 1
             add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
         }
+        country_event = { id = france_right.9 days = 1 } # PPP program launched
     }
 }
 
@@ -2588,11 +2619,13 @@ focus = {
     search_filters = { FOCUS_FILTER_INDUSTRY }
     ai_will_do = { factor = 1 }
     completion_reward = {
+        add_ideas = FRA_private_industry_boost_idea
         random_owned_state = {
             add_extra_state_shared_building_slots = 1
             add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
         }
         add_political_power = 25
+        country_event = { id = france_right.10 days = 1 } # Credit lines open
     }
 }
 
@@ -2607,7 +2640,11 @@ focus = {
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_WAR_SUPPORT }
     ai_will_do = { factor = 1 }
-    completion_reward = { add_war_support = 0.04 }
+    completion_reward = {
+        add_war_support = 0.04
+        add_ideas = FRA_industrial_mobilization_right_idea
+        country_event = { id = france_right.11 days = 1 } # Mobilization decree
+    }
 }
 
 focus = {
@@ -2622,7 +2659,9 @@ focus = {
     search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 1 }
     available = { is_puppet = no }
-    completion_reward = { LUX = { country_event = { days = 1 id = luxemborg.1 } } }
+    completion_reward = {
+        country_event = { id = france_right.12 days = 1 } # Diplomatic note to LUX
+    }
 }
 
 # --- Governance Strand ---
@@ -2638,11 +2677,11 @@ focus = {
     search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 1 }
     available = { has_government = democratic }
-    completion_reward = { 
-	    add_political_power = 50
-		add_war_support = 0.02
-		add_ideas = FRA_concordat_spirit
-	}
+    completion_reward = {
+        add_political_power = 50
+        add_ideas = FRA_constitutional_revision
+        country_event = { id = france_right.13 days = 1 } # Convention opens
+    }
 }
 
 focus = {
@@ -2657,7 +2696,12 @@ focus = {
     search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 1 }
     available = { has_government = democratic }
-    completion_reward = { add_stability = 0.03 add_political_power = 50 }
+    completion_reward = {
+        add_stability = 0.03
+        add_political_power = 50
+        add_ideas = FRA_empowered_senate
+        country_event = { id = france_right.14 days = 1 } # Bicameral reform
+    }
 }
 
 focus = {
@@ -2671,7 +2715,12 @@ focus = {
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 1 }
-    completion_reward = { add_stability = 0.02 add_political_power = 50 }
+    completion_reward = {
+        add_stability = 0.02
+        add_political_power = 50
+        add_ideas = FRA_strong_presidency
+        country_event = { id = france_right.15 days = 1 } # Presidency powers refined
+    }
 }
 
 focus = {
@@ -2686,7 +2735,13 @@ focus = {
     search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 1 }
     available = { has_government = democratic }
-    completion_reward = { add_stability = 0.01 add_war_support = 0.02 add_political_power = 25 }
+    completion_reward = {
+        add_stability = 0.01
+        add_war_support = 0.02
+        add_political_power = 25
+        add_ideas = FRA_crisis_clause
+        country_event = { id = france_right.16 days = 1 } # Clause passed with safeguards
+    }
 }
 
 focus = {
@@ -2700,7 +2755,11 @@ focus = {
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 1 }
-    completion_reward = { add_stability = 0.02 add_political_power = 50 }
+    completion_reward = {
+        add_stability = 0.02
+        add_political_power = 50
+        country_event = { id = france_right.17 days = 1 } # Pardon debate
+    }
 }
 
 # --- Foreign Policy Strand ---
@@ -2717,7 +2776,12 @@ focus = {
     ai_will_do = { factor = 1 }
     bypass = { 28 = { is_demilitarized_zone = no } 914 = { is_demilitarized_zone = no } }
     available = { has_government = democratic }
-    completion_reward = { GER = { country_event = { days = 1 id = germany.25 } } add_political_power = 10 }
+    completion_reward = {
+        GER = { country_event = { days = 1 id = germany.25 } }
+        add_political_power = 10
+        add_ideas = FRA_conference_remilitarization
+        country_event = { id = france_right.18 days = 1 } # Conference outcome
+    }
 }
 
 focus = {
@@ -2733,7 +2797,10 @@ focus = {
     ai_will_do = { factor = 1 }
     bypass = { NOT = { country_exists = ENG } }
     available = { is_puppet = no }
-    completion_reward = { ENG = { country_event = { days = 1 id = denmark.1 } } }
+    completion_reward = {
+        ENG = { country_event = { days = 1 id = denmark.1 } }
+        country_event = { id = france_right.19 days = 1 } # British reply
+    }
 }
 
 focus = {
@@ -2749,7 +2816,10 @@ focus = {
     ai_will_do = { factor = 1 }
     bypass = { NOT = { country_exists = ITA } }
     available = { is_puppet = no }
-    completion_reward = { ITA = { country_event = { days = 1 id = denmark.1 } } }
+    completion_reward = {
+        ITA = { country_event = { days = 1 id = denmark.1 } }
+        country_event = { id = france_right.20 days = 1 } # Italian reply
+    }
 }
 
 focus = {
@@ -2763,7 +2833,13 @@ focus = {
     available_if_capitulated = yes
     search_filters = { FOCUS_FILTER_POLITICAL }
     ai_will_do = { factor = 1 }
-    completion_reward = { add_war_support = 0.02 add_political_power = 25 }
+    completion_reward = {
+        add_war_support = 0.02
+        add_political_power = 25
+        add_ideas = FRA_acp_commitments
+        country_event = { id = france_right.21 days = 1 } # Pact signed
+    }
 }
+
 
 }	

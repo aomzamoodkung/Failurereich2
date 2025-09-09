@@ -1,0 +1,31 @@
+add_namespace = france_right
+
+country_event = {
+    id = france_right.1
+    title = france_right.1.t
+    desc  = france_right.1.d
+    picture = GFX_report_event_generic_politics
+    is_triggered_only = yes
+    option = { name = france_right.ok }
+}
+
+country_event = { id = france_right.2 title = france_right.2.t desc = france_right.2.d picture = GFX_report_event_generic_propaganda is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.3 title = france_right.3.t desc = france_right.3.d picture = GFX_report_event_generic_religion   is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.4 title = france_right.4.t desc = france_right.4.d picture = GFX_report_event_generic_press      is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.5 title = france_right.5.t desc = france_right.5.d picture = GFX_report_event_generic_security   is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.6 title = france_right.6.t desc = france_right.6.d picture = GFX_report_event_generic_industry   is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.7 title = france_right.7.t desc = france_right.7.d picture = GFX_report_event_generic_strike     is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.8 title = france_right.8.t desc = france_right.8.d picture = GFX_report_event_generic_economy    is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.9 title = france_right.9.t desc = france_right.9.d picture = GFX_report_event_generic_construction is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.10 title = france_right.10.t desc = france_right.10.d picture = GFX_report_event_generic_economy  is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.11 title = france_right.11.t desc = france_right.11.d picture = GFX_report_event_generic_mobilize is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.12 title = france_right.12.t desc = france_right.12.d picture = GFX_report_event_generic_diplomacy is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.13 title = france_right.13.t desc = france_right.13.d picture = GFX_report_event_generic_parliament is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.14 title = france_right.14.t desc = france_right.14.d picture = GFX_report_event_generic_parliament is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.15 title = france_right.15.t desc = france_right.15.d picture = GFX_report_event_generic_president is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.16 title = france_right.16.t desc = france_right.16.d picture = GFX_report_event_generic_law       is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.17 title = france_right.17.t desc = france_right.17.d picture = GFX_report_event_generic_court     is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.18 title = france_right.18.t desc = france_right.18.d picture = GFX_report_event_generic_conference is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.19 title = france_right.19.t desc = france_right.19.d picture = GFX_report_event_generic_diplomacy is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.20 title = france_right.20.t desc = france_right.20.d picture = GFX_report_event_generic_diplomacy is_triggered_only = yes option = { name = france_right.ok } }
+country_event = { id = france_right.21 title = france_right.21.t desc = france_right.21.d picture = GFX_report_event_generic_treaty     is_triggered_only = yes option = { name = france_right.ok } }
