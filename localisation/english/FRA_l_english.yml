@@ -316,7 +316,6 @@
   france_right.11.d:0 "Standardized retooling protocols prepare the economy for emergencies."
 
   france_right.12.t:0 "Note to Luxembourg"
-  france_right.12.d:0 "France proposes talks on transit, security coordination, and mutual guarantees."
 
   france_right.13.t:0 "Constitutional Convention Convenes"
   france_right.13.d:0 "Delegates gather to redraft the Republic’s institutions."
@@ -344,3 +343,7 @@
 
   france_right.21.t:0 "Anti-Communist Pact Signed"
   france_right.21.d:0 "France enters coordinated commitments against subversive threats."
+  france_election.1.t:0 "Election night"
+  france_election.1.d:0 "The long-awaited elections have come. France must choose between two visions: the progressive Left or the conservative Republicans."
+  france_election.1.a:0 "The Left Triumphs!"
+  france_election.1.b:0 "The Right Secures the Mandate!"

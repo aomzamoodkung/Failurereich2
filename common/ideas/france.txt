@@ -852,7 +852,7 @@ ideas = {
 
     FRA_conference_remilitarization = {
         allowed = { original_tag = FRA }
-        modifier = { army_org = 5 }
+        modifier = { army_org = 0.05 }
     }
 
     FRA_acp_commitments = {

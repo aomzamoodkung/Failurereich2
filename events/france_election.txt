@@ -1,0 +1,22 @@
+
+add_namespace = france_election
+
+country_event = {
+    id = france_election.1
+    title = france_election.1.t
+    desc = france_election.1.d
+    picture = GFX_report_event_generic_politics
+    is_triggered_only = yes
+
+    option = {
+        name = france_election.1.a  # Leftist Victory
+        add_popularity = { ideology = left popularity = 0.30 }
+        activate_focus_tree = FRA_left_win
+    }
+
+    option = {
+        name = france_election.1.b  # Rightist Victory
+        add_popularity = { ideology = democratic popularity = 0.30 }
+        activate_focus_tree = FRA_right_win
+    }
+}

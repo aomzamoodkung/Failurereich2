@@ -1132,6 +1132,7 @@ focus_tree = {
 			set_politics = {
 				ruling_party = vanguardism
 			}
+			set_country_flag = FRA_vanguardist_path_chosen
 		}
 	}
 
@@ -1696,10 +1697,7 @@ focus_tree = {
 	    }
         completion_reward = {
 		    custom_effect_tooltip = FRA_hold_election_tt
-		    add_popularity = {
-				    ideology = left 
-				    popularity = 0.10
-	        }
+		    country_event = { id = france_election.1 days = 1 }
 		}
 	}
 	

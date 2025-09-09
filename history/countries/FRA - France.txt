@@ -232,7 +232,6 @@ if = {
 	complete_national_focus = FRA_devalue_the_franc
 	complete_national_focus = FRA_invest_in_the_metropole
 
-	give_guarantee = POL
 	ENG = { add_to_faction = FRA }
 
 
@@ -392,7 +391,6 @@ add_to_faction = FRA
 add_to_faction = ENG
 add_to_faction = ITA
 
-give_guarantee = POL
 
 set_politics = {
 	ruling_party = reactionary 
@@ -401,9 +399,9 @@ set_politics = {
 }
 
 set_popularities = {
-	democratic = 20
+	democratic = 25
 	reactionary = 30
-	fascism = 30
+	fascism = 25
 	left = 20
 }
 
@@ -426,6 +424,7 @@ recruit_character = FRA_rene_binet
 recruit_character = FRA_marcel_deat
 recruit_character = FRA_michel_clemenceau
 recruit_character = FRA_regency
+
 recruit_character = FRA_andre_tardieu
 recruit_character = FRA_maurice_thorez
 recruit_character = FRA_pierre_laval
