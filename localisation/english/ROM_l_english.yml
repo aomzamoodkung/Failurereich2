@@ -1,0 +1,85 @@
+﻿l_english:
+ 
+ 
+ ### events ###
+ romania_f.2.t: ""
+ romania_f.2.d: ""
+ romania_f.2.a: ""
+ romania_f.2.b: ""
+ 
+ romania_f.3.t: ""
+ romania_f.3.d: ""
+ romania_f.3.a: ""
+ romania_f.3.b: ""
+ 
+ romania_f.4.t: "the goals of your  army reform"
+ romania_f.4.d: "we must set clear goals for our military reform to strengthen our military and thus secure our country's sovereignty"
+ romania_f.4.a: "we need defensive army"
+ romania_f.4.b: "the best defense is offense"
+ 
+ romania_f.5.t: "army building"
+ romania_f.5.d: "let's decide on the structure of our military and the direction it should take"
+ romania_f.5.a: "small and mobile , armor "
+ romania_f.5.b: "compromise"
+ romania_f.5.c: "large and static"
+ 
+ romania_f.6.t: "question of airplanes"
+ romania_f.6.d: "let's decide on the structure of our air force , our domestic company IAR can produce sufficient quantities"
+ romania_f.6.a: "small fighters"
+ romania_f.6.b: "large bombers"
+ 
+ romania_f.7.t: "fortification"
+ romania_f.7.d: "let us build fortifications around our country to prevent loss of life and strengthen our defenses against our neighbors who wait for every opportunity to attack us"
+ romania_f.7.a: "build largest fortification"
+ romania_f.7.b: "compenze this with very big army"
+ 
+ romania_f.8.t: "fosrtification or question of airplanes"
+ romania_f.8.d: "let's choose between strengthening the air force or building fortifications along the border"
+ romania_f.8.a: "solve airplanes"
+ romania_f.8.b: "fortification"
+ 
+ romania_f.9.t: "buy new tanks"
+ romania_f.9.d: "our army needs tanks , our research would be more expensive than buying a proven foreign machine , therefore it is much better to negotiate abroad on the purchase , two options are offered , the first is politically more advantageous , given that we have ties to france but the tank is not as high quality , but the manufacturer wants to compensate for this by supplying 35 tanks the second option is much higher quality , the Czech Republic produces some of the best tanks in the world but we must take into account that it is the biggest competitor of france in terms of arms exports"
+ romania_f.9.a: "france FCM 36 ( Nouvelle des Forges et Chantiers de la Méditerranée ) "
+ romania_f.9.b: "Czech LT. vz. 35 (Škoda and ČKD)"
+ 
+ 
+ ###national focus###
+ 
+ #army
+ 
+ ROM_we_need_recover_our_country: "we need recover our country"
+ ROM_army_reforms: "start army reform"
+ ROM_politize_army: "politize army"
+ ROM_local_units: "local units"
+ ROM_mixed_units: "mixed units"
+ ROM_new_army_reaserch: "support new army reaserch"
+ ROM_new_army_airplanes_from_IAR: "new army airplanes from IAR " 
+ 
+ ###ideas###
+ ROM_army_regime: "army regime"
+ ROM_divided_land: "divided land"
+ ROM_legacy_of_carol_ii: "Figure King"
+ ROM_legacy_of_carol_ii_desc: "When Ferdinand I. died, he gave the throne to his grandson Michael I. But, he is now too young to rule by himself. This situation was used by his father Carol, who came back from exile. He usurped crone from his son and crowned himself as King Carol II. His lifestyle is causing damage to crown prestige. What is even that his parties and costly cars, villas, and concubines are taking a toll on the nation's budget. This chaos needs to end, or he can bring the population against the monarchy, which can end by supporting leftists and the abolition of the monarchy and when the facist coup the king carol ii only figure of them"
+ romania_michael.1.t:0 "The Fate of the Romanian Monarchy"
+ romania_michael.2.t:0 "King Michael Addresses Socialist Romania"
+ romania_michael_news.1.t:0 "Romania Maintains Constitutional Monarchy"
+ romania_michael_news.2.t:0 "Romanian Monarchy Abolished"
+
+ # Event Descriptions
+ romania_michael.1.d:0 "The Romanian Communist Party faces a crucial decision regarding King Michael. The young monarch, still popular among the people, could either be maintained as a stabilizing figure or removed in favor of pure socialist governance. Lucreţiu Pătrășcanu argues for pragmatism, suggesting that keeping Michael as a constitutional monarch could ease our transition to socialism. However, Gheorghe Gheorghiu-Dej and his supporters insist that true socialism cannot coexist with monarchy.\n\nOur decision today will shape Romania's future path to socialism."
+ 
+ romania_michael.2.d:0 "In an unprecedented public address, King Michael has spoken in support of Romania's socialist transformation. Speaking from the balcony of the newly renamed People's Palace, the young king emphasized the need for social progress and expressed his commitment to working with the communist government for the benefit of all Romanians.\n\nWearing a simple military uniform rather than royal regalia, Michael's modest appearance and progressive message have resonated with both traditionalists and revolutionaries."
+
+ romania_michael_news.1.d:0 "In an unprecedented development, Romania's communist government has announced its decision to maintain the monarchy, with King Michael remaining as a constitutional head of state. This unique arrangement, dubbed 'Royal Socialism' by some observers, represents a distinctly Romanian path to socialism.\n\nLucreţiu Pătrășcanu, the new communist leader, has emphasized that this decision reflects Romania's specific conditions and historical traditions."
+
+ romania_michael_news.2.d:0 "The Romanian Communist Party has formally abolished the monarchy, with King Michael being forced to abdicate. Under the leadership of Gheorghe Gheorghiu-Dej, Romania has declared itself a people's republic, following the more traditional socialist model.\n\nThis decision marks a definitive break with Romania's monarchical past and signals closer alignment with orthodox communist principles."
+
+ # Options
+ romania_michael.1.a:0 "Maintain Michael as Constitutional Monarch"
+ romania_michael.1.b:0 "The monarchy must end"
+ romania_michael.2.a:0 "A new era begins"
+ romania_michael_news.1.a:0 "Our unique path to socialism"
+ romania_michael_news.1.b:0 "An interesting experiment"
+ romania_michael_news.2.a:0 "Forward to pure socialism"
+ romania_michael_news.2.b:0 "Another monarchy falls"

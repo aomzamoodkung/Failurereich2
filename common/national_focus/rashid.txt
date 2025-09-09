@@ -1,0 +1,235 @@
+focus_tree = {
+	id = rashid_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = UAE
+		}
+	}
+	focus = {
+		id = UAE_crush_terrorist
+		text="Invade Ikhwan"
+		icon = GFX_goal_generic_military_sphere
+		x = 1
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = IKH }
+		}
+
+		completion_reward = {
+			add_stability = 0.15 
+			add_political_power = 100
+
+	        	create_wargoal = {
+		                target = IKH
+		                type = annex_everything
+	        	}	
+			IKH = {
+				every_owned_state = {
+				    add_claim_by = UAE
+				}
+			}
+		}
+	}
+	focus = {
+		id = UAE_take_hail
+		text="Invade Hail region"
+		icon = GFX_goal_generic_military_sphere
+		x = 3
+		y = 0
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = JSH }
+		}
+
+		completion_reward = {
+			add_stability = 0.15 
+			add_political_power = 100
+
+	        	create_wargoal = {
+		                target = JSH
+		                type = annex_everything
+	        	}	
+			JSH = {
+				every_owned_state = {
+				    add_claim_by = UAE
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = UAE_invade_saudi
+		text="Invade Saudi"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = UAE_crush_terrorist }
+		prerequisite = { focus = UAE_take_hail }
+		x = 1
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = SAU }
+		}
+
+		completion_reward = {
+			add_stability = 0.15 
+			add_political_power = 100
+
+	        	create_wargoal = {
+		                target = SAU
+		                type = annex_everything
+	        	}
+
+			SAU = {
+				every_owned_state = {
+				    add_claim_by = UAE
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = UAE_invade_hejaz
+		text="Invade Holy earth"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = UAE_crush_terrorist }
+		x = 3
+		y = 1
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = HEJ }
+		}
+
+		completion_reward = {
+			add_stability = 0.15 
+			add_political_power = 100
+
+	        	create_wargoal = {
+		                target = HEJ
+		                type = annex_everything
+	        	}
+
+			HEJ = {
+				every_owned_state = {
+				    add_claim_by = UAE
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = UAE_invade_oman
+		text="Invade Oman"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { 
+		focus = UAE_invade_hejaz 
+		focus = UAE_invade_saudi
+		}
+		x = 1
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = OMA }
+		}
+
+		completion_reward = {
+
+	        	create_wargoal = {
+		                target = OMA
+		                type = annex_everything
+	        	}
+
+			OMA = {
+				every_owned_state = {
+				    add_claim_by = OMA 
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = UAE_invade_yemen
+		text="Invade Yemen"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = UAE_invade_hejaz focus = UAE_invade_saudi }
+		x = 3
+		y = 2
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = YEM }
+		}
+
+		completion_reward = {
+
+	        	create_wargoal = {
+		                target = YEM
+		                type = annex_everything
+	        	}
+
+			UAE = {
+				every_owned_state = {
+				    add_claim_by = YEM
+				}
+			}	
+		}
+	}
+
+	focus = {
+		id = UAE_arabia
+		text= "Create Arabia"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = UAE_invade_yemen } 
+		prerequisite = { focus = UAE_invade_oman }
+		x = 2
+		y = 3
+		cost = 5
+		available_if_capitulated = yes
+
+		available = {
+			owns_state = 679
+			owns_state = 857
+			owns_state = 859
+			owns_state = 292
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+	        	set_cosmetic_tag = UAE_arabia
+		}
+	}
+ }

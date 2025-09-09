@@ -1,0 +1,43 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_news_event_us_civil_war"
+		texturefile = "gfx/event_pictures/news_event_us_civil_war.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_japan_civil_war"
+		texturefile = "gfx/event_pictures/news_event_japan_civil_war.dds"
+	}
+
+	spriteType = {
+		name = "GFX_news_event_chinese_civil_war"
+		texturefile = "gfx/event_pictures/news_event_chinese_civil_war.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_monarchy_question"
+		texturefile = "gfx/event_pictures/monarchy_question.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_collaboration"
+		texturefile = "gfx/event_pictures/collaboration.png"
+	}
+	spriteType = {
+		name = "GFX_news_event_french_revolution"
+		texturefile = "gfx/event_pictures/french_revolution.dds"
+	}
+	spriteType = {
+		name = "GFX_news_event_pius_xi_dead"
+		texturefile = "gfx/event_pictures/pius_xi_dead.dds"
+	}
+	spriteType = {
+		name = "GFX_fate_of_petain"
+		texturefile = "gfx/event_pictures/fate_of_petain.dds"
+	}
+	spriteType = {
+		name = "GFX_FRA_uprising"
+		texturefile = "gfx/event_pictures/FRA_uprising.dds"
+	}
+	
+}

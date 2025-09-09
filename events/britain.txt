@@ -1,0 +1,54 @@
+
+add_namespace = britain
+
+country_event = {
+	id = britain.1
+	title = "New Regency come back"
+	desc = "Fascists want to come back and serve the country. We need to get rid of this and reetablish monarchy."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Come with George VI"
+			release = IRE
+			ENG = {
+				start_civil_war = {
+				    ruling_party = reactionary
+				    ideology = fascism
+				    size = 0.4
+				    only_own_territory = no
+				    capital = 126
+				    states = {
+				        122 123 125 126 127 128 338 129
+				    }
+				}
+			}
+		}
+	}
+
+country_event = {
+	id = britain.2
+	title = "A new State"
+	desc = "Fascists want to come back and serve the country. We need help them."
+	picture = GFX_report_event_lithuania_army
+
+	is_triggered_only = yes
+	
+	option = {
+		name = "Mosley and the State"
+			release = IRE
+			ENG = {
+				start_civil_war = {
+				    ruling_party = fascism
+				    ideology = reactionary
+				    size = 0.4
+				    only_own_territory = no
+				    capital = 121
+				    states = {
+				        121 120 133 136 931 932 131
+				    }
+				}
+			}
+		}
+	}

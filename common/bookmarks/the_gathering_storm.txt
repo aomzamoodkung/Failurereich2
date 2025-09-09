@@ -1,0 +1,178 @@
+bookmarks = {
+	bookmark = {
+		name = "Rotër Reich"
+		desc = "GATHERING_STORM_DESC"
+		date = 1936.1.1.12
+		picture = "GFX_select_date_1936"
+		default_country = "GER"
+		default = yes
+
+		"FRA"={
+			history = "from 1918, Petain never ended this war after Paris was taken. Despite Germany's collapse, France faced multiple internal mouvements and fall under fascism after years of terror. Communists has been captured after the fall of the Commune. With Bucard as prime minister, Petain began to left more power to collaborationists and minor parties. Fascism come in France after the 20s, where the military juntla controlled everything. While Petain left power, democracy never come back."
+			ideology = fascism
+			ideas = {
+				FRA_up_with_jean_darc 
+				FRA_down_with_marianne 
+				FRA_anti_bolshevist_volunteers 
+			}
+			focuses = {
+				FRA_freedom_way
+				FRA_monarchist_coup
+				FRA_old_marechal_speech
+			}
+		}
+		"GER"={
+			history = "In the Great War, Germany suffered too much under Kaiser and his junkers regime. They drag Germany through its war and, after that, death, poverty, and hunger. This led to unrest, and after that revolution, which deposed Kaiser Wilhelm II. The brutal civil war was fought by, Freicorps against Startacus League. Spartacist had succeeded, and on the first party congress insuring for them a majority of votes. Karl Liebknecht was voted as the first president of Germany. This led to a communist dictatorship and a one-party state supported by the suppression of anything remaining from reactionary influence. In 1925 second party congress of KPD was held in Munich. There, a great power struggle began between Rosa Luxemburg and Ernst Thälmann, from which Thälmann emerge victorious. He enacts some reforms of the system but blocks any liberalization or democratization. From this position, Germany emerged as the head and beacon of the socialistic world, with many possible threats and successes ahead of them."
+			ideology = communism
+			ideas = {
+				GER_clamp_down_on_fascism 
+				GER_communist_refugees 
+				GER_soviet_military_exercises 
+			}
+			focuses = {
+				GER_thalmann
+			}
+		}
+		"ITA"={
+			history = "Italy failed to keep the monarchy stable and the fascists take over the King in the south. The Napolis Regime is leaded by Mussolini since 1920s."
+			ideology = fascism
+			ideas = {
+				ITA_iri_fake_ns
+				ITA_re_fake_ns
+				ITA_divino_duce_2 
+			}	
+			focuses = {
+				ITA_fascism
+				ITA_empire
+			}		
+		}
+		"AFR"={
+			history = "Napoleon Revive under a very harsh situation, where France is divided Between fascism and monarchism. After the failure in Paris, French regime fleed in Africa and decide to handle last borders in Africa"
+			ideology = fascism
+			ideas = {
+				FRA_counter_action 
+				FRA_la_deluge 
+				FRA_constitutional_revision 
+			}	
+			focuses = {
+				AFR_oppose_napoleon
+				AFR_absolute_monarchy
+			}		
+		}
+		"WGR"={
+			history = "Germany last it's fatherland after spartacists get access to Berlin. The Kaiser have to deal with African peasant to survive and reconquer German lands."
+			ideology = reactionarism
+			ideas = {
+				GER_revive_the_kaiserreich 
+				GER_rebuild_the_nation 
+				kaiser_challenge_met 
+			}	
+			focuses = {
+				GEX_wilhelm
+				GEX_new
+			}		
+		}
+		"SOV"={
+			history = "Following a long civil war and multiple divisions, Denekin take all of the Russian lands but have to deal with multiple factions. Russia keep united only in 1932 and a fascist gouvernement has been put in place for interim."
+			ideology = reactionarism
+			ideas = {
+				SOV_aristocratic_investments_idea 
+				SOV_multi_religious_empire 
+				SOV_consolidate_power 
+			}
+			focuses = {
+				RUS_Kolchak
+			}	
+		}
+		"JAP"={
+			history = "Japan is now an unstable nation, where communist riots affect the Emperor legacy."
+			ideology = fascism
+			ideas = {
+				state_shintoism 
+				JAP_militarism 
+			}
+			focuses = {
+			}	
+		}
+
+		"---"={
+			history = "OTHER_GATHERING_STORM_DESC"
+		}
+
+
+		# minors from DLC ####
+		"CAN"={
+			minor = yes
+			history = "CAN_GATHERING_STORM_DESC"
+			ideology = democratic
+			ideas = {
+				CAN_great_depression_1
+				CAN_conscription_crisis
+			}
+			focuses = {
+				CAN_strong
+			}
+		}
+
+		"HUN"={
+			minor = yes
+			history = "HUN_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				HUN_treaty_of_triannon
+			}
+			focuses = {
+				HUN_the_soviet_republic
+			}
+		}
+
+		"MAN"={
+			minor = yes
+			history = "MAN_GATHERING_STORM_DESC"
+			ideology = reactionary
+			ideas = {
+				MAN_national_defense_state 
+				MAN_white_russian_advisers 
+				MAN_rebuilt_nation 
+			}
+			focuses = {
+				MAN_constitutional_monarchy
+			}
+		}
+
+		"TUR"={
+			minor = yes
+			history = "TUR_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {
+				TUR_sectarian_woes
+				TUR_disorganised_armed_forces
+				TUR_debt_council
+			}
+			focuses = {
+				TUR_kars_republic_legacy
+			}
+		}
+
+		"POL"={
+			minor = yes
+			history = "POL_GATHERING_STORM_DESC"
+			ideology = fascism
+			ideas = {
+				uncontrolled_exports
+				POL_april_constitution_1
+				POL_looming_peasants_strike
+			}
+			focuses = {
+				POL_hohenzollern
+				POL_falangism
+				POL_habsburg
+			}
+		}
+
+		effect = {
+			randomize_weather = 22345 # <- Obligatory in every bookmark !
+			#123 = { rain_light = yes }
+		}
+	}
+}

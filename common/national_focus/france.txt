@@ -1,0 +1,2767 @@
+﻿### search_filters = {FOCUS_FILTER_POLITICAL}
+### search_filters = {FOCUS_FILTER_RESEARCH}
+### search_filters = {FOCUS_FILTER_INDUSTRY}
+### search_filters = {FOCUS_FILTER_STABILITY}
+### search_filters = {FOCUS_FILTER_WAR_SUPPORT}
+### search_filters = {FOCUS_FILTER_MANPOWER}
+### search_filters = {FOCUS_FILTER_ANNEXATION}
+
+focus_tree = {
+	id = french_state_focus
+
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = FRA
+		}
+	}
+
+	default = no
+	continuous_focus_position = { x = 4000 y = 2500 }
+
+	focus = {
+		id = FRA_economic_planning
+		icon = GFX_goal_generic_construct_civilian
+		x = 2
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY } 
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_economic_planning
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_create_the_national_statistics_service
+		icon = GFX_focus_generic_self_management
+		prerequisite = { focus = FRA_economic_planning }
+		x = -2
+		y = 1
+		relative_position_id = FRA_economic_planning
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = FRA_sns
+		}
+	}
+	
+	focus = {
+		id = FRA_cnrs
+		icon = GFX_focus_research
+		prerequisite = { focus = FRA_create_the_national_statistics_service }
+		x = 0
+		y = 2
+		relative_position_id = FRA_create_the_national_statistics_service
+		cost = 10
+
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_RESEARCH }
+
+		completion_reward = {
+			add_research_slot = 1
+		}
+	}
+
+	focus = {
+		id = FRA_national_railway
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = FRA_economic_planning }
+		x = -1
+		y = 2
+		relative_position_id = FRA_economic_planning
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			add_ideas = FRA_sncf
+		}
+	}
+
+	focus = {
+		id = FRA_major_works_in_paris
+		icon = GFX_goal_generic_construction
+		prerequisite = { focus = FRA_economic_planning }
+		x = 0
+		y = 1
+		relative_position_id = FRA_economic_planning
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 16
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+
+		completion_reward = {
+			16 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = fuel_silo
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = anti_air_building
+					level = 10
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = air_base
+					level = 10
+					instant_build = yes
+				}
+			}
+		}
+	}
+	
+	focus = {
+		id = FRA_revitalize_the_shipbuilding
+		icon = GFX_goal_generic_construct_naval_dockyard
+		prerequisite = { focus = FRA_major_works_in_paris }
+		x = 0
+		y = 2
+		relative_position_id = FRA_major_works_in_paris
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 14
+			has_full_control_of_state = 15
+			has_full_control_of_state = 785
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY  }
+
+		completion_reward = {
+			14 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			15 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+			785 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_develop_our_refineries
+		icon = GFX_goal_generic_oil_refinery
+	 	prerequisite = { focus = FRA_economic_planning }
+		x = 1
+		y = 2
+		relative_position_id = FRA_economic_planning
+		cost = 10
+
+		available_if_capitulated = yes
+
+		available = {
+			has_full_control_of_state = 14
+			has_full_control_of_state = 15
+			has_full_control_of_state = 21
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			14 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			15 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 1
+					instant_build = yes
+				}
+			}
+			21 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = synthetic_refinery
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_sainte_etienne_state_arsenals
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = FRA_economic_planning }
+		x = 2
+		y = 1
+		relative_position_id = FRA_economic_planning
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			has_full_control_of_state = 20
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {
+			20 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}				
+		}
+	}
+	
+	focus = {
+		id = FRA_modernize_arms_industries
+		icon = GFX_goal_panzerwaffe
+		prerequisite = { focus = FRA_sainte_etienne_state_arsenals }
+		x = 0
+		y = 2
+		relative_position_id = FRA_sainte_etienne_state_arsenals
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+
+		completion_reward = {
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}	
+			random_owned_state = {
+				add_extra_state_shared_building_slots = 2 
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+			}	
+		}
+	}
+	
+	focus = {
+		id = FRA_reorganize_the_aviation_industry
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = FRA_sainte_etienne_state_arsenals }
+		x = 1
+		y = 1
+		relative_position_id = FRA_sainte_etienne_state_arsenals
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		
+		completion_reward = {
+			random_owned_state = {
+				limit = { 
+					OR = {
+						state = 29 
+						state = 785 
+						state = 15 
+						state = 16
+					}
+					is_fully_controlled_by = ROOT 
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { 
+					OR = {
+						state = 30
+						state = 14
+						state = 23
+					}
+					is_fully_controlled_by = ROOT 
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { 
+					OR = {
+						state = 24
+						state = 33
+						state = 27
+						state = 26
+						state = 25
+					}
+					is_fully_controlled_by = ROOT 
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { 
+					OR = {
+						state = 735
+						state = 32
+						state = 20
+						state = 21
+					}
+					is_fully_controlled_by = ROOT 
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				limit = { 
+					OR = {
+						state = 22
+						state = 31
+						state = 19
+						state = 25
+					}
+					is_fully_controlled_by = ROOT 
+					free_building_slots = {
+						building = arms_factory
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_ressources_exploitation
+		icon = GFX_goal_generic_construction2
+	 	prerequisite = { focus = FRA_economic_planning }
+		x = 4
+		y = 1
+		relative_position_id = FRA_economic_planning
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = FRA_ressources_exploitation
+				bonus = 1
+				uses = 1
+				category = excavation_tech
+			}
+			add_ideas = FRA_global_investments
+		}
+	}
+
+#####################
+### PETAIN-ROCQUE ###
+#####################
+
+	focus = {
+		id = FRA_old_marechal_speech
+		icon = GFX_FRA_old_marshals_speech
+		mutually_exclusive = { focus = FRA_monarchist_coup }
+		mutually_exclusive = { focus = FRA_freedom_way }
+		available = {
+		    always = no
+        }
+		x = 15
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_manpower = 100000
+			custom_effect_tooltip = FRA_autocomplete_tt
+		}
+	}
+
+	focus = {
+		id = FRA_rocquist_coalition
+		icon = GFX_focus_up_joan_of_arc
+		mutually_exclusive = { focus = FRA_doriot focus = FRA_petain }
+		prerequisite = { focus = FRA_old_marechal_speech }
+		x = -6
+		y = 1
+		relative_position_id = FRA_old_marechal_speech
+		cost = 5
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			FRA_philippe_petain = {
+				remove_country_leader_role = {
+					ideology = oligarchism
+				}
+			}
+			set_party_name = { 
+    			ideology = reactionary
+    			long_name = "Parti Social Français"
+    			name = "PSF"
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_renforce_premier_power
+		icon = GFX_goal_generic_forceful_treaty
+		prerequisite = { focus = FRA_rocquist_coalition }
+		x = -1
+		y = 1
+		relative_position_id = FRA_rocquist_coalition
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			remove_ideas = FRA_military_junta_1
+			add_popularity = {
+				ideology = fascism 
+				popularity = 0.20
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_renforce_paramilitaries
+		icon = GFX_focus_generic_strike_at_democracy1
+		prerequisite = { focus = FRA_renforce_premier_power }
+		x = 0
+		y = 1
+		relative_position_id = FRA_renforce_premier_power
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = FRA_paramilitaries
+		}
+	}
+
+	focus = {
+		id = FRA_petain
+		icon = GFX_focus_generic_military_dictatorship
+		mutually_exclusive = { focus = FRA_doriot focus = FRA_rocquist_coalition }
+		prerequisite = { focus = FRA_old_marechal_speech }
+		x = 0
+		y = 1
+		relative_position_id = FRA_old_marechal_speech
+		cost = 5
+		available_if_capitulated = yes
+
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_stability = 0.1
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = FRA_christian_social_values
+		icon = GFX_focus_mex_restore_the_army_of_christ
+		prerequisite = { 
+			focus = FRA_rocquist_coalition
+			focus = FRA_petain
+		}
+		x = 1
+		y = 1
+		relative_position_id = FRA_rocquist_coalition
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.10
+		}
+	}
+
+	focus = {
+		id = FRA_promote_solidarity
+		icon = GFX_goal_generic_national_unity
+		prerequisite = { focus = FRA_christian_social_values }
+		x = 0
+		y = 1
+		relative_position_id = FRA_christian_social_values
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = FRA_promote_solidarity
+		}
+	}
+
+	focus = {
+		id = FRA_reach_to_fascist_countries
+		icon = GFX_goal_support_fascism
+		prerequisite = { 
+			focus = FRA_rocquist_coalition
+			focus = FRA_petain
+		}
+		x = 3
+		y = 1
+		relative_position_id = FRA_rocquist_coalition
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_government = fascism
+					OR = {
+						original_tag = ROM
+						original_tag = ENG
+						original_tag = ITA
+					}
+				}
+				add_opinion_modifier = {
+					target = FRA
+					modifier = francist_collaborator 
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_ardennes
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = FRA_reach_to_fascist_countries }
+		x = 0
+		y = 1
+		relative_position_id = FRA_reach_to_fascist_countries
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			has_army_manpower = { size > 200000 }
+			is_puppet = no
+		}
+		bypass = {
+			28 = { is_demilitarized_zone = no }
+			914 = { is_demilitarized_zone = no }
+		}
+
+		completion_reward = {
+			914 = { set_demilitarized_zone = no }
+			28 = { set_demilitarized_zone = no }
+			add_political_power = 190
+			army_experience = 5
+		}
+	}
+
+	focus = {
+		id = FRA_patriotic_peasantry
+		icon = GFX_focus_generic_population_growth
+		prerequisite = { 
+			focus = FRA_rocquist_coalition
+			focus = FRA_petain
+		}
+		x = -1
+		y = 1
+		relative_position_id = FRA_petain
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = FRA_agricultural_protectionism
+		}
+	}
+
+	focus = {
+		id = FRA_renforce_corporatism
+		icon = GFX_focus_ITA_generic_fascist_workers
+		prerequisite = { focus = FRA_patriotic_peasantry}
+		x = 0
+		y = 1
+		relative_position_id = FRA_patriotic_peasantry
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = FRA_renforce_corporatism
+		}
+	}
+
+	focus = {
+		id = FRA_cult_of_personnality
+		icon = GFX_FRA_petainism
+		prerequisite = { 
+			focus = FRA_petain
+		}
+		x = 1
+		y = 1
+		relative_position_id = FRA_petain
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_war_support = 0.10
+			add_popularity = {
+				ideology = fascism 
+				popularity = 0.20
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_renforce_the_army
+		icon = GFX_focus_generic_fascist_troops
+		prerequisite = { 
+			focus = FRA_cult_of_personnality
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_cult_of_personnality
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = FRA_military_junta_1
+				add_idea = FRA_military_junta_2
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_work_family_fatherland
+		icon = GFX_focus_generic_fascist_propaganda
+		prerequisite = { focus = FRA_promote_solidarity }
+		prerequisite = { focus = FRA_ardennes }
+		prerequisite = { focus = FRA_renforce_corporatism }
+		prerequisite = { 
+			focus = FRA_renforce_paramilitaries
+			focus = FRA_renforce_the_army
+		}
+		x = 0
+		y = 1
+		relative_position_id = FRA_ardennes
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+		}
+
+		completion_reward = {
+			add_ideas = FRA_work_family_fatherland
+		}
+	}
+
+	focus = {
+		id = FRA_fascist_economic_bloc
+		icon = GFX_focus_GRE_reevaluating_the_drachma
+		prerequisite = {focus = FRA_work_family_fatherland }
+		x = -2
+		y = 2
+		relative_position_id = FRA_work_family_fatherland
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			every_country = {
+				limit = {
+					has_government = fascism
+					OR = {
+						original_tag = FRA
+						original_tag = ENG
+						original_tag = ITA
+					}
+				}
+				add_ideas = FRA_fascist_economic_bloc
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_luxemburg
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = FRA_work_family_fatherland }
+		x = 1
+		y = 1
+		relative_position_id = FRA_work_family_fatherland
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_puppet = no
+			has_army_manpower = { size > 400000 }
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.0 }
+			}
+		}
+	}
+
+	###### WAR ######
+
+	focus = {
+		id = FRA_belgium
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = FRA_pact_with_the_netherlands }
+		prerequisite = { focus = FRA_luxemburg }
+		x = 1
+		y = 1
+		relative_position_id = FRA_pact_with_the_netherlands
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_ANNEXATION } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no	
+			has_army_manpower = { size > 600000 }
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.4 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_pact_with_the_netherlands
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = FRA_work_family_fatherland }
+		x = -1
+		y = 1
+		relative_position_id = FRA_work_family_fatherland
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_befriend_netherlands
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = FRA_pact_with_the_netherlands }
+		mutually_exclusive = {
+			focus = FRA_invade_netherlands
+		}	
+		x = 0
+		y = 2
+		relative_position_id = FRA_pact_with_the_netherlands
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+		}
+	}
+
+	focus = {
+		id = FRA_invade_netherlands
+		icon = GFX_goal_support_fascism
+		text = "Take netherlands"
+		mutually_exclusive = {
+			focus = FRA_befriend_netherlands
+		}
+		prerequisite = { 
+				focus = FRA_luxemburg
+		}
+		x = 0
+		y = 2
+		relative_position_id = FRA_luxemburg
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+	        	create_wargoal = {
+		            	target = HOL
+		      		type = annex_everything
+	        	}
+			FRA = {
+				add_state_claim = 35
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_invade_germany
+		icon = GFX_focus_focus_fra_ratify_stresa
+		text = "Invade Germany"
+		prerequisite = { 
+			focus = FRA_befriend_netherlands
+			focus = FRA_invade_netherlands
+		}
+		x = 1
+		y = 1
+		relative_position_id = FRA_befriend_netherlands
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+	        	create_wargoal = {
+		            	target = GER
+		      		type = annex_everything
+	        	}
+			add_state_claim = 42
+			add_state_claim = 51
+		}
+	}
+
+	focus = {
+		id = FRA_help_romania
+		icon = GFX_focus_focus_fra_national_resistance_council
+		text = "Ally Romania"
+		prerequisite = { 
+				focus = FRA_fascist_economic_bloc
+		}
+		x = 0
+		y = 2
+		relative_position_id = FRA_fascist_economic_bloc
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			give_guarantee = ROM
+			ROM = { give_guarantee = FRA }
+		}
+	}
+
+##############
+### DORIOT ###
+##############
+
+	focus = {
+		id = FRA_doriot
+		icon = GFX_FRA_ppf
+		prerequisite = { focus = FRA_old_marechal_speech }
+		mutually_exclusive = { focus = FRA_petain  focus = FRA_rocquist_coalition }
+		x = 4
+		y = 1
+		relative_position_id = FRA_old_marechal_speech
+		cost = 5
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_politics = {
+				ruling_party = vanguardism
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_social_reforms
+		icon = GFX_focus_generic_concessions
+		prerequisite = { focus = FRA_doriot }
+		x = -1
+		y = 1
+		relative_position_id = FRA_doriot
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_popularity = {
+			    ideology = anarchist
+			    popularity = 0.1
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_reintroduce_trade_unions
+		icon = GFX_FRA_ppf_labor_front
+		text = "Creation of the Labor Front"
+		prerequisite = { focus = FRA_doriot }
+		x = 1
+		y = 1
+		relative_position_id = FRA_doriot
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+			add_ideas = {
+				FRA_french_labor_front
+			}
+		}
+	}
+
+##### CIVIL WAR #####
+
+	focus = {
+		id = FRA_ana2
+		icon = GFX_focus_fra_french_union
+		text = "The Black Internationale"
+		prerequisite = { focus = FRA_reintroduce_trade_unions focus = FRA_social_reforms }
+		x = 0
+		y = 2
+		relative_position_id = FRA_doriot
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.12 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_CNT
+		icon = GFX_FRA_cnt_alliance
+		text = "CNT alliance"
+		prerequisite = { 
+				focus = FRA_ana2
+		}
+		x = -1
+		y = 3
+		relative_position_id = FRA_doriot
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+ 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			    country_exists = SPC
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.13 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_free_ukraine
+		icon = GFX_FRA_ukraine_alliance
+		text = "Ukraine Alliance"
+		prerequisite = { 
+				focus = FRA_ana2
+		}
+		x = 1
+		y = 3
+		relative_position_id = FRA_doriot
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+ 
+		ai_will_do = {
+			factor = 1
+		}
+
+		bypass = {
+			    NOT = { country_exists = UKR }
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = france.14 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_german_ana
+		icon = GFX_FRA_a_free_germany
+		text = "A free Germany"
+		prerequisite = { 
+				focus = FRA_CNT
+				focus = FRA_free_ukraine
+		}
+		x = 0
+		y = 4
+		relative_position_id = FRA_doriot
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+ 
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			    country_exists = GER
+		}
+
+		completion_reward = {
+	        	create_wargoal = {
+		            	target = GER
+		      		type = annex_everything
+	        	}
+			add_state_claim = 42
+			add_state_claim = 51
+		}
+	}
+
+
+##################
+### MONARCHIST ###
+##################
+
+	focus = {
+		id = FRA_monarchist_coup
+		icon = GFX_FRA_establish_the_monarchy
+		mutually_exclusive = { focus = FRA_old_marechal_speech }
+		mutually_exclusive = { focus = FRA_freedom_way }
+		available = {
+		    always = no
+        }
+		x = 8
+		y = 0
+		relative_position_id = FRA_old_marechal_speech
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		    custom_effect_tooltip = FRA_autocomplete_tt
+			add_manpower = 10000		
+			set_politics = {
+				ruling_party = reactionary
+			}
+			retire_country_leader = yes
+			promote_character = FRA_regency
+			remove_ideas = FRA_military_junta_1
+			remove_ideas = FRA_military_constitution
+			set_party_name = { 
+				ideology = reactionary
+				long_name = "Regency"
+				name = "Council of the regency"
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_conservatives_monarch
+		icon = GFX_FRA_legitimist_king
+		text = "The Conservatives"
+		prerequisite = { 
+			focus = FRA_monarchist_coup
+		}
+		mutually_exclusive = { focus = FRA_orleans_restoration }
+		x = -1
+		y = 1
+		relative_position_id = FRA_monarchist_coup
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+			create_country_leader = {
+				name = "Henry VI"
+				desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+				picture = GFX_portrait_fra_infante_jaime
+				expire = "1965.1.1"
+				ideology = despotism
+			}
+
+			set_party_name = {
+				ideology = reactionary
+				long_name = FRA_legitimist_party_long
+				name = FRA_legitimist_party
+			}
+
+			set_politics = { ruling_party = reactionary }
+			set_cosmetic_tag = FRA_monarchist_coup
+		}
+	}
+
+	focus = {
+		id = FRA_orleans_restoration
+		icon = GFX_FRA_orleanist_king
+		prerequisite = { 
+			focus = FRA_monarchist_coup
+		}
+		mutually_exclusive = { focus = FRA_conservatives_monarch }
+		x = 1
+		y = 1
+		relative_position_id = FRA_monarchist_coup
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+
+				create_country_leader = {
+					name = "Jean III"
+					desc = "POLITICS_ÉDOUARD_DALADIER_DESC"
+					picture = GFX_portrait_fra_jean_duke_of_guise
+					expire = "1965.1.1"
+					ideology = moderatism
+					traits = {
+						duke_of_orleans
+					}
+				}
+
+			set_party_name = {
+				ideology = neutrality
+				long_name = FRA_orleanist_party_long
+				name = FRA_orleanist_party
+			}
+			set_politics = { ruling_party = neutrality }
+			set_cosmetic_tag = FRA_ORLEANS
+		}
+	}
+
+	focus = {
+		id = FRA_luxemburg_belgium
+		icon = GFX_FRA_annex_belgium
+		text = "Invade Belgium"
+
+		prerequisite = { 
+				focus = FRA_conservatives_monarch
+				focus = FRA_orleans_restoration
+		}
+
+		x = -1
+		y = 2
+		relative_position_id = FRA_monarchist_coup
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = bourbon_france.1 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_switzerland
+		icon = GFX_FRA_annex_switzerland
+		text = "Annex Geneve"
+
+		prerequisite = { 
+				focus = FRA_conservatives_monarch
+				focus = FRA_orleans_restoration
+		}
+
+		x = 1
+		y = 2
+		relative_position_id = FRA_monarchist_coup
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = bourbon_france.2 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_turin
+		icon = GFX_FRA_130_departments
+		text = "The 130 departements"
+
+		prerequisite = { 
+				focus = FRA_luxemburg_belgium
+				focus = FRA_switzerland
+		}
+
+		x = 0
+		y = 3
+		relative_position_id = FRA_monarchist_coup
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+			FRA = {
+				country_event = { days = 1 id = bourbon_france.3 }
+			}
+		}
+	}
+
+	focus = {
+		id = FRA_spanish_crown
+		icon = GFX_FRA_work_with_monarchist_spain
+		text = "Help the Spanish monarchists"
+
+		prerequisite = { 
+				focus = FRA_turin
+		}
+
+		x = 1
+		y = 4
+		relative_position_id = FRA_monarchist_coup
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+	        	FRA = { add_to_faction = SPR }
+		}
+	}
+
+	focus = {
+		id = FRA_divided_ger
+		icon = GFX_FRA_destroy_germany
+		text = "Germany into piece"
+
+		prerequisite = { 
+				focus = FRA_turin
+		}
+
+		x = -1
+		y = 4
+		relative_position_id = FRA_monarchist_coup
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			is_puppet = no
+		}
+
+		completion_reward = {
+	        	create_wargoal = {
+		            	target = GER
+		      		type = annex_everything
+	        	}
+			add_state_claim = 42
+			add_state_claim = 51
+		}
+	}
+	
+	focus = {
+		id = FRA_king_of_the_french
+		icon = GFX_focus_focus_fra_orleans_restoration
+		text = "King of the french"
+		
+		prerequisite = {
+				focus = FRA_divided_ger
+		}	
+
+		x = -1
+		y = 5
+		relative_position_id = FRA_monarchist_coup
+		mutually_exclusive = {
+		         focus = FRA_king_of_france
+		}		 
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = {FOCUS_FILTER_POLITICAL}
+		
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+                add_country_leader_trait = constitutional_monarch
+		}
+	}
+	
+	focus = {
+	    id = FRA_king_of_france
+		icon = GFX_focus_rom_royal_dictatorship
+		text = "King of france"
+		
+		prerequisite = {
+		        focus = FRA_spanish_crown
+		}
+
+	    x = 1
+        y = 5
+		relative_position_id = FRA_monarchist_coup
+		mutually_exclusive = {
+		         focus = FRA_king_of_the_french
+		}
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = {FOCUS_FILTER_POLITICAL}
+
+        ai_will_do = {
+            factor = 1
+        }
+
+        completion_reward = {
+        add_country_leader_trait = dictator
+		}
+	}
+
+####democrat path ####
+
+	focus = {
+	    id = FRA_freedom_way
+		icon = GFX_FRA_republicanism
+		mutually_exclusive = {
+		         focus = FRA_old_marechal_speech 
+		}
+		mutually_exclusive = {
+		         focus = FRA_monarchist_coup
+		}
+        available = {
+		    always = no
+        }		
+		text = "Bring Back The Demoracts"
+	    x = 38
+        y = 0
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = {FOCUS_FILTER_POLITICAL}
+        ai_will_do = {
+            factor = 1
+        }
+        completion_reward = {
+		        custom_effect_tooltip = FRA_autocomplete_tt
+				set_politics = {
+				    ruling_party = left
+				    elections_allowed = yes
+			    }
+			    set_party_name = {
+                        ideology = left
+                        long_name = "RP"
+                        name = "Parti de la Révolution"
+                }
+				remove_ideas = FRA_military_junta_1
+				remove_ideas = FRA_military_constitution
+                add_popularity = {
+				ideology = left 
+				popularity = 0.20
+			    }
+				add_popularity = {
+				ideology = democratic 
+				popularity = 0.15
+			    }
+                set_cosmetic_tag = FRA_republic
+				hidden_effect = {
+			        news_event = { hours = 1 id = fr_news.5 }
+				}		
+	    }
+    }
+	
+	focus = {
+	    id = FRA_hold_election
+	    icon = GFX_FRA_election
+	    text = "Hold election"
+        prerequisite = {
+			   focus = FRA_freedom_way
+		}
+		available = {
+			is_puppet = no
+		}
+	    x = 38
+	    y = 1
+	    cost = 10
+	    available_if_capitulated = yes
+	    search_filters = { FOCUS_FILTER_POLITICAL }
+	    ai_will_do = {
+			factor = 1
+	    }
+        completion_reward = {
+		    custom_effect_tooltip = FRA_hold_election_tt
+		    add_popularity = {
+				    ideology = left 
+				    popularity = 0.10
+	        }
+		}
+	}
+	
+	###AFTER DEFEATED branch###
+
+    # --- Root focus ---
+    focus = {
+        id = FRA_underground_networks
+        icon = GFX_FRA_rebel
+        x = 22
+        y = 7
+        cost = 10
+        available = {
+            is_subject = yes
+            overlord = { tag = GER }
+        }
+        completion_reward = {
+            add_political_power = 100
+            add_stability = -0.05
+        }
+    }
+
+    # --- Shared branch ---
+    focus = {
+        id = FRA_contact_allies
+        icon = GFX_FRA_ask_for_help
+        prerequisite = { focus = FRA_underground_networks }
+        x = 21
+        y = 8
+        cost = 10
+        available = { is_subject = yes overlord = { tag = GER } }
+
+        completion_reward = {
+            add_political_power = 25
+
+            if = {
+                limit = { ENG = { exists = yes } }
+                ENG = { country_event = { id = fra_allies_aid.1 days = 1 } }
+            }
+
+            if = {
+                limit = { USA = { exists = yes } }
+                USA = { country_event = { id = fra_allies_aid.1 days = 1 } }
+            }
+        }
+    }
+
+
+    focus = {
+        id = FRA_arm_the_maquis
+        icon = GFX_focus_generic_army_artillery2
+        prerequisite = { focus = FRA_underground_networks }
+        x = 23
+        y = 8
+        cost = 5
+        completion_reward = {
+            add_manpower = 50000
+            add_equipment_to_stockpile = {
+                type = infantry_equipment
+                producer = FRA
+                amount = 5000
+            }
+        }
+    }
+
+    # --- Democratic Rebellion Path ---
+    focus = {
+        id = FRA_restore_republic
+        icon = GFX_focus_generic_democracy
+        prerequisite = { focus = FRA_contact_allies }
+        x = 20
+        y = 9
+        cost = 5
+        available = {
+            is_subject = yes
+            has_country_flag = FRA_democrat_path_chosen
+        }
+        completion_reward = {
+            add_stability = 0.1
+            add_political_power = 100
+            random_owned_controlled_state = {
+                limit = { state = 8 } # Île-de-France
+                remove_building = {
+                    type = arms_factory
+                    level = 1
+                }    
+            }
+        }
+    }
+    # --- Junta / Authoritarian Path ---
+    focus = {
+        id = FRA_military_revolt
+        icon = GFX_focus_generic_military_dictatorship
+        prerequisite = { focus = FRA_arm_the_maquis }
+        x = 24
+        y = 9
+        cost = 5
+        available = {
+            is_subject = yes
+            has_country_flag = FRA_junta_path_chosen
+        }
+        completion_reward = {
+            add_war_support = 0.1
+            add_stability = -0.05
+            add_political_power = 75
+            random_owned_controlled_state = {
+                limit = { state = 28 } # Occitanie
+                remove_building = {
+                    type = industrial_complex
+                    level = 1
+                }
+            }
+        }
+    }
+
+
+    # --- Monarchy Path ---
+    focus = {
+        id = FRA_restore_monarchy
+        icon = GFX_focus_generic_monarchy
+        prerequisite = { focus = FRA_contact_allies }
+        x = 19
+        y = 9
+        cost = 5
+        available = {
+            is_subject = yes
+            has_country_flag = FRA_monarchist_path_chosen
+        }
+        completion_reward = {
+            add_stability = 0.15
+            add_political_power = 50
+            random_owned_controlled_state = {
+                limit = { state = 17 } # Normandy
+                remove_building = {
+                    type = arms_factory
+                    level = 1
+                }
+            }
+        }
+    }
+
+
+    # --- Vanguardist Path ---
+    focus = {
+        id = FRA_vanguardist_rebellion
+        icon = GFX_focus_generic_communism
+        prerequisite = { focus = FRA_arm_the_maquis }
+        x = 25
+        y = 9
+        cost = 5
+        available = {
+            is_subject = yes
+            has_country_flag = FRA_vanguardist_path_chosen
+        }
+        completion_reward = {
+            add_manpower = 75000
+            add_war_support = 0.15
+            random_owned_controlled_state = {
+                limit = { state = 14 } # Brittany
+                remove_building = {
+                    type = industrial_complex
+                    level = 1
+                }
+            }
+        }
+    }
+
+
+    # --- Final shared rebellion trigger ---
+    focus = {
+        id = FRA_rebel_against_germany
+        icon = GFX_focus_generic_political_pressure
+        prerequisite = {
+            focus = FRA_restore_republic
+            focus = FRA_military_revolt
+            focus = FRA_restore_monarchy
+            focus = FRA_vanguardist_rebellion
+        }
+        x = 22
+        y = 10
+        cost = 10
+        available = { is_subject = yes overlord = { tag = GER } }
+        completion_reward = {
+            country_event = { id = fra_rebellion.1 }
+        }
+    }
+
+	
+	###Leftist Branch###
+	
+	focus = {
+	    id = FRA_left_win
+	    icon = GFX_FRA_marceal_deat
+	    text = "Leftist Victory"
+	    prerequisite = {
+	           focus = FRA_hold_election
+	    }
+		mutually_exclusive = { focus = FRA_right_win }
+        x = 33
+        y = 2
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+        completion_reward = {
+			    set_party_name = {
+                        ideology = left
+                        long_name = "PSD"
+						name = "Parti Social démocrate"
+		        }
+				add_popularity = {
+				ideology = left 
+				popularity = 0.05
+			    }
+		}
+    }
+	focus = {
+	    id = FRA_start_education_reform
+	    icon = GFX_education
+	    text = "Education reform"
+	    prerequisite = {
+	           focus = FRA_left_win
+	    }
+        x = 34
+        y = 3
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+        completion_reward = {
+				add_popularity = {
+				ideology = left 
+				popularity = 0.05
+			    }
+				add_stability = 0.10	
+		}
+    }
+	
+	focus = {
+	    id = FRA_help_usa
+	    icon = GFX_help_usa
+	    text = "Help USA"
+	    prerequisite = {
+	           focus = FRA_left_win
+	    }
+        x = 32
+        y = 3
+        cost = 10
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    NOT = { country_exists = usa }
+		}	
+		available = {
+			is_puppet = no
+			country_exists = USA
+		}	
+		
+        completion_reward = {
+                set_truce = {
+   				target = USA
+			    	days = 600
+			    }
+			FRA = {
+				send_equipment = {
+				    equipment = infantry_equipment
+				    amount = 1000
+				    target = USA
+				}				
+		    }
+        }
+	}
+   
+    focus = {
+        id = FRA_religion_freedom
+        icon = GFX_free_religion
+	    text = "Freedom of religion"
+	    prerequisite = {
+	           focus = FRA_help_usa
+	    }
+		prerequisite = {
+	           focus = FRA_start_education_reform
+	    }
+        x = 33
+        y = 4
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+                 add_ideas = FRA_freedom_of_religion
+                 add_manpower = 10
+        }				 
+    }
+	
+	focus = {
+        id = FRA_write_con
+        icon = GFX_FRA_constitution
+	    text = "Drafting a New Constitution by Referendum"
+	    prerequisite = {
+	           focus = FRA_religion_freedom
+	    }
+        x = 30
+        y = 5
+        cost = 4
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+                 add_political_power = 50
+        }				 
+    }
+	
+	focus = {
+        id = FRA_human_right
+        icon = GFX_rights_of_human
+	    prerequisite = {
+	           focus = FRA_write_con
+	    }
+        x = 29
+        y = 6
+        cost = 5
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+                 add_political_power = 100
+        }				 
+    }
+	
+	focus = {
+        id = FRA_woman_election
+        icon = GFX_womens_suffrage
+	    prerequisite = {
+	           focus = FRA_write_con
+	    }
+        x = 31
+        y = 6
+        cost = 5
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+				 add_ideas = { FRA_women_election }
+				 add_political_power = 40
+        }				 
+    }
+	
+	focus = {
+        id = FRA_freedom_of_talk
+        icon = GFX_freedom_of_speech
+	    prerequisite = {
+	           focus = FRA_human_right
+	    }
+        x = 29
+        y = 7
+        cost = 5
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+				 add_political_power = 100
+				 add_ideas = { FRA_freedom_of_talk }
+        }				 
+    }
+	
+	focus = {
+        id = FRA_justice_reform
+        icon = GFX_prison_reform
+	    prerequisite = {
+	           focus = FRA_woman_election
+	    }
+        x = 31
+        y = 7
+        cost = 5
+        available_if_capitulated = yes
+        search_filters = {FOCUS_FILTER_STABILITY}
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+            has_government = anarchist
+		}	
+		available = {
+			has_government = left
+			is_puppet = no
+        }
+
+        completion_reward = {
+		         add_ideas = FRA_justice_reform
+        }				 
+    }
+	
+	focus = {
+        id = FRA_finish_con
+        icon = GFX_finish_the_constitution
+	    prerequisite = {
+	           focus = FRA_justice_reform
+			   focus = FRA_freedom_of_talk
+	    }
+        x = 30
+        y = 8
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			has_ideas = FRA_military_junta_1
+			has_ideas = FRA_military_junta_2
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+				 add_political_power = 100
+				 add_ideas = FRA_democrat_con
+        }				 
+    }
+	
+	focus = {
+        id = FRA_expand_parliment
+        icon = GFX_par_ex
+	    prerequisite = {
+	           focus = FRA_finish_con
+	    }
+        x = 31
+        y = 9
+        cost = 7
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+            has_government = anarchist
+			is_puppet = yes
+		}	
+		available = {
+			has_government = left
+			has_ideas = FRA_democrat_con
+        }
+
+        completion_reward = {
+		        add_popularity = {
+				    ideology = left 
+				    popularity = 0.05
+			    }
+				custom_effect_tooltip = FRA_expand_parliment_tt
+				add_stability = 0.01
+        }				 
+    }
+	
+	focus = {
+        id = FRA_remiliterize_negition
+        icon = GFX_FRA_remiliterize_moselland
+	    prerequisite = {
+	           focus = FRA_religion_freedom
+	    }
+        x = 34
+        y = 5
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_ANNEXATION }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+			28 = { is_demilitarized_zone = no }
+			914 = { is_demilitarized_zone = no }
+           
+		}	
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+		    GER = {
+				country_event = { days = 1 id = germany.25 }
+			}
+				 add_political_power = 10
+        }				 
+    }
+	
+	focus = {
+        id = FRA_invite_denmark
+        icon = GFX_danish_alliance
+	    prerequisite = {
+	           focus = FRA_remiliterize_negition
+	    }
+        x = 35
+        y = 6
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+            NOT = { country_exists = DEN }
+		}
+		available = {
+			has_government = left
+			is_puppet = no
+        }
+
+        completion_reward = {
+		    DEN = {
+				country_event = { days = 1 id = denmark.1 }
+			}
+        }				 
+    }
+	
+	focus = {
+        id = FRA_invite_usa
+        icon = GFX_american_alliance
+	    prerequisite = {
+	           focus = FRA_remiliterize_negition
+	    }
+        x = 33
+        y = 6
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			has_government = anarchist
+			is_puppet = yes
+            NOT = { country_exists = DEN }
+		}
+		available = {
+			has_government = left
+			is_puppet = no
+        }
+
+        completion_reward = {
+		    USA = {
+				country_event = { days = 1 id = denmark.1 }
+			}
+        }
+    }
+	
+	focus = {
+        id = FRA_london_treaty
+        icon = GFX_treaty_of_london
+	    prerequisite = {
+	           focus = FRA_invite_usa
+			   focus = FRA_invite_denmark
+	    }
+        x = 34
+        y = 7
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+			has_government = anarchist
+			is_puppet = yes
+		}
+		available = {
+			has_government = left
+        }
+
+        completion_reward = {
+		    ENG = {
+				country_event = { days = 1 id = denmark.1 }
+			}
+			custom_effect_tooltip = FRA_london_treaty_tt
+        }				 
+    }
+	
+	focus = {
+        id = FRA_factory_democrat
+        icon = GFX_democratic_industry
+	    prerequisite = {
+	           focus = FRA_finish_con
+	    }
+        x = 29
+        y = 9
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+            has_government = anarchist
+			is_puppet = yes
+		}
+		available = {
+			has_government = left
+			has_ideas = FRA_democrat_con
+        }
+
+        completion_reward = {
+		        add_ideas = FRA_factory_democracy
+		        add_popularity = {
+				    ideology = left 
+				    popularity = 0.01
+			    }
+				add_stability = 0.01
+        }
+    }
+	
+	focus = {
+        id = FRA_goal_lux
+        icon = GFX_democratic_industry
+	    prerequisite = {
+	           focus = FRA_factory_democrat
+	    }
+        x = 29
+        y = 10
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+			is_puppet = yes
+		}
+		available = {
+			has_government = left
+			has_ideas = FRA_democrat_con
+        }
+
+        completion_reward = {
+		        LUX = {
+				    country_event = { days = 1 id = luxemborg.1 }
+			    }
+        }
+    }
+	
+	focus = {
+        id = FRA_fate_petain
+        icon = GFX_fate_petain
+	    prerequisite = {
+	           focus = FRA_expand_parliment
+	    }
+        x = 31
+        y = 10
+        cost = 9
+        available_if_capitulated = yes
+        search_filters = { FOCUS_FILTER_POLITICAL }
+        ai_will_do = {
+			factor = 1
+	    }
+		bypass = {
+		    has_government = fascism
+            has_government = anarchist
+			is_puppet = yes
+		}
+		available = {
+			has_government = left
+			has_ideas = FRA_democrat_con
+        }
+
+        completion_reward = {
+		    FRA = {
+			    country_event = { hours = 1 id = france.19 }
+		    }
+			 
+        }
+    }
+#### RIGHT-WING DEMOCRATIC ELECTION BRANCH ####
+
+focus = {
+    id = FRA_right_win
+    icon = GFX_goal_generic_political_right
+    text = "Rightist Victory"
+    prerequisite = { focus = FRA_hold_election }
+    mutually_exclusive = { focus = FRA_left_win }
+    x = 43
+    y = 2
+    cost = 10
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+
+    completion_reward = {
+        set_politics = { ruling_party = democratic elections_allowed = yes }
+        set_party_name = { ideology = democratic long_name = "Alliance Républicaine-M" name = "AR" }
+        add_popularity = { ideology = democratic popularity = 0.12 }
+        add_popularity = { ideology = reactionary popularity = 0.05 }
+        remove_ideas = FRA_military_junta_1
+        remove_ideas = FRA_military_constitution
+        add_stability = 0.05
+        create_country_leader = {
+            name = "André Tardieu"
+            desc = "POLITICS_ANDRE_TARDIEU_DESC"
+            picture = GFX_portrait_andre_tardieu
+            expire = "1965.1.1"
+            ideology = democratic
+            traits = { conservative_reformer defender_of_democracy }
+        }
+    }
+}
+
+# --- Social Strand ---
+focus = {
+    id = FRA_national_morality
+    icon = GFX_focus_generic_propaganda
+    text = "Civic Renewal Campaign"
+    prerequisite = { focus = FRA_right_win }
+    x = 43
+    y = 3
+    cost = 10
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_STABILITY }
+    ai_will_do = { factor = 1 }
+    available = { has_government = democratic }
+    completion_reward = { add_stability = 0.05 add_political_power = 25 }
+}
+
+focus = {
+    id = FRA_concordat
+    icon = GFX_focus_mex_restore_the_army_of_christ
+    text = "Church–State Understanding"
+    prerequisite = { focus = FRA_national_morality }
+    x = 43
+    y = 4
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_STABILITY }
+    ai_will_do = { factor = 1 }
+    available = { has_government = democratic }
+    completion_reward = { add_stability = 0.03 add_war_support = 0.02 }
+}
+
+focus = {
+    id = FRA_press_law
+    icon = GFX_freedom_of_speech
+    text = "Balanced Press Law"
+    prerequisite = { focus = FRA_concordat }
+    x = 43
+    y = 5
+    cost = 7
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    available = { has_government = democratic }
+    completion_reward = { add_political_power = 75 add_stability = 0.02 }
+}
+
+focus = {
+    id = FRA_public_order_act
+    icon = GFX_focus_generic_military_police
+    text = "Community Security Reform"
+    prerequisite = { focus = FRA_press_law }
+    x = 43
+    y = 6
+    cost = 7
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+    ai_will_do = { factor = 1 }
+    available = { has_government = democratic is_puppet = no }
+    completion_reward = { add_war_support = 0.03 army_experience = 3 }
+}
+
+# --- Economy Strand ---
+focus = {
+    id = FRA_business_charters
+    icon = GFX_focus_ITA_generic_fascist_workers
+    text = "National Business Charters"
+    prerequisite = { focus = FRA_right_win }
+    x = 41
+    y = 3
+    cost = 10
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+    ai_will_do = { factor = 1 }
+    completion_reward = { add_political_power = 50 add_stability = 0.02 }
+}
+
+focus = {
+    id = FRA_break_general_strike
+    icon = GFX_focus_generic_strike_at_democracy1
+    text = "Resolve the General Strike"
+    prerequisite = { focus = FRA_business_charters }
+    x = 41
+    y = 4
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_MANPOWER }
+    ai_will_do = { factor = 1 }
+    available = { has_government = democratic }
+    completion_reward = { add_manpower = 40000 add_stability = 0.02 }
+}
+
+focus = {
+    id = FRA_tax_relief_industry
+    icon = GFX_focus_GRE_reevaluating_the_drachma
+    text = "Industrial Tax Relief"
+    prerequisite = { focus = FRA_business_charters }
+    x = 40
+    y = 4
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+    ai_will_do = { factor = 1 }
+    completion_reward = { add_political_power = 50 }
+}
+
+focus = {
+    id = FRA_industrial_partnerships
+    icon = GFX_goal_generic_construction
+    text = "State–Industry Partnerships"
+    prerequisite = { focus = FRA_tax_relief_industry focus = FRA_break_general_strike }
+    x = 40
+    y = 5
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+        random_owned_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+        }
+    }
+}
+
+focus = {
+    id = FRA_private_industry_boost
+    icon = GFX_goal_generic_construct_civilian
+    text = "Private Industry Boost"
+    prerequisite = { focus = FRA_industrial_partnerships }
+    x = 40
+    y = 6
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_INDUSTRY }
+    ai_will_do = { factor = 1 }
+    completion_reward = {
+        random_owned_state = {
+            add_extra_state_shared_building_slots = 1
+            add_building_construction = { type = industrial_complex level = 1 instant_build = yes }
+        }
+        add_political_power = 25
+    }
+}
+
+focus = {
+    id = FRA_industrial_mobilization_right
+    icon = GFX_goal_generic_military_sphere
+    text = "Industrial Mobilization"
+    prerequisite = { focus = FRA_private_industry_boost }
+    x = 40
+    y = 7
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+    ai_will_do = { factor = 1 }
+    completion_reward = { add_war_support = 0.04 }
+}
+
+focus = {
+    id = FRA_fate_luxembourg_right
+    icon = GFX_goal_support_fascism
+    text = "Deal with Luxembourg"
+    prerequisite = { focus = FRA_private_industry_boost }
+    x = 41
+    y = 7
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    available = { is_puppet = no }
+    completion_reward = { LUX = { country_event = { days = 1 id = luxemborg.1 } } }
+}
+
+# --- Governance Strand ---
+focus = {
+    id = FRA_write_con_right
+    icon = GFX_FRA_constitution
+    text = "Draft a Conservative Constitution"
+    prerequisite = { focus = FRA_national_morality }
+    x = 45
+    y = 4
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    available = { has_government = democratic }
+    completion_reward = { add_political_power = 50 }
+}
+
+focus = {
+    id = FRA_senate_empowered
+    icon = GFX_par_ex
+    text = "Empower the Senate"
+    prerequisite = { focus = FRA_write_con_right }
+    x = 45
+    y = 5
+    cost = 7
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    available = { has_government = democratic }
+    completion_reward = { add_stability = 0.03 add_political_power = 50 }
+}
+
+focus = {
+    id = FRA_strengthen_presidency
+    icon = GFX_focus_generic_forceful_treaty
+    text = "Strengthen the Presidency"
+    prerequisite = { focus = FRA_senate_empowered }
+    x = 45
+    y = 6
+    cost = 7
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    completion_reward = { add_stability = 0.02 add_political_power = 50 }
+}
+
+focus = {
+    id = FRA_emergency_powers
+    icon = GFX_goal_generic_political_pressure
+    text = "Crisis Management Clause"
+    prerequisite = { focus = FRA_strengthen_presidency }
+    x = 45
+    y = 7
+    cost = 7
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    available = { has_government = democratic }
+    completion_reward = { add_stability = 0.01 add_war_support = 0.02 add_political_power = 25 }
+}
+
+focus = {
+    id = FRA_pardon_petain
+    icon = GFX_fate_petain
+    text = "Pardon Pétain"
+    prerequisite = { focus = FRA_strengthen_presidency }
+    x = 45
+    y = 8
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    completion_reward = { add_stability = 0.02 add_political_power = 50 }
+}
+
+# --- Foreign Policy Strand ---
+focus = {
+    id = FRA_remilitarize_conference
+    icon = GFX_FRA_remiliterize_moselland
+    text = "Remilitarize by Conference"
+    prerequisite = { focus = FRA_right_win }
+    x = 47
+    y = 3
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_ANNEXATION }
+    ai_will_do = { factor = 1 }
+    bypass = { 28 = { is_demilitarized_zone = no } 914 = { is_demilitarized_zone = no } }
+    available = { has_government = democratic }
+    completion_reward = { GER = { country_event = { days = 1 id = germany.25 } } add_political_power = 10 }
+}
+
+focus = {
+    id = FRA_invite_britain
+    icon = GFX_focus_generic_allies_build_influence
+    text = "Invite Britain"
+    prerequisite = { focus = FRA_remilitarize_conference }
+    x = 47
+    y = 4
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    bypass = { NOT = { country_exists = ENG } }
+    available = { is_puppet = no }
+    completion_reward = { ENG = { country_event = { days = 1 id = denmark.1 } } }
+}
+
+focus = {
+    id = FRA_invite_italy
+    icon = GFX_goal_support_fascism
+    text = "Invite Italy"
+    prerequisite = { focus = FRA_remilitarize_conference }
+    x = 48
+    y = 4
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    bypass = { NOT = { country_exists = ITA } }
+    available = { is_puppet = no }
+    completion_reward = { ITA = { country_event = { days = 1 id = denmark.1 } } }
+}
+
+focus = {
+    id = FRA_anti_communist_pact
+    icon = GFX_goal_support_fascism
+    text = "Anti-Communist Pact"
+    prerequisite = { focus = FRA_invite_britain focus = FRA_invite_italy }
+    x = 47
+    y = 5
+    cost = 9
+    available_if_capitulated = yes
+    search_filters = { FOCUS_FILTER_POLITICAL }
+    ai_will_do = { factor = 1 }
+    completion_reward = { add_war_support = 0.02 add_political_power = 25 }
+}
+
+}	

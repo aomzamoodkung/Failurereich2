@@ -1,0 +1,23 @@
+ideas = {
+
+	    country = {
+		    SIA_young_king = {
+			picture = GFX_idea_SIA_young_king
+			
+			    allowed = {
+				        original_tag = SIA
+					    always = no
+	            }
+
+			    allowed_civil_war = {
+				        always = yes
+		            }
+			    removal_cost = -1
+			
+			    modifier = {
+				        stability_weekly = 0.03
+			    }
+
+		    }
+	    }
+}	

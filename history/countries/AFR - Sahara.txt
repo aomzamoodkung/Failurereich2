@@ -1,0 +1,89 @@
+﻿capital = 460
+
+oob = "AFR_1936"
+
+# Starting tech
+set_technology = {
+	infantry_weapons = 1
+	gw_artillery = 1
+	early_fighter = 1
+}
+
+set_convoys = 10
+
+set_popularities = {
+        democratic = 22
+        communism = 3
+        neutrality = 0
+        reactionary = 75
+
+}
+
+set_politics = {
+	
+	ruling_party = reactionary
+	last_election = "1936.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+ recruit_charecters = AFR_gaulle_minister
+ add_ideas = AFR_military_colony
+
+
+			create_country_leader = {
+				name = "Napoléon VI"
+				desc = "Empereur des Français"
+				picture = "gfx/leaders/FRA/FRA_napoleon_vi.png"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {
+					
+				}
+			}
+
+
+			create_country_leader = {
+				name = "Philippe Lecrec"
+				desc = "General de France"
+				picture = "gfx/leaders/FRA/portrait_france_philippe_leclerc.dds"
+				expire = "1965.1.1"
+				ideology = centrism
+				traits = {
+					
+				}
+			}
+
+			create_country_leader = {
+				name = "Charles de Gaulle"
+				desc = "Grand Général de France"
+				picture = "gfx/leaders/FRA/AFR_Charles_de_Gaulle.png"
+				expire = "1965.1.1"
+				ideology = conservatism
+				traits = {
+			
+				}
+			}
+			
+			create_country_leader = {
+				name = "Leon Blum"
+				desc = ""
+				picture = "gfx/leaders/AFR/AFR_leon_blum.png"
+				expire = "1965.1.1"
+				ideology = dem_soc
+				traits = {
+			
+				}
+			}
+			
+			create_country_leader = {
+				name = "Maurice Thorez"
+				desc = ""
+				picture = "gfx/leaders/AFR/Portrait_AFR_maurice_thorez.png"
+				expire = "1965.1.1"
+				ideology = stalinism
+				traits = {
+			
+				}
+			}
+
+set_research_slots = 3

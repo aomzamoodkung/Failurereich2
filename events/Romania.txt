@@ -1,0 +1,397 @@
+add_namespace = romania_f
+
+country_event = {
+	id = romania_f.1
+	title = romania_f.1.t
+	desc = romania_f.1.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+
+	option = {
+		name = romania_f.1.a
+		ai_chance = { factor = 0.1 }
+		HUN = { country_event= { days = 1 id = hungary.2 } }
+			}
+			
+	option = {
+		name = romania_f.1.b
+		ai_chance = { factor = 0.9 }
+		HUN = { country_event= { days = 1 id = hungary.1 } }
+		} 
+		#diplomatic_relation = { country = FRA relation = guarantee active = no } 
+		#diplomatic_relation = { country = CZE relation = guarantee active = no }
+	}
+	
+#succes army reform
+country_event = {
+	id = romania_f.2
+	title = romania_f.2.t
+	desc = romania_f.2.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+
+	option = {
+		name = romania_f.2.a
+		ai_chance = { factor = 0 }
+			}
+			
+	option = {
+		name = romania_f.2.b
+		ai_chance = { factor = 0 }
+		} 
+	}
+	
+#defeat army reform
+country_event = {
+	id = romania_f.3
+	title = romania_f.3.t
+	desc = romania_f.3.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+
+	option = {
+		name = romania_f.3.a
+		ai_chance = { factor = 0 }
+			}
+			
+	option = {
+		name = romania_f.3.b
+		ai_chance = { factor = 0 }
+		} 
+	}
+	
+country_event = {the goals of your reform army first stepp
+	id = romania_f.4
+	title = romania_f.4.t
+	desc = romania_f.4.d
+	picture = GFX_event_test
+	fire_only_once = yes
+	
+	trigger = {
+	focus_progress = {
+    focus = ROM_army_reforms
+    progress > 0.5
+		}
+	}
+
+	option = {#defensive army
+		name = romania_f.4.a
+		ai_chance = { factor = 0 }
+		country_event = { days = 10 id = romania_f.5 }
+		set_country_flag = defensive_army_reform
+			}
+			
+	option = {#ofensive army
+		name = romania_f.4.b
+		ai_chance = { factor = 0 }
+		country_event = { days = 10 id = romania_f.5 }
+		set_country_flag = ofensive_army_reform
+		} 
+	}
+
+country_event = {#the goals of your reform army second step
+	id = romania_f.5
+	title = romania_f.5.t
+	desc = romania_f.5.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {#small and mobile , armor 
+		name = romania_f.5.a
+		ai_chance = { factor = 0 }
+		set_country_flag = mobile_army_reform
+		if = {
+			limit = {
+		has_country_flag = ofensive_army_reform
+				}
+		country_event = { days = 10 id = romania_f.6 }
+			}
+			if = {
+			limit = {
+		has_country_flag = defensive_army_reform
+				}
+			country_event = { days = 10 id = romania_f.7 }
+			}
+		}
+	
+	option = {#compromise
+		name = romania_f.5.b
+		ai_chance = { factor = 0 }
+		country_event= { days = 10 id = romania_f.8 }
+		set_country_flag = compromise_army_reform
+		}
+		
+	option = {#large and static
+		name = romania_f.5.c
+		ai_chance = { factor = 0 }
+		set_country_flag = static_army_reform
+		if = {
+			limit = {
+		has_country_flag = defensive_army_reform
+				}
+			country_event = { days = 10 id = romania_f.7 }
+			}
+			if = {
+			limit = {
+		has_country_flag = ofensive_army_reform
+				}
+		country_event = { days = 10 id = romania_f.6 }
+			}
+		} 
+	}
+	
+country_event = {#question of airplanes
+	id = romania_f.6
+	title = romania_f.6.t
+	desc = romania_f.6.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {#small fighters
+		name = romania_f.6.a
+		ai_chance = { factor = 0 }
+		set_country_flag = small_fighters_reform
+			}
+	
+	option = {#large bombers
+		name = romania_f.6.b
+		ai_chance = { factor = 0 }
+		set_country_flag = large_bombers_reform
+		}
+	}
+country_event = {#fortification
+	id = romania_f.7
+	title = romania_f.7.t
+	desc = romania_f.7.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {#build largest fortification
+		name = romania_f.7.a
+		ai_chance = { factor = 0 }
+		set_country_flag = build_fortification_reform
+		
+			}
+	
+	option = {#compenze this with very big army
+		name = romania_f.7.b
+		ai_chance = { factor = 0 }
+		set_country_flag = build_big_army
+		}
+	}
+	
+	country_event = {#compromise fortification or question of airplanes
+	id = romania_f.8
+	title = romania_f.8.t
+	desc = romania_f.8.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {#solve airplanes
+		name = romania_f.8.a
+		ai_chance = { factor = 0 }
+		country_event = { days = 10 id = romania_f.6 }
+			}
+	
+	option = {#fortification
+		name = romania_f.8.b
+		ai_chance = { factor = 0 }
+		country_event = { days = 10 id = romania_f.7 }
+		}
+	}
+	
+	country_event = {#new tanks
+	id = romania_f.9
+	title = romania_f.9.t
+	desc = romania_f.9.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {#buy france FCM 36
+		name = romania_f.9.a
+		ai_chance = { factor = 0 }
+		FRA = {
+		country_event = { days = 10 id = romania_f.10 }
+		}
+		set_country_flag = FCM_36_import
+			}
+	
+	option = {#buy czech LT. vz. 35
+		name = romania_f.9.b
+		ai_chance = { factor = 0 }
+		set_country_flag = LT_vz_35_import
+		CZE = {
+		country_event = { days = 10 id = romania_f.10 }
+			}
+		}
+	}
+	
+		country_event = {#
+	id = romania_f.10
+	title = romania_f.10.t
+	desc = romania_f.10.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {
+		name = romania_f.10.a
+		ai_chance = { factor = 0 }
+
+			}
+
+	}
+	
+	### economy
+	
+	country_event = {#
+	id = romania_f.11
+	title = romania_f.11.t
+	desc = romania_f.11.d
+	picture = GFX_event_test
+		fire_only_once = yes
+	
+	trigger = {
+	focus_progress = {
+    focus = ROM_revive_our_economy
+    progress > 0.5
+		}
+	}
+	option = {#walachia
+		name = romania_f.11.a
+		ai_chance = { factor = 0 }
+		set_country_flag = high_industriliazed_walachia_economy_reform
+				country_event = { days = 10 id = romania_f.12 }
+
+			}
+			
+	option = {#moldavia
+		name = romania_f.11.a
+		ai_chance = { factor = 0 }
+			set_country_flag = industriliaze_rural_moldovia_economy_reform
+					country_event = { days = 10 id = romania_f.12 }
+			}
+
+	}
+	
+	country_event = {#future of resource
+	id = romania_f.12
+	title = romania_f.12.t
+	desc = romania_f.12.d
+	picture = GFX_event_test
+
+	is_triggered_only = yes
+	
+
+	option = {#expand oil industry
+		name = romania_f.12.a
+		ai_chance = { factor = 0 }
+		set_country_flag = expand_oil_industry_reform
+
+			}
+	option = {#metalurgy
+		name = romania_f.12.b
+		ai_chance = { factor = 0 }
+		set_country_flag = expand_metalurgy_industry_reform
+			}
+	}
+	
+	country_event = {
+    id = romania_michael.1
+    title = romania_michael.1.t
+    desc = romania_michael.1.d
+    picture = GFX_report_event_generic_sign_treaty2
+    
+    fire_only_once = yes
+    
+    trigger = {
+        tag = ROM
+        has_government = communism
+    }
+
+    mean_time_to_happen = {
+        days = 1
+    }
+    
+    # Pătrășcanu's Path - Keep Michael
+    option = {
+        name = romania_michael.1.a
+        ai_chance = {
+            base = 70
+            modifier = {
+                add = 10
+                has_stability < 0.5
+            }
+        }
+        
+        add_stability = 0.15
+        add_political_power = 100
+        add_ideas = ROM_constitutional_monarchy
+        
+        create_country_leader = {
+            name = "Lucreţiu Pătrășcanu"
+            desc = "POLITICS_PATRASCANU_DESC"
+            picture = "gfx/leaders/ROM/Portrait_Romania_Lucretiu_Patrascanu.dds"
+            expire = "1965.1.1"
+            ideology = marxism
+            traits = {
+                royal_sympathizer
+            }
+        }
+        
+        set_global_flag = ROM_monarchy_decided
+        set_country_flag = ROM_kept_monarchy
+        
+        hidden_effect = {
+            country_event = { id = romania_michael.2 days = 30 }
+            news_event = { id = romania_michael_news.1 hours = 6 }
+        }
+    }
+    
+    # Gheorghiu-Dej's Path - Remove Michael
+    option = {
+        name = romania_michael.1.b
+        ai_chance = {
+            base = 30
+            modifier = {
+                add = 20
+                SOV = { has_government = communism }
+            }
+        }
+        
+        add_stability = -0.10
+        add_political_power = -50
+        
+        create_country_leader = {
+            name = "Gheorghe Gheorghiu-Dej"
+            desc = "POLITICS_GHEORGHIU_DEJ_DESC"
+            picture = "gfx/leaders/ROM/Portrait_Romania_Gheorghe_Gheorghiu_Dej.dds"
+            expire = "1965.1.1"
+            ideology = stalinism
+            traits = {
+                stalinist_communist
+            }
+        }
+        
+        set_global_flag = ROM_monarchy_decided
+        set_country_flag = ROM_abolished_monarchy
+        
+        hidden_effect = {
+            news_event = { id = romania_michael_news.2 hours = 6 }
+        }
+    }
+}	

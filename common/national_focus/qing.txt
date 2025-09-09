@@ -1,0 +1,327 @@
+﻿focus_tree = {
+	id = qing_focus
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = MAN
+		}
+	}
+
+	default = no
+    continuous_focus_position = { x = 4000 y = 2500 }
+	focus = {
+		id = MAN_constitutional_monarchy
+		icon = GFX_focus_man_claim_the_mandate_of_heaven
+		x = 8
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_capital= 608
+		}
+	}
+
+#### Focus for Reject kuomintang ####
+
+	focus = {
+		id = MAN_reject_kuomintang
+		icon = GFX_goal_generic_demand_territory
+		x = 12
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_constitutional_monarchy }
+		mutually_exclusive = { focus = MAN_compromise_with_kuomintang }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			diplomatic_relation= { 
+				country = CHI 
+				relation = non_aggression_pact 
+			}
+		}
+	}
+
+	focus = {
+		id = MAN_invade_ganxi
+		icon = GFX_focus_jap_manchurian_project
+		x = 12
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_reject_kuomintang }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = annex_everything 
+				target = XSM
+			}
+		}
+	}
+	#Focus for Invade Sinkiang
+	focus = {
+		id = MAN_invade_sinkiang
+		icon = GFX_focus_jap_manchurian_project
+		x = 10
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_invade_ganxi }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = annex_everything 
+				target = SIK
+			}
+		}
+	}
+	#Focus for Retake Mongolia
+	focus = {
+		id = MAN_retake_mongolia
+		icon = GFX_focus_NZL_bob_semple_tank
+		x = 14
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_invade_ganxi }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = annex_everything 
+				target = MON
+			}
+		}
+	}
+	#Focus for Retake Vladivostok
+	focus = {
+		id = MAN_retake_vladivostok
+		icon = GFX_focus_chi_army_reform
+		x = 12
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_invade_ganxi }
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal= { 
+				type = annex_everything 
+				target = SOV
+			}
+		}
+	}
+
+#### Focus for Compromise with kuomintang ####
+
+	focus = {
+		id = MAN_compromise_with_kuomintang
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		x = 4
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_constitutional_monarchy }
+		mutually_exclusive = { focus = MAN_reject_kuomintang }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			CHI = {
+			give_guarantee = MAN #has_guaranteed = CHI it isnť effect but trigger
+			}
+		}
+	}
+	focus = {
+		id = MAN_guarantee_from_german_empire
+		icon = Focus_ger_revive_kaiserreich
+		x = 3
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_compromise_with_kuomintang }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+		WGR = {
+			give_guarantee = MAN #has_guaranteed = WGR it isnť effect but trigger
+			}
+		}
+	}
+	focus = {
+		id = MAN_guarantee_austria
+		icon = GFX_focus_generic_monarchy
+		x = 5
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_compromise_with_kuomintang }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_stability = 0.5
+		}
+	}
+	focus = {
+		id = MAN_reorganize_government
+		icon = GFX_focus_generic_monarchy
+		text = "Qing reforms"
+		x = 4
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_guarantee_from_german_empire }
+		prerequisite = { focus = MAN_guarantee_austria }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_stability = 0.2
+		}
+	}
+	focus = {
+		id = MAN_collapse
+		icon = GFX_focus_chi_army_reform
+		text = "Qing civil war"
+		x = 4
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		prerequisite = { focus = MAN_reorganize_government }
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+				country_event = { days = 1 id = qing.1 }
+		}
+	}
+ }
+
+### Focus for industrial ###
+
+	focus = {
+		id = MAN_economic_revise
+		icon = GFX_focus_chi_army_reform
+		text = "Economy revise"
+		x = 16
+		y = 1
+		cost = 6
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		
+        available_if_capitulated = yes
+		
+		completion_reward = {
+			add_tech_bonus = {
+				name = industrial_bonus
+				bonus = 1.0
+				uses = 1
+				category = industry
+			}
+		}
+
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				factor = 0
+				date < 1939.1.1			
+			}
+		}
+	}
+	focus = {
+		id = MAN_aresenal_factory
+		icon = GFX_goal_generic_construct_civ_factory
+		prerequisite = { focus = MAN_economic_revise }
+		text = "Aresenal factory"
+		x = 17
+		y = 2
+		relative_position_id = MAN_economic_revise		
+		cost = 6
+		
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+		
+		
+		ai_will_do = {
+			factor = 2
+		}
+		
+		bypass = {
+			custom_trigger_tooltip = {
+				tooltip = aresenal_factory_tt
+				all_owned_state = {
+					free_building_slots = {
+						building = industrial_complex
+						size < 1
+						include_locked = yes
+					}					
+				}
+			}
+		}
+
+		complete_tooltip = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = yes
+			}			
+		}
+
+		completion_reward = {
+			random_owned_controlled_state = {
+				limit = {
+					free_building_slots = {
+						building = industrial_complex
+						size > 0
+						include_locked = yes
+					}
+					OR = {
+						is_in_home_area = yes
+						NOT = {
+							owner = {
+								any_owned_state = {
+									free_building_slots = {
+										building = industrial_complex
+										size > 0
+										include_locked = yes
+									}
+									is_in_home_area = yes
+								}
+							}
+						}
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+

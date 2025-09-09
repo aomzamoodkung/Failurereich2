@@ -1,0 +1,38 @@
+
+add_namespace = fra_allies_aid
+
+country_event = {
+    id = fra_allies_aid.1
+    title = fra_allies_aid.1.t
+    desc  = fra_allies_aid.1.d
+    picture = GFX_report_event_generic_diplomacy
+    is_triggered_only = yes
+
+    option = {
+        name = fra_allies_aid.opt_refuse
+        ai_chance = { factor = 10 }
+        FRA = { add_opinion_modifier = { target = ENG modifier = refused_aid } }
+        FRA = { country_event = { id = fra_allies_resp.1 } }
+    }
+    option = {
+        name = fra_allies_aid.opt_weapons
+        ai_chance = { factor = 35 }
+        FRA = {
+            add_equipment_to_stockpile = { type = infantry_equipment producer = ENG amount = 8000 }
+            add_equipment_to_stockpile = { type = support_equipment  producer = ENG amount = 400 }
+            country_event = { id = fra_allies_resp.2 }
+        }
+        add_political_power = -25
+        FRA = { add_opinion_modifier = { target = ENG modifier = sent_weapons } }
+    }
+    option = {
+        name = fra_allies_aid.opt_manpower
+        ai_chance = { factor = 20 }
+        FRA = {
+            add_manpower = 50000
+            country_event = { id = fra_allies_resp.3 }
+        }
+        add_political_power = -25
+        FRA = { add_opinion_modifier = { target = ENG modifier = sent_volunteers } }
+    }
+}

@@ -1,0 +1,64 @@
+BAY_kommissariat = {
+
+	icon = generic_formable_nations
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+BAY_kommissariat_scandinaven = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_scandinavia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+BAY_kommissariat_niederlande = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_nordic_league
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+BAY_kommissariat_belgien_nordfrankreich = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_gran_colombia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+BAY_kommissariat_ukraine = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_gran_colombia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+
+BAY_kommissariat_ostland = {
+
+	icon = generic_formable_nations
+
+	picture = GFX_decision_cat_generic_gran_colombia
+
+	allowed = {
+		has_dlc = "Waking the Tiger"
+	}
+}
+

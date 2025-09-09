@@ -1,0 +1,109 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_french_labor_front"
+		texturefile = "gfx/interface/ideas/FRA/GFX_french_labor_front.png"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_no_work_no_kolaches"
+		texturefile = "gfx/interface/ideas/CZE/CZE_no_work_no_kolaches.dds"
+	}
+	
+	spriteType = {
+		name = "GFX_idea_AFR_cult_napoleon"
+		texturefile = "gfx/interface/ideas/AFR/AFR_cult_napoleon.dds"
+	}
+	
+	spriteType = {
+	name = "GFX_idea_Bohemia_economy_giants"
+	texturefile = "gfx/interface/ideas/CZE/CZE_Bohemia_economy_giants.png"
+	}
+
+	spriteType = {
+	name = "GFX_idea_divided_romania"
+	texturefile = "gfx/interface/ideas/ROM/ROM_divided_romania.png"
+	}
+	
+	spriteType = {
+	name = "GFX_idea_young_king"
+	texturefile = "gfx/interface/ideas/SIA/SIA_young_king.png"
+	}
+	
+	spriteType = {
+	name = "GFX_idea_american_militarism"
+	texturefile = "gfx/interface/ideas/USA/GFX_american_militarism.png"
+	}
+    spriteType = {
+	name = "GFX_idea_freedom_of_religion"
+	texturefile = "gfx/interface/ideas/FRA/GFX_freedom_of_religion.png"
+	}
+	spriteType = {
+	name = "GFX_idea_military_junta"
+	texturefile = "gfx/interface/ideas/FRA/GFX_military_junta.png"
+	}
+	spriteType = {
+	name = "GFX_idea_young_king"
+	texturefile = "gfx/interface/ideas/SIA/GFX_young_king.png"
+	}
+	spriteType = {
+	name = "GFX_idea_napoleon_king"
+	texturefile = "gfx/interface/ideas/FRA/GFX_napoleon_king.png"
+	}
+	spriteType = {
+	name = "GFX_idea_women_election"
+	texturefile = "gfx/interface/ideas/FRA/GFX_women_election.png"
+	}
+	spriteType = {
+	name = "GFX_idea_freedom_of_speech"
+	texturefile = "gfx/interface/ideas/FRA/GFX_freedom_of_speech.png"
+	}
+	spriteType = {
+	name = "GFX_idea_constitution_dissagreement"
+	texturefile = "gfx/interface/ideas/FRA/GFX_constitution_dissagreement.png"
+	}
+	spriteType = {
+	name = "GFX_idea_constitution_agreement"
+	texturefile = "gfx/interface/ideas/FRA/GFX_constitution_agreement.png"
+	}
+	spriteType = {
+	name = "GFX_idea_justice_reform"
+	texturefile = "gfx/interface/ideas/FRA/GFX_justice_reform.png"
+	}
+	spriteType = {
+	name = "GFX_idea_military_colony"
+	texturefile = "gfx/interface/ideas/FRA/GFX_military_colony.png"
+	}
+	spriteType = {
+	name = "GFX_idea_george_ii"
+	texturefile = "gfx/interface/ideas/GRE/GFX_george_ii.png"
+	}
+	spriteType = {
+	name = "GFX_idea_factory_democrat"
+	texturefile = "gfx/interface/ideas/FRA/GFX_factory_democrat.png"
+	}
+	spriteType = {
+	name = "GFX_idea_legacy_of_carol_ii"
+	texturefile = "gfx/interface/ideas/ROM/GFX_legacy_of_carol_ii.png"
+	}
+	spriteType = {
+	name = "GFX_idea_AFR_gaulle_minister"
+	texturefile = "gfx/interface/ideas/AFR/AFR_gaulle_minister.png"
+	}
+	spriteType = {
+	name = "GFX_idea_SIA_young_king"
+	texturefile = "gfx/interface/ideas/SIA/GFX_young_king.png"
+	}
+	spriteType = {
+	name = "GFX_idea_two_nation"
+	texturefile = "gfx/interface/ideas/USA/GFX_two_nation.png"
+	}
+    spriteType = {
+        name = "GFX_idea_german_france_military_alliance"
+        texturefile = "gfx/interface/ideas/AFR/german_france_military_alliance.dds"
+    }
+    spriteType = {
+        name = "GFX_idea_AFR_catholic_support"
+        texturefile = "gfx/interface/ideas/AFR/AFR_catholic_support.dds"
+    }
+}

@@ -1,0 +1,125 @@
+
+	selected_mobile_army = {
+	if = {
+	limit = {
+	has_country_flag = mobile_army_reform
+			}
+	has_tech = improved_light_tank
+	has_tech = motorised_infantry
+	has_tech = mobile_warfare
+			
+		}
+	}
+	
+		selected_compromise_army = {
+	if = {
+	limit = {
+	has_country_flag = compromise_army_reform
+			}
+	has_tech = motorised_infantry
+	has_tech = tech_logistics_company
+	OR = {
+	has_tech = mobile_warfare
+	has_tech = superior_firepower
+	has_tech = trench_warfare
+	has_tech = mass_assault
+			}
+		}
+	}
+	
+	selected_large_and_static_army = {
+	if = {
+	limit = {
+	has_country_flag = static_army_reform
+			}
+	has_tech = tech_logistics_company
+	has_tech = radio
+	OR = {
+	has_tech = superior_firepower
+	has_tech = trench_warfare
+	has_tech = mass_assault
+			}
+		}
+	}
+	
+	selected_small_fighters_reform = {
+	if = {
+	limit = {
+	has_country_flag = small_fighters_reform
+			}
+	has_tech = fighter1
+	has_tech = CAS1
+	has_equipment = {
+    fighter_equipment_1 > 15
+			}
+	has_equipment = {
+    CAS_equipment_1 > 10
+			}
+		}
+	}
+	
+	selected_large_bombers_reform = {
+	if = {
+	limit = {
+	has_country_flag = large_bomber_reform
+			}
+	has_tech = heavy_fighter1
+	has_tech = tactical_bomber1
+	has_equipment = {
+    heavy_fighter_equipment_1 > 6
+	}
+	has_equipment = {
+    tac_bomber_equipment_1 > 4
+			}
+		}
+	}
+	
+	build_big_army_reform = {
+	if = {
+	limit = {
+	has_country_flag = large_bomber_reform
+			}
+		has_army_size = {
+		size > 30
+			}
+	has_equipment = {
+    infantry_equipment_1 > 2000
+			}
+		}
+	}
+	
+	high_industriliazed_walachia_economy_reform = {
+	if = {
+	limit = {
+	has_country_flag = high_industriliazed_walachia_reform
+			}
+		has_tech = concentrated_industry
+		}
+	}
+	
+	industriliaze_rural_moldovia_economy_reform = {
+	if = {
+	limit = {
+	has_country_flag = industriliaze_rural_moldovia_reform
+			}
+		has_tech = dispersed_industry
+		}
+	}
+	
+	selected_expand_oil_industry = {
+	if = {
+	limit = {
+	has_country_flag = expand_oil_industry_reform
+			}
+		has_tech = fuel_refining
+		}
+	}
+	
+	selected_expanded_metalurgy = {
+	if = {
+	limit = {
+	has_country_flag = expand_metalurgy_industry_reform
+			}
+		has_tech = fuel_refining
+		}
+	}

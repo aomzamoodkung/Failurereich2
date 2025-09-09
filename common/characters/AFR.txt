@@ -1,0 +1,32 @@
+characters={
+    
+    AFR_leon_blum={
+		name="Leon Blum"
+		portraits={
+			civilian={
+				large="GFX/leaders/AFR/AFR_leon_blum.png"
+			}
+		}
+		country_leader = {
+			ideology = dem_soc
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+
+    AFR_maurice_thorez={
+		name="Maurice Thorez"
+		portraits={
+			civilian={
+				large="GFX/leaders/AFR/Portrait_AFR_maurice_thorez.png"
+			}
+		}
+		country_leader = {
+			ideology = stalinism
+			traits = { }
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}	
+}	
