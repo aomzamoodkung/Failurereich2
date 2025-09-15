@@ -240,7 +240,7 @@ focus_tree = {
 
 	focus = {
 		id = HUN_support_syncretics
-		text = "New future"
+		text = "Reform Hungary"
 		icon = GFX_focus_proclaim_the_restauration_of_austria_hungary
 		x = 14
 		y = 0
@@ -359,12 +359,20 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_manpower = 100000
+				annex_country = {
+				    target = SLO
+				    transfer_troops = yes
+				}
+				annex_country = {
+				    target = TRA
+				    transfer_troops = yes
+				}
 		}
 	}
 
 	focus = {
 		id = HUN_neutrality
-		text = "Compromise"
+		text = "Democratic Compromise"
 		icon = GFX_focus_generic_provoke_border_clashes
 
 		x = 12
@@ -400,7 +408,7 @@ focus_tree = {
 
 	focus = {
 		id = HUN_Austria
-		text = "Danubian Federation"
+		text = "Personal union"
 		icon = GFX_focus_generic_royal_wedding
 
 		x = 18
@@ -424,7 +432,7 @@ focus_tree = {
 
 	focus = {
 		id = HUN_Czech
-		text = "Take Pragues"
+		text = "Ask to Pragues"
 		icon = GFX_focus_cze_german_puppet
 
 		x = 18
@@ -448,10 +456,10 @@ focus_tree = {
 
 	focus = {
 		id = HUN_YUG
-		text = "Invade Yugoslavia"
+		text = "Above Yugoslavia"
 		icon = GFX_focus_cze_german_puppet
 
-		x = 18
+		x = 17
 		y = 5
 		cost = 5
 
@@ -473,6 +481,67 @@ focus_tree = {
 			}
 		}
 	}
+
+	focus = {
+		id = HUN_ROM
+		text = "Crush Romania"
+		icon = GFX_focus_cze_german_puppet
+
+		x = 19
+		y = 5
+		cost = 5
+
+		available_if_capitulated = yes
+
+		prerequisite = { 
+			focus = HUN_Czech
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+				target = ROM
+				type = annex_everything
+				expire = 1
+			}
+		}
+	}
+
+	focus = {
+		id = HUN_Austria_Hungary
+		text = "Austria Hungary"
+		icon = GFX_focus_generic_strike_at_democracy1
+
+		x = 18
+		y = 6
+		cost = 5
+
+		available_if_capitulated = yes
+
+		prerequisite = { 
+			focus = HUN_YUG
+			focus = HUN_ROM
+		}
+
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_cosmetic_tag = HUN_EMPIRE
+			hidden_effect = { AUS = { set_cosmetic_tag = AUS_NOT_WHITE } }
+			hidden_effect = {
+				news_event = { id = news.295 }
+			}
+			set_global_flag = form_austria_hungary_flag
+			set_global_flag = GER_reformed_austro_hungarian_empire
+		}
+	}
+
+### Decentralized ###
 
 	focus = {
 		id = HUN_alliance
@@ -543,8 +612,10 @@ focus_tree = {
 			factor = 1
 		}
 		completion_reward = {
+
 			give_guarantee = AUS
 			give_guarantee = CZE
+
 			add_opinion_modifier = {
 			    target = CZE
 			    modifier = faction_traitor
@@ -561,7 +632,7 @@ focus_tree = {
 		text = "French approchement"
 		icon = GFX_focus_generic_strike_at_democracy1
 
-		x = 14
+		x = 13
 		y = 3
 		cost = 5
 
@@ -586,7 +657,7 @@ focus_tree = {
 		text = "Soviet relations"
 		icon = GFX_focus_generic_strike_at_democracy1
 
-		x = 14
+		x = 13
 		y = 4
 		cost = 5
 
@@ -604,37 +675,4 @@ focus_tree = {
 			give_guarantee = SOV
 		}
 	}
-
-	focus = {
-		id = HUN_Austria_Hungary
-		text = "Austria Hungary"
-		icon = GFX_focus_generic_strike_at_democracy1
-
-		x = 16
-		y = 6
-		cost = 5
-
-		available_if_capitulated = yes
-		prerequisite = { 
-			focus = HUN_RUS_diplomacy
-		}
-		prerequisite = { 
-			focus = HUN_YUG
-		}
-
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			set_cosmetic_tag = HUN_EMPIRE
-			hidden_effect = { AUS = { set_cosmetic_tag = AUS_NOT_WHITE } }
-			hidden_effect = {
-				news_event = { id = news.295 }
-			}
-			set_global_flag = form_austria_hungary_flag
-			set_global_flag = GER_reformed_austro_hungarian_empire
-		}
-	}
-
  }
