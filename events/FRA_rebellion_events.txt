@@ -12,10 +12,12 @@ country_event = {
         name = fra_rebellion.100.a
 
         # 1) Break subject status if under GER
-        if = {
+		
+		if = {
             limit = { is_subject = yes overlord = { tag = GER } }
-            set_autonomy = { target = GER autonomy_state = autonomy_free }
-            leave_faction = yes
+            overlord = { tag = GER }
+            remove_autonomy = FRA
+			leave_faction = yes
         }
 
         add_stability = 0.10
