@@ -1,0 +1,110 @@
+
+add_namespace = fra_rebellion
+
+country_event = {
+    id = fra_rebellion.100
+    title = fra_rebellion.100.t
+    desc  = fra_rebellion.100.d
+    picture = GFX_report_event_generic_revolution
+    is_triggered_only = yes
+
+    option = {
+        name = fra_rebellion.100.a
+
+        # 1) Break subject status if under GER
+        if = {
+            limit = { is_subject = yes overlord = { tag = GER } }
+            set_autonomy = { target = GER autonomy_state = autonomy_free }
+            leave_faction = yes
+        }
+
+        add_stability = 0.10
+        add_war_support = 0.10
+
+        # 2) Instantly declare war on Germany (skip wargoal step)
+        if = {
+            limit = { NOT = { has_war_with = GER } }
+            declare_war_on = { target = GER type = annex_everything }  # war goal type is cosmetic here
+        }
+
+        # 3) Switch ruling party based on pre-war choice flags
+        #    Make sure your pre-war focuses set ONE of these:
+        #    FRA_democrat_path_chosen / FRA_junta_path_chosen / FRA_monarchist_path_chosen / FRA_vanguardist_path_chosen
+
+        # Democratic Republic
+        if = {
+            limit = { has_country_flag = FRA_democrat_path_chosen }
+            set_politics = { ruling_party = democratic elections_allowed = yes }
+            add_popularity = { ideology = democratic popularity = 0.25 }
+            add_popularity = { ideology = neutrality popularity = -0.10 }
+            add_popularity = { ideology = fascism   popularity = -0.10 }
+            add_popularity = { ideology = communism popularity = -0.05 }
+            set_country_flag = FRA_rebellion_ruling_democratic
+        }
+
+        # Military Junta (map to fascism or neutrality; pick one. Default here uses fascism for a hardline junta.)
+        if = {
+            limit = { has_country_flag = FRA_junta_path_chosen }
+            set_politics = { ruling_party = fascism elections_allowed = no }
+            add_popularity = { ideology = fascism   popularity = 0.25 }
+            add_popularity = { ideology = neutrality popularity = 0.05 }
+            add_popularity = { ideology = democratic popularity = -0.20 }
+            add_popularity = { ideology = communism popularity = -0.10 }
+            set_country_flag = FRA_rebellion_ruling_junta
+        }
+
+        # Monarchy (non-aligned)
+        if = {
+            limit = { has_country_flag = FRA_monarchist_path_chosen }
+            set_politics = { ruling_party = neutrality elections_allowed = no }
+            add_popularity = { ideology = neutrality popularity = 0.30 }
+            add_popularity = { ideology = democratic popularity = -0.10 }
+            add_popularity = { ideology = fascism   popularity = -0.10 }
+            add_popularity = { ideology = communism popularity = -0.05 }
+            set_country_flag = FRA_rebellion_ruling_monarchy
+        }
+
+        # Vanguardism
+        # If your mod has a custom ideology "vanguardism", swap the lines below to your custom ideology keys.
+        # Otherwise, this maps to neutrality by default. If you prefer communism for gameplay reasons, flip ruling_party accordingly.
+        if = {
+            limit = { has_country_flag = FRA_vanguardist_path_chosen }
+            set_politics = { ruling_party = neutrality elections_allowed = no }
+            add_popularity = { ideology = neutrality popularity = 0.25 }
+            add_popularity = { ideology = democratic popularity = -0.10 }
+            add_popularity = { ideology = fascism   popularity = -0.10 }
+            add_popularity = { ideology = communism popularity = -0.05 }
+            set_country_flag = FRA_rebellion_ruling_vanguardist
+        }
+
+        # 4) Pay off Allied “we’ll join on uprising” promises
+        if = {
+            limit = { ENG = { has_country_flag = ENG_promised_join_french_uprising } }
+            ENG = {
+                clr_country_flag = ENG_promised_join_french_uprising
+                if = { limit = { has_war_with = GER } join_war = { target = GER ally = FRA } }
+                if = {
+                    limit = { NOT = { has_war_with = GER } }
+                    create_wargoal = { type = take_state_focus target = GER generator = { FRA = yes } }
+                    join_war = { target = GER ally = FRA }
+                }
+            }
+        }
+        if = {
+            limit = { USA = { has_country_flag = USA_promised_join_french_uprising } }
+            USA = {
+                clr_country_flag = USA_promised_join_french_uprising
+                if = { limit = { has_war_with = GER } join_war = { target = GER ally = FRA } }
+                if = {
+                    limit = { NOT = { has_war_with = GER } }
+                    create_wargoal = { type = take_state_focus target = GER generator = { FRA = yes } }
+                    join_war = { target = GER ally = FRA }
+                }
+            }
+        }
+
+        # 5) Small stability/WS bump for flavor
+        add_stability = 0.02
+        add_war_support = 0.03
+    }
+}

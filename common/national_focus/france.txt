@@ -515,6 +515,7 @@ focus_tree = {
 		completion_reward = {
 			add_manpower = 100000
 			custom_effect_tooltip = FRA_autocomplete_tt
+			set_country_flag = FRA_junta_path_chosen
 		}
 	}
 
@@ -1881,7 +1882,7 @@ focus_tree = {
         cost = 10
         available = { is_subject = yes overlord = { tag = GER } }
         completion_reward = {
-            country_event = { id = fra_rebellion.1 }
+            country_event = { id = fra_rebellion.100 }
         }
     }
 
