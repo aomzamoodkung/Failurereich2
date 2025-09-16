@@ -57,8 +57,8 @@ country_event = {
         # Monarchy (non-aligned)
         if = {
             limit = { has_country_flag = FRA_monarchist_path_chosen }
-            set_politics = { ruling_party = reactionary elections_allowed = no }
-            add_popularity = { ideology = reactionary popularity = 0.30 }
+            set_politics = { ruling_party = neutrality elections_allowed = no }
+            add_popularity = { ideology = neutrality popularity = 0.30 }
             add_popularity = { ideology = democratic popularity = -0.10 }
             add_popularity = { ideology = fascism   popularity = -0.10 }
             add_popularity = { ideology = communism popularity = -0.05 }
@@ -79,10 +79,8 @@ country_event = {
         }
 		
 		set_country_flag = FRA_rebellion_active
-        # ping whoever the overlord was (or Germany if you prefer) so they know a timer is live
-        if = { limit = { exists = event_target:fr_prev_overlord }
-            event_target:fr_prev_overlord = { country_event = { id = fra_rebellion.2 } }
-        }
+        GER = { country_event = { id = fra_rebellion.2 } }
+		GER = { take_decision = GER_crush_french_rebellion_cat }
 
 
         # 5) Small stability/WS bump for flavor

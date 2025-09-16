@@ -1,19 +1,9 @@
-GER_crush_french_rebellion_cat = {
+GER_france_timer_category = {
 	GER_crush_french_rebellion_cat = {
         allowed = { original_tag = GER }
         visible = {
             FRA = { exists = yes has_country_flag = FRA_rebellion_active }
         }
-
-        decision = {
-            id = GER_crush_french_rebellion_150
-            icon = GFX_goal_generic_major_war
-            allowed = {
-                has_war_with = FRA
-                FRA = { has_country_flag = FRA_rebellion_active }
-            }
-            available = { has_war_with = FRA }
-            visible = { always = yes }
             days_remove = 150
             cancel_if_invalid = yes
             ai_will_do = { factor = 10 }
