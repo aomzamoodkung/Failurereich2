@@ -46,8 +46,8 @@ country_event = {
         # Military Junta (map to fascism or neutrality; pick one. Default here uses fascism for a hardline junta.)
         if = {
             limit = { has_country_flag = FRA_junta_path_chosen }
-            set_politics = { ruling_party = fascism elections_allowed = no }
-            add_popularity = { ideology = fascism   popularity = 0.25 }
+            set_politics = { ruling_party = reactionary elections_allowed = no }
+            add_popularity = { ideology = reactionary   popularity = 0.25 }
             add_popularity = { ideology = neutrality popularity = 0.05 }
             add_popularity = { ideology = democratic popularity = -0.20 }
             add_popularity = { ideology = communism popularity = -0.10 }
@@ -57,8 +57,8 @@ country_event = {
         # Monarchy (non-aligned)
         if = {
             limit = { has_country_flag = FRA_monarchist_path_chosen }
-            set_politics = { ruling_party = neutrality elections_allowed = no }
-            add_popularity = { ideology = neutrality popularity = 0.30 }
+            set_politics = { ruling_party = reactionary elections_allowed = no }
+            add_popularity = { ideology = reactionary popularity = 0.30 }
             add_popularity = { ideology = democratic popularity = -0.10 }
             add_popularity = { ideology = fascism   popularity = -0.10 }
             add_popularity = { ideology = communism popularity = -0.05 }
@@ -70,8 +70,8 @@ country_event = {
         # Otherwise, this maps to neutrality by default. If you prefer communism for gameplay reasons, flip ruling_party accordingly.
         if = {
             limit = { has_country_flag = FRA_vanguardist_path_chosen }
-            set_politics = { ruling_party = neutrality elections_allowed = no }
-            add_popularity = { ideology = neutrality popularity = 0.25 }
+            set_politics = { ruling_party = vanguardism elections_allowed = no }
+            add_popularity = { ideology = vanguardism popularity = 0.25 }
             add_popularity = { ideology = democratic popularity = -0.10 }
             add_popularity = { ideology = fascism   popularity = -0.10 }
             add_popularity = { ideology = communism popularity = -0.05 }
