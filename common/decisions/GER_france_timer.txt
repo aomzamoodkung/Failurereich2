@@ -1,4 +1,4 @@
-GER_france_timer = {
+GER_crush_french_rebellion_cat = {
 	GER_crush_french_rebellion_cat = {
         allowed = { original_tag = GER }
         visible = {
