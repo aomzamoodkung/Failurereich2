@@ -14,11 +14,10 @@ country_event = {
         # 1) Break subject status if under GER
 		
 		if = {
-            limit = { is_subject = yes overlord = { tag = GER } }
-            overlord = { tag = GER }
-            remove_autonomy = FRA
-			leave_faction = yes
+            limit = { is_subject = yes }
+            overlord = { end_puppet = ROOT }     # <- do it from the overlord scope
         }
+		leave_faction = yes
 
         add_stability = 0.10
         add_war_support = 0.10
@@ -77,32 +76,6 @@ country_event = {
             add_popularity = { ideology = fascism   popularity = -0.10 }
             add_popularity = { ideology = communism popularity = -0.05 }
             set_country_flag = FRA_rebellion_ruling_vanguardist
-        }
-
-        # 4) Pay off Allied “we’ll join on uprising” promises
-        if = {
-            limit = { ENG = { has_country_flag = ENG_promised_join_french_uprising } }
-            ENG = {
-                clr_country_flag = ENG_promised_join_french_uprising
-                if = { limit = { has_war_with = GER } join_war = { target = GER ally = FRA } }
-                if = {
-                    limit = { NOT = { has_war_with = GER } }
-                    create_wargoal = { type = take_state_focus target = GER generator = { FRA = yes } }
-                    join_war = { target = GER ally = FRA }
-                }
-            }
-        }
-        if = {
-            limit = { USA = { has_country_flag = USA_promised_join_french_uprising } }
-            USA = {
-                clr_country_flag = USA_promised_join_french_uprising
-                if = { limit = { has_war_with = GER } join_war = { target = GER ally = FRA } }
-                if = {
-                    limit = { NOT = { has_war_with = GER } }
-                    create_wargoal = { type = take_state_focus target = GER generator = { FRA = yes } }
-                    join_war = { target = GER ally = FRA }
-                }
-            }
         }
 
         # 5) Small stability/WS bump for flavor

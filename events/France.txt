@@ -229,6 +229,7 @@ country_event = {
 		OR = {
 			GER = { controls_state = 16 }
 			HOL = { controls_state = 16 }
+			LOM = { controls_state = 16 }
 		}        
 	}
 	
