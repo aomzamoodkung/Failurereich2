@@ -1,0 +1,47 @@
+GER_france_timer = {
+	GER_crush_french_rebellion_cat = {
+        allowed = { original_tag = GER }
+        visible = {
+            FRA = { exists = yes has_country_flag = FRA_rebellion_active }
+        }
+
+        decision = {
+            id = GER_crush_french_rebellion_150
+            icon = GFX_goal_generic_major_war
+            allowed = {
+                has_war_with = FRA
+                FRA = { has_country_flag = FRA_rebellion_active }
+            }
+            available = { has_war_with = FRA }
+            visible = { always = yes }
+            days_remove = 150
+            cancel_if_invalid = yes
+            ai_will_do = { factor = 10 }
+
+            # Optional PP tax so the AI actually clicks it if you want manual completion too
+            cost = 0
+
+            # If the player clicks Complete early, annex only if France has already capitulated
+            complete_effect = {
+                if = {
+                    limit = { FRA = { has_capitulated = yes } }
+                    GER = { annex_country = { target = FRA transfer_troops = yes } }
+                    news_event = { id = gerfrance.3 } # "Germany crushes the rebellion"
+                }
+            }
+
+            # Auto-resolve when the 150-day timer expires
+            remove_effect = {
+                if = {
+                    limit = { FRA = { has_capitulated = yes } }
+                    GER = { annex_country = { target = FRA transfer_troops = yes } }
+                    news_event = { id = gerfrance.3 }
+                }
+                else = {
+                    news_event = { id = gerfrance.4 }   # "Germany fails to crush the rebellion"
+                    GER = { white_peace = FRA }
+                }
+            }
+        }
+    }
+}

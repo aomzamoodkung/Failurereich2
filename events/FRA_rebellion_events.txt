@@ -77,9 +77,45 @@ country_event = {
             add_popularity = { ideology = communism popularity = -0.05 }
             set_country_flag = FRA_rebellion_ruling_vanguardist
         }
+		
+		set_country_flag = FRA_rebellion_active
+        # ping whoever the overlord was (or Germany if you prefer) so they know a timer is live
+        if = { limit = { exists = event_target:fr_prev_overlord }
+            event_target:fr_prev_overlord = { country_event = { id = fra_rebellion.2 } }
+        }
+
 
         # 5) Small stability/WS bump for flavor
         add_stability = 0.02
         add_war_support = 0.03
     }
 }
+country_event = {
+    id = fra_rebellion.2
+    title = fra_rebellion.2.t
+    desc  = fra_rebellion.2.d
+    picture = GFX_report_event_generic_uprising
+    is_triggered_only = yes
+    option = {
+        name = fra_rebellion.2.a
+        # nothing, just opens the decision UI
+    }
+}
+news_event = {
+    id = fra_rebellion.3
+    title = fra_rebellion.3.t
+    desc  = fra_rebellion.3.d
+    picture = GFX_report_event_generic_victory
+    is_triggered_only = yes
+    option = { name = fra_rebellion.ok }
+}
+
+news_event = {
+    id = fra_rebellion.4
+    title = fra_rebellion.4.t
+    desc  = fra_rebellion.4.d
+    picture = GFX_report_event_generic_army
+    is_triggered_only = yes
+    option = { name = fra_rebellion.ok }
+}
+
