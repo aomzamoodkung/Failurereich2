@@ -80,7 +80,7 @@ country_event = {
 		
 		set_country_flag = FRA_rebellion_active
         GER = { country_event = { id = fra_rebellion.2 } }
-		GER = { take_decision = GER_crush_french_rebellion_cat }
+		GER = { activate_decision = GER_crush_french_rebellion_150 }
 
 
         # 5) Small stability/WS bump for flavor

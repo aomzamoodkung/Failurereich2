@@ -620,6 +620,7 @@ focus_tree = {
 		completion_reward = {
 			add_stability = 0.1
 			add_war_support = 0.10
+			set_country_flag = FRA_junta_path_chosen
 		}
 	}
 

@@ -678,7 +678,7 @@ country_event = {
 	}
 	
 	option = {
-		name = "we should jailed him"
+		name = "jail him"
     }
 	option = {
 		name = "execute him"
@@ -705,23 +705,25 @@ country_event = {
 		name = "Send an loyal army to end this revolt!"
 		custom_effect_tooltip = king_or_petain_tt
 		set_country_flag = FRA_king_or_petain
+		16 =  { set_demilitarized_zone = yes }
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
     }
 	option = {
-		name = "Send National guard to negotiation with them"
+		name = "Send National guard to crush them!"
 		custom_effect_tooltip = FRA_demo_tt
 		set_country_flag = FRA_liberty_way
+		16 =  { set_demilitarized_zone = yes }
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
     }
 }
 country_event = {
 	id = france.21
 	title = "Paris uprising ended"
-	desc = "now we can control capital The uprising's leaders were publicly executed at the Place de la Concorde, serving as a stark reminder of the fate that awaits traitors."
+	desc = "Now that we control the capital, the uprising’s leaders have been publicly executed at the Place de la Concorde, serving as a stark reminder of the fate that awaits traitors."
 	picture = GFX_fate_of_petain
 	
 	fire_only_once = yes
@@ -736,15 +738,17 @@ country_event = {
 	}
 	
 	option = {
-		name = "now Petain regime are weak we should coup them and restablish monarchy again Vive le Roi!"
+		name = "The Pétain regime is weak; we should stage a coup and restore the monarchy. Vive le Roi!"
 		complete_national_focus = FRA_monarchist_coup
+		16 =  { set_demilitarized_zone = no }
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
     }
 	option = {
 		name = "Now we should strengthen our regime"
 		complete_national_focus = FRA_old_marechal_speech
+		16 =  { set_demilitarized_zone = no }
 		ai_will_do = {
 			factor = 1
 		}
@@ -752,8 +756,8 @@ country_event = {
 }
 country_event = {
 	id = france.22
-	title = "our negotiator join them"
-	desc = "Fight again our regime is raging through the capital city of Paris. We tried to quell down the rebels by negotiating with them, but our negotiators switched sides and with their escort are now fighting against us. This isn't the first time since something like this happened, but this time it made us panic through our lines. With our lines collapsing and our support from the population missing, we capitulated. By this moment the fourth republic is born."
+	title = "National guard join them"
+	desc = "Fight again our regime is raging through the capital city of Paris. We tried to quell down the rebels but National guard switched sides and with their escort are now fighting against us. This isn't the first time since something like this happened, but this time it made us panic through our lines. With our lines collapsing and our support from the population missing, we capitulated. By this moment the fourth republic is born."
 	picture = GFX_fate_of_petain
 	
 	fire_only_once = yes
@@ -770,8 +774,9 @@ country_event = {
 	option = {
 		name = "liberté, liberté chéries!"
         complete_national_focus = FRA_freedom_way
+		16 =  { set_demilitarized_zone = no }
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
     }
 }
@@ -788,20 +793,20 @@ country_event = {
 		date = 1936.1.1
 	}	
 	mean_time_to_happen = {
-		days = 0
+		days = 1
 	}
 	
 	option = {
 		name = "ok"
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
     }
 	option = {
 		name = "I want to read more(it may take long time to appear)"
 		set_country_flag = AFR_read_more
 		ai_will_do = {
-			factor = 1
+			factor = 50
 		}
     }
 }
