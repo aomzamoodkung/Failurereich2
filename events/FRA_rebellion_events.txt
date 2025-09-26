@@ -14,11 +14,10 @@ country_event = {
         # 1) Break subject status if under GER
 		
 		if = {
-            limit = { is_subject = yes overlord = { tag = GER } }
-            overlord = { tag = GER }
-            remove_autonomy = FRA
-			leave_faction = yes
+            limit = { is_subject = yes }
+            overlord = { end_puppet = ROOT }     # <- do it from the overlord scope
         }
+		leave_faction = yes
 
         add_stability = 0.10
         add_war_support = 0.10
@@ -47,8 +46,8 @@ country_event = {
         # Military Junta (map to fascism or neutrality; pick one. Default here uses fascism for a hardline junta.)
         if = {
             limit = { has_country_flag = FRA_junta_path_chosen }
-            set_politics = { ruling_party = fascism elections_allowed = no }
-            add_popularity = { ideology = fascism   popularity = 0.25 }
+            set_politics = { ruling_party = reactionary elections_allowed = no }
+            add_popularity = { ideology = reactionary   popularity = 0.25 }
             add_popularity = { ideology = neutrality popularity = 0.05 }
             add_popularity = { ideology = democratic popularity = -0.20 }
             add_popularity = { ideology = communism popularity = -0.10 }
@@ -71,42 +70,50 @@ country_event = {
         # Otherwise, this maps to neutrality by default. If you prefer communism for gameplay reasons, flip ruling_party accordingly.
         if = {
             limit = { has_country_flag = FRA_vanguardist_path_chosen }
-            set_politics = { ruling_party = neutrality elections_allowed = no }
-            add_popularity = { ideology = neutrality popularity = 0.25 }
+            set_politics = { ruling_party = vanguardism elections_allowed = no }
+            add_popularity = { ideology = vanguardism popularity = 0.25 }
             add_popularity = { ideology = democratic popularity = -0.10 }
             add_popularity = { ideology = fascism   popularity = -0.10 }
             add_popularity = { ideology = communism popularity = -0.05 }
             set_country_flag = FRA_rebellion_ruling_vanguardist
         }
+		
+		set_country_flag = FRA_rebellion_active
+        GER = { country_event = { id = fra_rebellion.2 } }
+		GER = { activate_decision = GER_crush_french_rebellion_150 }
 
-        # 4) Pay off Allied “we’ll join on uprising” promises
-        if = {
-            limit = { ENG = { has_country_flag = ENG_promised_join_french_uprising } }
-            ENG = {
-                clr_country_flag = ENG_promised_join_french_uprising
-                if = { limit = { has_war_with = GER } join_war = { target = GER ally = FRA } }
-                if = {
-                    limit = { NOT = { has_war_with = GER } }
-                    create_wargoal = { type = take_state_focus target = GER generator = { FRA = yes } }
-                    join_war = { target = GER ally = FRA }
-                }
-            }
-        }
-        if = {
-            limit = { USA = { has_country_flag = USA_promised_join_french_uprising } }
-            USA = {
-                clr_country_flag = USA_promised_join_french_uprising
-                if = { limit = { has_war_with = GER } join_war = { target = GER ally = FRA } }
-                if = {
-                    limit = { NOT = { has_war_with = GER } }
-                    create_wargoal = { type = take_state_focus target = GER generator = { FRA = yes } }
-                    join_war = { target = GER ally = FRA }
-                }
-            }
-        }
 
         # 5) Small stability/WS bump for flavor
         add_stability = 0.02
         add_war_support = 0.03
     }
 }
+country_event = {
+    id = fra_rebellion.2
+    title = fra_rebellion.2.t
+    desc  = fra_rebellion.2.d
+    picture = GFX_report_event_generic_uprising
+    is_triggered_only = yes
+    option = {
+        name = fra_rebellion.2.a
+        # nothing, just opens the decision UI
+    }
+}
+news_event = {
+    id = fra_rebellion.3
+    title = fra_rebellion.3.t
+    desc  = fra_rebellion.3.d
+    picture = GFX_report_event_generic_victory
+    is_triggered_only = yes
+    option = { name = fra_rebellion.ok }
+}
+
+news_event = {
+    id = fra_rebellion.4
+    title = fra_rebellion.4.t
+    desc  = fra_rebellion.4.d
+    picture = GFX_report_event_generic_army
+    is_triggered_only = yes
+    option = { name = fra_rebellion.ok }
+}
+

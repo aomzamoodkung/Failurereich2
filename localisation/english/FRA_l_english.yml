@@ -350,3 +350,16 @@
   fra_rebellion.100.t:0 "France Declares Independence"
   fra_rebellion.100.d:0 "The signal is given. Barricades rise, rail lines burn, and the tricolor returns to the streets. A provisional government assumes control and proclaims a free France. War with Germany is now inevitable."
   fra_rebellion.100.a:0 "To arms!"
+  GER_crush_french_rebellion_cat:0 "Crush the French Rebellion"
+  GER_crush_french_rebellion_150:0 "Annex France Within 150 Days"
+
+  fra_rebellion.2.t:0 "The French Uprising"
+  fra_rebellion.2.d:0 "France has declared independence and risen against us. We must crush the revolt swiftly or be forced to negotiate."
+  fra_rebellion.2.a:0 "We will stamp it out."
+
+  fra_rebellion.3.t:0 "Germany Crushes the French Rebellion"
+  fra_rebellion.3.d:0 "After a determined campaign, the French uprising has been broken. German authorities assert complete control over France."
+  fra_rebellion.4.t:0 "Germany Fails to Crush the French Rebellion"
+  fra_rebellion.4.d:0 "Despite its efforts, Germany did not defeat the reborn France within the deadline and has agreed to a white peace."
+  fra_rebellion.ok:0 "Noted"
+
