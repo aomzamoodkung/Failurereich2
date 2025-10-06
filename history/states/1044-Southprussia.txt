@@ -1,7 +1,7 @@
 
 state={
 	id=1044
-	name="STATE_1045"
+	name="STATE_1044"
 
 	history={
 		owner = POL

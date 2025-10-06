@@ -1,7 +1,7 @@
 
 state={
 	id=1046
-	name="STATE_1047"
+	name="STATE_1046"
 	history={
 		owner = AFR
 		add_core_of = ALG
