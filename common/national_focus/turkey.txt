@@ -281,7 +281,7 @@
 				focus = TRK_war_GEO
 		}
 
-		x = 10
+		x = 9
 		y = 3
 
 		cost = 10
@@ -310,11 +310,11 @@
 		icon = GFX_focus_TUR_turanist_ambition
 		text = "Conquer old lands"
 		prerequisite = { 
-				focus = TRK_war_PER
+				focus = TRK_war_GEO
 		}
 
-		x = 10
-		y = 4
+		x = 11
+		y = 3
 
 		cost = 10
 
@@ -355,6 +355,34 @@
 		}
 	}
 
+	focus = {
+		id = TRK_Turkestan2
+		icon = GFX_focus_TUR_turanist_ambition
+		text = "Form the Turkish Khanate"
+		prerequisite = { 
+				focus = TRK_war_PER
+				focus = TRK_Turkestan
+		}
+
+		x = 10
+		y = 4
+
+		cost = 10
+
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		available = {
+			tag = TRK
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_cosmetic_tag = Oghuz_Empire
+		}
+	}
+
 ###### Ottoman ########
 
 	focus = {
@@ -387,9 +415,9 @@
 		}
 		completion_reward = {
 			controller = { 
-				    MSQ = {
+				    OTT = {
 				        create_wargoal = {
-				            target = PREV
+				            target = MSQ
 				            type = take_state_focus
 				            generator = { 554 291 }
 				        }
@@ -411,7 +439,7 @@
 				focus = OTT_war_MSQ 
 		}
 
-		x = 16
+		x = 15
 		y = 3
 
 		cost = 10
@@ -480,7 +508,7 @@
 				focus = OTT_war_ARA 
 		}
 
-		x = 16
+		x = 15
 		y = 4
 
 		cost = 10
@@ -522,7 +550,7 @@
 				focus = OTT_war_BUL
 		}
 
-		x = 15
+		x = 14
 		y = 5
 
 		cost = 10
@@ -578,7 +606,7 @@
 				focus = OTT_war_MSQ
 		}
 
-		x = 14
+		x = 13
 		y = 3
 
 		cost = 10
@@ -611,7 +639,7 @@
 				focus = OTT_war_GRE
 		}
 
-		x = 14
+		x = 13
 		y = 4
 
 		cost = 10
