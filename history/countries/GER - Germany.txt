@@ -802,8 +802,10 @@ set_popularities = {
 }
 
 # Wowow nice faction
-create_faction = Axis
+create_faction = Comintern
 add_to_faction = GER
+add_to_faction = HUN
+add_to_faction = FIN
 
 # Setup of National Spirits
 add_ideas = {

@@ -90,8 +90,8 @@ country_event = {
 	}
 	option = { 
 		name = "Invade Austria"
-		
-	        declare_war_on = {
+
+		create_wargoal  = {
 		                target = AUS
 		                type = annex_everything
 	        }	
@@ -155,10 +155,10 @@ country_event = {
 	
 	option = {
 		name = "We will not tolerate this"
-	        declare_war_on = {
-		                target = AUS
+			create_wargoal  = {
+		                target = PAP
 		                type = annex_everything
-	        }
+	        	}		
 			AUS = {
 				every_owned_state = {
 				    add_claim_by = HUN
@@ -187,11 +187,10 @@ country_event = {
 	}
 	option = { 
 		name = "Invade Czech"
-		
-	        declare_war_on = {
+			create_wargoal  = {
 		                target = CZE
 		                type = annex_everything
-	        }	
+	        	}		
 			CZE = {
 				every_owned_state = {
 				    add_claim_by = HUN
@@ -252,10 +251,10 @@ country_event = {
 	
 	option = {
 		name = "We will not tolerate this"
-	        declare_war_on = {
+			create_wargoal  = {
 		                target = CZE
 		                type = annex_everything
-	        }
+	        	}		
 			CZE = {
 				every_owned_state = {
 				    add_claim_by = HUN
