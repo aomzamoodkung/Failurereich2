@@ -294,7 +294,7 @@ focus_tree = {
 	focus = {
 		id = FRA_liberia
 		icon = GFX_focus_focus_fra_intervention_spain
-		text = "Secure Liberia"
+		text = "Secure West Africa"
 		x = 10
 		y = 4
 		prerequisite = {
@@ -320,7 +320,11 @@ focus_tree = {
 
 		completion_reward = {
 				creat_wargoal = {
-   				 	target = LIB
+   				 	target = GHA
+   					type = annex_everything
+				}
+				creat_wargoal = {
+   				 	target = GNA
    					type = annex_everything
 				}
 			}
