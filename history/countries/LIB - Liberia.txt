@@ -9,9 +9,25 @@ set_technology = {
 
 set_convoys = 10
 
+recruit_character = LIB_edgar_cailloux
+recruit_character = LIB_andre_fields
+recruit_character = LIB_james_brooks
+recruit_character = LIB_won_loy_chan
+recruit_character = LIB_benton_stukes
+recruit_character = LIB_reginald_brandon
+recruit_character = LIB_aaron_pinn
+recruit_character = LIB_john__r_fox
+recruit_character = LIB_samuel_nell
+recruit_character = LIB_joseph_smith
+recruit_character = LIB_stewart_holland
+recruit_character = LIB_benjamin_o_davis
+recruit_character = LIB_george_remond
+recruit_character = LIB_iver_virgin
+
 1939.1.1 = {
 
 	add_political_power = 1198
+	add_command_power = 100
 	
 	#generic focuses
 	complete_national_focus = army_effort
@@ -27,20 +43,11 @@ set_convoys = 10
 	oob = "LIB_1939"
 	set_technology = {
 		#doctrines
-		air_superiority = 1
-		
-		mass_assault = 1
-		pocket_defence = 1
-		defence_in_depth = 1
-
-		fleet_in_being = 1
-		battlefleet_concentration = 1
-		convoy_sailing = 1
+		#air_superiority = 1
 
 		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
-		radio_detection = 1
 		mechanical_computing = 1
 
 		#industry
@@ -52,6 +59,14 @@ set_convoys = 10
 		construction2 = 1
 		dispersed_industry = 1
 		dispersed_industry2 = 1
+	}
+
+set_grand_doctrine = grand_battleplan
+set_grand_doctrine = new_fleet_in_being
+set_grand_doctrine = new_strategic_destruction
+
+	complete_special_project = {
+		project = sp:sp_air_radar
 	}
 }
 
@@ -68,7 +83,7 @@ set_popularities = {
 create_country_leader = {
 	name = "Edwin Barclay"
 	desc = "POLITICS_EDWIN_BARCLAY_DESC"
-	picture = "gfx/leaders/Africa/Portrait_Africa_Generic_2.dds"
+	picture = "GFX_portrait_lib_edwin_barclay"
 	expire = "1965.1.1"
 	ideology = conservatism
 	traits = {

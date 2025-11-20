@@ -160,8 +160,13 @@ country_event = {
 		VIN= { transfer_state = 670 }
 		VIN= { transfer_state = 741 }
 		VIN= { transfer_state = 286 }
+		VIN= { transfer_state = 1017 }
 		KOR= { transfer_state = 525 }
 		KOR= { transfer_state = 527 }
+		KOR= { transfer_state = 1028 }
+		KOR= { transfer_state = 1029 }
+		KOR= { transfer_state = 1030 }
+		KOR= { transfer_state = 1031 }
 	}
 }
 

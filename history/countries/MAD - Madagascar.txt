@@ -23,14 +23,9 @@ set_convoys = 5
 	
 	set_technology = {
 
-		#doctrines
-		grand_battle_plan = 1
-		trench_warfare = 1
-
 		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
-		radio_detection = 1
 		mechanical_computing = 1
 
 		#industry
@@ -42,25 +37,33 @@ set_convoys = 5
 		dispersed_industry = 1
 		dispersed_industry2 = 1
 	}
+
+set_grand_doctrine = grand_battleplan
+
+	complete_special_project = {
+		project = sp:sp_air_radar
+	}
 }
 set_politics = {
-	ruling_party = left
+	ruling_party = neutrality
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 30
-	left = 40
-	communism = 10
-	neutrality = 20
+	democratic = 27
+	fascism = 8
+	communism = 15
+	neutrality = 50
 }
 
-recruit_character = MAD_jean_ralaimongo
-recruit_character = MAD_joseph_ravoahangy
-
-
-
-
-
-
+#create_country_leader = {
+#	
+#	name = "Jonas Lote"
+#	picture = "gfx//leaders//Africa//Portrait_Africa_Generic_2.dds"
+#	expire = "1965.1.1"
+#	ideology = centrism
+#	traits = {
+#		#
+#	}
+#}

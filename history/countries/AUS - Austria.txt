@@ -15,7 +15,7 @@ set_technology = {
 }
 
 set_politics = {
-	ruling_party = neutrality
+	ruling_party = reactionary
 	last_election = "1930.11.9"
 	election_frequency = 48
 	elections_allowed = no
@@ -23,12 +23,14 @@ set_politics = {
 
 set_popularities = {
 	neutrality = 48
-	fascism = 50
+	reactionary = 50
 	democratic = 1
 	communism = 1
 }
 
 set_stability = 0.50
+
+character = HUN_otto_von_habsburg
 
 create_country_leader = {
 	name = "Kurt Schuschnigg"

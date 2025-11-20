@@ -50,10 +50,6 @@ recruit_character = BRM_fascist_guy
 	
 	set_technology = {
 
-		#doctrines
-		grand_battle_plan = 1
-		trench_warfare = 1
-
 		#electronics
 		electronic_mechanical_engineering = 1
 		radio = 1
@@ -69,35 +65,27 @@ recruit_character = BRM_fascist_guy
 		dispersed_industry = 1
 		dispersed_industry2 = 1
 	}
+
+set_grand_doctrine = grand_battleplan
+
 	complete_special_project = {
 		project = sp:sp_air_radar
 	}
 }
 
 set_politics = {
-	ruling_party = left 
+	ruling_party = democratic
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = yes
 }
 set_popularities = {
-	left = 72
+	democratic = 72
 	fascism = 2
 	communism = 14
-	reactionary = 12
+	neutrality = 12
 }
 
-
-create_country_leader = {
-	name = "Aung San"
-	desc = "POLITICS_SHENG_SHICAI_DESC"
-	picture = "gfx/leaders/Portrait_BRM_aung_san.dds"
-	expire = "1965.1.1"
-	ideology = socialism
-	traits = {
-		#
-	}
-}
 recruit_character = BRM_archibald_cochrane
 recruit_character = BRM_ne_win
 recruit_character = BRM_ba_maw
