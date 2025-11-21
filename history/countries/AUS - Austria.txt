@@ -30,7 +30,7 @@ set_popularities = {
 
 set_stability = 0.50
 
-character = HUN_otto_von_habsburg
+recruit_character = AUS_Otto_I
 
 create_country_leader = {
 	name = "Kurt Schuschnigg"

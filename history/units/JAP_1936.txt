@@ -249,7 +249,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 19
 		}
-		location = 4052 #Pyongyang
+		location = 4056 #Pusan
 		division_template = "Hohei Shidan"
 		start_experience_factor = 0.3
 	}
@@ -258,7 +258,7 @@ units = {
 			is_name_ordered = yes
 			name_order = 20
 		}
-		location = 7125 #Seoul
+		location = 4056 #Pusan
 		division_template = "Hohei Shidan"
 		start_experience_factor = 0.3
 	}

@@ -33,6 +33,7 @@ if = {
 
 set_convoys = 20
 
+recruit_character = PAK_qazi_isa
 recruit_character = PAK_acd2
 recruit_character = PAK_fascist_guy
 recruit_character = PAK_ncs

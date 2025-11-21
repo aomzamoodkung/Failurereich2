@@ -102,4 +102,4 @@ set_popularities = {
 	fascism = 5
 }
 
-
+recruit_character = KAS_hari_singh

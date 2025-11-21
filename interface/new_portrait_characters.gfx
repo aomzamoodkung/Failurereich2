@@ -7,6 +7,13 @@ spriteTypes = {
 		texturefile = "gfx/leaders/Portrait_prov_japan.dds"
 	}
 
+	### AUS
+
+	spriteType = {
+		name = "GFX_portrait_AUS_Otto_I"
+		texturefile = "gfx/leaders/AUS/AUS_Otto_I.dds"
+	}
+
 	### SOV
 
 	spriteType = {

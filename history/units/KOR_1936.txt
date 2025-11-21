@@ -13,28 +13,28 @@ units = {
 
 	division = {
 		name = "People's Army  I"
-		location = 4052
+		location = 7125 
 		division_template = "Infantry Corps"
 	}
 	division = {
 		name = "People's Army I"
-		location = 6922
+		location = 7125 
 		division_template = "Infantry Corps"
 	}
 	division = {
 		name = "People's Army  I"
-		location = 4052
+		location = 7125 
 		division_template = "Infantry Corps"
 	}
 
 	division = {
 		name = "People's Army  II"
-		location = 4052
+		location = 7125 
 		division_template = "Infantry Corps"
 	}
 	division = {
 		name = "People's Army II"
-		location = 6922
+		location = 7125 
 		division_template = "Infantry Corps"
 	}
 	division = {
