@@ -1,18 +1,15 @@
 state={
 	id=1048
 	name="STATE_1048"
+	history={
+		owner = POR
+		add_core_of = INS
+	}
 	provinces={
 		1339 1355 4358 
 	}
-	history={
-		owner = POR
-		buildings = {
-			infrastructure = 4
-		}
-	}
-
-	state_category = pastoral
-
 	manpower=19542
-	buildings_max_level_factor=1.000
+	buildings_max_level_factor=1
+	state_category=pastoral
+	local_supplies=0
 }

@@ -19,10 +19,10 @@ set_politics = {
 	elections_allowed = yes
 }
 set_popularities = {
-	democratic = 25
-	fascism = 90
+	democratic = 10
+	fascism = 10
 	communism = 79
-	neutrality = 10
+	neutrality = 1
 }
 
 recruit_character = KOR_jiro_minami
