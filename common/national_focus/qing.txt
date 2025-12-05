@@ -12,6 +12,7 @@
     continuous_focus_position = { x = 4000 y = 2500 }
 	focus = {
 		id = MAN_constitutional_monarchy
+		text = "A second Empire"
 		icon = GFX_focus_man_claim_the_mandate_of_heaven
 		x = 8
 		y = 0
@@ -131,6 +132,7 @@
 	focus = {
 		id = MAN_compromise_with_kuomintang
 		icon = GFX_focus_chi_cooperation_with_the_nationalists
+		text = "Ties with Kuomindang"
 		x = 4
 		y = 1
 		cost = 10
@@ -150,6 +152,7 @@
 	focus = {
 		id = MAN_guarantee_from_german_empire
 		icon = Focus_ger_revive_kaiserreich
+		text = "Diplomacy with The German Kaiser"
 		x = 3
 		y = 2
 		cost = 10
@@ -160,14 +163,15 @@
 			factor = 1
 		}
 		completion_reward = {
-		WGR = {
-			give_guarantee = MAN #has_guaranteed = WGR it isnť effect but trigger
+			WGR = {
+				give_guarantee = MAN 
 			}
 		}
 	}
 	focus = {
 		id = MAN_guarantee_austria
 		icon = GFX_focus_generic_monarchy
+		text = "Diplomacy with Austria"
 		x = 5
 		y = 2
 		cost = 10
@@ -216,7 +220,46 @@
 				country_event = { days = 1 id = qing.1 }
 		}
 	}
- }
+
+#### Collapsed Qing ####
+
+	focus = {
+		id = MAN_fall
+		icon = GFX_goal_generic_demand_territory
+		text = "Second failure"
+		x = 16
+		y = 0
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			NOT = { owns_state = 608 }
+		}
+		completion_reward = {
+			set_capital = 
+		}
+	}
+
+	focus = {
+		id = MAN_help
+		icon = GFX_goal_generic_demand_territory
+		prerequisite = { focus = MAN_fall }
+		text = "Ask to the Kaiser"
+		x = 16
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+		}
+		completion_reward = {
+			set_capital = 328
+		}
+	}
 
 ### Focus for industrial ###
 
@@ -224,7 +267,7 @@
 		id = MAN_economic_revise
 		icon = GFX_focus_chi_army_reform
 		text = "Economy revise"
-		x = 16
+		x = 20
 		y = 1
 		cost = 6
 		
@@ -249,79 +292,4 @@
 			}
 		}
 	}
-	focus = {
-		id = MAN_aresenal_factory
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = MAN_economic_revise }
-		text = "Aresenal factory"
-		x = 17
-		y = 2
-		relative_position_id = MAN_economic_revise		
-		cost = 6
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-		
-		
-		ai_will_do = {
-			factor = 2
-		}
-		
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = aresenal_factory_tt
-				all_owned_state = {
-					free_building_slots = {
-						building = industrial_complex
-						size < 1
-						include_locked = yes
-					}					
-				}
-			}
-		}
-
-		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}			
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-
+}

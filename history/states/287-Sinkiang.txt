@@ -4,23 +4,13 @@ state = {
 
 	history = {
 
-		owner = SIK
+		owner = XSM
 		add_core_of = SIK
 		add_core_of = CHI
 		add_core_of = PRC
 
 		buildings = {
 			infrastructure = 0
-		}
-
-		1936.1.1 = {
-			IF = {
-				limit = {
-					has_dlc = "No Compromise, No Surrender" 
-				}
-				KHM = { transfer_state = PREV }
-				add_core_of = KHM
-			}
 		}	
 
 		1938.10.25 = {
