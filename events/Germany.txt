@@ -242,9 +242,9 @@ country_event = {
 		GER = { set_state_owner = 86 }
 		GER = { set_state_owner = 87 }
 		GER = { set_state_owner = 98 }
-		GER = { set_state_owner = 1047 } ### to update ###
-		GER = { set_state_owner = 1040 } ### to update ###
-		GER = { set_state_owner = 1039 } ### to update ###
+		GER = { set_state_owner = 1077 } ### to update ###
+		GER = { set_state_owner = 1070 } ### to update ###
+		GER = { set_state_owner = 1069 } ### to update ###
 		SOV = { set_state_owner = 97 }
 		SOV = { set_state_owner = 91 }
 		SOV = { set_state_owner = 89 }

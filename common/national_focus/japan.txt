@@ -5,9 +5,9 @@
 		modifier = {
 			add = 10
 			OR = {
-				tag = JAP
-				tag = TGW
 				tag = EDO
+				tag = TGW
+				tag = JAP
 			}
 		}
 	}
@@ -662,14 +662,16 @@
 		}
 	}
 
+#### to the South ####
+
 	focus = {
 		id = JAP_war_indonesia
-		icon = GFX_focus_jap_strike_south
-		text = "Control Indonesia"
+		icon = GFX_focus_attack_indonesia
+		text = "Control Nusantara" 
 		prerequisite = { 
 				focus = JAP_war_china
 		}
-		x = 8
+		x = 6
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
@@ -683,20 +685,193 @@
 		}
 		completion_reward = {
 			create_wargoal = {
-			    type = puppet_wargoal_focus
+			    type = annex_everything
 			    target = INS
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = SAB
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = SAR
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = BRN
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_war_philipinnes
+		icon = GFX_focus_jap_strike_south
+		text = "Control Indonesia"
+		prerequisite = { 
+				focus = JAP_war_indonesia
+		}
+		x = 6
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = PHI
+			}
+		}
+	}
+
+#### to the West ####
+
+	focus = {
+		id = JAP_support_princes
+		icon = GFX_focus_attack_britain
+		text = "Invade India"
+		prerequisite = { 
+				focus = JAP_war_china
+		}
+		x = 10
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_collaboration = {
+			    target = HYD
+			    value = 0.3
+			}
+			set_collaboration = {
+			    target = PAK
+			    value = 0.3
+			}
+			set_collaboration = {
+			    target = KAS
+			    value = 0.3
 			}
 		}
 	}
 
 	focus = {
 		id = JAP_war_india
-		icon = GFX_focus_attack_britain
-		text = "Invade the Raj"
+		icon = GFX_focus_attack_india
+		text = "Invite the princes"
+		prerequisite = { 
+				focus = JAP_support_princes
+		}
+		x = 10
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = RAJ
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_war_Inner_china
+		icon = GFX_focus_attack_india
+		text = "Invade Inner lands"
+		prerequisite = { 
+				focus = JAP_war_india
+		}
+		mutually_exclusive = { 
+			focus = JAP_Inner_china
+		}
+		x = 9
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = annex_everything
+			    target = XSM
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = TIB
+			}
+		}
+	}
+
+	focus = {
+		id = JAP_Inner_china
+		icon = GFX_focus_attack_india
+		text = "Negociate West China"
+		prerequisite = { 
+				focus = JAP_war_india
+		}
+		mutually_exclusive = { 
+			focus = JAP_war_Inner_china
+		}
+		x = 11
+		y = 8
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_collaboration = {
+			    target = XSM
+			    value = 0.3
+			}
+			set_collaboration = {
+			    target = TIB
+			    value = 0.3
+			}
+		}
+	}
+
+#### To the North ####
+
+	focus = {
+		id = JAP_war_Mongolia
+		icon = GFX_focus_attack_mongolia
+		text = "Take the Khanate"
 		prerequisite = { 
 				focus = JAP_war_china
 		}
-		x = 12
+		x = 14
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
@@ -710,12 +885,8 @@
 		}
 		completion_reward = {
 			create_wargoal = {
-			    type = puppet_wargoal_focus
-			    target = RAJ
-			}
-			create_wargoal = {
-			    type = puppet_wargoal_focus
-			    target = MAL
+			    type = annex_everything
+			    target = MON
 			}
 		}
 	}
@@ -725,10 +896,9 @@
 		icon = GFX_focus_attack_soviet
 		text = "Take the Bear"
 		prerequisite = { 
-				focus = JAP_war_india
-				focus = JAP_war_indonesia
+				focus = JAP_war_Mongolia
 		}
-		x = 12
+		x = 14
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
@@ -753,11 +923,10 @@
 		icon = GFX_focus_usa_recruit_the_free_corps
 		text = "Take the Eagle"
 		prerequisite = { 
-				focus = JAP_war_india
-				focus = JAP_war_indonesia
+				focus = JAP_war_Russia
 		}
-		x = 8
-		y = 7
+		x = 14
+		y = 8
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }

@@ -1208,5 +1208,77 @@ HBC = {
 	color_ui = rgb { 94 17 14 }
 }
 
+#####
 
+HEJ = {
+color = rgb { 193 174 98 }
+color_ui = rgb { 193 174 98 }
+}
+
+KUR = {
+color = rgb { 98 157 105 }
+color_ui = rgb { 98 157 105 }
+}
+
+AFR = {
+color = rgb { 24 12 194 }
+color_ui = rgb { 24 12 194 }
+}
+
+LOM = {
+color = rgb { 159 239 12 }
+color_ui = rgb { 159 239 12 }
+}
+
+JSH = {
+color = rgb { 240 192 81 }
+color_ui = rgb { 240 192 81 }
+}
+DES = {
+color = rgb { 223 226 156 }
+color_ui = rgb { 223 226 156 }
+}
+NEN = {
+color = rgb { 120  120  210 }
+color_ui = rgb { 120  120  210 }
+}
+CAL = {
+color = rgb { 206 208 106 }
+color_ui = rgb { 206 208 106 }
+}
+HYD = {
+color = rgb { 234 237 107 }
+color_ui = rgb { 234 237 107 }
+}
+PNJ = {
+color = rgb { 234 237 107 }
+color_ui = rgb { 234 237 107 }
+}
+KAS = {
+color = rgb { 204 230 26 }
+color_ui = rgb { 204 230 26 }
+}
+IKH = {
+color = rgb { 31 44 33 }
+color_ui = rgb { 31 44 33 }
+}
+ZHI = {
+color = rgb { 143 101 86 }
+color_ui = rgb { 143 101 86 }
+}
+ANH = {
+color = rgb { 214 218 131 }
+color_ui = rgb { 214 218 131 }
+}
+
+TRK = {
+color = rgb { 140 145 199 }
+color_ui = rgb { 140 145 199 }
+}
+OTT = {
+color = rgb { 25 85 12 }
+color_ui = rgb { 25 85 12 }
+}
+
+#####
 
