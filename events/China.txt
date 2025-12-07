@@ -20,6 +20,10 @@ country_event = {
 		PRC = { transfer_state = 613 }
 		PRC = { transfer_state = 596 }
 		PRC = { transfer_state = 749 }
+		PRC = { transfer_state = 1033 }
+		PRC = { transfer_state = 1034 }
+		PRC = { transfer_state = 1035 }
+		PRC = { transfer_state = 1036 }
 
 		PRC = {	
 
@@ -169,13 +173,13 @@ country_event = {
 		598 = { set_demilitarized_zone = yes }
 		597 = { set_demilitarized_zone = yes }
 
+		ANH = { transfer_state = 1043 }
+		ANH = { transfer_state = 1046 }
+		ANH = { transfer_state = 1032 }
 		ANH = { transfer_state = 612 }
 		ANH = { transfer_state = 611 }
 		ANH = { transfer_state = 621 }
 		ANH = { transfer_state = 746 }
-		ANH = { transfer_state = 715 }
-		ANH = { transfer_state = 610 }
-		ANH = { transfer_state = 598 }
 		ANH = { transfer_state = 597 }
 		ANH = { transfer_state = 819 }
 		ZHI = { transfer_state = 609 }
@@ -184,6 +188,9 @@ country_event = {
 		ZHI = { transfer_state = 597 }
 		ZHI = { transfer_state = 607 }
 		ZHI = { transfer_state = 744 }
+		ZHI = { transfer_state = 598 }
+		ZHI = { transfer_state = 1038 }
+		ZHI = { transfer_state = 1039 }
 		ANH = { transfer_state = 622 }
 		ANH = { transfer_state = 615 }
 		ZHI = { transfer_state = 620 }
