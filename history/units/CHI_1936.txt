@@ -133,13 +133,6 @@ units = {
 		start_equipment_factor = 0.7
 
 	}
-	division = {
-		name = "Qingdao Jingbei"
-		location = 10000
-		division_template = "Juntuán"		# Garrison unit (poor equipment and training)
-		start_equipment_factor = 0.7
-		start_experience_factor = 0.1
-	}
 	## 3rd Army (CO: Han Fuqu) ##
 	division = { # "12 Juntuán"
 		division_name = {

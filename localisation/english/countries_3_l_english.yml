@@ -51,14 +51,14 @@
  LOM_neutrality_DEF:0 "Lombardy"
  LOM_neutrality_ADJ:0 "Lombardian"
 
- PAP_democratic:0 "Republic of Papal states"
- PAP_democratic_DEF:0 "Republic of Papal states"
+ PAP_democratic:0 "Republic of Latium"
+ PAP_democratic_DEF:0 "Republic of Latium"
  PAP_democratic_ADJ:0 "Papal"
- PAP_communism:0 "People's Republic of Papal states"
- PAP_communism_DEF:0 "People's Republic of Papal states"
+ PAP_communism:0 "People's Republic of Rome"
+ PAP_communism_DEF:0 "People's Republic of Rome"
  PAP_communism_ADJ:0 "Papal"
- PAP_fascism:0 "Papal Empire"
- PAP_fascism_DEF:0 "Papal Empire"
+ PAP_fascism:0 "Roman State"
+ PAP_fascism_DEF:0 "Roman State"
  PAP_fascism_ADJ:0 "Papal"
  PAP_neutrality:0 "Papal states"
  PAP_neutrality_DEF:0 "Papal states"
@@ -180,6 +180,7 @@
  HEJ_arabia:0 "Hashemite Kingdom of Arabia"
  HEJ_arabia_DEF:0 "Hashemite Kingdom of Arabia"
  HEJ_arabia_ADJ:0 "Arabian"
+
  ZHI_democratic:0 "Republic of Zhili"
  ZHI_democratic_DEF:0 "Republic of Zhili"
  ZHI_democratic_ADJ:0 "Zhili"
@@ -231,7 +232,7 @@
  TEX_ADJ:0 "Texan"
 
  EDO:0 "People's Japan"
- EDO_DEF:0 "Syndicates of Japan"
+ EDO_DEF:0 "Syndicates Republic of Japan"
  EDO_ADJ:0 "Japanese"
  TGW:0 "State of Japan"
  TGW_DEF:0 "Japanese Military Council"
@@ -244,6 +245,9 @@
  TRK_DEF:0 "Turkish salvation"
  TRK_ADJ:0 "Candar"
 
+ MAN_empire:0 "Empire of China"
+ MAN_empire_DEF:0 "Empire of China"
+ MAN_empire_ADJ:0 "Qing"
 
 MSQ_fascism:0 "Mashriqi Kingdom"
 MSQ_fascism_DEF:0 "the Mashriqi Kingdom"

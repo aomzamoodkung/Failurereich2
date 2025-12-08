@@ -698,6 +698,11 @@ CHI_second_empire = {
 	color_ui = rgb { 222  222  180 }
 }
 
+MAN_empire = {
+	color = rgb { 220 140  50 }
+	color_ui = rgb { 222  140  50 }
+}
+
 CAN_federation = {
 	color = rgb { 140 0 0 }
 	color_ui = rgb { 145 0 0 }

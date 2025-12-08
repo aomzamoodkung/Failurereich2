@@ -10,6 +10,7 @@
 
 	default = no
     continuous_focus_position = { x = 4000 y = 2500 }
+
 	focus = {
 		id = MAN_constitutional_monarchy
 		text = "A second Empire"
@@ -23,7 +24,7 @@
 			factor = 1
 		}
 		completion_reward = {
-			set_capital= 608
+			set_cosmetic_tag = MAN_empire 
 		}
 	}
 
@@ -216,6 +217,9 @@
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			owns_state = 608
+		}
 		completion_reward = {
 				country_event = { days = 1 id = qing.1 }
 		}
@@ -266,7 +270,7 @@
 	focus = {
 		id = MAN_economic_revise
 		icon = GFX_focus_chi_army_reform
-		text = "Economy revise"
+		text = "Improve the industry"
 		x = 20
 		y = 1
 		cost = 6

@@ -648,8 +648,8 @@ country_event = {
 	trigger= {
 		OR = {
 			tag = EDO
-			tag = JAP
-			tag = TGW
+			tag = VIN
+			tag = BRM
 		}
 		has_war_with = SIA
 		controls_state = 289 
@@ -665,6 +665,8 @@ country_event = {
 		name = "Unconditional surrender"
 		white_peace = SIA
 		puppet = SIA
+		BRM = { set_state_owner = 993 }
+		BRM = { set_state_owner = 994 }
 
 	}
 }
@@ -782,8 +784,8 @@ country_event = {
 }
 country_event = {
 	id = tt.19
-	title = "Red Siam"
-	desc = "Japan succeed to take over the Siamese Empire, we will now make this country our base."
+	title = "Red Indonesia"
+	desc = "Japan succeed to take over the Indonesia, now we will now make this country our base."
 	picture = GFX_report_event_north_germany
 	
 	fire_only_once = yes
@@ -791,12 +793,9 @@ country_event = {
 	trigger= {
 		OR = {
 			tag = EDO
-			tag = JAP
-			tag = TGW
 		}
-		has_war_with = SIA
-		controls_state = 640 
-		controls_state = 288
+		has_war_with = INS
+		controls_state = 335
         }
 	
 	mean_time_to_happen = {
@@ -805,8 +804,8 @@ country_event = {
 
 	option = { 
 		name = "Unconditional surrender"
-		white_peace = SIA
-		puppet = SIA
+		white_peace = INS
+		puppet = INS
 
 	}
 }
@@ -845,6 +844,60 @@ country_event = {
 		PRC = { set_state_owner = 600 }
 		PRC = { set_state_owner = 595 }
 		puppet = PRC
+	}
+}
+
+country_event = {
+	id = tt.22
+	title = "Fall of the Red Kanto"
+	desc = "Japanese People state is not longer a threat to everyone, it's army will be disbanded after all these times."
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		OR = {
+			tag = MAN
+			tag = CHI
+			tag = SOV
+		}
+		OR = {
+			controls_state = 531 
+			controls_state = 282
+		}
+		has_war_with = EDO
+        }
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+
+	option = { 
+		name = "Kansai treaty"
+		white_peace = EDO
+		CAM = { set_state_owner = 741 }
+		LAO = { set_state_owner = 670 }
+		SOV = { set_state_owner = 555 }
+		SOV = { set_state_owner = 537 }
+		MAN = { set_state_owner = 743 }
+		MAN = { set_state_owner = 745 }
+		FOR = { set_state_owner = 524 }
+		OKN = { set_state_owner = 526 }
+		EZO = { set_state_owner = 536 }
+
+		JAP = { set_state_owner = 282 }
+		JAP = {
+			annex_country = {
+	   			 target = EDO
+	   			 transfer_troops = yes
+		      }
+		}
+
+
+		VIN = { set_ruling_party = democratic }
+		JAP = { set_ruling_party = democratic }
+		KOR = { set_ruling_party = reactionary }
+
 	}
 }
 
