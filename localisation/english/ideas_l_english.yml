@@ -2719,3 +2719,19 @@
  AFR_napoleon_cult_spirit: "Imperial Cult of Napoleon"
  AFR_napoleon_cult_spirit_desc: "The Emperor has declared himself more than a ruler—he is the living heir of Rome and Charlemagne, chosen by destiny. Portraits, statues, and catechisms of loyalty flood schools and churches alike. The cult elevates Napoleon beyond mortal politics, binding the state, army, and people together in his image, but at the cost of crushing individuality and sparking underground dissent."
  SIA_a_royal_marriage:0 "A Royal Marriage"
+ RUS_legacy_white_victory:0 "Legacy of the White Victory"
+ RUS_legacy_white_victory_desc:0 "The White Army defeated the Bolsheviks, but the memory of civil war still shapes our military and politics."
+ 
+ RUS_kolchaks_shadow:0 "Kolchak's Shadow"
+ RUS_kolchaks_shadow_desc:0 "Admiral Kolchak's legacy of military dictatorship still influences Russia's political culture."
+ 
+ RUS_orthodox_restoration:0 "Orthodox Restoration"
+ RUS_orthodox_restoration_desc:0 "The Orthodox Church has been restored to prominence in Russian society."
+ 
+ RUS_paranoid_state:0 "Paranoid State Apparatus"
+ RUS_paranoid_state_desc:0 "Fear of communist resurgence has created an extensive internal security apparatus."
+ 
+ RUS_conservative_unity:0 "Conservative Military Unity"
+ RUS_conservative_unity_desc:0 "The old guard stands united against dangerous reforms."
+ 
+ RUS_wrangels_return:0 "Wrangel"

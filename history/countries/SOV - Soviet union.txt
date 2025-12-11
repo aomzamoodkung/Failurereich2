@@ -202,8 +202,10 @@ recruit_character = SOV_lev_dovator
 recruit_character = SOV_pavel_rybalko
 
 add_ideas = {
-	trotskyite_plot
-	home_of_revolution
+	RUS_paranoid_state
+	RUS_orthodox_restoration
+	RUS_kolchaks_shadow
+	RUS_legacy_white_victory
 }
 
 set_cosmetic_tag = SOV_russia 

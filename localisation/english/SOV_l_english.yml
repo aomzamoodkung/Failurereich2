@@ -1,0 +1,91 @@
+﻿l_english:
+ ### Focus Tree ###
+ RUS_aging_general:0 "The Aging General"
+ RUS_aging_general_desc:0 "Anton Denikin has led Russia since Kolchak's death, but he cannot lead forever. We must consider the future."
+ 
+ RUS_young_officers_question:0 "The Young Officers' Memorandum"
+ RUS_young_officers_question_desc:0 "A group of younger officers has submitted proposals for modernization. Do we listen?"
+ 
+ RUS_conservative_military:0 "Maintain Military Unity"
+ RUS_conservative_military_desc:0 "The military junta has served Russia well. We will not weaken it with reforms."
+ 
+ RUS_reform_consideration:0 "Consider Reforms"
+ RUS_reform_consideration_desc:0 "Perhaps the young officers have a point. Russia cannot remain frozen in 1920 forever."
+ 
+ RUS_wrangel_question:0 "The Wrangel Question"
+ RUS_wrangel_question_desc:0 "General Wrangel remains in the Crimea. Should we reconcile with him?"
+ 
+ RUS_reconcile_wrangel:0 "Wrangel's Return"
+ RUS_reconcile_wrangel_desc:0 "General Wrangel will return to active service, bringing his expertise and loyal units."
+ 
+ RUS_industrial_question:0 "The Industrial Question"
+ RUS_industrial_question_desc:0 "Russia's industry must be modernized. But what path do we take?"
+ 
+ RUS_state_capitalism:0 "State-Directed Capitalism"
+ RUS_state_capitalism_desc:0 "Limited privatization under military oversight can boost our economy."
+ 
+ RUS_military_industry:0 "Military-Industrial Complex"
+ RUS_military_industry_desc:0 "The military will control all heavy industry to ensure readiness."
+ 
+ RUS_orthodox_economy:0 "Orthodox Economic Model"
+ RUS_orthodox_economy_desc:0 "A church-blessed traditional economy will maintain stability and our values."
+ 
+ RUS_berlin_invitation:0 "The Berlin Invitation"
+ RUS_berlin_invitation_desc:0 "Communist Germany has invited us to join their coalition. This is unthinkable."
+ 
+ RUS_denounce_communism:0 "Denounce Germany Publicly"
+ RUS_denounce_communism_desc:0 "We will make our stance against communism absolutely clear to the world."
+ 
+ RUS_anti_communist_pact:0 "Form Anti-Communist Pact"
+ RUS_anti_communist_pact_desc:0 "We will seek allies against the Red tide sweeping Europe."
+ 
+ RUS_succession_crisis:0 "The Succession Crisis"
+ RUS_succession_crisis_desc:0 "Denikin's health is declining. We must choose a successor."
+ 
+ RUS_choose_kornilov_jr:0 "Mikhail Kornilov"
+ RUS_choose_kornilov_jr_desc:0 "The son of the legendary Lavr Kornilov will continue the military path."
+ 
+ RUS_choose_grand_duke:0 "Grand Duke Kirill"
+ RUS_choose_grand_duke_desc:0 "Restore the monarchy under a Romanov heir."
+ 
+ RUS_choose_kerensky:0 "Alexander Kerensky"
+ RUS_choose_kerensky_desc:0 "The former prime minister will lead Russia toward democracy."
+ 
+ RUS_choose_collective:0 "Council of Generals"
+ RUS_choose_collective:desc:0 "No single leader—a collective military leadership will guide Russia."
+ 
+ RUS_nkvd_reports:0 "NKVD Reports"
+ RUS_nkvd_reports_desc:0 "Intelligence suggests communist infiltration. What do we do?"
+ 
+ RUS_limited_investigation:0 "Limited Investigation"
+ RUS_limited_investigation_desc:0 "A careful investigation will root out threats without causing panic."
+ 
+ RUS_moderate_purge:0 "Moderate Purge"
+ RUS_moderate_purge_desc:0 "A targeted purge will eliminate the communist threat."
+ 
+ RUS_ignore_reports:0 "Ignore the Reports"
+ RUS_ignore_reports_desc:0 "These reports are probably exaggerated. We have more important matters."
+ 
+ RUS_siberian_question:0 "The Siberian Question"
+ RUS_siberian_question_desc:0 "Siberia remains vulnerable and underdeveloped."
+ 
+ RUS_secure_the_east:0 "Secure the East"
+ RUS_secure_the_east_desc:0 "Build infrastructure throughout Siberia to secure our Far Eastern territories."
+ 
+ RUS_far_eastern_command:0 "Far Eastern Command"
+ RUS_far_eastern_command_desc:0 "Establish a dedicated military command for the Far East."
+ 
+ RUS_german_threat:0 "The German Threat"
+ RUS_german_threat_desc:0 "Communist Germany is remilitarizing. We must respond."
+ 
+ RUS_immediate_buildup:0 "Immediate Military Buildup"
+ RUS_immediate_buildup_desc:0 "Switch to war economy and expand our military industry immediately."
+ 
+ RUS_defensive_doctrine:0 "Defensive Doctrine"
+ RUS_defensive_doctrine_desc:0 "Build fortifications along our western border."
+ 
+ RUS_diplomatic_offensive:0 "Diplomatic Offensive"
+ RUS_diplomatic_offensive_desc:0 "Form a coalition against communist expansion."
+ 
+ RUS_denikins_final_decision:0 "Denikin's Final Decision"
+ RUS_denikins_final_decision_desc:0 "The General must now choose Russia's path for the future."

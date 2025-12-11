@@ -3309,3 +3309,64 @@
  fra_allies_resp.2.d:0 "Shipments from Allies slip past German eyes. The Maquis will put them to good use."
  fra_allies_resp.3.t:0 "Volunteers Answer the Call"
  fra_allies_resp.3.d:0 "A cadre of volunteers and instructors arrives to drill and fight alongside us."
+  ### Events ###
+ denikin_russia.1.t:0 "Denikin's Burden"
+ denikin_russia.1.d:0 "General Anton Denikin sits in his office, surrounded by maps and reports. The weight of leadership shows on his weathered face. He defeated the Bolsheviks once, but now they rule from Berlin to Constantinople. How long can Russia stand against this tide?"
+ denikin_russia.1.a:0 "We will endure, as we always have."
+ 
+ denikin_russia.2.t:0 "The Young Officers' Memorandum"
+ denikin_russia.2.d:0 "A group of young officers, survivors of the Civil War who have risen through the ranks, have submitted a formal memorandum. They argue that Russia cannot remain a military junta indefinitely. They propose limited democratic reforms, modernization of the state apparatus, and a gradual transition to civilian rule.\n\nThe older generals are outraged. They see this as betrayal of everything the White Movement fought for."
+ denikin_russia.2.a:0 "Refuse these dangerous ideas."
+ denikin_russia.2.b:0 "At least hear what they have to say."
+ 
+ denikin_russia.3.t:0 "The Wrangel Question"
+ denikin_russia.3.d:0 "General Pyotr Wrangel, the 'Black Baron' of the White Guard, has remained in semi-exile in the Crimea since disagreements with Kolchak. Many officers still revere him, and some whisper that he should have been chosen to lead after Kolchak's death.\n\nDenikin must decide: reconcile with Wrangel and bring him back into the fold, or continue to keep him at arm's length?"
+ denikin_russia.3.a:0 "Russia needs all her White generals. Invite Wrangel back."
+ denikin_russia.3.b:0 "Wrangel made his choice. Let him stay in Crimea."
+ 
+ denikin_russia.4.t:0 "The Industrial Question"
+ denikin_russia.4.d:0 "Your economic advisors have prepared three different plans for industrial development. Each represents a fundamentally different vision of Russia's economic future."
+ denikin_russia.4.a:0 "State-Directed Capitalism - Limited private enterprise under military oversight."
+ denikin_russia.4.b:0 "Military-Industrial Complex - The military must control heavy industry."
+ denikin_russia.4.c:0 "Orthodox Economic Model - Traditional economy blessed by the Church."
+ 
+ denikin_russia.5.t:0 "Invitation from Berlin"
+ denikin_russia.5.d:0 "An official delegation from Communist Germany has arrived with a formal invitation. They speak of 'international proletarian solidarity' and 'the inevitable victory of communism.' They offer Russia membership in their 'International Communist Coalition.'\n\nThe irony is almost laughable. These are the ideological descendants of the men Denikin fought for years. How should Russia respond?"
+ denikin_russia.5.a:0 "Denounce them publicly and completely."
+ denikin_russia.5.b:0 "Decline politely but firmly."
+ denikin_russia.5.c:0 "Counter with our own proposal - an Anti-Communist Pact!"
+ 
+ denikin_russia.6.t:0 "Denikin's Heart"
+ denikin_russia.6.d:0 "The General collapsed during a military review. Doctors stabilized him, but the diagnosis is clear: angina, brought on by years of stress and the weight of leadership. Denikin will recover, but he cannot ignore reality any longer.\n\nHe must choose a successor. Four candidates have emerged, each representing a different vision for Russia's future."
+ denikin_russia.6.a:0 "Mikhail Kornilov - Continue the military path."
+ denikin_russia.6.b:0 "Grand Duke Kirill - Restore the monarchy."
+ denikin_russia.6.c:0 "Alexander Kerensky - Democratic reforms."
+ denikin_russia.6.d:0 "Council of Generals - Collective leadership."
+ 
+ denikin_russia.10.t:0 "The NKVD Reports"
+ denikin_russia.10.d:0 "Your intelligence service has delivered a troubling report. They claim to have evidence of communist cells operating within the military and government. According to their analysis, agents sympathetic to the German or Ottoman regimes may have infiltrated at multiple levels.\n\nSome advisors urge an immediate purge. Others counsel caution, warning that paranoia could be more dangerous than the threat itself."
+ denikin_russia.10.a:0 "Conduct a limited, careful investigation."
+ denikin_russia.10.b:0 "Purge the suspected elements immediately."
+ denikin_russia.10.c:0 "These reports are exaggerated. Focus on real threats."
+ 
+ denikin_russia.11.t:0 "The Coup Attempt"
+ denikin_russia.11.d:0 "The reports were not exaggerated. A group of junior officers, secretly communist sympathizers, have attempted a coup. They seized the radio station and tried to broadcast a call for revolution.\n\nLoyal troops suppressed the uprising within hours, but the damage is done. How many more sleeper agents remain?"
+ denikin_russia.11.a:0 "Hunt down every last one of them!"
+ 
+ denikin_russia.12.t:0 "The Siberian Question"
+ denikin_russia.12.d:0 "Siberia—vast, rich in resources, and nearly impossible to defend. Japan eyes the region hungrily. Communist agitators operate from Vladivostok. The local population feels neglected by the government in Moscow.\n\nIf Russia is to remain a great power, we must secure the East."
+ denikin_russia.12.a:0 "We will address this immediately."
+ 
+ denikin_russia.13.t:0 "Germany Remilitarizes"
+ denikin_russia.13.d:0 "Intelligence reports confirm what many feared: Communist Germany is massively expanding its military. New tank divisions, aircraft factories, and a growing Wehrmacht.\n\nThey look east. Russia must respond."
+ denikin_russia.13.a:0 "Immediate military buildup—prepare for war!"
+ denikin_russia.13.b:0 "Build fortifications. We will defend Russia."
+ denikin_russia.13.c:0 "Form a diplomatic coalition against them."
+ 
+ denikin_russia.20.t:0 "Denikin's Final Decision"
+ denikin_russia.20.d:0 "It is late 1937. General Denikin sits alone in his study, looking at four different documents—each representing a path forward for Russia.\n\nHe has devoted his life to this nation. Now, in what may be his final act of leadership, he must choose its future. What kind of Russia will emerge from this decision?"
+ denikin_russia.20.a:0 "Russia will remain a military state. [Eternal Junta]"
+ denikin_russia.20.b:0 "The Tsar will return. [Monarchist Restoration]"
+ denikin_russia.20.c:0 "Russia will embrace democracy. [Democratic Reform]"
+ denikin_russia.20.d:0 "Let the generals decide together. [Collective Leadership]"
+ 
