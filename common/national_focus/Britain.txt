@@ -594,6 +594,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			NOR = { has_war = no }
+		}
 		completion_reward = {
 			release_puppet = NOR
 		}
@@ -614,6 +617,9 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		available = {
+			DEN = { has_war = no }
+		}
 		completion_reward = {
 			release_puppet = DEN
 		}
@@ -633,6 +639,9 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT } 
 		ai_will_do = {
 			factor = 1
+		}
+		available = {
+			HOL = { has_war = no }
 		}
 		completion_reward = {
 			release_puppet = HOL
