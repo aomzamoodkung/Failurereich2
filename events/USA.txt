@@ -450,7 +450,8 @@ country_event = {
 
 	trigger= {
 		tag = USA
-		NOT = { controls_state = 360 }
+		NOT = { controls_state = 369 }		
+		NOT = { controls_state = 373 }
         }
 	
 	mean_time_to_happen = {
@@ -483,7 +484,7 @@ country_event = {
 	trigger= {
 		tag = USA
 		NOT = { owns_state = 463 }
-		USA = { surrender_progress > 0.3 }
+		USA = { surrender_progress > 0.35 }
         } 
 	
 	mean_time_to_happen = {
