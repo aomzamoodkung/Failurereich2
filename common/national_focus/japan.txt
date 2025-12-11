@@ -898,7 +898,7 @@
 		prerequisite = { 
 				focus = JAP_war_Mongolia
 		}
-		x = 14
+		x = 13
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
@@ -919,11 +919,39 @@
 	}
 
 	focus = {
+		id = JAP_peace_Russia
+		icon = GFX_focus_attack_soviet
+		text = "Deal with the bear"
+		prerequisite = { 
+				focus = JAP_war_Mongolia
+		}
+		x = 15
+		y = 7
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			diplomatic_relation= { 
+				country = SOV
+				relation = non_aggression_pact 
+			}
+		}
+	}
+
+	focus = {
 		id = JAP_war_USA
 		icon = GFX_focus_usa_recruit_the_free_corps
 		text = "Take the Eagle"
 		prerequisite = { 
 				focus = JAP_war_Russia
+				focus = JAP_peace_Russia
 		}
 		x = 14
 		y = 8
