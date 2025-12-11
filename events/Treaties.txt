@@ -874,7 +874,11 @@ country_event = {
 
 	option = { 
 		name = "Kansai treaty"
+
 		white_peace = EDO
+		white_peace = VIN
+		white_peace = KOR
+
 		CAM = { set_state_owner = 741 }
 		LAO = { set_state_owner = 670 }
 		SOV = { set_state_owner = 555 }
@@ -886,9 +890,16 @@ country_event = {
 		EZO = { set_state_owner = 536 }
 
 		JAP = { set_state_owner = 282 }
+
 		JAP = {
 			annex_country = {
 	   			 target = EDO
+	   			 transfer_troops = yes
+		      }
+		}
+		CHI = {
+			annex_country = {
+	   			 target = PRC
 	   			 transfer_troops = yes
 		      }
 		}

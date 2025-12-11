@@ -146,7 +146,7 @@
 		}
 		completion_reward = {
 			CHI = {
-			give_guarantee = MAN #has_guaranteed = CHI it isnť effect but trigger
+				give_guarantee = MAN 
 			}
 		}
 	}
@@ -242,7 +242,7 @@
 			NOT = { owns_state = 608 }
 		}
 		completion_reward = {
-			set_capital = 
+			set_capital = 328
 		}
 	}
 
@@ -250,7 +250,7 @@
 		id = MAN_help
 		icon = GFX_goal_generic_demand_territory
 		prerequisite = { focus = MAN_fall }
-		text = "Ask to the Kaiser"
+		text = "Ask to the Khan"
 		x = 16
 		y = 1
 		cost = 10
@@ -261,7 +261,9 @@
 		available = {
 		}
 		completion_reward = {
-			set_capital = 328
+			MON = {
+				give_guarantee = MAN
+			}
 		}
 	}
 
