@@ -97,7 +97,7 @@ country_event = {
 country_event = {
 	id = germany.4
 	title = "Referundum about czech"
-	desc = "Prussian parlement try to find if they can integrate czech, this referundum will be made becCZEe Petrograd alliance collapsed."
+	desc = "Prussian parlement try to find if they can integrate czech, this referundum will be made because Petrograd alliance collapsed."
 	picture = GFX_report_event_generic_read_write
 	
 	is_triggered_only = yes
@@ -243,6 +243,7 @@ country_event = {
 		GER = { set_state_owner = 87 }
 		GER = { set_state_owner = 98 }
 		GER = { set_state_owner = 1077 } ### to update ###
+		GER = { set_state_owner = 1074 } ### to update ###
 		GER = { set_state_owner = 1070 } ### to update ###
 		GER = { set_state_owner = 1069 } ### to update ###
 		SOV = { set_state_owner = 97 }

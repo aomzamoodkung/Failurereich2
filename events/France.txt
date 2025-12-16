@@ -167,6 +167,7 @@ country_event = {
 	   		 transfer_troops = yes
 		}
 		HOL = { transfer_state = 6 }
+		HOL = { transfer_state = 977 }
 	}
 }
 
