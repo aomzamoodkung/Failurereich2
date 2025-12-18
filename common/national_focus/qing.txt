@@ -242,7 +242,7 @@
 			NOT = { owns_state = 608 }
 		}
 		completion_reward = {
-			set_capital = 328
+			set_capital = 716
 		}
 	}
 

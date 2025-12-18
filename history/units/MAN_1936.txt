@@ -43,7 +43,7 @@ units = {
 		}
 		location = 800
 		division_template = "Qu Jun"
-		start_experience_factor = 0.1
+		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
 	}
 	division = { # "2 Qu Jun"
@@ -53,7 +53,7 @@ units = {
 		}
 		location = 11771
 		division_template = "Qu Jun"
-		start_experience_factor = 0.1
+		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
 	}
 	division = { # "3 Qu Jun"
@@ -63,7 +63,7 @@ units = {
 		}
 		location = 3944
 		division_template = "Qu Jun"
-		start_experience_factor = 0.1
+		start_experience_factor = 0.3
 		start_equipment_factor = 0.9
 	}
 	division = {
@@ -84,7 +84,7 @@ units = {
 		}
 		location = 3877
 		division_template = "Qu Jun"
-		start_experience_factor = 0.1
+		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
 	}
 	division = { # "1 Qibing Shi"
@@ -94,7 +94,7 @@ units = {
 		}
 		location = 800
 		division_template = "Qibing Shi"
-		start_experience_factor = 0.1
+		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
 	division = { # "2 Qibing Shi"
@@ -104,7 +104,7 @@ units = {
 		}
 		location = 11771
 		division_template = "Qibing Shi"
-		start_experience_factor = 0.1
+		start_experience_factor = 0.4
 		start_equipment_factor = 0.9
 	}
 	division = { # "3 Qibing Shi"
@@ -114,7 +114,7 @@ units = {
 		}
 		location = 3944
 		division_template = "Qibing Shi"
-		start_experience_factor = 0.1
+		start_experience_factor = 0.5
 		start_equipment_factor = 0.9
 	}
 	division = { # "4 Qibing Shi"
@@ -124,7 +124,27 @@ units = {
 		}
 		location = 4809
 		division_template = "Qibing Shi"
-		start_experience_factor = 0.1
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.3
+	}
+	division = { # "4 Qibing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 4809
+		division_template = "Qibing Shi"
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.6
+	}
+	division = { # "4 Qibing Shi"
+		division_name = {
+			is_name_ordered = yes
+			name_order = 4
+		}
+		location = 4809
+		division_template = "Qibing Shi"
+		start_experience_factor = 0.6
 		start_equipment_factor = 0.9
 	}
 	division = { # "4 Qibing Shi"
@@ -134,8 +154,8 @@ units = {
 		}
 		location = 4809
 		division_template = "Qibing Shi"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.9
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.6
 	}
 	division = { # "4 Qibing Shi"
 		division_name = {
@@ -144,8 +164,8 @@ units = {
 		}
 		location = 4809
 		division_template = "Qibing Shi"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.9
+		start_experience_factor = 0.6
+		start_equipment_factor = 0.6
 	}
 	division = { # "4 Qibing Shi"
 		division_name = {
@@ -154,27 +174,7 @@ units = {
 		}
 		location = 4809
 		division_template = "Qibing Shi"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.9
-	}
-	division = { # "4 Qibing Shi"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 4
-		}
-		location = 4809
-		division_template = "Qibing Shi"
-		start_experience_factor = 0.1
-		start_equipment_factor = 0.9
-	}
-	division = { # "4 Qibing Shi"
-		division_name = {
-			is_name_ordered = yes
-			name_order = 4
-		}
-		location = 4809
-		division_template = "Qibing Shi"
-		start_experience_factor = 0.1
+		start_experience_factor = 0.2
 		start_equipment_factor = 0.9
 	}
 }

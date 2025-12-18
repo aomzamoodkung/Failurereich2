@@ -25,6 +25,7 @@ ideologies = {
 		}
 		
 		color = { 45 45 45 }
+<<<<<<< HEAD
 		
 		war_impact_on_world_tension = 0.5
 		faction_impact_on_world_tension = 0.5
@@ -51,7 +52,40 @@ ideologies = {
 		}
 		
 		ai_fascist = yes
+=======
+>>>>>>> 98baff1cfae3c0bd5fec95b2b1bd3faa806b2036
 
+
+		war_impact_on_world_tension = 0.25		#no major danger
+		faction_impact_on_world_tension = 0.1
+
+		rules = {
+			can_force_government = yes
+			can_puppet = yes
+			can_send_volunteers = no
+		}
+
+		modifiers = {
+			#increased_influence_factor = 0.3 #30% easier to influence
+			generate_wargoal_tension = 0.5
+			join_faction_tension = 0.4
+			lend_lease_tension = 0.6
+			send_volunteers_tension = 0.4
+			guarantee_tension = 0.4
+			drift_defence_factor = -0.3
+			civilian_intel_to_others = 20.0
+			army_intel_to_others = 10.0
+			navy_intel_to_others = 20.0
+			airforce_intel_to_others = 10.0
+		}
+
+		faction_modifiers = {
+		}
+
+		ai_neutral = yes #
+		ai_ideology_wanted_units_factor = 1.15
+		
+		ai_give_core_state_control_threshold = 10000
 	}
 
 	vanguardism = { ### Syncretic Politics
@@ -111,17 +145,21 @@ ideologies = {
 	communism = { ### Vanguard Politics
 		
 		types = {
-	
-			stalinism = {
-			}
-		
+
 			marxism = {
 			}
-			
+
 			leninism = {
 			}
+
+			stalinism = {
+			}
+
+			buddhist_socialism = {
+				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
+			}
 			
-            mladorossism = {
+            		mladorossism = {
 			}
 
 		}
@@ -252,34 +290,40 @@ ideologies = {
 		
 		color = { 124 100 124 }
 		
-		
 		war_impact_on_world_tension = 0.25		#no major danger
 		faction_impact_on_world_tension = 0.1
-		
+
 		rules = {
-			can_force_government = no
+			can_force_government = yes
 			can_puppet = yes
 			can_send_volunteers = no
 		}
-		
+
 		modifiers = {
 			#increased_influence_factor = 0.3 #30% easier to influence
 			generate_wargoal_tension = 0.5
 			join_faction_tension = 0.4
-			lend_lease_tension = 0.4
+			lend_lease_tension = 0.6
 			send_volunteers_tension = 0.4
 			guarantee_tension = 0.4
-			drift_defence_factor = -0.3	
+			drift_defence_factor = -0.3
 			civilian_intel_to_others = 20.0
 			army_intel_to_others = 10.0
 			navy_intel_to_others = 20.0
 			airforce_intel_to_others = 10.0
 		}
-		
+
 		faction_modifiers = {
 		}
 
+<<<<<<< HEAD
 		ai_fascist = yes
+=======
+		ai_neutral = yes #
+		ai_ideology_wanted_units_factor = 1.15
+		
+		ai_give_core_state_control_threshold = 10000
+>>>>>>> 98baff1cfae3c0bd5fec95b2b1bd3faa806b2036
 	}
 
 	democratic = {
@@ -297,6 +341,9 @@ ideologies = {
 			}
 
 			traditionalism = {
+			}
+
+			populism = {
 			}
 
 		}
@@ -361,6 +408,10 @@ ideologies = {
 			corporatism  = {
 			}
 
+			japan_militarism_ideology = {
+				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
+			}
+
 		}
 
 		dynamic_faction_names = {
@@ -373,34 +424,40 @@ ideologies = {
 		
 		color = { 0 0 100 }
 		
-		
 		war_impact_on_world_tension = 0.25		#no major danger
 		faction_impact_on_world_tension = 0.1
-		
+
 		rules = {
 			can_force_government = yes
 			can_puppet = yes
 			can_send_volunteers = no
 		}
-		
+
 		modifiers = {
 			#increased_influence_factor = 0.3 #30% easier to influence
 			generate_wargoal_tension = 0.5
 			join_faction_tension = 0.4
-			lend_lease_tension = 0.4
+			lend_lease_tension = 0.6
 			send_volunteers_tension = 0.4
 			guarantee_tension = 0.4
-			drift_defence_factor = -0.3	
+			drift_defence_factor = -0.3
 			civilian_intel_to_others = 20.0
 			army_intel_to_others = 10.0
 			navy_intel_to_others = 20.0
 			airforce_intel_to_others = 10.0
 		}
-		
+
 		faction_modifiers = {
 		}
 
+<<<<<<< HEAD
 		ai_fascist = yes
+=======
+		ai_neutral = yes #
+		ai_ideology_wanted_units_factor = 1.15
+		
+		ai_give_core_state_control_threshold = 10000
+>>>>>>> 98baff1cfae3c0bd5fec95b2b1bd3faa806b2036
 	}
 
 	fascism = {
@@ -412,14 +469,18 @@ ideologies = {
 
 			gen_nazism = {
 			}
-			
+
 			fascism_ideology = {
 			}
-			
+
 			falangism = {
 			}
-			
+
 			rexism = {
+			}
+
+			emperor_fascism = {
+				can_be_randomly_selected = no # won't be assigned to randomly generated country leaders
 			}
 		}
 		
