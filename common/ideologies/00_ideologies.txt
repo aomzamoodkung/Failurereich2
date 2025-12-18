@@ -50,7 +50,7 @@ ideologies = {
 			
 		}
 		
-		ai_neutral = yes
+		ai_fascist = yes
 
 	}
 
@@ -103,7 +103,7 @@ ideologies = {
 			
 		}
 		
-		ai_neutral = yes
+		ai_fascist = yes
 
 	}
 
@@ -160,7 +160,7 @@ ideologies = {
 			
 		}
 		
-		ai_neutral = yes
+		ai_fascist = yes
 
 	}
 
@@ -226,7 +226,7 @@ ideologies = {
 			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
 		}
 
-		ai_neutral = yes
+		ai_fascist = yes
 
 	}
 	
@@ -279,7 +279,7 @@ ideologies = {
 		faction_modifiers = {
 		}
 
-		ai_neutral = yes
+		ai_fascist = yes
 	}
 
 	democratic = {
@@ -345,7 +345,7 @@ ideologies = {
 			faction_trade_opinion_factor = 0.50 #plus 50% trade opinion
 		}
 
-		ai_neutral = yes
+		ai_fascist = yes
 	}
 	
 	reactionary = { ### Right-Far right
@@ -400,7 +400,7 @@ ideologies = {
 		faction_modifiers = {
 		}
 
-		ai_neutral = yes
+		ai_fascist = yes
 	}
 
 	fascism = {
@@ -453,6 +453,6 @@ ideologies = {
 			hidden_modifier = { join_faction_tension = -0.1 }
 		}
 
-		ai_neutral = yes
+		ai_fascist = yes
 	}
 }

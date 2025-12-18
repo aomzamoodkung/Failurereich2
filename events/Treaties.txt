@@ -575,12 +575,26 @@ country_event = {
 	}
 	
 	option = {
-		name = "our land!"
+		name = "Create a puppet state"
 		
 		GER = { set_state_owner = 69 }
 		GER = { set_state_owner = 74 }
-		HUN = { set_state_owner = 75 }
-		HUN = { set_state_owner = 9 }
+		GER = { set_state_owner = 72 }
+
+		RKH = { set_state_owner = 75 }
+		RKH = { set_state_owner = 9 }
+
+		puppet = RKH
+		RKH = { set_cosmetic_tag = RKH_volk }
+		
+	}
+	option = {
+		name = "Our land!"
+		
+		GER = { set_state_owner = 69 }
+		GER = { set_state_owner = 74 }
+		GER = { set_state_owner = 75 }
+		GER = { set_state_owner = 9 }
 		GER = { set_state_owner = 72 }
 		
 	}
