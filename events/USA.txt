@@ -519,8 +519,8 @@ country_event = {
 		NWG  = { set_state_owner = 360 }
 		NWG  = { set_state_owner = 359 }
 		NWG  = { set_state_owner = 816 }
-		DES = { set_state_owner = 1059 } ### to update ###
-		DES = { set_state_owner = 1060 } ### to update ###
+		NWG = { set_state_owner = 1059 } ### to update ###
+		NWG = { set_state_owner = 1060 } ### to update ###
 
 		NWG  = { set_cosmetic_tag = NWG_USA }
 

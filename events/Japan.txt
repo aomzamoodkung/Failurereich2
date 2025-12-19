@@ -10,7 +10,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "Kuomindang will harshly get pain with Qing"
+		name = "Take over China"
 	        declare_war_on = {
 		                target = MAN
 		                type = annex_everything
@@ -150,23 +150,36 @@ country_event = {
 	is_triggered_only = yes
 
 	option = {
-		name = "Japan new friends"
+		name = "People's Japan new allies"
+
+		MAN= { transfer_state = 745 }
+		MAN= { transfer_state = 743 }
+		FOR= { transfer_state = 524 }
+
 		EDO = { 
 			create_faction = "East Asian Workers Front"
 			add_to_faction = VIN
 			add_to_faction = KOR
+			puppet = FOR
 		}
+
 		VIN= { transfer_state = 671 }
 		VIN= { transfer_state = 670 }
 		VIN= { transfer_state = 741 }
 		VIN= { transfer_state = 286 }
 		VIN= { transfer_state = 1017 }
+
 		KOR= { transfer_state = 525 }
 		KOR= { transfer_state = 527 }
 		KOR= { transfer_state = 1028 }
 		KOR= { transfer_state = 1029 }
 		KOR= { transfer_state = 1030 }
 		KOR= { transfer_state = 1031 }
+
+		EDO = { transfer_state = 646 }
+		EDO = { transfer_state = 647 }
+		EDO = { transfer_state = 633 }
+		EDO = { transfer_state = 684 }
 	}
 }
 
