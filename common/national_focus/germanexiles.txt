@@ -63,16 +63,6 @@ focus_tree = {
 		}
 		completion_reward = {
 			add_manpower = 200000
-			add_units_to_division_template = {
-			    	template_name = "Colonial army"
-			   	regiments = {
-			     	   infantry = 3
-			     	   infantry = 3
-			    	}
-		    		support = {
-			  	      military_police = 0
-			  	}
-			}
 		}
 	}
 	
