@@ -215,7 +215,7 @@ JAP1_setup_civil_war = {
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 533 state = 536 state = 537 state = 555 state = 524 state = 645
+					state = 533 state = 536 state = 537 state = 555 state = 524 state = 645 state = 648
 				}
 			}
 			EDO = { add_state_core = PREV }
