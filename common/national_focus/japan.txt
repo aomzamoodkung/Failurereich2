@@ -146,6 +146,15 @@
 				    add_claim_by = JAP
 				}
 			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = FOR
+			}
+			FOR = {
+				every_owned_state = {
+				    add_claim_by = JAP
+				}
+			}
 		}
 	}
 
@@ -311,6 +320,15 @@
 			    target = KOR
 			}
 			KOR = {
+				every_owned_state = {
+				    add_claim_by = TGW
+				}
+			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = FOR
+			}
+			FOR = {
 				every_owned_state = {
 				    add_claim_by = TGW
 				}
