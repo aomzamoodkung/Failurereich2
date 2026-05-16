@@ -178,6 +178,7 @@ country_event = {
 
 		EDO = { transfer_state = 646 }
 		EDO = { transfer_state = 647 }
+		EDO = { transfer_state = 648 }
 		EDO = { transfer_state = 633 }
 		EDO = { transfer_state = 684 }
 	}

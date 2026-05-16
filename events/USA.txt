@@ -173,9 +173,9 @@ country_event = {
 		hidden_effect = {
 			news_event = { hours = 6 id = fr_news.1 }
 
-			country_event = { days = 36 id = usa.3 }
-			country_event = { days = 17 id = usa.5 }
-			country_event = { days = 29 id = usa.8 }
+			country_event = { days = 15 id = usa.3 }
+			country_event = { days = 30 id = usa.5 }
+			country_event = { days = 45 id = usa.8 }
 		}
 	}
 }
