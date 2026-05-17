@@ -111,9 +111,9 @@
 			factor = 1
 		}
 		completion_reward = {
-			JAP = { 		
-				
-			}
+			####
+			create_faction = "Imperial Sphere"
+			####
 		}
 	}
 
@@ -285,10 +285,10 @@
 		completion_reward = {
 			TGW = { 
 				set_politics = {
-					ruling_party = reactionary
+					ruling_party = fascism
     					elections_allowed = no
-    					long_name = "Republican Liberal party"
-    					name = "Republican party"
+    					long_name = "Republican Liberal Party"
+    					name = "RLP"
 				}
 			}
 			create_faction = "Defense sphere"
