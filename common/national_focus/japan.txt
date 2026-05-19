@@ -111,9 +111,10 @@
 			factor = 1
 		}
 		completion_reward = {
-			####
+		
 			create_faction = "Imperial Sphere"
-			####
+			create_faction = "Imperial Sphere"
+			
 		}
 	}
 
@@ -286,9 +287,9 @@
 			TGW = { 
 				set_politics = {
 					ruling_party = fascism
-    					elections_allowed = no
-    					long_name = "Republican Liberal Party"
-    					name = "RLP"
+    				elections_allowed = no
+    				long_name = "Republican Party"
+    				name = "RLP"
 				}
 			}
 			create_faction = "Defense sphere"
