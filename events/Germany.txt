@@ -190,7 +190,7 @@ country_event = {
 country_event = {
 	id = germany.8
 	title = "Invade Poland"
-	desc = ""
+	desc = "We are now free to take over Western Slavia. Our goal is to liberate the East from fascism."
 	picture = GFX_report_event_north_germany
 	
 	is_triggered_only = yes
@@ -202,14 +202,16 @@ country_event = {
 		                target = POL
 		                type = annex_everything
 	        }	
-
-		add_state_claim  = 67
-		add_state_claim  = 800
-		add_state_claim  = 762
-		add_state_claim  = 86
-		add_state_claim  = 87
-		add_state_claim  = 98
-		add_state_claim  = 799
+	
+		add_state_claim = 67
+		add_state_claim = 762
+		add_state_claim = 86
+		add_state_claim = 87
+		add_state_claim = 98
+		add_state_claim = 1077
+		add_state_claim = 1074
+		add_state_claim = 1070
+		add_state_claim = 1069
 	}
 }
 

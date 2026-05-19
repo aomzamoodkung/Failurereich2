@@ -156,7 +156,7 @@ country_event = {
 	option = {
 		name = "We will not tolerate this"
 			create_wargoal  = {
-		                target = PAP
+		                target = AUS
 		                type = annex_everything
 	        	}		
 			AUS = {
