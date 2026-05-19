@@ -153,7 +153,6 @@ focus_tree = {
 		text = "Military doctrine"
 		prerequisite = { 	
 			focus = AFR_appeal_to_the_catholic_church
-			focus = AFR_de_gaulle
 			focus = AFR_enshrine_laicite
 		}
 		x = 8
