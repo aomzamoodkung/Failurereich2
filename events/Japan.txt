@@ -38,21 +38,6 @@ country_event = {
 }
 
 country_event = {
-	id = japan.2
-	title = "Japan make peace with Vietnamand Korea"
-	desc = "Vietnam is now beyond us as for Korea. We will let Ho Chi Minh alone."
-	picture = GFX_report_event_generic_read_write
-	
-	is_triggered_only = yes
-
-	option = {
-		name = "Make peace with Vietnam and Korea"
-		white_peace = VIN
-		white_peace = KOR
-	}
-}
-
-country_event = {
 	id = japan.3
 	title = "Japanese's Coup"
 	desc = "The shocks of the global Financial Crisis have reached all across the world, it seems. Recent unemployment protests have turned into riots, with 200+ police officers dead, It is unknown how this will end. There have been 56 nations sending aid, including China, which commented 'We cannot let another Major Power fall into civil war, lest another World War were to occur."

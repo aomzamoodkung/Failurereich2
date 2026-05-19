@@ -183,7 +183,8 @@ country_event = {
             set_state_owner = 480 
             set_state_owner = 482 
             set_state_owner = 483 
-            set_state_owner = 484 
+            set_state_owner = 484
+            set_state_owner = 1054  
         }
     }
 }
@@ -368,7 +369,7 @@ country_event = {
 country_event = {
     id = usa.11
     title = "Second American Civil War end."
-    desc = "Under the conference of Ottawa..."
+    desc = "Under the conference of Ottawa, USA is now divided between winners."
     picture = GFX_report_event_lithuania_army
 
     fire_only_once = yes
@@ -395,7 +396,7 @@ country_event = {
         NWG = { white_peace = USB }
 
         # Attribution des territoires finaux
-        CSA = { set_state_owner = 374 set_state_owner = 376 }
+        CSA = { set_state_owner = 374 set_state_owner = 376 set_state_owner = 1055 }
         CAN = { set_state_owner = 686 }
         USB = { 
             set_state_owner = 369
