@@ -22,7 +22,7 @@ division_template = {
 ##### OOB #####
 units = {
 	division= {	
-		name = "Theocrat troops"	
+		name = "Theocrat troops 1"	
 		location = 4865 
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
@@ -30,7 +30,7 @@ units = {
 
 	}
 	division= {	
-		name = "Theocrat troops"	
+		name = "Theocrat troops 2"	
 		location = 4865 
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
@@ -38,7 +38,7 @@ units = {
 
 	}
 	division= {	
-		name = "Theocrat troops"	
+		name = "Theocrat troops 3"	
 		location = 4668 
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
@@ -46,7 +46,7 @@ units = {
 
 	}
 	division= {	
-		name = "Theocrat troops"	
+		name = "Theocrat troops 4"	
 		location = 4668 
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
@@ -54,7 +54,7 @@ units = {
 
 	}
 	division= {	
-		name = "Theocrat troops"	
+		name = "Theocrat troops 5"	
 		location = 4668 
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }
@@ -62,7 +62,7 @@ units = {
 
 	}
 	division= {	
-		name = "Theocrat troops"	
+		name = "Theocrat troops 6"	
 		location = 4865 
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "DES" } }

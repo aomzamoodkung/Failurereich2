@@ -1,281 +1,75 @@
 ##### Division Templates #####
 
 division_template = {
-    name = "Division d'Infanterie"
-    division_names_group = AFR_INF_01
-    regiments = {
-        infantry = { x = 0 y = 0 }
-        infantry = { x = 0 y = 1 }
-        infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
-        infantry = { x = 1 y = 1 }
-        infantry = { x = 1 y = 2 }
-        infantry = { x = 2 y = 0 }
-        infantry = { x = 2 y = 1 }
-        infantry = { x = 2 y = 2 }
-    }
-    support = {
-        artillery = { x = 0 y = 0 }
-        engineer = { x = 0 y = 1 }
-    }
-}
-
-division_template = {
-    name = "Division Coloniale"
-    division_names_group = AFR_COL_01
-    regiments = {
-        infantry = { x = 0 y = 0 }
-        infantry = { x = 0 y = 1 }
-        infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
-        infantry = { x = 1 y = 1 }
-        infantry = { x = 1 y = 2 }
-        infantry = { x = 2 y = 0 }
-        infantry = { x = 2 y = 1 }
-        infantry = { x = 2 y = 2 }
-    }
-    support = {
-        artillery = { x = 0 y = 0 }
-    }
-}
-
-division_template = {
-    name = "Division d'Infanterie Motorisée"
-    division_names_group = AFR_MOT_01
-
-    regiments = {
-        motorized = { x = 0 y = 0 }
-        motorized = { x = 0 y = 1 }
-        motorized = { x = 0 y = 2 }
-        motorized = { x = 1 y = 0 }
-        motorized = { x = 1 y = 1 }
-        motorized = { x = 1 y = 2 }
-        motorized = { x = 2 y = 0 }
-        motorized = { x = 2 y = 1 }
-        motorized = { x = 2 y = 2 }
-    }
-    support = {
-        mot_recon = { x = 0 y = 0 }
-        artillery = { x = 0 y = 1 }
-        engineer = { x = 0 y = 2 }   # Correction : position différente
-    }
-}
-
-division_template = {
-    name = "Division d'Infanterie Alpine"
-    division_names_group = AFR_MNT_01
-
-    regiments = {
-        mountaineers = { x = 0 y = 0 }
-        mountaineers = { x = 0 y = 1 }
-        mountaineers = { x = 0 y = 2 }
-        mountaineers = { x = 1 y = 0 }
-        mountaineers = { x = 1 y = 1 }
-        mountaineers = { x = 1 y = 2 }
-        mountaineers = { x = 2 y = 0 }
-        mountaineers = { x = 2 y = 1 }
-        mountaineers = { x = 2 y = 2 }
-        mountaineers = { x = 3 y = 0 }
-        mountaineers = { x = 3 y = 1 }
-        mountaineers = { x = 3 y = 2 }
-    }
-}
-
-division_template = {
-    name = "Division de Cavalerie"
-    division_names_group = AFR_CAV_01
-    regiments = {
-        cavalry = { x = 0 y = 0 }
-        cavalry = { x = 0 y = 1 }
-        cavalry = { x = 1 y = 0 }
-        cavalry = { x = 1 y = 1 }
-    }
-    support = {
-        recon = { x = 0 y = 0 }
-    }
-}
-
-division_template = {
-    name = "Division Légère Mécanique"
-    division_names_group = AFR_MEC_01
-
-    regiments = {
-        light_armor = { x = 0 y = 0 }
-        light_armor = { x = 0 y = 1 }
-        motorized = { x = 1 y = 0 }
-        motorized = { x = 1 y = 1 }
-        motorized = { x = 1 y = 2 }
-        motorized = { x = 1 y = 3 }
-    }
-    support = {
-        mot_recon = { x = 0 y = 0 }
-        engineer = { x = 0 y = 1 }
-    }
-}
-
-division_template = {
-    name = "Brigade de Chars de Combat"
-    division_names_group = AFR_ARM_01
-    regiments = {
-        light_armor = { x = 0 y = 0 }
-        light_armor = { x = 0 y = 1 }
-        light_armor = { x = 1 y = 0 }
-        light_armor = { x = 1 y = 1 }
-    }
-}
-
-division_template = {
-    name = "Brigade Coloniale"
-    division_names_group = AFR_COL_01
-    regiments = {
-        infantry = { x = 0 y = 0 }
-        infantry = { x = 0 y = 1 }
-        infantry = { x = 0 y = 2 }
-        infantry = { x = 1 y = 0 }
-        infantry = { x = 1 y = 1 }
-        infantry = { x = 1 y = 2 }
-    }
-    priority = 0
+    	name = "Brigade Coloniale"
+	division_names_group = AFR_COL_01
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 0 y = 2 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+		infantry = { x = 1 y = 2 }
+	}
+	priority = 0
 }
 
 ##### OOB #####
 units = {
-
-    ##### North African Theatre #####
-
-    ### Troupes de Alger ###
     division= {	
         name = "1ère Brigade d'Infanterie Algérienne"
         location = 1145
         division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.3
+	start_experience_factor = 0.2
+	start_equipment_factor = 0.3
     }
 
     division= {	
         name = "2ème Brigade d'Infanterie Algérienne"
         location = 1145
         division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.3
+	start_experience_factor = 0.2
+	start_equipment_factor = 0.3
     }
 
     division= {	
         name = "4ème Brigade d'Infanterie Algérienne"
         location = 1145
         division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.3
+	start_experience_factor = 0.2
+	start_equipment_factor = 0.3
     }
 
     division= {	
         name = "5ème Brigade d'Infanterie Algérienne"
         location = 1145
         division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.3
+	start_experience_factor = 0.2
+	start_equipment_factor = 0.3
     }
 
     division= {	
         name = "3ème Brigade d'Infanterie Algérienne"
         location = 7132
         division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.3
+        start_experience_factor = 0.5
+	start_equipment_factor = 0.15
     }
 
     division= {	
         name = "7ème Brigade d'Infanterie Algérienne"
         location = 7132
         division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.3
+        start_experience_factor = 0.5
+	start_equipment_factor = 0.15
     }
 
     division= {	
         name = "Groupement Cavalerie d'Algérie"
         location = 7132
-        division_template = "Division de Cavalerie"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.3
-    }
-
-    ### Protectorat de Tunisie ###
-    division= {	
-        division_name = { is_name_ordered = yes name_order = 93 }
-        name = "Division de Tunisie"
-        location = 11969
         division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.5
-    }
-
-    division= {	
-        division_name = { is_name_ordered = yes name_order = 94 }
-        name = "Division de Sousse"
-        location = 9994
-        division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.5
-    }
-
-    ### Protectorat du Maroc ###
-    division= {	
-        division_name = { is_name_ordered = yes name_order = 98 }
-        name = "Division de Meknès"
-        location = 7069
-        division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.5
-    }
-
-    division= {	
-        division_name = { is_name_ordered = yes name_order = 95 }
-        name = "Division de Casablanca"
-        location = 7069
-        division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.3
-    }
-
-    division= {	
-        division_name = { is_name_ordered = yes name_order = 96 }
-        name = "Division de Fès"
-        location = 7100
-        division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.3
-    }
-
-    division= {	
-        division_name = { is_name_ordered = yes name_order = 97 }
-        name = "Division de Marrakech"
-        location = 7069
-        division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.3
-    }
-
-    division= {	
-        name = "Groupement de Cavalerie du Maroc"
-        location = 7100
-        division_template = "Division de Cavalerie"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_experience_factor = 0.1
-        start_equipment_factor = 0.3
+        start_experience_factor = 0.5
+	start_equipment_factor = 0.15
     }
 
     ##### Afrique Occidentale et Équatoriale #####
@@ -284,16 +78,16 @@ units = {
         name = "Troupes de Sénégal"
         location = 4948
         division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_equipment_factor = 0.3
+	start_experience_factor = 0.2
+	start_equipment_factor = 0.3
     }
 
     division= {	
         name = "Troupes d'Afrique Équatoriale Française"
-        location = 5139
+        location = 4948
         division_template = "Brigade Coloniale"
-        force_equipment_variants = { infantry_equipment_0 = { owner = "AFR" } }
-        start_equipment_factor = 0.15
+        start_experience_factor = 0.5
+	start_equipment_factor = 0.15
     }
 }
 
