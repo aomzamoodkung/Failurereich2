@@ -1,4 +1,4 @@
-﻿capital = 291
+﻿capital = 676
 
 oob = "MSQ_1936"
 
@@ -14,8 +14,6 @@ set_technology = {
 set_war_support = 0.1
 set_stability = 0.8
 set_convoys = 5
-
-recruit_character = IRQ_ghazi_i
 
 set_politics = {
 	ruling_party = reactionary

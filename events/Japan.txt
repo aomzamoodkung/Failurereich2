@@ -159,6 +159,20 @@ country_event = {
 		CHM= { transfer_state = 286 }
 		VIN= { transfer_state = 1017 }
 	
+	
+		VIN = {
+			add_state_claim = 741
+			add_state_claim = 286
+		}
+
+	
+		CHM = {
+			add_state_claim = 670
+			add_state_claim = 671
+			add_state_claim = 286
+			add_state_claim = 1017
+		}
+
 		JAP = { 
 			create_faction = "Imperial Treaty"
 			add_to_faction = CHM

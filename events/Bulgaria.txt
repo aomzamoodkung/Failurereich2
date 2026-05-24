@@ -51,7 +51,7 @@ country_event = {
 country_event = {
 	id = other.2
 	title = "Turkish expand in Arab states"
-	desc = "Turkey inherit Asrab states"
+	desc = "Turkey inherit The Arabic States"
 	picture = GFX_report_event_north_germany
 	
 	fire_only_once = yes
@@ -78,8 +78,24 @@ country_event = {
 		                type = annex_everything
 	        }	
 	        create_wargoal  = {
-		                target = UAE
+		                target = SYR
 		                type = annex_everything
-	        }			
+	        }	
+	        create_wargoal  = {
+		                target = JOR
+		                type = annex_everything
+	        }	
+	        create_wargoal  = {
+		                target = LEB
+		                type = annex_everything
+	        }		
+	        create_wargoal  = {
+		                target = IRQ
+		                type = annex_everything
+	        }	
+	        create_wargoal  = {
+		                target = ISR
+		                type = annex_everything
+	        }						
 	}
 }

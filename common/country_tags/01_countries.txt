@@ -17,7 +17,7 @@ ANH = "countries/Anhui.txt"
 
 OTT = "countries/Konya.txt"
 TRK = "countries/Candar.txt" 
-MSQ = "countries/Mashriq.txt" # Assyria
+MSQ = "countries/Mashriq.txt" ### Assyria
 
 #### Temp tags ####
 
