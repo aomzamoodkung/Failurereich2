@@ -151,7 +151,13 @@ country_event = {
 			add_to_faction = VIN
 			add_to_faction = KOR
 			puppet = FOR
-		}	
+		}
+
+		VIN= { transfer_state = 671 }
+		VIN= { transfer_state = 670 }
+		CHM= { transfer_state = 741 }
+		CHM= { transfer_state = 286 }
+		VIN= { transfer_state = 1017 }
 	
 		JAP = { 
 			create_faction = "Imperial Treaty"
@@ -164,12 +170,6 @@ country_event = {
 	        	}
 			set_cosmetic_tag = CHM_Indochina_Empire
 		}
-
-		VIN= { transfer_state = 671 }
-		VIN= { transfer_state = 670 }
-		CHM= { transfer_state = 741 }
-		CHM= { transfer_state = 286 }
-		VIN= { transfer_state = 1017 }
 
 		KOR= { transfer_state = 525 }
 		KOR= { transfer_state = 527 }

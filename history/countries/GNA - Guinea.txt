@@ -12,10 +12,10 @@ set_technology = {
 set_convoys = 10
 
 set_popularities = {
-        democratic = 3
+        democratic = 0
         communism = 0
-        neutrality = 11
-        reactionary = 86
+        neutrality = 10
+        reactionary = 90
 
 }
 
@@ -31,8 +31,8 @@ add_ideas = AFR_military_colony
 
 
 create_country_leader = {
-	name = "Napoléon VI"
-	desc = "Empereur de Guinée"
+	name = "Conseil de Guerre"
+	desc = "Juntle de Guinée"
 	picture = "gfx/leaders/FRA/FRA_napoleon_vi.png"
 	expire = "1965.1.1"
 	ideology = despotism
