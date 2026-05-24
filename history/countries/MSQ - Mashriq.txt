@@ -34,8 +34,6 @@ set_convoys = 5
 
 recruit_character = IRQ_ghazi_i
 
-
-
 set_politics = {
 	ruling_party = reactionary
 	last_election = "1936.1.1"

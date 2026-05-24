@@ -57,5 +57,26 @@ units = {
 		division_template = "Alfurqat Almasha"	
 		start_equipment_factor = 0.3
 
+	}	division = {
+		#name = "Alfurqat Ar Qatar"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10850
+		division_template = "Alfurqat Almasha"	
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Alfurqat Ar Abu Dabi"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 10850
+		division_template = "Alfurqat Almasha"	
+		start_equipment_factor = 0.3
+
 	}
 }

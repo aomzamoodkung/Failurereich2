@@ -40,23 +40,67 @@ units = {
 
 	}
 	division = {
-		#name = "Alfurqat Khobar"
+		#name = "Alfurqat Khobar 1"
 		division_name = {    # New syntax for compatibility with name lists
 			is_name_ordered = yes
 			name_order = 2
 		}
-		location = 7960
+		location = 10850
 		division_template = "Alfurqat Almasha"
 		start_equipment_factor = 0.3
 
 	}
 	division = {
-		#name = "Alfurqat Khobar"
+		#name = "Alfurqat Khobar 2"
 		division_name = {    # New syntax for compatibility with name lists
 			is_name_ordered = yes
 			name_order = 2
 		}
-		location = 7960
+		location = 8085
+		division_template = "Alfurqat Almasha"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Alfurqat Khobar 3"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 10850
+		division_template = "Alfurqat Almasha"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Alfurqat Khobar 4"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 8085
+		division_template = "Alfurqat Almasha"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Alfurqat Khobar 5"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 10850
+		division_template = "Alfurqat Almasha"
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Alfurqat Khobar 6"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 8085
 		division_template = "Alfurqat Almasha"
 		start_equipment_factor = 0.3
 

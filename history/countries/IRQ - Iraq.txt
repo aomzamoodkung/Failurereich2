@@ -228,35 +228,12 @@ IF = {
 }
 
 set_politics = {
-	ruling_party = reactionary 
+	ruling_party = democratic 
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
 	fascism = 20
-	reactionary = 80
-}
-
-1939.1.1 = {
-	set_politics = {
-		ruling_party = neutrality
-		last_election = "1936.1.1"
-		election_frequency = 48
-		elections_allowed = no
-	}
-	set_popularities = {
-		fascism = 30
-		neutrality = 70
-	}
-	IF = {
-		limit = { 
-			NOT = { 
-				has_dlc = "Graveyard of Empires" 
-			} 
-		}		
-		recruit_character = IRQ_faisal_ii
-		promote_character = IRQ_faisal_ii
-		retire_character = IRQ_ghazi_i
-	}
+	democratic = 80
 }

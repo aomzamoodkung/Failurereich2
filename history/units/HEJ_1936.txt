@@ -29,7 +29,7 @@ division_template = {
 units = {
 	##### Royal Hashemite Army #####
 	division = {
-		#name = "Alfursan Almalika 'Medina'"
+		#name = "Alfursan Almalika 'Medina' 1"
 		division_name = {    # New syntax for compatibility with name lists
 			is_name_ordered = yes
 			name_order = 1
@@ -40,7 +40,7 @@ units = {
 
 	}
 	division = {
-		#name = "Alfurqat Jiddah"
+		#name = "Alfurqat Jiddah 1"
 		division_name = {    # New syntax for compatibility with name lists
 			is_name_ordered = yes
 			name_order = 2
@@ -51,7 +51,7 @@ units = {
 
 	}
 	division = {
-		#name = "Alfursan Almalika 'Medina'"
+		#name = "Alfursan Almalika 'Medina' 2"
 		division_name = {    # New syntax for compatibility with name lists
 			is_name_ordered = yes
 			name_order = 1
@@ -62,7 +62,18 @@ units = {
 
 	}
 	division = {
-		#name = "Alfurqat Jiddah"
+		#name = "Alfursan Almalika 'Medina' 3"
+		division_name = {    # New syntax for compatibility with name lists
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 7934
+		division_template = "Alfurqat Alfursan"		
+		start_equipment_factor = 0.3
+
+	}
+	division = {
+		#name = "Alfurqat Jiddah 2"
 		division_name = {    # New syntax for compatibility with name lists
 			is_name_ordered = yes
 			name_order = 2
@@ -73,7 +84,7 @@ units = {
 
 	}
 	division = {
-		#name = "Alfurqat Jiddah"
+		#name = "Alfurqat Jiddah 3"
 		division_name = {    # New syntax for compatibility with name lists
 			is_name_ordered = yes
 			name_order = 2
@@ -84,7 +95,7 @@ units = {
 
 	}
 	division = {
-		#name = "Alfurqat Jiddah"
+		#name = "Alfurqat Jiddah 4"
 		division_name = {    # New syntax for compatibility with name lists
 			is_name_ordered = yes
 			name_order = 2

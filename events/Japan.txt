@@ -100,11 +100,11 @@ country_event = {
 			declare_war_on = {
 		                target = EDO
 		                type = annex_everything
-	        }
-	        declare_war_on = {
+	        	}
+	       		declare_war_on = {
 		                target = TGW
 		                type = annex_everything
-	        }
+	        	}
 	        EDO = { 
 				declare_war_on = {
 		               target = TGW
@@ -129,13 +129,13 @@ country_event = {
 country_event = {
 	id = japan.5
 	title = "Japanese's Coup"
-	desc = "Japan is unstable and need to have a new government."
+	desc = "Japan is unstable and need to have a new government. We already lost Indochina and Korea from our control."
 	picture = GFX_report_event_generic_read_write
 	
 	is_triggered_only = yes
 
 	option = {
-		name = "People's Japan new allies"
+		name = "Divided colonies"
 
 		MAN= { transfer_state = 745 }
 		MAN= { transfer_state = 743 }
@@ -156,6 +156,13 @@ country_event = {
 		JAP = { 
 			create_faction = "Imperial Treaty"
 			add_to_faction = CHM
+		}
+		CHM = {
+			declare_war_on = {
+		                target = VIN
+		                type = annex_everything
+	        	}
+			set_cosmetic_tag = CHM_Indochina_Empire
 		}
 
 		VIN= { transfer_state = 671 }
