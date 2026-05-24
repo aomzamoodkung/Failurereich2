@@ -354,3 +354,6 @@ FRA_monarchist_coup_DEF:0 "Kingdom of France"
 
  HUN_puppet:0 "$OVERLORDADJ$ Council of $NONIDEOLOGY$"
  HUN_puppet_DEF:0 "The $OVERLORDADJ$ Council of $NONIDEOLOGY$"
+
+ CHM_Indochina_Empire:0 "Empire of Indochina"
+ CHM_Indochina_Empire_DEF:0 "The Empire of Indochina"

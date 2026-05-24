@@ -206,6 +206,9 @@ add_to_faction = FRA
 add_to_faction = ENG
 add_to_faction = ITA
 
+give_guarantee = ROM
+give_guarantee = ENG
+give_guarantee = ITA
 
 set_politics = {
 	ruling_party = reactionary 
@@ -220,7 +223,6 @@ set_popularities = {
 	left = 20
 }
 
-give_guarantee = ROM
 
 add_ideas = {
 	FRA_military_junta_1

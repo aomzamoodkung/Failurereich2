@@ -9,7 +9,7 @@ focus_tree = {
 	}
 	focus = {
 		id = UAE_crush_terrorist
-		text="Invade Ikhwan"
+		text="Invade Iraq"
 		icon = GFX_goal_generic_military_sphere
 		x = 1
 		y = 0
@@ -20,7 +20,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-			   NOT = { country_exists = IKH }
+			   NOT = { country_exists = IRQ }
 		}
 
 		completion_reward = {
@@ -28,10 +28,10 @@ focus_tree = {
 			add_political_power = 100
 
 	        	create_wargoal = {
-		                target = IKH
+		                target = IRQ
 		                type = annex_everything
 	        	}	
-			IKH = {
+			IRQ = {
 				every_owned_state = {
 				    add_claim_by = UAE
 				}

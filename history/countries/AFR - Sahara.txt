@@ -19,6 +19,8 @@ set_popularities = {
 
 }
 
+puppet = GNA
+
 set_politics = {
 	
 	ruling_party = reactionary

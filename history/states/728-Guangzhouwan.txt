@@ -10,8 +10,7 @@ state = {
 	state_category = enclave
 	
 	history = {
-
-		owner = FRA
+		owner = JAP
 		add_core_of = CHI
 		add_core_of = PRC
 

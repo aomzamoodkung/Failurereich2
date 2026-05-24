@@ -5,8 +5,7 @@ state={
 		4017 4115 4574 4591 7001 7151 7170 10089 11976 
 	}
 	history = {
-		owner = MSQ
-		add_core_of = MSQ
+		owner = JOR
 		add_core_of = JOR
 
 		buildings = {

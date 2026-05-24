@@ -107,7 +107,7 @@ focus_tree = {
 
 	focus = {
 		id = HEJ_invade_ikhwan
-		text="Invade Ikhwan"
+		text="Invade Iraq"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_crush_terrorist }
 		x = 3
@@ -119,7 +119,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-			   NOT = { country_exists = IKH }
+			   NOT = { country_exists = IRQ }
 		}
 
 		completion_reward = {
@@ -127,11 +127,11 @@ focus_tree = {
 			add_political_power = 100
 
 	        	create_wargoal = {
-		                target = IKH
+		                target = IRQ
 		                type = annex_everything
 	        	}
 
-			IKH = {
+			IRQ = {
 				every_owned_state = {
 				    add_claim_by = HEJ
 				}
@@ -265,15 +265,26 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
+		
+		bypass = {
+			   NOT = { country_exists = SYR }
+			   NOT = { country_exists = JOR }
+		}
 
 		completion_reward = {
 				
 	        	create_wargoal = {
-		                target = MSQ
+		                target = SYR
 		                type = annex_everything
 	        	}
 
-			MSQ = {
+			SYR = {
+				every_owned_state = {
+				    add_claim_by = HEJ
+				}
+			}
+
+			JOR = {
 				every_owned_state = {
 				    add_claim_by = HEJ
 				}
@@ -283,7 +294,7 @@ focus_tree = {
 
 	focus = {
 		id = HEJ_invite_krd
-		text="Invade Kurdistan"
+		text="Invade Kurdistan and Assyria"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_arabia }
 		x = 1
@@ -305,13 +316,23 @@ focus_tree = {
 				every_owned_state = {
 				    add_claim_by = HEJ
 				}
+			}	
+	        	create_wargoal = {
+		                target = MSQ
+		                type = annex_everything
+	        	}
+
+			MSQ = {
+				every_owned_state = {
+				    add_claim_by = HEJ
+				}
 			}
 		}
 	}
 
 	focus = {
 		id = HEJ_join_entente
-		text="Join Entente"
+		text="Join The Entente"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_invite_syria }
 		prerequisite = { focus = HEJ_invite_iraq }

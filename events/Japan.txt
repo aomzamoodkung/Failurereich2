@@ -139,6 +139,11 @@ country_event = {
 
 		MAN= { transfer_state = 745 }
 		MAN= { transfer_state = 743 }
+
+		PRC= { transfer_state = 1033 }
+		PRC= { transfer_state = 728 }
+		PRC= { transfer_state = 591 }
+
 		FOR= { transfer_state = 524 }
 
 		EDO = { 
@@ -146,12 +151,17 @@ country_event = {
 			add_to_faction = VIN
 			add_to_faction = KOR
 			puppet = FOR
+		}	
+	
+		JAP = { 
+			create_faction = "Imperial Treaty"
+			add_to_faction = CHM
 		}
 
 		VIN= { transfer_state = 671 }
 		VIN= { transfer_state = 670 }
-		VIN= { transfer_state = 741 }
-		VIN= { transfer_state = 286 }
+		CHM= { transfer_state = 741 }
+		CHM= { transfer_state = 286 }
 		VIN= { transfer_state = 1017 }
 
 		KOR= { transfer_state = 525 }

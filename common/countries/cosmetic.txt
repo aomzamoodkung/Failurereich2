@@ -885,6 +885,15 @@ HUN_puppet = {
 	color_ui = rgb { 250 164 127 }
 }
 
+### Others ###
+
+CHM_Indochina_Empire = {
+	color = rgb { 20 190 10 }
+	color_ui = rgb { 20 190 10 }
+}
+
+
+
 ###############
 ### Vanilla ###
 ###############

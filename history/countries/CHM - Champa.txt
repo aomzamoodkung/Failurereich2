@@ -54,15 +54,17 @@ set_grand_doctrine = new_strategic_destruction
 	}
 }
 
+set_cosmetic_tag = CHM_Indochina_Empire
+
 set_politics = {
-	ruling_party = democratic
+	ruling_party = neutrality
 	last_election = "1936.1.1"
 	election_frequency = 48
 	elections_allowed = no
 }
 set_popularities = {
-	democratic = 60
+	democratic = 20
 	fascism = 5
 	communism = 5
-	neutrality = 30
+	neutrality = 70
 }
