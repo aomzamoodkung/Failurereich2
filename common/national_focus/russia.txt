@@ -35,7 +35,7 @@
         prerequisite = { focus = RUS_aging_general }
         x = 2
         y = 1
-        cost = 35
+        cost = 5
         
         completion_reward = {
             country_event = denikin_russia.2
@@ -49,7 +49,7 @@
         mutually_exclusive = { focus = RUS_reform_consideration }
         x = 1
         y = 2
-        cost = 35
+        cost = 5
         
         available = {
             has_country_flag = RUS_refused_reforms
@@ -69,7 +69,7 @@
         mutually_exclusive = { focus = RUS_conservative_military }
         x = 3
         y = 2
-        cost = 35
+        cost = 5
         
         available = {
             has_country_flag = RUS_consider_reforms
@@ -88,7 +88,7 @@
         prerequisite = { focus = RUS_aging_general }
         x = 8
         y = 1
-        cost = 35
+        cost = 5
         
         completion_reward = {
             country_event = denikin_russia.3
@@ -101,7 +101,7 @@
         prerequisite = { focus = RUS_wrangel_question }
         x = 8
         y = 2
-        cost = 35
+        cost = 5
         
         available = {
             has_country_flag = RUS_wrangel_reconciled
@@ -132,7 +132,7 @@
         }
         x = 2
         y = 3
-        cost = 35
+        cost = 5
         
         completion_reward = {
             country_event = denikin_russia.4
@@ -149,7 +149,7 @@
         }
         x = 0
         y = 4
-        cost = 50
+        cost = 10
         
         available = {
             has_country_flag = RUS_chose_state_capitalism
@@ -178,7 +178,7 @@
         }
         x = 2
         y = 4
-        cost = 50
+        cost = 10
         
         available = {
             has_country_flag = RUS_chose_military_industry
@@ -207,7 +207,7 @@
         }
         x = 4
         y = 4
-        cost = 50
+        cost = 7
         
         available = {
             has_country_flag = RUS_chose_orthodox_economy
@@ -227,7 +227,7 @@
         prerequisite = { focus = RUS_industrial_question }
         x = 8
         y = 3
-        cost = 35
+        cost = 7
         
         completion_reward = {
             country_event = denikin_russia.5
@@ -241,7 +241,7 @@
         mutually_exclusive = { focus = RUS_anti_communist_pact }
         x = 7
         y = 4
-        cost = 35
+        cost = 8
         
         available = {
             has_country_flag = RUS_denounced_germany
@@ -260,7 +260,7 @@
         mutually_exclusive = { focus = RUS_denounce_communism }
         x = 9
         y = 4
-        cost = 35
+        cost = 8
         
         available = {
             has_country_flag = RUS_seeking_allies
@@ -284,7 +284,7 @@
         }
         x = 2
         y = 5
-        cost = 35
+        cost = 8
         
         completion_reward = {
             country_event = denikin_russia.6
@@ -302,7 +302,7 @@
         }
         x = 0
         y = 6
-        cost = 35
+        cost = 8
         
         available = {
             has_country_flag = RUS_grooming_kornilov
@@ -331,7 +331,7 @@
         }
         x = 2
         y = 6
-        cost = 35
+        cost = 8
         
         available = {
             has_country_flag = RUS_grooming_grand_duke
@@ -364,7 +364,7 @@
         }
         x = 4
         y = 6
-        cost = 35
+        cost = 8
         
         available = {
             has_country_flag = RUS_grooming_kerensky
@@ -397,7 +397,7 @@
         }
         x = 6
         y = 6
-        cost = 35
+        cost = 8
         
         available = {
             has_country_flag = RUS_grooming_collective
@@ -423,7 +423,7 @@
         }
         x = 3
         y = 7
-        cost = 35
+        cost = 8
         
         available = {
             date > 1937.1.1
@@ -444,7 +444,7 @@
         }
         x = 1
         y = 8
-        cost = 35
+        cost = 8
         
         available = {
             has_country_flag = RUS_chose_limited_investigation
@@ -467,7 +467,7 @@
         }
         x = 3
         y = 8
-        cost = 35
+        cost = 8
         
         available = {
             has_country_flag = RUS_chose_moderate_purge
@@ -490,7 +490,7 @@
         }
         x = 5
         y = 8
-        cost = 35
+        cost = 8
         
         available = {
             has_country_flag = RUS_chose_ignore_reports
@@ -509,7 +509,7 @@
         prerequisite = { focus = RUS_nkvd_reports }
         x = 8
         y = 7
-        cost = 35
+        cost = 8
         
         available = {
             date > 1937.3.1
@@ -526,7 +526,7 @@
         prerequisite = { focus = RUS_siberian_question }
         x = 8
         y = 8
-        cost = 70
+        cost = 8
         
         completion_reward = {
             random_owned_controlled_state = {
@@ -551,7 +551,7 @@
         prerequisite = { focus = RUS_secure_the_east }
         x = 8
         y = 9
-        cost = 50
+        cost = 8
         
         completion_reward = {
             add_ideas = RUS_far_eastern_command
@@ -571,7 +571,7 @@
         }
         x = 3
         y = 9
-        cost = 35
+        cost = 8
         
         available = {
             date > 1937.6.1
@@ -593,7 +593,7 @@
         }
         x = 1
         y = 10
-        cost = 50
+        cost = 10
         
         available = {
             has_country_flag = RUS_chose_buildup
@@ -622,7 +622,7 @@
         }
         x = 3
         y = 10
-        cost = 50
+        cost = 10
         
         available = {
             has_country_flag = RUS_chose_defensive
@@ -655,7 +655,7 @@
         }
         x = 5
         y = 10
-        cost = 50
+        cost = 8
         
         available = {
             has_country_flag = RUS_chose_diplomatic
