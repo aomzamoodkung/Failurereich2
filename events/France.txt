@@ -581,7 +581,7 @@ country_event = {
 	option = { 
 		name = "Damn ..."
 		
-		GER = { set_state_owner = 974 } 
+		GER = { set_state_owner = 1051 } 
 		GER = { set_state_owner = 28 } 
 		
 	}
