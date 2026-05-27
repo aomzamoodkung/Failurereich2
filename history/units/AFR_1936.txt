@@ -1,7 +1,7 @@
 ##### Division Templates #####
 
 division_template = {
-    	name = "Brigade Coloniale"
+    	name = "Brigade Coloniale exile"
 	division_names_group = AFR_INF_01
 	template_counter = 99
 	regiments = {
@@ -19,7 +19,7 @@ units = {
     division= {	
         name = "1ère Brigade d'Infanterie Algérienne"
         location = 1145
-        division_template = "Brigade Coloniale"	
+        division_template = "Brigade Coloniale exile"
 	start_experience_factor = 0.2
 	start_equipment_factor = 0.5
     }
@@ -27,7 +27,7 @@ units = {
     division= {	
         name = "2ème Brigade d'Infanterie Algérienne"
         location = 1145
-        division_template = "Brigade Coloniale"	
+        division_template = "Brigade Coloniale exile"
 	start_experience_factor = 0.2
 	start_equipment_factor = 0.5
     }
@@ -35,7 +35,7 @@ units = {
     division= {	
         name = "4ème Brigade d'Infanterie Algérienne"
         location = 1145
-        division_template = "Brigade Coloniale"	
+        division_template = "Brigade Coloniale exile"
 	start_experience_factor = 0.2
 	start_equipment_factor = 0.5
     }
@@ -43,7 +43,7 @@ units = {
     division= {	
         name = "5ème Brigade d'Infanterie Algérienne"
         location = 1145
-        division_template = "Brigade Coloniale"	
+        division_template = "Brigade Coloniale exile"
 	start_experience_factor = 0.2
 	start_equipment_factor = 0.5
     }
@@ -51,7 +51,7 @@ units = {
     division= {	
         name = "3ème Brigade d'Infanterie Algérienne"
         location = 7132
-        division_template = "Brigade Coloniale"	
+        division_template = "Brigade Coloniale exile"
 	start_experience_factor = 0.2
 	start_equipment_factor = 0.5
     }
@@ -59,7 +59,7 @@ units = {
     division= {	
         name = "7ème Brigade d'Infanterie Algérienne"
         location = 7132
-        division_template = "Brigade Coloniale"	
+        division_template = "Brigade Coloniale exile"	
 	start_experience_factor = 0.2
 	start_equipment_factor = 0.5
     }
@@ -67,7 +67,7 @@ units = {
     division= {	
         name = "Groupement Cavalerie d'Algérie"
         location = 7132
-        division_template = "Brigade Coloniale"	
+        division_template = "Brigade Coloniale exile"
 	start_experience_factor = 0.2
 	start_equipment_factor = 0.5
     }
@@ -77,7 +77,7 @@ units = {
     division= {	
         name = "Troupes de Sénégal"
         location = 4948
-        division_template = "Brigade Coloniale"	
+        division_template = "Brigade Coloniale exile"
 	start_experience_factor = 0.2
 	start_equipment_factor = 0.5
     }
@@ -85,7 +85,7 @@ units = {
     division= {	
         name = "Troupes d'Afrique Équatoriale Française"
         location = 4948
-        division_template = "Brigade Coloniale"
+        division_template = "Brigade Coloniale exile"
         start_experience_factor = 0.2
 	start_equipment_factor = 0.3
     }
