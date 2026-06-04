@@ -33,10 +33,19 @@ set_popularities = {
         neutrality = 0
         reactionary = 75
 
+}	
+
+set_autonomy = {
+	target = GHA
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.4
+}
+set_autonomy = {
+	target = GNA
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.4
 }
 
-puppet = GNA
-puppet = GHA
 
 set_politics = {
 	
