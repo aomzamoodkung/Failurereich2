@@ -14,7 +14,7 @@ focus_tree = {
 		id = SAU_crush_terrorist
 		text="Invade Iraq"
 		icon = GFX_goal_generic_military_sphere
-		x = 2
+		x = 1
 		y = 0
 		cost = 5
 		available_if_capitulated = yes
@@ -114,6 +114,7 @@ focus_tree = {
 		text="Invade Holy earth"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = SAU_crush_terrorist }
+		prerequisite = { focus = SAU_take_hail }
 		x = 3
 		y = 1
 		cost = 5
@@ -156,6 +157,13 @@ focus_tree = {
 			factor = 1
 		}
 		
+		available = {
+			   NOT = { country_exists = UAE }
+			   NOT = { country_exists = IRQ }
+			   NOT = { country_exists = HEJ }
+			   NOT = { country_exists = JSH }
+		}
+
 		bypass = {
 			   NOT = { country_exists = OMA }
 		}
@@ -187,7 +195,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 1
 		}
-		
+				
+		available = {
+			   NOT = { country_exists = UAE }
+			   NOT = { country_exists = IRQ }
+			   NOT = { country_exists = HEJ }
+			   NOT = { country_exists = JSH }
+		}
+
 		bypass = {
 			   NOT = { country_exists = YEM }
 		}
