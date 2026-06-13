@@ -6,7 +6,7 @@ state = {
 
 	history = {
 
-		owner = USA 
+		owner = JAP 
 		add_core_of = SAM
 
 		buildings = {

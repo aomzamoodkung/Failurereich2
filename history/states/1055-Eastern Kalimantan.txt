@@ -8,7 +8,7 @@ state={
 	}
 
 	history={
-		owner = INS
+		owner = GOW
 		add_core_of = GOW
 		buildings = {
 			infrastructure = 1

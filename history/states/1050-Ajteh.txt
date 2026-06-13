@@ -6,7 +6,7 @@ state={
 	}
 
 	history={
-		owner = INS
+		owner = ATJ
 		add_core_of = ATJ
 		start_resistance = yes
 		set_resistance = 75

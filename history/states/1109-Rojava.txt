@@ -1,0 +1,23 @@
+
+state={
+	id=1109
+	name="STATE_1109"
+
+	history={
+		owner = MSQ
+		add_core_of = MSQ
+		add_core_of = KUR
+		buildings = {
+			infrastructure = 1
+
+		}
+
+	}
+
+	provinces={
+		1549 1578 
+	}
+	manpower=59120
+	buildings_max_level_factor=1.000
+	state_category=town
+}

@@ -7,7 +7,7 @@ state={
 	}
 
 	history={
-		owner = INS
+		owner = SSI
 		add_core_of = SSI
 		set_resistance = 0
 		set_compliance = 60

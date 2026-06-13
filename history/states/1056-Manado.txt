@@ -6,7 +6,7 @@ state={
 	}
 
 	history={
-		owner = INS
+		owner = TNE
 		add_core_of = TNE
 		add_core_of = GOW
 		set_resistance = 0
