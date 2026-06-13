@@ -94,17 +94,38 @@ give_guarantee = DEN
 give_guarantee = NOR
 give_guarantee = AFR
 
-puppet = AST
-puppet = NZL
+set_autonomy = {
+	target = AST
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.6
+}
+set_autonomy = {
+	target = NZL
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.6
+}
+set_autonomy = {
+	target = MAL
+	autonomous_state = autonomy_dominion
+	freedom_level = 0.4
+}
+
 puppet = NGA
 puppet = UGA
 puppet = KEN
-puppet = MAL
 puppet = SUD
 puppet = COG
 puppet = CMR
 puppet = CAR
 puppet = GAB
+
+### South East Asian Puppets ###
+puppet = POK
+puppet = GOW
+puppet = TLE
+puppet = BLI
+puppet = SSI
+puppet = ATJ
 
 create_country_leader = {
 	name = "Mackenzie King"

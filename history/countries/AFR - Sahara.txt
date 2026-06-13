@@ -29,23 +29,11 @@ set_convoys = 10
 
 set_popularities = {
         democratic = 22
-        communism = 3
-        neutrality = 0
+        communism = 0
+        neutrality = 3
         reactionary = 75
 
 }	
-
-set_autonomy = {
-	target = GHA
-	autonomous_state = autonomy_dominion
-	freedom_level = 0.4
-}
-set_autonomy = {
-	target = GNA
-	autonomous_state = autonomy_dominion
-	freedom_level = 0.4
-}
-
 
 set_politics = {
 	
