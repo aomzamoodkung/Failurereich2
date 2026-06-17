@@ -34,7 +34,7 @@ bookmarks = {
 			}
 		}
 		"ITA"={
-			history = "Italy failed to keep the monarchy stable and the fascists take over the King in the south. The Napolis Regime is leaded by Mussolini since 1920s."
+			history = "Italy failed to keep the monarchy stable and the fascists take over the King in the south. The Napolitan Regime is leaded by Mussolini since 1920s."
 			ideology = fascism
 			ideas = {
 				ITA_iri_fake_ns
@@ -47,7 +47,7 @@ bookmarks = {
 			}		
 		}
 		"AFR"={
-			history = "Napoleon Revive under a very harsh situation, where France is divided Between fascism and monarchism. After the failure in Paris, French regime fleed in Africa and decide to handle last borders in Africa"
+			history = "Napoleon Revive under a very harsh situation, where France is divided Between fascism and monarchism. After the failure in Paris, French regime fleed in Africa and decide to handle last borders in Africa, leaving an sand region under The Bonapartist Control. Some democrats and liberals join the rebels and form a new government, which remain unstable because of the tribals rebellions."
 			ideology = fascism
 			ideas = {
 				FRA_counter_action 
@@ -60,7 +60,7 @@ bookmarks = {
 			}		
 		}
 		"WGR"={
-			history = "Germany last it's fatherland after spartacists get access to Berlin. The Kaiser have to deal with African peasant to survive and reconquer German lands."
+			history = "Germany last it's fatherland after spartacists get access to Berlin. The Kaiser have to deal with African peasant to survive and reconquer German lands. Goering and many officials try to revive the old Kaiserreich, now under a Talhmannist State."
 			ideology = reactionarism
 			ideas = {
 				GER_revive_the_kaiserreich 
@@ -85,8 +85,8 @@ bookmarks = {
 			}	
 		}
 		"JAP"={
-			history = "Japan is now an unstable nation, where communist riots affect the Emperor legacy."
-			ideology = fascism
+			history = "Japan is now an unstable nation, where communist riots affect the Emperor legacy. Without any hegemony in the East Asia, the Showa Emperor have to choose between a stable monarchy, reinforced military or lost everything after 2 thousand years of inheritance."
+			ideology = reactionary
 			ideas = {
 				state_shintoism 
 				JAP_militarism 
@@ -100,7 +100,8 @@ bookmarks = {
 		}
 
 
-		# minors from DLC ####
+		#### minors from DLC ####
+
 		"CAN"={
 			minor = yes
 			history = "CAN_GATHERING_STORM_DESC"
@@ -167,6 +168,18 @@ bookmarks = {
 				POL_hohenzollern
 				POL_falangism
 				POL_habsburg
+			}
+		}
+
+		"CHI"={
+			minor = yes
+			history = "Kuomindang failed to overthrown the Manchu monarchy. While they keep the south under their hands, Only the Yangze river keep their regime alive. Between Jingwei and federalist, the Nationalist Regime has not any external support to reclaim China."
+			ideology = reactionary
+			ideas = {
+				uncontrolled_exports
+			}
+			focuses = {
+				
 			}
 		}
 

@@ -1905,3 +1905,207 @@ CZE_first_monarchy_color = {
 	color = rgb { 111 110 137 }
 	color_ui = rgb { 111 110 137 }
 }
+
+
+
+##########################
+#### NEW FAILUREREICH ####
+##########################
+
+CHI_second_empire = {
+	color = rgb { 220 220  150 }
+	color_ui = rgb { 222  222  180 }
+}
+
+MAN_empire = {
+	color = rgb { 220 140  50 }
+	color_ui = rgb { 222  140  50 }
+}
+
+CAN_federation = {
+	color = rgb { 140 0 0 }
+	color_ui = rgb { 145 0 0 }
+}
+
+LOM_padania = {
+	color = rgb { 179 29 12 }
+	color_ui = rgb { 179 29 12 }
+}
+
+##### ARABIA #####
+
+SAU_arabia = {
+	color = rgb { 10 100 10 }
+	color_ui = rgb { 10 100 10 }
+}
+IKH_arabia = {
+	color = rgb { 50 70 50 }
+	color_ui = rgb { 50 50 50 }
+}
+JSH_arabia = {
+	color = rgb { 100 50 0 }
+	color_ui = rgb { 100 50 0 }
+}
+HEJ_arabia = {
+	color = rgb { 100 100 0 }
+	color_ui = rgb { 100 100 0 }
+}
+
+UAE_arabia = {
+	color = rgb { 100 190 175 }
+	color_ui = rgb { 100 190 175 }
+}
+
+##############
+
+MAN_fengtian = {
+	color = rgb { 104 108 10 }
+	color_ui = rgb { 104 108 10 }
+}
+
+West_africa = {
+	color = rgb { 20 20 210 }
+	color_ui = rgb { 20 20 210 }
+}
+
+British_africa = {
+	color = rgb { 211 28 10 }
+	color_ui = rgb { 211 28 10 }
+}
+
+RUS_empire = {
+	color = rgb { 0 100 0 }
+	color_ui = rgb { 0 100 0 }
+}
+
+Ruthenia = {
+	color = rgb { 150 100 0 }
+	color_ui = rgb { 150 100 0 }
+}
+
+CAL_Pacific = {
+	color = rgb { 150 150 0 }
+	color_ui = rgb { 150 150 0 }
+}
+
+NWG_USA = {
+	color = rgb { 100 110 200 }
+	color_ui = rgb { 100 110 200 }
+}
+
+Strato_GER = {
+	color = rgb { 100 100 100 }
+	color_ui = rgb { 100 100 100 }
+}
+
+Democrat_GER = {
+	color = rgb { 150 150 150 }
+	color_ui = rgb { 150 150 150 }
+}
+
+NazBol_GER = {
+	color = rgb { 100 50 50 }
+	color_ui = rgb { 100 50 50 }
+}
+
+Ultranat_GER = {
+	color = rgb { 50 50 50 }
+	color_ui = rgb { 50 50 50 }
+}
+
+POL_HUN_UNION = {
+	color = rgb { 200 140 50 }
+	color_ui = rgb { 200 140 50 }
+}
+
+FRA_FARLEFT = {
+	color = rgb { 150 0 0 }
+	color_ui = rgb { 150 0 0 }
+} 
+
+FRA_ORLEANS = {
+	color = rgb { 150 150 220 }
+	color_ui = rgb { 150 150 220 }
+} 
+
+FRA_BOURBONS = {
+	color = rgb { 150 150 220 }
+	color_ui = rgb { 150 150 220 }
+} 
+
+POL_WS = {
+	color = rgb { 220 140 50 }
+	color_ui = rgb { 220 140 50 }
+}
+
+#### ITALIAN EMPIRE/ ROMAN EMPIRE ####
+
+GRE_Thracia = {
+	color = rgb { 30 150 110 }
+	color_ui = rgb { 30 150 110 }
+}
+
+#### ORDENSTAAT ####
+
+HOL_RK = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
+BEL_RK = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
+NOR_RK = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
+LAT_RK = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
+UKR_RK = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
+HUN_RK = {
+	color = rgb { 60 60 60 }
+	color_ui = rgb { 60 60 60 }
+}
+
+#### CANADA_AFRICA ####
+
+COG_british = {
+	color = rgb { 150 20 20 }
+	color_ui = rgb { 150 20 20 }
+}
+KEN_british = {
+	color = rgb { 150 20 20 }
+	color_ui = rgb { 150 20 20 }
+}
+NGA_british = {
+	color = rgb { 150 20 20 }
+	color_ui = rgb { 150 20 20 }
+}
+CMR_british = {
+	color = rgb { 150 20 20 }
+	color_ui = rgb { 150 20 20 }
+}
+
+#### FREE_INDIA ####
+
+Free_india  = {
+	color = rgb { 120 120 20 }
+	color_ui = rgb { 120 120 20 }
+}
+
+HUN_puppet = {	
+	color = rgb { 240 126 98 }
+	color_ui = rgb { 250 164 127 }
+}
+
+### Others ###
+
+CHM_Indochina_Empire = {
+	color = rgb { 40 230 20 }
+	color_ui = rgb { 40 230 20 }
+}
