@@ -211,7 +211,7 @@ country_event = {
 		add_state_claim = 1077
 		add_state_claim = 1074
 		add_state_claim = 1070
-		add_state_claim = 1069
+		add_state_claim = 1097
 	}
 }
 
@@ -244,10 +244,10 @@ country_event = {
 		GER = { set_state_owner = 86 }
 		GER = { set_state_owner = 87 }
 		GER = { set_state_owner = 98 }
-		GER = { set_state_owner = 1077 } ### to update ###
-		GER = { set_state_owner = 1074 } ### to update ###
-		GER = { set_state_owner = 1070 } ### to update ###
-		GER = { set_state_owner = 1069 } ### to update ###
+		GER = { set_state_owner = 1105 } ### to update ###
+		GER = { set_state_owner = 1102 } ### to update ###
+		GER = { set_state_owner = 1098 } ### to update ###
+		GER = { set_state_owner = 1097 } ### to update ###
 		SOV = { set_state_owner = 97 }
 		SOV = { set_state_owner = 91 }
 		SOV = { set_state_owner = 89 }
