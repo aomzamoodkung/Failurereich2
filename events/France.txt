@@ -253,7 +253,7 @@ country_event = {
 		HOL = { set_state_owner = 6 }
 		HOL = { set_state_owner = 29 }
 		HOL = { set_state_owner = 977 }
-		HOL = { set_state_owner = 980 }
+		GER = { set_state_owner = 980 }
 		LOM = { set_state_owner = 735 }
 		LOM = { set_state_owner = 851 }
 		AFR = { set_state_owner = 1 }
@@ -581,7 +581,7 @@ country_event = {
 	option = { 
 		name = "Damn ..."
 		
-		GER = { set_state_owner = 1079 } 
+		GER = { set_state_owner = 1085 } 
 		GER = { set_state_owner = 28 } 
 		
 	}

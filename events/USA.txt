@@ -184,7 +184,7 @@ country_event = {
             set_state_owner = 482 
             set_state_owner = 483 
             set_state_owner = 484
-            set_state_owner = 1082  
+            set_state_owner = 1088
         }
     }
 }
@@ -265,7 +265,7 @@ country_event = {
         DES = { 
             set_state_owner = 377 
             set_state_owner = 379 
-            set_state_owner = 1085 
+            set_state_owner = 1091 
         }
 
         diplomatic_relation = { country = USA relation = non_aggression_pact active = yes }
@@ -396,7 +396,7 @@ country_event = {
         NWG = { white_peace = USB }
 
         # Attribution des territoires finaux
-        CSA = { set_state_owner = 374 set_state_owner = 376 set_state_owner = 1083 }
+        CSA = { set_state_owner = 374 set_state_owner = 376 set_state_owner = 1089 }
         CAN = { set_state_owner = 686 }
         USB = { 
             set_state_owner = 369
@@ -410,8 +410,8 @@ country_event = {
             set_state_owner = 360
             set_state_owner = 359
             set_state_owner = 816
-            set_state_owner = 1087
-            set_state_owner = 1088
+            set_state_owner = 1093
+            set_state_owner = 1094
             set_cosmetic_tag = NWG_USA
         }
 
@@ -449,8 +449,8 @@ country_event = {
 
         CAL = { 
             transfer_state = 378
-            transfer_state = 1085
-            transfer_state = 1086
+            transfer_state = 1091
+            transfer_state = 1092
         }
 
         CAL = {
