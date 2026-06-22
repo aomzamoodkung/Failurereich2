@@ -370,8 +370,7 @@ country_event = {
 				every_owned_state = {
 				    add_claim_by = GER
 				}
-			}	
-		}
+			}
 	}
 }
 
@@ -425,8 +424,7 @@ country_event = {
 				every_owned_state = {
 				    add_claim_by = GER
 				}
-			}	
-		}
+			}
 	}
 }
 
