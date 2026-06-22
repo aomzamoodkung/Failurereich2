@@ -230,3 +230,41 @@ country_event = {
 	        }
 	}
 }
+country_event = {
+	id = italy.12
+	title = "The Social Republic flee"
+	desc = "We are forced to surrender. Our Duce is unable to handle the peninsula and we have to deal with the enemies."
+	picture = GFX_report_event_lithuania_army
+
+	fire_only_once = yes
+
+	trigger= {
+		tag = ITA
+		OR = {
+			LOM = { controls_state = 16 }
+			LOM = { controls_state = 2 }
+			LOM = { controls_state = 1107 }
+			LOM = { controls_state = 157 }
+			LOM = { controls_state = 117 }
+			LOM = { controls_state = 849 }
+		}        
+	}
+	
+	mean_time_to_happen = {
+		days = 1
+	}
+	
+	option = {
+		name = "We will surrenders"
+	        white_peace = GER
+		white_peace = LOM
+
+		LOM = { annex_country = { target = ITA transfer_troops = no } }
+	}
+	
+	drop_cosmetic_tag = yes
+
+	option = {
+	    name= "Arrivadece"
+	}	
+}
