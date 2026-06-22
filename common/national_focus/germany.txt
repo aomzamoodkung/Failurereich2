@@ -508,7 +508,7 @@ focus_tree = {
 			OR = {
 				NOT = { country_exists = DEN }
 				DEN = {
-					is_puppet = no
+					is_puppet = yes
 				}
 			}
 			is_puppet = no
@@ -528,6 +528,46 @@ focus_tree = {
 			}
 		}
 	}
+
+
+	focus = {
+		id = GER_red_britain
+		icon = GFX_focus_usa_build_the_pentagon
+		text = "Invade Britain"
+
+		prerequisite = { 
+				focus = GER_danes
+				focus = GER_norse
+		}
+
+		x = 6
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+
+		ai_will_do = {
+			factor = 1
+		}
+		available = {
+			OR = {
+				NOT = { country_exists = NOR }
+				NOR = {
+					is_puppet = yes
+				}
+			}
+			is_puppet = no
+		}
+
+		completion_reward = {
+			add_to_faction = NOR
+	        	declare_war_on = {
+			                target = ENG
+			                type = annex_everything
+	   	    	 }
+		}
+	}
+
 
 ####################
 #### DIPLOMATIC ####

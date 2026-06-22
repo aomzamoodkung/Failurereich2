@@ -350,7 +350,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { 
-		name = "Scheiss"
+		name = "Ja !"
 		GER = { puppet = AUS }
 		AUS = { set_politics = { ruling_party = communism } }
 		AUS = {
@@ -358,7 +358,20 @@ country_event = {
 				communism = 90
 				left = 10
 			}
-		}		
+		}
+	}
+	option = {  
+			name = "Nein !"	
+	      		declare_war_on = {
+			            target = AUS
+		    	            type = annex_everything
+	        	}
+			AUS = {
+				every_owned_state = {
+				    add_claim_by = GER
+				}
+			}	
+		}
 	}
 }
 
@@ -371,7 +384,7 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { 
-		name = "Oh No ..."
+		name = "Why not ..."
 		GER = { puppet = CZE }
 		CZE = { set_politics = { ruling_party = communism } }
 		CZE = {
@@ -380,6 +393,40 @@ country_event = {
 				left = 10
 			}
 		}		
+	}
+	option = {  
+			name = "No that !"	
+			CZE = { release = SDL }
+			RKH = { set_state_owner = 75 }
+			GER = { puppet = RKH }
+			RKH = { set_politics = { ruling_party = communism } }
+			RKH = {
+				set_popularities = {
+					communism = 90
+					left = 10
+				}
+	      			declare_war_on = {
+			           	target = CZE
+		    	            	type = annex_everything
+	        		}
+			}			
+			GER = {
+	      			declare_war_on = {
+			           	target = SDL
+		    	            	type = annex_everything
+	        		}
+			}
+			CZE = {
+				every_owned_state = {
+				    add_claim_by = RKH
+				}
+			}
+			SDL = {
+				every_owned_state = {
+				    add_claim_by = GER
+				}
+			}	
+		}
 	}
 }
 
@@ -392,7 +439,15 @@ country_event = {
 	is_triggered_only = yes
 
 	option = { 
-		name = "Kurwa !"
+		name = "Well ..."
+		POL = {	
+			release = RUT	
+			release = LOM
+		}
+		GER = { puppet = POL }
+	}
+	option = { 
+		name = "Never again !"
 		POL = {	
 			start_civil_war = {
 				ruling_party = communism

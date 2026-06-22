@@ -19,6 +19,7 @@ state={
 
 		add_core_of = POL
 		add_claim_by = CZE
+		add_core_of = GAL
 	}
 	manpower= 74600
 	buildings_max_level_factor=1.000

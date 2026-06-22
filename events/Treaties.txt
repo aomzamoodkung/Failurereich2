@@ -887,7 +887,7 @@ country_event = {
 	}
 
 	option = { 
-		name = "Kansai treaty"
+		name = "Kobe treaty"
 
 		white_peace = EDO
 		white_peace = VIN
