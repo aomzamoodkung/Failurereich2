@@ -363,7 +363,7 @@ country_event = {
 	option = {  
 			name = "Nein !"	
 	      		declare_war_on = {
-			            target = AUS
+			            target = GER
 		    	            type = annex_everything
 	        	}
 			AUS = {
@@ -440,7 +440,7 @@ country_event = {
 		name = "Well ..."
 		POL = {	
 			release = RUT	
-			release = LOM
+			release = GAL
 		}
 		GER = { puppet = POL }
 	}

@@ -379,17 +379,26 @@ country_event = {
 		HUN = { release = SLO }
 		HOL = { release = BEL }
 		HOL = { release = FRA }
+		BEL = { set_state_owner = 980 }
+		BEL = { set_state_owner = 977 }
+
+		AFR = { set_state_owner = 1086 }
 		AFR = { set_state_owner = 42 }
 		AFR = { set_state_owner = 51 }
+
 		DEN = { set_state_owner = 58 }
 		DEN = { set_state_owner = 909 }
+
 		CAN = { set_state_owner = 57 }
 		CAN = { set_state_owner = 56 }
 		CAN = { set_state_owner = 977 }
+
 		SOV = { set_state_owner = 722 }
 		SOV = { set_state_owner = 146 }
+
 		YUG = { set_state_owner = 45 }
 		YUG = { set_state_owner = 82 }
+		YUG = { set_state_owner = 853 }
 		YUG = { set_state_owner = 764 }
 		YUG = { set_state_owner = 102 }
 		YUG = { set_state_owner = 103 }
@@ -680,7 +689,8 @@ country_event = {
 		white_peace = SIA
 		puppet = SIA
 		BRM = { set_state_owner = 993 }
-		BRM = { set_state_owner = 994 }
+		VIN = { set_state_owner = 1067 } ### Indochina's requests
+		VIN = { set_state_owner = 1069 } ### Indochina's requests
 
 	}
 }
@@ -721,7 +731,7 @@ country_event = {
 		PRC = { set_state_owner = 714 }
 		PRC = { set_state_owner = 610 }
 		PRC = { set_state_owner = 761 }
-		puppet = PRC
+		add_to_faction = PRC
 	}
 }
 
@@ -819,7 +829,7 @@ country_event = {
 	option = { 
 		name = "Unconditional surrender"
 		white_peace = INS
-		puppet = INS
+		CAN = { puppet = INS }
 
 	}
 }
@@ -857,7 +867,7 @@ country_event = {
 		PRC = { set_state_owner = 613 }
 		PRC = { set_state_owner = 600 }
 		PRC = { set_state_owner = 595 }
-		puppet = PRC
+		add_to_faction = PRC
 	}
 }
 
@@ -887,7 +897,7 @@ country_event = {
 	}
 
 	option = { 
-		name = "Kobe treaty"
+		name = "Kyoto treaty"
 
 		white_peace = EDO
 		white_peace = VIN
@@ -895,6 +905,7 @@ country_event = {
 
 		CAM = { set_state_owner = 741 }
 		LAO = { set_state_owner = 670 }
+		LAO = { set_state_owner = 1068 }
 		SOV = { set_state_owner = 555 }
 		SOV = { set_state_owner = 537 }
 		MAN = { set_state_owner = 743 }
@@ -905,13 +916,17 @@ country_event = {
 
 		JAP = { set_state_owner = 282 }
 
+		SIA = { set_state_owner = 993 }
+		SIA = { set_state_owner = 1067 } 
+		SIA = { set_state_owner = 1069 }
+
 		JAP = {
 			annex_country = {
 	   			 target = EDO
 	   			 transfer_troops = yes
 		      }
 		}
-		CHI = {
+		MAN = {
 			annex_country = {
 	   			 target = PRC
 	   			 transfer_troops = yes
@@ -919,9 +934,11 @@ country_event = {
 		}
 
 
-		VIN = { set_ruling_party = democratic }
-		JAP = { set_ruling_party = democratic }
-		KOR = { set_ruling_party = reactionary }
+		VIN = { set_politics = { ruling_party = democratic } }
+		JAP = { set_politics = { ruling_party = democratic } }
+		KOR = { set_politics = { ruling_party = democratic } }
+		FOR = { set_politics = { ruling_party = democratic } }
+		
 
 	}
 }
