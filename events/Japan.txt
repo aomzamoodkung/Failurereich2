@@ -155,10 +155,12 @@ country_event = {
 
 		VIN= { transfer_state = 671 }
 		VIN= { transfer_state = 670 }
-		CHM= { transfer_state = 741 }
-		CHM= { transfer_state = 286 }
 		VIN= { transfer_state = 1017 }
 	
+		CHM= { transfer_state = 741 }
+		CHM= { transfer_state = 286 }
+		CHM= { transfer_state = 1066 }
+		CHM= { transfer_state = 1068 }
 	
 		VIN = {
 			add_state_claim = 741
