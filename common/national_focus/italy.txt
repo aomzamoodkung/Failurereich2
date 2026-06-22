@@ -13,7 +13,7 @@
 	focus = {
 		id = ITA_fascism
 		icon = GFX_focus_generic_italy_first
-		text = "Blackshirt regime"
+		text = "The Blackshirts"
 		mutually_exclusive = { focus = ITA_empire }
 		x = 2
 		y = 1
@@ -39,7 +39,7 @@
 	focus = {
 		id = ITA_empire
 		icon = GFX_focus_generic_italy_first
-		text = "Legion regime"
+		text = "The Legion"
 		mutually_exclusive = { focus = ITA_fascism }
 		x = 8
 		y = 1
@@ -61,12 +61,12 @@
 	focus = {
 		id = ITA_support_papal_integrate
 		icon = GFX_focus_generic_vatican_state
-		text = "Reform Vatican"
+		text = "Reintegrate the Vatican"
 		prerequisite = { 
 				focus = ITA_fascism
 				focus = ITA_empire
 		}
-		x = 5
+		x = 6
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
@@ -92,7 +92,7 @@
 		prerequisite = { 
 				focus = ITA_support_papal_integrate
 		}
-		x = 5
+		x = 6
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -121,7 +121,7 @@
 		prerequisite = { 
 				focus = ITA_empire
 		}
-		x = 8
+		x = 10
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -152,7 +152,7 @@
 				focus = ITA_rom_treaty
 				focus = ITA_empire
 		}
-		x = 5
+		x = 6
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -180,7 +180,7 @@
 		prerequisite = { 
 				focus = ITA_albania_exp
 		}
-		x = 9
+		x = 11
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
@@ -212,7 +212,7 @@
 		prerequisite = { 
 				focus = ITA_albania_exp
 		}
-		x = 7
+		x = 9
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
@@ -245,7 +245,7 @@
 				focus = ITA_divide_greece
 				focus = ITA_BUL_war
 		}
-		x = 8
+		x = 10
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
@@ -282,11 +282,11 @@
 	focus = {
 		id = ITA_yugoslavia_treaty
 		icon = GFX_focus_invite_yugoslavia
-		text = "Ally Yugoslavia"
+		text = "Appease Yugoslavia"
 		prerequisite = { 
 				focus = ITA_fascism
 		}
-		x = 2
+		x = 4
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
@@ -314,7 +314,7 @@
 		prerequisite = { 
 				focus = ITA_yugoslavia_treaty
 		}
-		x = 2
+		x = 4
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -348,7 +348,7 @@
 		prerequisite = { 
 				focus = ITA_albania
 		}
-		x = 2
+		x = 4
 		y = 4
 		cost = 10
 		available_if_capitulated = yes
@@ -367,6 +367,36 @@
 			send_equipment_fraction = {
  			    value = 0.2
 			    target = SPA
+			}
+		}
+	}
+
+	focus = {
+		id = ITA_CSA
+		icon = GFX_focus_intervention_usa
+		text = "Support The Unionists"
+		prerequisite = { 
+				focus = ITA_SPA_TT
+		}
+		x = 4
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			country_exists = CSA
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			CSA = {
+				give_military_access = ITA
+			}
+			send_equipment_fraction = {
+ 			    value = 0.1
+			    target = CSA
 			}
 		}
 	}

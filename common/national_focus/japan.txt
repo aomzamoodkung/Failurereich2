@@ -599,7 +599,7 @@
 				focus = JAP_thailand2
 				focus = JAP_sinkiang
 		}
-		x = 10
+		x = 14
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
@@ -628,7 +628,7 @@
 				focus = JAP_thailand2
 				focus = JAP_sinkiang
 		}
-		x = 7
+		x = 11
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
@@ -660,7 +660,7 @@
 				focus = JAP_thailand2
 				focus = JAP_sinkiang
 		}
-		x = 13
+		x = 17
 		y = 5
 		cost = 10
 		available_if_capitulated = yes
@@ -690,7 +690,7 @@
 		prerequisite = { 
 				focus = JAP_war_china
 		}
-		x = 6
+		x = 10
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
@@ -729,7 +729,7 @@
 		prerequisite = { 
 				focus = JAP_war_indonesia
 		}
-		x = 6
+		x = 10
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
@@ -754,11 +754,11 @@
 	focus = {
 		id = JAP_support_princes
 		icon = GFX_focus_attack_britain
-		text = "Invade India"
+		text = "Deal with The Indian States"
 		prerequisite = { 
 				focus = JAP_war_china
 		}
-		x = 10
+		x = 14
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
@@ -773,15 +773,15 @@
 		completion_reward = {
 			set_collaboration = {
 			    target = HYD
-			    value = 0.3
+			    value = 0.6
 			}
 			set_collaboration = {
 			    target = PAK
-			    value = 0.3
+			    value = 0.6
 			}
 			set_collaboration = {
 			    target = KAS
-			    value = 0.3
+			    value = 0.6
 			}
 		}
 	}
@@ -789,11 +789,11 @@
 	focus = {
 		id = JAP_war_india
 		icon = GFX_focus_attack_india
-		text = "Invite the princes"
+		text = "Invade the Raj"
 		prerequisite = { 
 				focus = JAP_support_princes
 		}
-		x = 10
+		x = 14
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
@@ -823,7 +823,7 @@
 		mutually_exclusive = { 
 			focus = JAP_Inner_china
 		}
-		x = 9
+		x = 13
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
@@ -844,20 +844,24 @@
 			    type = annex_everything
 			    target = TIB
 			}
+			create_wargoal = {
+			    type = annex_everything
+			    target = KUM
+			}
 		}
 	}
 
 	focus = {
 		id = JAP_Inner_china
 		icon = GFX_focus_attack_india
-		text = "Negociate West China"
+		text = "Negociate with the West"
 		prerequisite = { 
 				focus = JAP_war_india
 		}
 		mutually_exclusive = { 
 			focus = JAP_war_Inner_china
 		}
-		x = 11
+		x = 15
 		y = 8
 		cost = 10
 		available_if_capitulated = yes
@@ -876,6 +880,10 @@
 			}
 			set_collaboration = {
 			    target = TIB
+			    value = 0.3
+			}
+			set_collaboration = {
+			    target = KUM
 			    value = 0.3
 			}
 		}
@@ -890,14 +898,17 @@
 		prerequisite = { 
 				focus = JAP_war_china
 		}
-		x = 14
+		x = 17
 		y = 6
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available = {
-
+			OR = {
+				tag = JAP
+				tag = EDO
+			}
 		} 
 		ai_will_do = {
 			factor = 1
@@ -911,13 +922,44 @@
 	}
 
 	focus = {
+		id = JAP_deal_Mongolia
+		icon = GFX_focus_attack_mongolia
+		text = "Deal with the Mongols"
+		prerequisite = { 
+				focus = JAP_war_china
+		}
+		x = 19
+		y = 6
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		available = {
+			OR = {
+				tag = JAP
+				tag = TGW
+			}
+		} 
+
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_collaboration = {
+			    target = MON
+			    value = 0.3
+			}
+		}
+	}
+
+	focus = {
 		id = JAP_war_Russia
 		icon = GFX_focus_attack_soviet
 		text = "Take the Bear"
 		prerequisite = { 
 				focus = JAP_war_Mongolia
 		}
-		x = 13
+		x = 17
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
@@ -944,7 +986,7 @@
 		prerequisite = { 
 				focus = JAP_war_Mongolia
 		}
-		x = 15
+		x = 19
 		y = 7
 		cost = 10
 		available_if_capitulated = yes
@@ -972,7 +1014,7 @@
 				focus = JAP_war_Russia
 				focus = JAP_peace_Russia
 		}
-		x = 14
+		x = 18
 		y = 8
 		cost = 10
 		available_if_capitulated = yes

@@ -218,7 +218,7 @@ focus_tree = {
 
 	focus = {
 		id = ENG_army 
-		text = "Army first"
+		text = "The Army First"
 		icon = GFX_focus_eng_move_to_secure_the_dominions
 		mutually_exclusive = { focus = ENG_monarchist_coup focus = ENG_mosley_way }
 		x = 20
@@ -416,7 +416,7 @@ focus_tree = {
 		}
 	}
 
-#### Join Entente ####
+#### Join the Entente ####
 
 	focus = {
 		id = ENG_canada_crown
@@ -474,6 +474,69 @@ focus_tree = {
 		completion_reward = {
 			add_opinion_modifier = {
 			    target = AFR
+			    modifier = entente_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_help_portos
+		icon = GFX_focus_diplomacy_portugal
+		text = "Support Portugal"
+		prerequisite = { focus = ENG_french_africa }
+		x = 25
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = POR
+			    modifier = entente_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_and_belgium
+		icon = GFX_focus_diplomacy_portugal
+		text = "Reinforce Belgian Relations"
+		prerequisite = { focus = ENG_help_portos }
+		x = 25
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = BEL
+			    modifier = entente_collaborator 
+			}
+		}
+	}
+
+	focus = {
+		id = ENG_SOV
+		icon = GFX_focus_diplomacy_portugal
+		text = "Approach Russia"
+		prerequisite = { focus = ENG_help_portos }
+		x = 29
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL } 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_opinion_modifier = {
+			    target = SOV
 			    modifier = entente_collaborator 
 			}
 		}
@@ -756,7 +819,6 @@ focus_tree = {
 
 		available = {
 			has_political_party = fascism
-			has_political_party = reactionary
 		}
 		
 		ai_will_do = {
