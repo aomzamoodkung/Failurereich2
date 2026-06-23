@@ -215,7 +215,34 @@ country_event = {
 
 		SOV = { puppet = TUR }
 		SOV = { puppet = GEO }
+		TUR = { release = KUR }
 		SOV = { set_state_owner = 797 }
+		KUR = { set_state_owner = 350 }
+
+		TUR = { release = SYR }
+		TUR = { release = IRQ }
+		TUR = { release = LEB }
+		TUR = { release = JOR }
+		TUR = { release = ISR }
+
+		HEJ = {
+			annex_country = {
+	   			 target = SYR 
+	   			 transfer_troops = yes
+		      }
+		}
+		HEJ = {
+			annex_country = {
+	   			 target = IRQ 
+	   			 transfer_troops = yes
+		      }
+		}
+		HEJ = {
+			annex_country = {
+	   			 target = JOR 
+	   			 transfer_troops = yes
+		      }
+		}
 
 	}
 
@@ -227,6 +254,33 @@ country_event = {
 		SOV = { puppet = GEO }
 		GEO = { set_state_owner = 354 }
 		SOV = { set_state_owner = 797 }
+		KUR = { set_state_owner = 350 }
+
+		TUR = { release = SYR }
+		TUR = { release = IRQ }
+		TUR = { release = LEB }
+		TUR = { release = JOR }
+		TUR = { release = ISR }
+
+		HEJ = {
+			annex_country = {
+	   			 target = SYR 
+	   			 transfer_troops = yes
+		      }
+		}
+		HEJ = {
+			annex_country = {
+	   			 target = IRQ 
+	   			 transfer_troops = yes
+		      }
+		}
+		HEJ = {
+			annex_country = {
+	   			 target = JOR 
+	   			 transfer_troops = yes
+		      }
+		}
+
 
 	}
 }
@@ -273,7 +327,7 @@ country_event = {
 		has_war_with = BUL
 		has_war_with = GER
 		NOT = {
-			FIN = { controls_state = 111 }
+			BUL = { controls_state = 48 }
 		}
         }
 	
@@ -282,7 +336,14 @@ country_event = {
 	}
 
 	option = { 
-		name = "Zveno"
+		name = "Zveno will replace the communists"
+		
+		BUL = { set_state_owner = 801 }
+		BUL = { set_state_owner = 48 }
+		BUL = { set_state_owner = 77 }
+		BUL = { set_state_owner = 211 }
+		BUL = { set_state_owner = 212 }
+		GRE = { set_state_owner = 184 }
 
 		SOV = { puppet = BUL }
 
@@ -405,10 +466,34 @@ country_event = {
 		YUG = { set_state_owner = 163 }
 		YUG = { set_state_owner = 109 }
 
+		POL = { set_state_owner = 67 }
+		WGR = { set_state_owner = 1104 }
+		SOV = { set_state_owner = 73 }
+
+		NOR = { set_state_owner = 925 }
+		NOR = { set_state_owner = 924 }
+		NOR = { set_state_owner = 144 }
+		NOR = { set_state_owner = 923 }
+
+		CZE = { set_state_owner = 972 }
+
+		AUS = { set_state_owner = 4 }
+		AUS = { set_state_owner = 975 }
+		AUS = { set_state_owner = 976 }
+		AUS = { set_state_owner = 152 }
+		AUS = { set_state_owner = 153 }
+		AUS = { set_state_owner = 848 }
+
 
 		WGR = {
 			annex_country = {
 	   			 target = GER 
+	   			 transfer_troops = yes
+		      }
+		}
+		CZE = {
+			annex_country = {
+	   			 target = RKH 
 	   			 transfer_troops = yes
 		      }
 		}
@@ -919,6 +1004,12 @@ country_event = {
 		SIA = { set_state_owner = 993 }
 		SIA = { set_state_owner = 1067 } 
 		SIA = { set_state_owner = 1069 }
+
+		VIN = { set_state_owner = 286 }
+		VIN = { set_state_owner = 1017 }
+		VIN = { set_state_owner = 671 }
+		VIN = { set_state_owner = 1066 }
+		JAP = { release = KOR }
 
 		JAP = {
 			annex_country = {
