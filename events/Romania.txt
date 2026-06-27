@@ -10,13 +10,13 @@ country_event = {
 
 	option = {
 		name = romania_f.1.a
-		ai_chance = { factor = 0.1 }
+		ai_chance = { factor = 0.8 }
 		HUN = { country_event= { days = 1 id = hungary.2 } }
 			}
 			
 	option = {
 		name = romania_f.1.b
-		ai_chance = { factor = 0.9 }
+		ai_chance = { factor = 0.2 }
 		HUN = { country_event= { days = 1 id = hungary.1 } }
 		} 
 		#diplomatic_relation = { country = FRA relation = guarantee active = no } 

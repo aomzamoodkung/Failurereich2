@@ -5,8 +5,8 @@ add_namespace = ug
 
 country_event = {
 	id = ug.1
-	title = "Operation Ansluch"
-	desc = ""
+	title = "Operation Ostmark"
+	desc = "We need to take over Wien."
 	picture = GFX_report_event_generic_read_write
 	
 	is_triggered_only = yes
@@ -28,7 +28,7 @@ country_event = {
 country_event = {
 	id = ug.2
 	title = "Operation Zapadoslvia"
-	desc = "Invasion of Czech."
+	desc = "Invasion of Czech is important for our ressources. The army cannot use any weapons without that."
 	picture = GFX_report_event_generic_read_write
 	
 	is_triggered_only = yes

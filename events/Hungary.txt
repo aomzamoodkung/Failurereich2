@@ -1,5 +1,6 @@
 ﻿
 add_namespace = hungary
+add_namescape = hun_CW
 
 country_event = {
 	id = hungary.1
@@ -72,12 +73,12 @@ country_event = {
 	}
 }
 
-#### Monarchy and parlementarian ####
+#### Monarchy and Syncretist State ####
 
 country_event = {
 	id = hungary.5
 	title = "Referundum about Austria"
-	desc = "Prussian parlement try to find if they can integrate Austria, this referundum will be made because Petrograd alliance collapsed."
+	desc = "Magyar parlement try to find if they can integrate Austria, this referundum will be made because Petrograd alliance collapsed."
 	picture = GFX_report_event_north_germany
 	
 	is_triggered_only = yes
@@ -107,7 +108,7 @@ country_event = {
 country_event = {
 	id = hungary.6
 	title = "Integrate Austria"
-	desc = "Prussia ask if we can join their nation."
+	desc = "Hungary ask if we can join their nation."
 	picture = GFX_report_event_north_germany
 	
 	is_triggered_only = yes
@@ -168,7 +169,7 @@ country_event = {
 }
 
 
-#### Czech 
+#### Czech ####
 
 
 country_event = {
@@ -181,7 +182,7 @@ country_event = {
 	
 	option = { 
 		name = "Propose referundum"
-		AUS = {
+		CZE = {
 			country_event = { days = 1 id = hungary.10 }
 		}
 	}
@@ -263,3 +264,76 @@ country_event = {
 	}
 }
 
+#### Civil wars 
+
+country_event = {
+	id = hun_CW.1 
+	title = "War against the syndicates"
+	desc = "Bela Kun is a traitor, we need to rejoin the old monarchy."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Gott Save the Kaiserin !"
+		end_puppet = SLO
+		end_puppet = TRA
+			create_wargoal  = {
+		                target = SLO
+		                type = annex_everything
+	        	}		
+			create_wargoal  = {
+		                target = TRA
+		                type = annex_everything
+	        	}			
+		HUN = {
+				start_civil_war = {
+				    ruling_party = reactionary
+				    ideology = communism
+				    size = 0.3
+				    only_own_territory = no
+				    capital = 155
+				    states = {
+				        155 974 76
+				    }
+				}
+		}
+			
+	}
+}
+
+country_event = {
+	id = hun_CW.2 
+	title = "War against the syndicates"
+	desc = "Bela Kun is a traitor, we need to rejoin a New Hungary."
+	picture = GFX_report_event_generic_read_write
+	
+	is_triggered_only = yes
+	
+	option = { 
+		name = "Raise up Magyar !"
+		end_puppet = SLO
+		end_puppet = TRA
+			create_wargoal  = {
+		                target = SLO
+		                type = annex_everything
+	        	}		
+			create_wargoal  = {
+		                target = TRA
+		                type = annex_everything
+	        	}		
+		HUN = {
+				start_civil_war = {
+				    ruling_party = vanguardism
+				    ideology = democratic
+				    size = 0.3
+				    only_own_territory = no
+				    capital = 73
+				    states = {
+				        73 76 154
+				    }
+				}
+		}
+			
+	}
+}

@@ -14,7 +14,6 @@
 		id = CHI_Chang_kai_chek_assassination
 		icon = GFX_focus_china
 		text = "Chang Destitued"
-		mutually_exclusive = { focus = CHI_invade_zhili }
 		x = 6
 		y = 0
 		cost = 10
@@ -31,16 +30,50 @@
 		}
 	}
 
+### Democratics ###
+
 	focus = {
-		id = CHI_civil_war
-		icon = GFX_focus_united_china
-		text = "Chinese civil war"
+		id = CHI_federalists
+		icon = GFX_focus_china
+		text = "A new Election"
 		prerequisite = { 
 				focus = CHI_Chang_kai_chek_assassination
 		}
-
+		mutually_exclusive = { focus = CHI_wang }
 		x = 6
 		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_party_name = { 
+				    ideology = democratic
+				    long_name = "Federalist Party"
+				    name = "Federalists"
+			}			
+			set_political_party = {
+			    ideology = democratic
+			    popularity = 30
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_civil_war
+		icon = GFX_focus_united_china
+		text = "A broken China again"
+		prerequisite = { 
+				focus = CHI_federalists
+		}
+
+		x = 6
+		y = 2
 
 		cost = 10
 
@@ -59,14 +92,14 @@
 	focus = {
 		id = CHI_civil_lost
 		icon = GFX_focus_united_china
-		text = "Fleed in Yunnan"
+		text = "Flee in Yunnan"
 		prerequisite = { 
 				focus = CHI_civil_war
 		}
 		mutually_exclusive = { focus = CHI_civil_won }
 
 		x = 4
-		y = 2
+		y = 3
 
 		cost = 10
 
@@ -80,7 +113,11 @@
 			always = no
 		}
 
-		completion_reward = {
+		completion_reward = {		
+			set_political_party = {
+			    ideology = fascism
+			    popularity = 35
+			}
 
 		}
 	}
@@ -95,7 +132,7 @@
 		mutually_exclusive = { focus = CHI_civil_lost }
 
 		x = 8
-		y = 2
+		y = 3
 
 		cost = 10
 
@@ -110,18 +147,53 @@
 			NOT = { country_exists = PRC }
 		}
 
-		completion_reward = {
-			
+		completion_reward = {		
+			set_political_party = {
+			    ideology = democratic
+			    popularity = 60
+			}
 		}
 	}
 
-### stable ###
+### Expansionnist ###
+
+	focus = {
+		id = CHI_wang 
+		icon = GFX_focus_china
+		text = "Wang Come back"
+		prerequisite = { 
+				focus = CHI_Chang_kai_chek_assassination
+		}
+		mutually_exclusive = { focus = CHI_federalists }
+		x = 12
+		y = 1
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			set_party_name = { 
+				    ideology = fascism
+				    long_name = "The New Chinese Party"
+				    name = "New China"
+			}			
+			set_political_party = {
+			    ideology = fascism
+			    popularity = 30
+			}
+		}
+	}
 
 	focus = {
 		id = CHI_invade_zhili
 		icon = GFX_focus_united_china
 		text = "Reunite China"
-		mutually_exclusive = { focus = CHI_Chang_kai_chek_assassination }
+		mutually_exclusive = { focus = CHI_wang }
 		x = 12
 		y = 0
 		cost = 10

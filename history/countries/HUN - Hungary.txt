@@ -169,9 +169,9 @@ create_country_leader = {
 
 
 create_country_leader = {
-	name = "Sophie von Hohenberg"
-	desc = "POLITICS_MATYAS_RAKOSKI_DESC"
-	picture = "gfx/leaders/hu/Portrait_HUN_Sophie_I.dds"
+	name = "Árpád Szakasits"
+	desc = "POLITICS_ARPAD_SZAKASITS_DESC"
+	picture = "gfx/leaders/Europe/Portrait_Europe_Generic_2.dds"
 	expire = "1956.1.1"
 	ideology = nazbol 
 	traits = {

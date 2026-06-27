@@ -31,7 +31,8 @@ focus_tree = {
 		}
 	}
 
-	#Focus for Greater Hungary
+#### Focus for Greater Hungary ####
+
 	focus = {
 		id = HUN_greater_hungary
 		icon = GFX_focus_hol_legacy_of_the_de_zeven_provincien_mutiny
@@ -235,7 +236,7 @@ focus_tree = {
 	}
 
 ###########################
-#### Danubian Monarchy ####
+#### Hungarian Alternative ####
 ###########################
 
 	focus = {
@@ -258,6 +259,10 @@ focus_tree = {
 			add_political_power = 100
 		}
 	}
+
+###########################
+#### Danubian Monarchy ####
+###########################
 
 	focus = {
 		id = HUN_support_monarchists
@@ -282,8 +287,8 @@ focus_tree = {
 		completion_reward = {
 			set_party_name = { 
 			    ideology = reactionary
-			    long_name = "People's Party"
-			    name = "PP"
+			    long_name = "Imperial Party"
+			    name = "IP"
 			}
 			set_politics = {
 				ruling_party = reactionary
@@ -293,12 +298,17 @@ focus_tree = {
 			    ideology = reactionary
 			    popularity = 0.50
 			}
+			country_event = { days = 1 id = hun_CW.1 }
 		}
 	}
 
+#######################
+#### Turanic State ####
+#######################
+
 	focus = {
 		id = HUN_support_communists
-		text = "Legilsative power"
+		text = "Toward Totalists"
 		icon = GFX_focus_hun_assassinate_horthy
 
 		x = 18
@@ -330,6 +340,7 @@ focus_tree = {
 			    ideology = vanguardism 
 			    popularity = 0.50
 			}
+			country_event = { days = 1 id = hun_CW.2 }
 		}
 	}
 
@@ -512,7 +523,7 @@ focus_tree = {
 
 	focus = {
 		id = HUN_Austria_Hungary
-		text = "Austria Hungary"
+		text = "Austria and Hungary"
 		icon = GFX_focus_generic_strike_at_democracy1
 
 		x = 18
@@ -523,9 +534,17 @@ focus_tree = {
 
 		prerequisite = { 
 			focus = HUN_YUG
+		}
+		prerequisite = { 
 			focus = HUN_ROM
 		}
 
+		available = { 
+			NOT = { 
+				AUS = { country_exists = yes }	
+				CZE = { country_exists = yes } 
+			}	
+		}
 
 		ai_will_do = {
 			factor = 1
