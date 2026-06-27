@@ -126,19 +126,19 @@ country_event = {
 
 country_event = {
 	id = tt.4
-	title = "Warsaw taken"
-	desc = "Poland is now under our control, we will instaure a new republic"
+	title = "Madrid Fall"
+	desc = "Spain is now under our control, we will instaure a regency"
 	picture = GFX_report_event_north_germany
 	
 	fire_only_once = yes
 
 	trigger= {
-		tag = SOV
-		has_war_with = GER 
+		tag = AFR
+		has_war_with = SPC 
 		OR = {
-			SOV = { controls_state = 10 }
+			AFR = { controls_state = 41 }
 		}
-		POL = { is_puppet_of = GER }
+		SPC = { exist = yes }
         }
 	
 	mean_time_to_happen = {
@@ -146,11 +146,20 @@ country_event = {
 	}
 
 	option = { 
-		name = "Restaure Poland"
+		name = "Restaure The Spanish monarchy"
 
-		SOV = { puppet = POL }
-		SOV = { set_state_owner = 89 }
-		SOV = { set_state_owner = 91 }
+		SPR = { set_state_owner = 41 }
+		AFR = { puppet = AFR }
+		SPR = {
+			annex_country = {
+	   			 target = SPC 
+	   			 transfer_troops = yes
+		      }
+			annex_country = {
+	   			 target = SPA 
+	   			 transfer_troops = yes
+		      }
+		}
 
 	}
 }
@@ -247,7 +256,7 @@ country_event = {
 	}
 
 	option = { 
-		name = "Restaure Ottoman Empire"
+		name = "Restaure The Ottoman Empire"
 
 		TUR = { release = KUR }
 		SOV = { puppet = TUR }
@@ -452,7 +461,6 @@ country_event = {
 
 		CAN = { set_state_owner = 57 }
 		CAN = { set_state_owner = 56 }
-		CAN = { set_state_owner = 977 }
 
 		SOV = { set_state_owner = 722 }
 		SOV = { set_state_owner = 146 }
@@ -484,10 +492,22 @@ country_event = {
 		AUS = { set_state_owner = 153 }
 		AUS = { set_state_owner = 848 }
 
+		SOV = { set_state_owner = 147 }
+
+		AUS = { drop_cosmetic_tag = yes }
+		HUN = { drop_cosmetic_tag = yes }
+		SLO = { drop_cosmetic_tag = yes }
+		WGR = { set_cosmetic_tag = german_empire }
 
 		WGR = {
 			annex_country = {
 	   			 target = GER 
+	   			 transfer_troops = yes
+		      }
+		}
+		POL = {
+			annex_country = {
+	   			 target = GEN 
 	   			 transfer_troops = yes
 		      }
 		}
