@@ -14,7 +14,7 @@
 		id = CHI_Chang_kai_chek_assassination
 		icon = GFX_focus_china
 		text = "Chang Destitued"
-		x = 6
+		x = 9
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
@@ -193,9 +193,9 @@
 		id = CHI_invade_zhili
 		icon = GFX_focus_united_china
 		text = "Reunite China"
-		mutually_exclusive = { focus = CHI_wang }
+		prerequisite = { focus = CHI_wang }
 		x = 12
-		y = 0
+		y = 2
 		cost = 10
 		available_if_capitulated = yes
 		search_filters = { FOCUS_FILTER_POLITICAL } 
@@ -249,7 +249,7 @@
 		}
 
 		x = 12
-		y = 1
+		y = 3
 
 		cost = 10
 
@@ -282,7 +282,7 @@
 		}
 
 		x = 12
-		y = 2
+		y = 4
 
 		cost = 10
 

@@ -1,6 +1,5 @@
 ﻿
 add_namespace = hungary
-add_namescape = hun_CW
 
 country_event = {
 	id = hungary.1
@@ -267,7 +266,7 @@ country_event = {
 #### Civil wars 
 
 country_event = {
-	id = hun_CW.1 
+	id = hungary.13 
 	title = "War against the syndicates"
 	desc = "Bela Kun is a traitor, we need to rejoin the old monarchy."
 	picture = GFX_report_event_generic_read_write
@@ -303,7 +302,7 @@ country_event = {
 }
 
 country_event = {
-	id = hun_CW.2 
+	id = hungary.14
 	title = "War against the syndicates"
 	desc = "Bela Kun is a traitor, we need to rejoin a New Hungary."
 	picture = GFX_report_event_generic_read_write

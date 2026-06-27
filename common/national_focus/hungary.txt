@@ -298,7 +298,7 @@ focus_tree = {
 			    ideology = reactionary
 			    popularity = 0.50
 			}
-			country_event = { days = 1 id = hun_CW.1 }
+			country_event = { days = 1 id = hungary.13 }
 		}
 	}
 
@@ -340,7 +340,7 @@ focus_tree = {
 			    ideology = vanguardism 
 			    popularity = 0.50
 			}
-			country_event = { days = 1 id = hun_CW.2 }
+			country_event = { days = 1 id = hungary.14 }
 		}
 	}
 
