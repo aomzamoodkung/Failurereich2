@@ -57,7 +57,18 @@ recruit_character = SIA_thawee_punyaketu
 recruit_character = SIA_phot_bhahalyodin
 
 
-
+set_politics = {
+	ruling_party = reactionary
+	last_election = "1930.1.1"
+	election_frequency = 48
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 5
+	communism = 5
+	reactionary = 90
+	fascism = 0
+}
 
 ### PROPAGANDA ###
 set_variable = { SIA_new_propaganda_campaign = 0 } #Used to pick a poster slot

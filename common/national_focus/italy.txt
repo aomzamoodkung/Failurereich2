@@ -263,7 +263,7 @@
 			187 = { transfer_state_to = GRE }
 			186 = { transfer_state_to = GRE }
 			185 = { transfer_state_to = GRE }
-			992 = { transfer_state_to = GRE }
+			1100 = { transfer_state_to = GRE }
 			47 = { transfer_state_to = GRE }
 			184 = { transfer_state_to = GRE }
 			731 = { transfer_state_to = GRE }
@@ -271,7 +271,7 @@
 			801 = { transfer_state_to = GRE }
 			803 = { transfer_state_to = GRE }
 			211 = { transfer_state_to = GRE }
-			212 = { transfer_state_to = GRE }
+			212 = { transfer_state_to = GRE }=
 			puppet = GRE
 			GRE = { set_cosmetic_tag = GRE_Thracia }
 		}
