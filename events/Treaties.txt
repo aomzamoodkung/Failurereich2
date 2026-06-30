@@ -1,5 +1,4 @@
-﻿
-add_namespace = tt
+﻿add_namespace = tt
 
 country_event = {
 	id = tt.1
@@ -11,7 +10,7 @@ country_event = {
 
 	trigger= {
 		tag = AFR
-		has_war_with = GER 
+		has_war_with = GER
 		CAN = { has_war_with = GER }
 		FRA = { is_puppet_of = GER }
 		OR = {
@@ -25,7 +24,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Restaure France"
 
 		set_capital = 21
@@ -50,7 +49,7 @@ country_event = {
 
 	trigger= {
 		tag = CAN
-		has_war_with = GER 
+		has_war_with = GER
 		AFR = { has_war_with = GER }
 		OR = {
 			CAN = { controls_state = 126 }
@@ -63,7 +62,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Restaure United Kingdom"
 
 		set_capital = 126
@@ -88,7 +87,7 @@ country_event = {
 
 	trigger= {
 		tag = AFR
-		has_war_with = GER 
+		has_war_with = GER
 		CAN = { has_war_with = GER }
 		OR = {
 			AFR = { controls_state = 159 }
@@ -101,7 +100,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Restaure Italy"
 
 		CAN = { puppet = ITA }
@@ -134,7 +133,7 @@ country_event = {
 
 	trigger= {
 		tag = AFR
-		has_war_with = SPC 
+		has_war_with = SPC
 		OR = {
 			AFR = { controls_state = 41 }
 		}
@@ -145,18 +144,18 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Restaure The Spanish monarchy"
 
 		SPR = { set_state_owner = 41 }
 		AFR = { puppet = AFR }
 		SPR = {
 			annex_country = {
-	   			 target = SPC 
+	   			 target = SPC
 	   			 transfer_troops = yes
 		      }
 			annex_country = {
-	   			 target = SPA 
+	   			 target = SPA
 	   			 transfer_troops = yes
 		      }
 		}
@@ -186,7 +185,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Restaure Romania"
 
 		SOV = { set_state_owner = 78 }
@@ -219,7 +218,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Restaure Turkish Youth"
 
 		SOV = { puppet = TUR }
@@ -236,26 +235,26 @@ country_event = {
 
 		HEJ = {
 			annex_country = {
-	   			 target = SYR 
+	   			 target = SYR
 	   			 transfer_troops = yes
 		      }
 		}
 		HEJ = {
 			annex_country = {
-	   			 target = IRQ 
+	   			 target = IRQ
 	   			 transfer_troops = yes
 		      }
 		}
 		HEJ = {
 			annex_country = {
-	   			 target = JOR 
+	   			 target = JOR
 	   			 transfer_troops = yes
 		      }
 		}
 
 	}
 
-	option = { 
+	option = {
 		name = "Restaure The Ottoman Empire"
 
 		TUR = { release = KUR }
@@ -273,19 +272,19 @@ country_event = {
 
 		HEJ = {
 			annex_country = {
-	   			 target = SYR 
+	   			 target = SYR
 	   			 transfer_troops = yes
 		      }
 		}
 		HEJ = {
 			annex_country = {
-	   			 target = IRQ 
+	   			 target = IRQ
 	   			 transfer_troops = yes
 		      }
 		}
 		HEJ = {
 			annex_country = {
-	   			 target = JOR 
+	   			 target = JOR
 	   			 transfer_troops = yes
 		      }
 		}
@@ -304,7 +303,7 @@ country_event = {
 
 	trigger= {
 		tag = SOV
-		has_war_with = FIN 
+		has_war_with = FIN
 		has_war_with = GER
 		NOT = {
 			FIN = { controls_state = 111 }
@@ -315,7 +314,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Puppet Finland"
 
 		SOV = { puppet = FIN }
@@ -344,9 +343,9 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Zveno will replace the communists"
-		
+	
 		BUL = { set_state_owner = 801 }
 		BUL = { set_state_owner = 48 }
 		BUL = { set_state_owner = 77 }
@@ -388,8 +387,8 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
-		name = "Restaure German Empire"
+	option = {
+		name = "Restaure The German Empire"
 
 		white_peace = GER
 		white_peace = HUN
@@ -439,16 +438,31 @@ country_event = {
 		SOV = { puppet = BUL }
 		SOV = { puppet = SLO }
 		SOV = { puppet = POL }
-		HUN = { release = ROM }
+
+		CAN = { puppet = HOL }
+		AFR = { puppet = LUX }
+		AFR = { puppet = BEL }
+
+
 		GER = { release = CZE }
 		GER = { release = AUS }
+		LOM = { release = ALB }
+
 		GER = { release = LUX }
 		GER = { release = FRA }
+
 		GER = { release = POL }
 		GER = { release = YUG }
+
 		HUN = { release = SLO }
+		HUN = { release = ROM }
+
 		HOL = { release = BEL }
-		HOL = { release = FRA }
+
+		GER = { release = DEN }
+		GER = { release = SWE }
+		GER = { release = NOR }
+
 		BEL = { set_state_owner = 980 }
 		BEL = { set_state_owner = 977 }
 
@@ -501,19 +515,19 @@ country_event = {
 
 		WGR = {
 			annex_country = {
-	   			 target = GER 
+	   			 target = GER
 	   			 transfer_troops = yes
 		      }
 		}
 		POL = {
 			annex_country = {
-	   			 target = GEN 
+	   			 target = GEN
 	   			 transfer_troops = yes
 		      }
 		}
 		CZE = {
 			annex_country = {
-	   			 target = RKH 
+	   			 target = RKH
 	   			 transfer_troops = yes
 		      }
 		}
@@ -542,7 +556,7 @@ country_event = {
 
 		if = {
    		 	limit = {
-			
+	
 				LOM = { has_war_with = ITA }
 
 			}
@@ -558,7 +572,7 @@ country_event = {
 	   			 transfer_troops = yes
 		      		}
 
-			}		
+			}
 		}
 
 	}
@@ -583,7 +597,7 @@ country_event = {
 		OR = {
     			country_exists = BEL
     			country_exists = LUX
-		}    
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -627,7 +641,7 @@ country_event = {
 		OR = {
     			has_war_with = BEL
     			has_war_with = LUX
-		}    
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -654,7 +668,7 @@ country_event = {
 		OR = {
     			has_war_with = BEL
     			has_war_with = LUX
-		}    
+		}
 	}
 	
 	mean_time_to_happen = {
@@ -690,7 +704,7 @@ country_event = {
 	
 	option = {
 		name = "Create a puppet state"
-		
+	
 		GER = { set_state_owner = 69 }
 		GER = { set_state_owner = 74 }
 		GER = { set_state_owner = 72 }
@@ -700,17 +714,17 @@ country_event = {
 
 		puppet = RKH
 		RKH = { set_cosmetic_tag = RKH_volk }
-		
+	
 	}
 	option = {
 		name = "Our land!"
-		
+	
 		GER = { set_state_owner = 69 }
 		GER = { set_state_owner = 74 }
 		GER = { set_state_owner = 75 }
 		GER = { set_state_owner = 9 }
 		GER = { set_state_owner = 72 }
-		
+	
 	}
 }
 
@@ -735,7 +749,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Unconditional surrender"
 		white_peace = CHI
 		set_capital = 328
@@ -780,8 +794,8 @@ country_event = {
 			tag = BRM
 		}
 		has_war_with = SIA
-		controls_state = 289 
-		controls_state = 724 
+		controls_state = 289
+		controls_state = 724
 		controls_state = 868
         }
 	
@@ -789,7 +803,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Unconditional surrender"
 		white_peace = SIA
 		puppet = SIA
@@ -816,8 +830,8 @@ country_event = {
 			has_war_with = CHI
 			has_war_with = MAN
 		}
-		controls_state = 717 
-		controls_state = 715 
+		controls_state = 717
+		controls_state = 715
 		controls_state = 716
 		controls_state = 714
 		controls_state = 328
@@ -827,7 +841,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Create a Puppet State in the north"
 		PRC = { set_state_owner = 717 }
 		PRC = { set_state_owner = 715 }
@@ -862,7 +876,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Demolishe it."
 		white_peace = BAN
 		RAJ = {
@@ -873,7 +887,7 @@ country_event = {
 		}
 	}
 
-	option = { 
+	option = {
 		name = "Let some freedom."
 		white_peace = BAN
 		RAJ = { puppet = BAN }
@@ -903,7 +917,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Ne Win has to leave."
 		white_peace = BRM
 		BRM = { set_ruling_party = democratic }
@@ -931,7 +945,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Unconditional surrender"
 		white_peace = INS
 		CAN = { puppet = INS }
@@ -965,7 +979,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Manage A Socialist state in the south"
 		PRC = { set_state_owner = 596 }
 		PRC = { set_state_owner = 749 }
@@ -991,7 +1005,7 @@ country_event = {
 			tag = SOV
 		}
 		OR = {
-			controls_state = 531 
+			controls_state = 531
 			controls_state = 282
 		}
 		has_war_with = EDO
@@ -1001,7 +1015,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Kyoto treaty"
 
 		white_peace = EDO
@@ -1022,7 +1036,7 @@ country_event = {
 		JAP = { set_state_owner = 282 }
 
 		SIA = { set_state_owner = 993 }
-		SIA = { set_state_owner = 1067 } 
+		SIA = { set_state_owner = 1067 }
 		SIA = { set_state_owner = 1069 }
 
 		VIN = { set_state_owner = 286 }
@@ -1049,7 +1063,7 @@ country_event = {
 		JAP = { set_politics = { ruling_party = democratic } }
 		KOR = { set_politics = { ruling_party = democratic } }
 		FOR = { set_politics = { ruling_party = democratic } }
-		
+	
 
 	}
 }
@@ -1077,7 +1091,7 @@ country_event = {
 		days = 1
 	}
 
-	option = { 
+	option = {
 		name = "Keep Bela Kun has leader"
 		white_peace = HUN
 		GER = { puppet = HUN }

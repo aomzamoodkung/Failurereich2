@@ -155,14 +155,14 @@ country_event = {
 country_event = {
 	id = qing.2
 	title = "Our empire is divided."
-	desc = "Puyi has been assasinated. and we don't know how many time we can handle our country"
+	desc = "Puyi has been deposed. We don't know how many time we can handle our country"
 	picture = GFX_report_event_lithuania_army
 
 	is_triggered_only = yes
 	
 	option = {
 
-		name = "No ..."
+		name = "No again ..."
 
 		605 = { set_demilitarized_zone = yes }
 		744 = { set_demilitarized_zone = yes }
@@ -194,9 +194,7 @@ country_event = {
 		ANH = { transfer_state = 622 }
 		ANH = { transfer_state = 615 }
 		ZHI = { transfer_state = 620 }
-		ZHI = { transfer_state = 753 }
 		ZHI = { transfer_state = 283 }
-		ZHI = { transfer_state = 605 }
 		ZHI = { transfer_state = 606 }
 
 		hidden_effect = {
