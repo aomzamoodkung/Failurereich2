@@ -63,11 +63,20 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "That well"
+		name = "Take Austria"
 		annex_country = {
 	   		 target = AUS
 	   		 transfer_troops = yes
 		}
+	}
+	option = {
+		name = "Offer lands to allies"
+		annex_country = {
+	   		 target = AUS
+	   		 transfer_troops = yes
+		}
+		LOM = { set_state_owner = 853 }
+		HUN = { set_state_owner = 975 }
 	}
 }
 
@@ -156,11 +165,21 @@ country_event = {
 	is_triggered_only = yes
 	
 	option = {
-		name = "That well"
+		name = "Integrate it as mark"
 		annex_country = {
 	   		 target = CZE
 	   		 transfer_troops = yes
 		}
+	}
+	option = {
+		name = "Create a Bohemian state"
+		annex_country = {
+	   		 target = CZE
+	   		 transfer_troops = yes
+		}
+		RKH = { set_state_owner = 9 }
+		RKH = { set_state_owner = 75 }
+		GER = { puppet = RKH }
 	}
 }
 

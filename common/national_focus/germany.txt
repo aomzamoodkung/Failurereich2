@@ -550,12 +550,6 @@ focus_tree = {
 			factor = 1
 		}
 		available = {
-			OR = {
-				NOT = { country_exists = NOR }
-				NOR = {
-					is_puppet = yes
-				}
-			}
 			is_puppet = no
 		}
 

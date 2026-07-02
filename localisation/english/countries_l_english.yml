@@ -5,7 +5,11 @@
  GER_democratic_DEF: "the German Federal Republic"
  GER_neutrality: "German Empire"
  GER_neutrality_DEF: "the German Empire"
+<<<<<<< HEAD
  GER_communism: "Spartacist of Germany"
+=======
+ GER_communism: "Spartacist Germany"
+>>>>>>> 1bff3840856c26701adea8ccba107221fb048c41
  GER_communism_DEF: "the Free Socialist Republic of Germany"
  GER_fascism_ADJ: "German"
  GER_democratic_ADJ: "German"
@@ -21,7 +25,11 @@
  GER: "Germany"
  GER_DEF: "Germany"
  GER_ADJ: "German"
+<<<<<<< HEAD
  ENG_fascism: "British State"
+=======
+ ENG_fascism: "British Empire"
+>>>>>>> 1bff3840856c26701adea8ccba107221fb048c41
  ENG_fascism_DEF: "the British State"
  ENG_democratic: "United Kingdom"
  ENG_democratic_DEF: "the United Kingdom"
@@ -121,8 +129,13 @@
  SWE_ADJ: "Swedish"
  SWE_subject: "$OVERLORDADJ$ $SWE$"
  SWE_subject_DEF: "$OVERLORDADJ$ $SWE$"
+<<<<<<< HEAD
  FRA_fascism: "Nation Française"
  FRA_fascism_DEF: "The French State"
+=======
+ FRA_fascism: "Vichy France"
+ FRA_fascism_DEF: "La Nation Française"
+>>>>>>> 1bff3840856c26701adea8ccba107221fb048c41
  FRA_democratic: "France"
  FRA_democratic_DEF: "France"
  FRA_neutrality: "Bourbon France"
@@ -322,7 +335,11 @@
  SPR_subject: "$OVERLORDADJ$ $SPR$"
  SPR_subject_DEF: "$OVERLORDADJ$ $SPR$"
  ITA_fascism: "State of Italy"
+<<<<<<< HEAD
  ITA_fascism_DEF: "Italian Social Republic"
+=======
+ ITA_fascism_DEF: "The Social Republic of Italy"
+>>>>>>> 1bff3840856c26701adea8ccba107221fb048c41
  ITA_democratic: "Italian Republic"
  ITA_democratic_DEF: "the Italian Republic"
  ITA_neutrality: "Kingdom of Italy"
@@ -341,7 +358,11 @@
  ITA_subject: "$OVERLORDADJ$ $ITA$"
  ITA_subject_DEF: "$OVERLORDADJ$ $ITA$"
  ROM_fascism: "Legionary Romania"
+<<<<<<< HEAD
  ROM_fascism_DEF: "State of Romania"
+=======
+ ROM_fascism_DEF: "The Romanian State"
+>>>>>>> 1bff3840856c26701adea8ccba107221fb048c41
  ROM_democratic: "Romania"
  ROM_democratic_DEF: "the Kingdom of Romania"
  ROM_neutrality: "Kingdom of Romania"
@@ -360,7 +381,11 @@
  ROM_subject: "$OVERLORDADJ$ $ROM$"
  ROM_subject_DEF: "$OVERLORDADJ$ $ROM$"
  YUG_fascism: "Illyrian State"
+<<<<<<< HEAD
  YUG_fascism_DEF: "The Illyrian State of Yugoslavia"
+=======
+ YUG_fascism_DEF: "Radikalna Yugoslavia"
+>>>>>>> 1bff3840856c26701adea8ccba107221fb048c41
  YUG_democratic: "Yugoslavian Confederation"
  YUG_democratic_DEF: "the Yugoslavian Confederation"
  YUG_neutrality: "Yugoslavia"
@@ -556,8 +581,8 @@
  HUN_democratic_DEF: "the Republic of Hungary"
  HUN_neutrality: "Kingdom of Hungary"
  HUN_neutrality_DEF: "the Kingdom of Hungary"
- HUN_communism: "Hungarian People's Republic"
- HUN_communism_DEF: "the Hungarian People's Republic"
+ HUN_communism: "Soviet Hungary"
+ HUN_communism_DEF: "the Hungarian Council's Republic"
  HUN_fascism_ADJ: "Hungarian"
  HUN_democratic_ADJ: "Hungarian"
  HUN_neutrality_ADJ: "Hungarian"
@@ -3078,11 +3103,11 @@
  NIR_DEF: "Northern Ireland"
  NIR_ADJ: "North Irish"
  SPA_fascism: "Nationalist Spain"
- SPA_fascism_DEF: "Nationalist Spain"
+ SPA_fascism_DEF: "Estado Espanol"
  SPA_democratic: "Spain"
  SPA_democratic_DEF: "Spain"
- SPA_neutrality: "Nationalist Spain"
- SPA_neutrality_DEF: "Nationalist Spain"
+ SPA_neutrality: "Spanish State"
+ SPA_neutrality_DEF: "Kingdom of Spain"
  SPA_communism: "Republican Spain"
  SPA_communism_DEF: "Republican Spain"
  SPA_fascism_ADJ: "Spanish"
@@ -3093,7 +3118,7 @@
  SPA_DEF: "Spain"
  SPA_ADJ: "Spanish"
  SPB_fascism: "Nationalist Spain"
- SPB_fascism_DEF: "Nationalist Spain"
+ SPB_fascism_DEF: "Estado Espanol"
  SPB_democratic: "Spain"
  SPB_democratic_DEF: "Spain"
  SPB_neutrality: "Carlist Spain"
@@ -3108,7 +3133,7 @@
  SPB_DEF: "Spain"
  SPB_ADJ: "Spanish"
  SPC_fascism: "Nationalist Spain"
- SPC_fascism_DEF: "Nationalist Spain"
+ SPC_fascism_DEF: "Estado Espanol"
  SPC_democratic: "Spain"
  SPC_democratic_DEF: "Spain"
  SPC_neutrality: "Regional Defense Council of Aragon"
