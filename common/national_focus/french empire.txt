@@ -174,7 +174,7 @@ focus_tree = {
 		mutually_exclusive = { focus = AFR_war_policy }
 		text = "Revanchism"
 		prerequisite = { 	
-			focus = AFR_bonaparte
+			focus = AFR_appeal_to_the_catholic_church
 			focus = AFR_de_gaulle
 		}
 		x = 10
@@ -249,8 +249,8 @@ focus_tree = {
 		x = 8
 		y = 3
 		prerequisite = {
-			focus = AFR_de_gaulle
-			focus = AFR_bonaparte
+			focus = AFR_war_policy
+			focus = AFR_avenge_france
 		}
 		search_filters = { FOCUS_FILTER_WARGOAL }
 		cost = 10
