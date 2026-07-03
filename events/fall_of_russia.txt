@@ -1,0 +1,170 @@
+﻿add_namespace = ffl
+
+country_event = {
+	id = ffl.1
+	title = "The Motherland fall"
+	desc = "Russia is unable to handle, w have to surrender following our failure and flee to Omsk."
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = SOV
+		has_war_with = GER
+
+		OR = {
+			GER = { controls_state = 219 }
+			GER = { controls_state = 195 }
+			GER = { controls_state = 217 }
+		}
+		date > 1940.1.1
+        }
+	
+	mean_time_to_happen = {
+		days = 4
+	}
+
+	option = {
+		name = "Omsk as Capital"
+		SOV = { set_capital = {state = 571 } }
+
+		white_peace = GER
+		white_peace = HUN
+		white_peace = HOL
+		white_peace = BUL
+		white_peace = POL
+		white_peace = FIN
+		white_peace = TUR
+
+		
+		SOV = { release = BLR }
+		SOV = { release = EST }
+		SOV = { release = LIT }
+		SOV = { release = LAT }
+		SOV = { release = UKR }
+		RKU = { set_state_owner = 206 }
+		RKO = { set_state_owner = 202 }
+		RKU = {
+			annex_country = {
+	   			 target = UKR
+	   			 transfer_troops = yes
+		      }
+		}
+		RKO = {
+			annex_country = {
+	   			 target = BLR
+	   			 transfer_troops = yes
+		      }
+			annex_country = {
+	   			 target = EST
+	   			 transfer_troops = yes
+		      }
+			annex_country = {
+	   			 target = LAT
+	   			 transfer_troops = yes
+		      }
+			annex_country = {
+	   			 target = LIT
+	   			 transfer_troops = yes
+		      }
+		}
+
+		RKM = { set_state_owner = 219 }
+		RKM = { set_state_owner = 209 }
+		RKM = { set_state_owner = 208 }
+		RKM = { set_state_owner = 210 }
+		RKM = { set_state_owner = 244 }
+		RKM = { set_state_owner = 243 }
+		RKM = { set_state_owner = 242 }
+		RKM = { set_state_owner = 246 }
+		RKM = { set_state_owner = 205 }
+		RKM = { set_state_owner = 263 }
+		RKM = { set_state_owner = 247 }
+		RKM = { set_state_owner = 248 }
+		RKM = { set_state_owner = 195 }
+		RKM = { set_state_owner = 222 }
+		RKM = { set_state_owner = 223 }
+		RKM = { set_state_owner = 220 }
+		RKM = { set_state_owner = 257 }
+		RKM = { set_state_owner = 258 }
+		RKM = { set_state_owner = 260 }
+		RKM = { set_state_owner = 253 }
+		RKM = { set_state_owner = 254 }
+		RKM = { set_state_owner = 247 }
+		RKM = { set_state_owner = 248 }
+		RKM = { set_state_owner = 264 }
+		RKM = { set_state_owner = 351 }
+		RKM = { set_state_owner = 880 }
+		RKM = { set_state_owner = 879 }
+		RKM = { set_state_owner = 214 }
+
+		RKM = { set_state_owner = 224 }
+		RKM = { set_state_owner = 240 }
+		GER = { set_state_owner = 137 }
+		GER = { set_state_owner = 196 }
+		GER = { set_state_owner = 200 }
+
+		GEN = { set_state_owner = 89 }
+		GEN = { set_state_owner = 91 }
+
+		RKK = { set_state_owner = 245 }
+		RKK = { set_state_owner = 218 }
+		RKK = { set_state_owner = 217 }
+		RKK = { set_state_owner = 238 }
+		RKK = { set_state_owner = 234 }
+		RKK = { set_state_owner = 235 }
+		RKK = { set_state_owner = 237 }
+
+		GEO = { set_state_owner = 232 }
+		GEO = { set_state_owner = 821 }
+		GEO = { set_state_owner = 827 }
+		GEO = { set_state_owner = 828 }
+		GEO = { set_state_owner = 233 }
+
+		FIN = { set_state_owner = 213 }
+		FIN = { set_state_owner = 215 }
+		FIN = { set_state_owner = 216 }
+		
+		puppet = RKU
+		puppet = RKO
+		puppet = RKK
+		puppet = RKM
+
+	}
+}
+country_event = {
+	id = ffl.2
+	title = "Separatists rise"
+	desc = "The Whita army is now encircled, without any supports around"
+	picture = GFX_report_event_north_germany
+	
+	fire_only_once = yes
+
+	trigger= {
+		tag = SOV
+		GER = { controls_state = 219 }
+		GER = { controls_state = 195 }
+		GER = { controls_state = 217 }
+		date > 1941.1.1
+        }
+	
+	mean_time_to_happen = {
+		days = 8
+	}
+
+	option = {
+		name = "No again ..."
+
+		SOV = { release = BYA }
+		SOV = { release = VLA }
+		JAP = { puppet = VLA }
+		SOV = { release = FER }
+		SOV = { release = KOM }
+		SOV = { release = NEN }
+		SOV = { release = ALT }
+		SOV = { release = VGE }
+		SOV = { release = OVO }
+		SOV = { release = TAT }
+
+	}
+}
