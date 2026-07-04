@@ -42,8 +42,8 @@ country_event = {
 		SOV = { release = LIT }
 		SOV = { release = LAT }
 		SOV = { release = UKR }
-		RKU = { set_state_owner = 206 }
-		RKO = { set_state_owner = 202 }
+		RKO = { set_state_owner = 206 }
+		RKU = { set_state_owner = 202 }
 		RKU = {
 			annex_country = {
 	   			 target = UKR
@@ -97,9 +97,11 @@ country_event = {
 		RKM = { set_state_owner = 880 }
 		RKM = { set_state_owner = 879 }
 		RKM = { set_state_owner = 214 }
+		RKK = { set_state_owner = 265 }
 
 		RKM = { set_state_owner = 224 }
 		RKM = { set_state_owner = 240 }
+
 		GER = { set_state_owner = 137 }
 		GER = { set_state_owner = 196 }
 		GER = { set_state_owner = 200 }
@@ -114,6 +116,10 @@ country_event = {
 		RKK = { set_state_owner = 234 }
 		RKK = { set_state_owner = 235 }
 		RKK = { set_state_owner = 237 }
+		RKK = { set_state_owner = 236 }
+
+		GER = { set_state_owner = 814 }
+		GER = { set_state_owner = 97  }
 
 		GEO = { set_state_owner = 232 }
 		GEO = { set_state_owner = 821 }
@@ -124,12 +130,13 @@ country_event = {
 		FIN = { set_state_owner = 213 }
 		FIN = { set_state_owner = 215 }
 		FIN = { set_state_owner = 216 }
-		
-		puppet = RKU
-		puppet = RKO
-		puppet = RKK
-		puppet = RKM
 
+		GER = { 
+			puppet = RKU
+			puppet = RKO
+			puppet = RKK
+			puppet = RKM
+		}
 	}
 }
 country_event = {
