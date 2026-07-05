@@ -1,0 +1,47 @@
+add_namespace = finland
+
+country_event = {
+	id = finland.1
+	title = finland.1.t
+	desc = finland.1.d
+	picture = GFX_report_event_report_event_FIN_paasikivi_president
+	is_triggered_only = yes
+
+	option = {
+		name = finland.1.a
+		add_political_power = 30
+			add_popularity = {
+				ideology = vanguardism
+				popularity = 0.4
+			}
+		set_politics = {
+		    ruling_party = vanguardism
+		    elections_allowed = no
+		    last_election = "1935.12.17"
+		    long_name = "Worker Lapua Party" 
+		    name = WLP
+		}
+		ai_chance = { base = 10 }
+	}
+	option = {
+		name = finland.1.b
+		add_political_power = 40
+			add_popularity = {
+				ideology = left
+				popularity = 0.4
+			}
+		set_politics = {
+		    ruling_party = left
+		    elections_allowed = no
+		    last_election = "1935.12.17"
+		    long_name = "Social Democratic Party of Finland" 
+		    name = SDPF
+		}
+		ai_chance = { base = 20 }
+	}
+	option = {
+		name = finland.1.c
+		add_political_power = 50
+		ai_chance = { base = 70 }
+	}
+}
