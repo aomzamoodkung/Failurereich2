@@ -247,7 +247,6 @@
 				focus = TUR_collaborate_KUR 
 				focus = TUR_war_KUR
 		}
-		mutually_exclusive = { focus = OTT_war_SYR }
 
 		x = 10
 		y = 2
@@ -393,7 +392,6 @@
 				focus = TUR_collaborate_KUR 
 				focus = TUR_war_KUR
 		}
-		mutually_exclusive = { focus = TRK_war_GEO }
 
 		x = 14
 		y = 2
@@ -418,12 +416,44 @@
 				    OTT = {
 				        create_wargoal = {
 				            target = MSQ
-				            type = take_state_focus
-				            generator = { 554 291 }
+			    		    type = puppet_wargoal_focus
+				        }
+				} 
+				    SYR = {
+				        create_wargoal = {
+				            target = MSQ
+			    		    type = puppet_wargoal_focus
+				        }
+				} 
+				    IRQ = {
+				        create_wargoal = {
+				            target = MSQ
+			    		    type = puppet_wargoal_focus
+				        }
+				} 
+				    JOR = {
+				        create_wargoal = {
+				            target = MSQ
+			    		    type = puppet_wargoal_focus
 				        }
 				}
 			}
 			MSQ = {
+				every_owned_state = {
+				    add_claim_by = OTT
+				}
+			}
+			SYR = {
+				every_owned_state = {
+				    add_claim_by = OTT
+				}
+			}
+			JOR = {
+				every_owned_state = {
+				    add_claim_by = OTT
+				}
+			}
+			IRQ = {
 				every_owned_state = {
 				    add_claim_by = OTT
 				}
@@ -434,7 +464,7 @@
 	focus = {
 		id = OTT_war_ARA
 		icon = GFX_focus_TUR_pivot_to_the_past
-		text = "War to Arabian Peninsula"
+		text = "War to the Peninsula"
 		prerequisite = { 
 				focus = OTT_war_MSQ 
 		}
@@ -456,29 +486,26 @@
 		} 
 		completion_reward = {
 			controller = { 
-				    UAE = {
+				    OTT = {
 				        create_wargoal = {
-				            target = PREV
-				            type = take_state_focus
-				            generator = { 859 856 }
+				            target = UAE
+			    		    type = puppet_wargoal_focus
 				        }
 				}
 			}
 			controller = { 
-				    SAU = {
+				    OTT = {
 				        create_wargoal = {
-				            target = PREV
-				            type = take_state_focus
-				            generator = { 859 856 }
+				            target = SAU
+			    		    type = puppet_wargoal_focus
 				        }
 				}
 			}
 			controller = { 
-				    HEJ = {
+				    OTT = {
 				        create_wargoal = {
-				            target = PREV
-				            type = take_state_focus
-				            generator = { 859 856 }
+				            target = HEJ
+			    		    type = puppet_wargoal_focus
 				        }
 				}
 			}
@@ -528,8 +555,7 @@
 				    EGY = {
 				        create_wargoal = {
 				            target = PREV
-				            type = take_state_focus
-				            generator = { 907 549 }
+			    		    type = puppet_wargoal_focus
 				        }
 				}
 			}
@@ -571,8 +597,7 @@
 				    LBA = {
 				        create_wargoal = {
 				            target = PREV
-				            type = take_state_focus
-				            generator = { 448 450 458 }
+			    		    type = puppet_wargoal_focus
 				        }
 				}
 			}
@@ -580,8 +605,7 @@
 				    TUN = {
 				        create_wargoal = {
 				            target = PREV
-				            type = take_state_focus
-				            generator = { 448 450 458 }
+			    		    type = puppet_wargoal_focus
 				        }
 				}
 			}

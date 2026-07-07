@@ -152,6 +152,16 @@ set_popularities = {
 	reactionary = 11
 }
 
+create_country_leader = {
+	name = "Pedro Triana"
+	desc = "A revolutionnary leader in Mexico, fighting against USA imperialism."
+	picture = "gfx/leaders/MEX/MEX_pedro_triana.png"
+	expire = "1989.1.1"
+	ideology = rexism
+	traits = {
+	}
+}
+
 ### VARIANTS ###
 # 1936 Start #
 IF = {

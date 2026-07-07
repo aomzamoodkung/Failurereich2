@@ -434,16 +434,6 @@ country_event = {
 
 		}
 
-		SOV = { puppet = HUN }
-		SOV = { puppet = BUL }
-		SOV = { puppet = SLO }
-		SOV = { puppet = POL }
-
-		CAN = { puppet = HOL }
-		AFR = { puppet = LUX }
-		AFR = { puppet = BEL }
-
-
 		GER = { release = CZE }
 		GER = { release = AUS }
 		LOM = { release = ALB }
@@ -513,6 +503,9 @@ country_event = {
 		SLO = { drop_cosmetic_tag = yes }
 		WGR = { set_cosmetic_tag = german_empire }
 
+		WGR = { release = UKR }
+		FIN = { release = SOV }
+
 		WGR = {
 			annex_country = {
 	   			 target = GER
@@ -545,6 +538,28 @@ country_event = {
 	   			 target = GEO
 	   			 transfer_troops = yes
 		      }
+			annex_country = {
+	   			 target = RKK
+	   			 transfer_troops = yes
+		      }
+			annex_country = {
+	   			 target = UKR
+	   			 transfer_troops = yes
+		      }
+			annex_country = {
+	   			 target = RKM
+	   			 transfer_troops = yes
+		      }
+			annex_country = {
+	   			 target = RKU
+	   			 transfer_troops = yes
+		      }
+			annex_country = {
+	   			 target = RKO
+	   			 transfer_troops = yes
+		      }
+		      set_state_owner = 814
+		      set_state_owner = 97
 		}
 
 		CAN = {
@@ -553,6 +568,21 @@ country_event = {
 	   			 transfer_troops = yes
 		      }
 		}
+
+		SOV = { puppet = HUN }
+		SOV = { puppet = BUL }
+		SOV = { puppet = SLO }
+		SOV = { puppet = POL }
+
+		SOV = { set_state_owner = 89 }
+		SOV = { set_state_owner = 91 }
+
+		CAN = { puppet = HOL }
+		CAN = { puppet = NOR }
+		CAN = { puppet = DEN }
+
+		AFR = { puppet = LUX }
+		AFR = { puppet = BEL }
 
 		if = {
    		 	limit = {
@@ -1057,6 +1087,14 @@ country_event = {
 	   			 transfer_troops = yes
 		      }
 		}
+
+		SOV = { puppet = KOR }
+		SOV = { puppet = EZO }
+		CAN = { puppet = OKW }
+		CAN = { puppet = JAP }
+		AFR = { puppet = VIN }
+		AFR = { puppet = LAO }
+		AFR = { puppet = CAM }
 
 
 		VIN = { set_politics = { ruling_party = democratic } }
