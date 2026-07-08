@@ -1,5 +1,5 @@
-﻿
-add_namespace = china
+﻿add_namespace = china
+add_namespace = china_south
 add_namespace = qing
 
 country_event = {
@@ -122,6 +122,43 @@ country_event = {
 
 	}
 }
+
+### Monarchy ###
+
+country_event = {
+	id = china_south.1
+	title = china_south.1.t
+	desc = china_south.1.d
+	picture = GFX_report_event_report_event_chinese_soldiers_running
+	is_triggered_only = yes
+	mean_time_to_happen = {
+		days = 5
+	}
+
+	option = {
+		name = ming
+		add_political_power = 50
+		set_cosmetic_tag = CHI_ming
+			set_party_name = {
+				ideology = reactionary
+				long_name = House of Zhu
+				name = The House of Zhu
+			}
+		ai_chance = { base = 75 }
+	}
+	option = {
+		name = taping
+		add_political_power = 50
+		set_cosmetic_tag = CHI_taiping
+			set_party_name = {
+				ideology = reactionary
+				long_name = Heavenly Dynasty
+				name = The Heavenly Dynasty
+			}
+		ai_chance = { base = 25 }
+	}
+}
+
 
 ### Qing ###
 
