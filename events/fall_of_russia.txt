@@ -69,6 +69,9 @@ country_event = {
 		      }
 		}
 
+		GER = { set_state_owner = 97 }
+		GER = { set_state_owner = 814 }
+
 		RKM = { set_state_owner = 219 }
 		RKM = { set_state_owner = 209 }
 		RKM = { set_state_owner = 208 }
@@ -117,6 +120,9 @@ country_event = {
 		RKK = { set_state_owner = 235 }
 		RKK = { set_state_owner = 237 }
 		RKK = { set_state_owner = 236 }
+		
+		RKM = { set_state_owner = 265 }
+		
 
 		GER = { set_state_owner = 814 }
 		GER = { set_state_owner = 97  }
