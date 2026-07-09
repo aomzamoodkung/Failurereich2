@@ -136,24 +136,24 @@ country_event = {
 	}
 
 	option = {
-		name = ming
+		name = "Ming"
 		add_political_power = 50
 		set_cosmetic_tag = CHI_ming
 			set_party_name = {
 				ideology = reactionary
-				long_name = House of Zhu
-				name = The House of Zhu
+				long_name = "House of Zhu"
+				name = "The House of Zhu"
 			}
 		ai_chance = { base = 75 }
 	}
 	option = {
-		name = taping
+		name = "Taiping"
 		add_political_power = 50
 		set_cosmetic_tag = CHI_taiping
 			set_party_name = {
 				ideology = reactionary
-				long_name = Heavenly Dynasty
-				name = The Heavenly Dynasty
+				long_name = "Heavenly Dynasty"
+				name = "The Heavenly Dynasty"
 			}
 		ai_chance = { base = 25 }
 	}
@@ -231,7 +231,6 @@ country_event = {
 		ANH = { transfer_state = 622 }
 		ANH = { transfer_state = 615 }
 		ZHI = { transfer_state = 620 }
-		ZHI = { transfer_state = 283 }
 		ZHI = { transfer_state = 606 }
 
 		hidden_effect = {
