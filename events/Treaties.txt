@@ -459,6 +459,7 @@ country_event = {
 		AFR = { set_state_owner = 1086 }
 		AFR = { set_state_owner = 42 }
 		AFR = { set_state_owner = 51 }
+		AFR = { set_state_owner = 29 }
 
 		DEN = { set_state_owner = 58 }
 		DEN = { set_state_owner = 909 }
@@ -569,6 +570,13 @@ country_event = {
 		      }
 		}
 
+		ROM = {
+			annex_country = {
+	   			 target = TRA
+	   			 transfer_troops = yes
+		      }
+		}
+
 		SOV = { puppet = HUN }
 		SOV = { puppet = BUL }
 		SOV = { puppet = SLO }
@@ -583,6 +591,10 @@ country_event = {
 
 		AFR = { puppet = LUX }
 		AFR = { puppet = BEL }
+
+		WGR = { puppet = AUS }
+		WGR = { puppet = CZE }
+		ITA = { release_puppet = ALB }
 
 		if = {
    		 	limit = {
