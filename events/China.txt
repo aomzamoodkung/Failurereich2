@@ -14,16 +14,17 @@ country_event = {
 
 		name = "No communists please"
 
+		PRC = { transfer_state = 750}
 		PRC = { transfer_state = 602 }
-		PRC = { transfer_state = 600 }
-		PRC = { transfer_state = 595 }
-		PRC = { transfer_state = 613 }
-		PRC = { transfer_state = 596 }
-		PRC = { transfer_state = 749 }
-		PRC = { transfer_state = 1033 }
-		PRC = { transfer_state = 1034 }
-		PRC = { transfer_state = 1035 }
 		PRC = { transfer_state = 1036 }
+		PRC = { transfer_state = 600 }
+
+		RNG = { transfer_state = 1035 }
+		RNG = { transfer_state = 1034 }
+		RNG = { transfer_state = 613 }
+		RNG = { transfer_state = 596 }
+		RNG = { transfer_state = 749 }
+		RNG = { transfer_state = 595 }
 
 		PRC = {	
 
@@ -33,6 +34,22 @@ country_event = {
 			}
 			add_popularity = {
 				ideology = communism
+				popularity = 0.7
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.3
+			}
+		}
+
+		RNG = {	
+
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+			add_popularity = {
+				ideology = fascism
 				popularity = 0.7
 			}
 			add_popularity = {
@@ -64,10 +81,17 @@ country_event = {
 		PRC = { 
 			load_oob = "PRC_civil_war"
 		}
+		RNG = { 
+			load_oob = "RNG_civil_war"
+		}
 
-		PRC = {
+		CHI = {
 			  declare_war_on = {
-		            	target = CHI
+		            	target = PRC
+		                type = civil_war
+	      		  }
+			  declare_war_on = {
+		            	target = RNG 
 		                type = civil_war
 	      		  }
 		}
@@ -84,8 +108,10 @@ country_event = {
 
 	trigger= {
 		tag = CHI
-		PRC = { controls_state = 592 }
-		PRC = { controls_state = 613 }
+		OR = {
+			PRC = { controls_state = 592 }
+			RNG = { controls_state = 592 }
+		}
         }
 	
 	mean_time_to_happen = {
@@ -94,29 +120,22 @@ country_event = {
 	
 	option = {
 
-		name = "We fail"
+		name = "Flee in Yunnan"
+
 	        white_peace = PRC
-		PRC = { set_state_owner = 591 }
-		PRC = { set_state_owner = 593 }
-		PRC = { set_state_owner = 595 }
-		PRC = { set_state_owner = 600 }
-		PRC = { set_state_owner = 594 }
-		PRC = { set_state_owner = 602 }
-		PRC = { set_state_owner = 594 }
-		PRC = { set_state_owner = 592 }
-		PRC = { set_state_owner = 599 }
+	        white_peace = RNG 
+
+		RNG = { set_state_owner = 326 }
+		RNG = { set_state_owner = 593 }
+		RNG = { set_state_owner = 592 }
+		RNG = { set_state_owner = 594 }
+		RNG = { set_state_owner = 599 }
+
+		PRC = { set_state_owner = 605 }
 		PRC = { set_state_owner = 603 }
 		PRC = { set_state_owner = 748 }
-		PRC = { set_state_owner = 750 }
-
-		set_political_party = {
-    			ideology = fascism
-  			popularity = 75
-		}
-		
-		set_politics = {
-			ruling_party = fascism
-		}
+		PRC = { set_state_owner = 1037 }
+		PRC = { set_state_owner = 1041 }
 
 		unlock_national_focus = CHI_civil_lost
 
@@ -194,7 +213,6 @@ country_event = {
 		ANH = { transfer_state = 622 }
 		ANH = { transfer_state = 615 }
 		ZHI = { transfer_state = 620 }
-		ZHI = { transfer_state = 283 }
 		ZHI = { transfer_state = 606 }
 
 		hidden_effect = {
