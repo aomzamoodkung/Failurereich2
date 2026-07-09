@@ -308,7 +308,7 @@ GER_setup_civil_war = {
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 55 state = 56 state = 57 state = 59 state = 843
+					state = 55 state = 56 state = 57 state = 59 state = 843 state = 1086
 				}
 			}
 			HAN = { add_state_core = PREV }
@@ -337,11 +337,6 @@ GER_setup_civil_war = {
 			}
 			WUR = { add_state_core = PREV }
 		}
-		
-		release = WUR
-		release = BAY
-		release = HAN
-		release = PRE
 
 		transfer_units_fraction = {
 			target = HAN
@@ -434,19 +429,19 @@ TUR_start_civil_war = {
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 344 state = 345	state = 346 state = 348	state = 799
+					state = 342 state = 345	state = 346 state = 344 state = 348 state = 799
 				}
 			}
-			OTT = { add_state_core = PREV }
+			TRK = { add_state_core = PREV }
 		}
 
 		every_owned_state = {
 			limit = {
 				OR = {
-					state = 341 state = 797 state = 340 state = 347 state = 356
+					state = 341 state = 797 state = 340 state = 343 state = 347 state = 339
 				}
 			}
-			TRK = { add_state_core = PREV }
+			OTT = { add_state_core = PREV }
 		}
 
 		release = OTT
@@ -454,14 +449,14 @@ TUR_start_civil_war = {
 
 		transfer_units_fraction = {
 			target = OTT
-			size = 0.45
-			navy_ratio = 0.1
+			size = 0.5
+			navy_ratio = 0.2
 			keep_unit_leaders_trigger = { always = yes }
 		}
 		transfer_units_fraction = {
 			target = TRK
-			size = 0.55
-			navy_ratio = 0.1
+			size = 0.5
+			navy_ratio = 0.2
 			keep_unit_leaders_trigger = { always = yes }
 		}
 

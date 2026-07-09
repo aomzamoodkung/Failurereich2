@@ -164,7 +164,7 @@
 	focus = {
 		id = CHI_wang 
 		icon = GFX_focus_china
-		text = "Wang Come back"
+		text = "The Emperor Come back"
 		prerequisite = { 
 				focus = CHI_Chang_kai_chek_assassination
 		}
@@ -180,20 +180,18 @@
 		ai_will_do = {
 			factor = 1
 		}
-		completion_reward = {
-			set_party_name = { 
-				    ideology = fascism
-				    long_name = "The New Chinese Party"
-				    name = "New China"
-			}			
+		completion_reward = {	
 			set_political_party = {
-			    ideology = fascism
+			    ideology = reactionary
 			    popularity = 30
 			}
 			set_politics = {
-				ruling_party = fascism
+				ruling_party = reactionary
 				elections_allowed = no
 			}
+			CHI = {
+				country_event = { days = 5 id = china_south.1 }
+			}			
 		}
 	}
 

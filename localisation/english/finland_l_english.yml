@@ -1,6 +1,18 @@
 ﻿l_english:
- finland.1.t:0 "Limited elections"
- finland.1.d:0 "Kullervo Manner passed away. Finland has to choose a new leader because of the political crisis, do we need a new reform or keep tradtions ? we don't know."
- finland.1.a:0 "Revive the old Urals"
- finland.1.b:0 "Approach moderates"
- finland.1.c:0 "Keep ties with Germany"
+
+ ##########Events - finland##########
+ finland.1.t: "Limited elections"
+ finland.1.d: "Kullervo Manner passed away. Finland has to choose a new leader because of the political crisis, do we need a new reform or keep tradtions ? we don't know."
+ finland.1.a: "Revive the old Urals"
+ finland.1.b: "Approach moderates"
+ finland.1.c: "Keep ties with Germany"
+ my_namespace.1.t: "My Event Title"
+ my_namespace.1.d: "Describe what is happening in this event."
+ ming: "The Ming Dynasty"
+ taping: "The Heavenly State"
+ china_south.1.t: "Fall of the Republic"
+ china_south.1.d: "Kuomindang left a vacuum power, without any leader and institutions, the army will have to reform the constitution and found a new leadership."
+ CHI_ming: "Ming Dynasty"
+ CHI_taiping: "The Ming Empire"
+ CHI_ming_DEF: "Taiping State"
+ CHI_taiping_DEF: "The Heavenly State"
