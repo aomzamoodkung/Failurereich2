@@ -606,6 +606,7 @@
 		search_filters = { FOCUS_FILTER_POLITICAL }
 
 		available = {
+			has_manpower > 750000
 
 		} 
 		ai_will_do = {
