@@ -1993,6 +1993,8 @@ NWG_USA = {
 	color_ui = rgb { 100 110 200 }
 }
 
+#### GER ####
+
 Strato_GER = {
 	color = rgb { 100 100 100 }
 	color_ui = rgb { 100 100 100 }
@@ -2012,6 +2014,30 @@ Ultranat_GER = {
 	color = rgb { 50 50 50 }
 	color_ui = rgb { 50 50 50 }
 }
+
+
+
+Strato_GER_PROV = {
+	color = rgb { 100 100 100 }
+	color_ui = rgb { 100 100 100 }
+}
+
+Democrat_GER_PROV = {
+	color = rgb { 150 150 150 }
+	color_ui = rgb { 150 150 150 }
+}
+
+NazBol_GER_PROV = {
+	color = rgb { 100 50 50 }
+	color_ui = rgb { 100 50 50 }
+}
+
+Ultranat_GER_PROV = {
+	color = rgb { 50 50 50 }
+	color_ui = rgb { 50 50 50 }
+}
+
+#### G ####
 
 POL_HUN_UNION = {
 	color = rgb { 200 140 50 }
