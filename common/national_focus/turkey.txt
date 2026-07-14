@@ -19,7 +19,7 @@
 		icon = GFX_focus_TUR_turanist_ambition
 		text = "Kars legacy"
 		mutually_exclusive = { focus = TUR_oppose_syndicalism }
-		x = 4
+		x = 6
 		y = 0
 		cost = 10
 		available_if_capitulated = yes
@@ -44,11 +44,11 @@
 	focus = {
 		id = TUR_support_bulgaria
 		icon = GFX_focus_generic_befriend_bulgaria
-		text = "Focus on the West"
+		text = "Help the West"
 		prerequisite = { 
 				focus = TUR_kars_republic_legacy
 		}
-		x = 2
+		x = 3
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
@@ -74,7 +74,7 @@
 		prerequisite = { 
 				focus = TUR_kars_republic_legacy
 		}
-		x = 6
+		x = 8
 		y = 1
 		cost = 10
 		available_if_capitulated = yes
@@ -92,15 +92,19 @@
 			}
 		}
 	}
+
+#### German help ####
+
 	focus = {
 		id = TUR_german_alliance
 		icon = GFX_focus_TUR_the_montreux_convention
 		text = "German Turkey"
+		mutually_exclusive = { focus = TUR_own_group }
 		prerequisite = { 
 				focus = TUR_support_bulgaria
 				focus = TUR_support_persia
 		}
-		x = 4
+		x = 3
 		y = 2
 		cost = 10
 		available_if_capitulated = yes
@@ -118,14 +122,15 @@
 			}
 		}
 	}
+
 	focus = {
 		id = TUR_crescent
 		icon = GFX_focus_TUR_support_the_golden_square
-		text = "German Turkey"
+		text = "Socialist Middle East"
 		prerequisite = { 
 				focus = TUR_german_alliance
 		}
-		x = 4
+		x = 3
 		y = 3
 		cost = 10
 		available_if_capitulated = yes
@@ -145,12 +150,276 @@
 	}
 
 	focus = {
+		id = TUR_east
+		icon = GFX_focus_TUR_support_the_golden_square
+		text = "Persia and Germany"
+		prerequisite = { 
+				focus = TUR_crescent
+		}
+		x = 1
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			PER = { has_war = no }
+			date > 1940.1.1
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			GER = {
+				add_to_faction = PER
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_north
+		icon = GFX_focus_TUR_support_the_golden_square
+		text = "Interve in Bulgaria"
+		prerequisite = { 
+				focus = TUR_crescent
+		}
+		x = 3
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			date > 1940.1.1
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			GER = {
+				add_to_faction = BUL
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_north
+		icon = GFX_focus_TUR_support_the_golden_square
+		text = "Reinforce Caucasia"
+		prerequisite = { 
+				focus = TUR_crescent
+		}
+		x = 5
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			GEO = { has_war = no }
+			date > 1940.1.1
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			GER = {
+				add_to_faction = GEO
+			}
+		}
+	}
+
+#### Middle east Socialism ####
+
+
+	focus = {
+		id = TUR_own_group 
+		icon = GFX_focus_TUR_the_montreux_convention
+		text = "A Red Middle East"
+		mutually_exclusive = { focus = TUR_german_alliance }
+		prerequisite = { 
+				focus = TUR_support_bulgaria
+				focus = TUR_support_persia
+		}
+		x = 8
+		y = 2
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			TUR = {
+				create_faction = "Red Orient"
+			}
+		}
+	}
+
+	focus = {
+		id = TUR_east2
+		icon = GFX_focus_TUR_support_the_golden_square
+		text = "Interve in Tabriz"
+		prerequisite = { 
+				focus = TUR_own_group 
+		}
+		x = 8
+		y = 3
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		bypass = {
+			PER = { is_in_faction = yes }
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_to_faction = PER
+		}
+	}
+
+	focus = {
+		id = TUR_north2
+		icon = GFX_focus_TUR_support_the_golden_square
+		text = "Defend the north"
+		prerequisite = { 
+				focus = TUR_east2
+		}
+		x = 7
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		bypass = {
+			GEO = { is_in_faction = yes }
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_to_faction = GEO
+		}
+	}
+
+	focus = {
+		id = TUR_west2
+		icon = GFX_focus_TUR_support_the_golden_square
+		text = "Secure Europe"
+		prerequisite = { 
+				focus = TUR_east2
+		}
+		x = 9
+		y = 4
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		bypass = {
+			BUL = { is_in_faction = yes }
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			add_to_faction = BUL
+		}
+	}
+
+	focus = {
+		id = TUR_arabs_fall
+		icon = GFX_focus_TUR_support_the_golden_square
+		text = "Erase Gulf Aristocracy"
+		prerequisite = { 
+				focus = TUR_north2
+		}
+		prerequisite = { 
+				focus = TUR_west2
+		}
+		x = 8
+		y = 5
+		cost = 10
+		available_if_capitulated = yes
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+		} 
+		bypass = {
+		} 
+		ai_will_do = {
+			factor = 1
+		}
+		completion_reward = {
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = IRQ
+			}
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = KUR
+			}
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = SYR
+			}
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = JOR
+			}
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = LEB
+			}
+			create_wargoal = {
+			    type = puppet_wargoal_focus
+			    target = ISR
+			}
+
+			KUR = {
+				every_owned_state = {
+				    add_claim_by = TUR
+				}
+			}
+
+			IRQ = {
+				every_owned_state = {
+				    add_claim_by = TUR
+				}
+			}
+
+			SYR = {
+				every_owned_state = {
+				    add_claim_by = TUR
+				}
+			}
+
+			JOR = {
+				every_owned_state = {
+				    add_claim_by = TUR
+				}
+			}
+
+			ISR = {
+				every_owned_state = {
+				    add_claim_by = TUR
+				}
+			}
+
+			LEB = {
+				every_owned_state = {
+				    add_claim_by = TUR
+				}
+			}
+		}
+	}
+
+#### End socialism ####
+
+	focus = {
 		id = TUR_oppose_syndicalism
 		icon = GFX_focus_TUR_pivot_to_the_past
 		text = "Oppose communism"
 		mutually_exclusive = { focus = TUR_kars_republic_legacy }
 
-		x = 12
+		x = 16
 		y = 0
 
 		cost = 10
@@ -182,7 +451,7 @@
 		}
 		mutually_exclusive = { focus = TUR_war_KUR }
 
-		x = 11
+		x = 14
 		y = 1
 
 		cost = 10
@@ -214,7 +483,7 @@
 		}
 		mutually_exclusive = { focus = TUR_collaborate_KUR }
 
-		x = 13
+		x = 18
 		y = 1
 
 		cost = 10
@@ -248,7 +517,7 @@
 				focus = TUR_war_KUR
 		}
 
-		x = 10
+		x = 18
 		y = 2
 
 		cost = 10
@@ -280,7 +549,7 @@
 				focus = TRK_war_GEO
 		}
 
-		x = 9
+		x = 19
 		y = 3
 
 		cost = 10
@@ -312,7 +581,7 @@
 				focus = TRK_war_GEO
 		}
 
-		x = 11
+		x = 17
 		y = 3
 
 		cost = 10
@@ -363,7 +632,7 @@
 				focus = TRK_Turkestan
 		}
 
-		x = 10
+		x = 18
 		y = 4
 
 		cost = 10
@@ -393,7 +662,7 @@
 				focus = TUR_war_KUR
 		}
 
-		x = 14
+		x = 13
 		y = 2
 
 		cost = 10
@@ -469,7 +738,7 @@
 				focus = OTT_war_MSQ 
 		}
 
-		x = 15
+		x = 14
 		y = 3
 
 		cost = 10
@@ -535,7 +804,7 @@
 				focus = OTT_war_ARA 
 		}
 
-		x = 15
+		x = 14
 		y = 4
 
 		cost = 10
@@ -570,13 +839,13 @@
 	focus = {
 		id = OTT_war_LBA
 		icon = GFX_focus_TUR_pivot_to_the_past
-		text = "War to Maghreb"
+		text = "War to the aghreb"
 		prerequisite = { 
 				focus = OTT_war_EGY 
 				focus = OTT_war_BUL
 		}
 
-		x = 14
+		x = 13
 		y = 5
 
 		cost = 10
@@ -630,7 +899,7 @@
 				focus = OTT_war_MSQ
 		}
 
-		x = 13
+		x = 12
 		y = 3
 
 		cost = 10
@@ -663,7 +932,7 @@
 				focus = OTT_war_GRE
 		}
 
-		x = 13
+		x = 12
 		y = 4
 
 		cost = 10
