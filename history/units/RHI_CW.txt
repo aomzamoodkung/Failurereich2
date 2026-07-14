@@ -23,7 +23,7 @@ division_template = {
 units = {
 	division= {	
 		name = "Communist troops"	
-		location = 4196
+		location = 6469
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "RHI" } }
 		start_equipment_factor = 0.15
@@ -31,7 +31,7 @@ units = {
 	}
 	division= {	
 		name = "Communist troops"	
-		location = 7097
+		location = 587
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "RHI" } }
 		start_equipment_factor = 0.15
@@ -39,7 +39,7 @@ units = {
 	}
 	division= {	
 		name = "Communist troops"	
-		location = 7097 
+		location = 587 
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "RHI" } }
 		start_equipment_factor = 0.15
@@ -47,7 +47,7 @@ units = {
 	}
 	division= {	
 		name = "Communist troops"	
-		location = 4196
+		location = 6469
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "RHI" } }
 		start_equipment_factor = 0.15
@@ -55,7 +55,7 @@ units = {
 	}
 	division= {	
 		name = "Communist troops"	
-		location = 7097
+		location = 587
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "RHI" } }
 		start_equipment_factor = 0.15
@@ -63,7 +63,7 @@ units = {
 	}
 	division= {	
 		name = "Communist troops"	
-		location = 7097 
+		location = 587 
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "RHI" } }
 		start_equipment_factor = 0.15
@@ -71,7 +71,7 @@ units = {
 	}
 	division= {	
 		name = "Communist troops"	
-		location = 4196
+		location = 6469
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "RHI" } }
 		start_equipment_factor = 0.15
@@ -79,7 +79,7 @@ units = {
 	}
 	division= {	
 		name = "Communist troops"	
-		location = 7097
+		location = 587
 		division_template = "Infantry" 
 		force_equipment_variants = { infantry_equipment_0 = { owner = "RHI" } }
 		start_equipment_factor = 0.15
