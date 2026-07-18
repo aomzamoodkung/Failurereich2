@@ -11,38 +11,6 @@ focus_tree = {
 	default = no
 
 	focus = {
-		id = SAU_crush_terrorist
-		text="Invade Iraq"
-		icon = GFX_goal_generic_military_sphere
-		x = 1
-		y = 0
-		cost = 5
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
-		}
-		
-		bypass = {
-			   NOT = { country_exists = IRQ }
-		}
-		
-		completion_reward = {
-			add_stability = 0.15 
-			add_political_power = 100
-
-	        	create_wargoal = {
-		                target = IRQ
-		                type = annex_everything
-	        	}	
-			IRQ = {
-				every_owned_state = {
-				    add_claim_by = SAU
-				}
-			}
-		}
-	}
-
-	focus = {
 		id = SAU_take_hail
 		text="Invade Hail region"
 		icon = GFX_goal_generic_military_sphere
@@ -78,10 +46,8 @@ focus_tree = {
 		id = SAU_invade_uae
 		text="Invade Al Hassa"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = SAU_crush_terrorist }
-		prerequisite = { focus = SAU_take_hail }
 		x = 1
-		y = 1
+		y = 0
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -89,7 +55,7 @@ focus_tree = {
 		}
 		
 		bypass = {
-			   NOT = { country_exists = JSH }
+			   NOT = { country_exists = UAE }
 		}
 		
 		completion_reward = {
@@ -113,10 +79,8 @@ focus_tree = {
 		id = SAU_invade_hejaz
 		text="Invade Holy earth"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = SAU_crush_terrorist }
-		prerequisite = { focus = SAU_take_hail }
-		x = 3
-		y = 1
+		x = 5
+		y = 0
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -148,8 +112,10 @@ focus_tree = {
 		id = SAU_invade_oman
 		text="Invade Oman"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = SAU_invade_hejaz focus = SAU_invade_uae }
-		x = 1
+		prerequisite = { focus = SAU_invade_hejaz }
+		prerequisite = { focus = HEJ_take_hail }
+		prerequisite = { focus = SAU_invade_uae }
+		x = 2
 		y = 2
 		cost = 5
 		available_if_capitulated = yes
@@ -159,7 +125,6 @@ focus_tree = {
 		
 		available = {
 			   NOT = { country_exists = UAE }
-			   NOT = { country_exists = IRQ }
 			   NOT = { country_exists = HEJ }
 			   NOT = { country_exists = JSH }
 		}
@@ -187,9 +152,11 @@ focus_tree = {
 		id = SAU_invade_yemen
 		text="Invade Yemen"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = SAU_invade_hejaz focus = SAU_invade_uae }
-		x = 3
-		y = 2
+		prerequisite = { focus = SAU_invade_hejaz }
+		prerequisite = { focus = HEJ_take_hail }
+		prerequisite = { focus = SAU_invade_uae }
+		x = 4
+		y = 1
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -198,7 +165,6 @@ focus_tree = {
 				
 		available = {
 			   NOT = { country_exists = UAE }
-			   NOT = { country_exists = IRQ }
 			   NOT = { country_exists = HEJ }
 			   NOT = { country_exists = JSH }
 		}
@@ -221,12 +187,11 @@ focus_tree = {
 			}	
 		}
 	}
-
 	focus = {
 		id = SAU_arabia
-		text="Create Arabia"
+		text= "Saudi Arabia formed"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = SAU_invade_yemen }
+		prerequisite = { focus = SAU_invade_yemen } 
 		prerequisite = { focus = SAU_invade_oman }
 		x = 2
 		y = 3
@@ -246,27 +211,74 @@ focus_tree = {
 
 		completion_reward = {
 	        	set_cosmetic_tag = SAU_arabia
+		}
+	}
+
+#### Arabian Entente ####
+
+	focus = {
+		id = SAU_join_entente
+		text= "Join The Entente"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SAU_arabia }
+		x = 3
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+	        	CAN = { add_to_faction = SAU }
+		}
+	}
+
+	focus = {
+		id = SAU_invade_mesopotamia
+		text="Invade Babylonland"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = SAU_join_entente }
+		x = 3
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
 				
-				HEJ = {
-					every_core_state = {
-						add_core_of = SAU
-					}
+	        	create_wargoal = {
+		                target = IRQ
+		                type = annex_everything
+	        	}
+
+			IRQ = {
+				every_owned_state = {
+				    add_claim_by = SAU
 				}
-				UAE = {
-					every_core_state = {
-						add_core_of = SAU
-					}
+			}
+	        	create_wargoal = {
+		                target = SYR
+		                type = annex_everything
+	        	}
+
+			SYR = {
+				every_owned_state = {
+				    add_claim_by = SAU
 				}
-				YEM = {
-					every_core_state = {
-						add_core_of = SAU
-					}
+			}
+	        	create_wargoal = {
+		                target = JOR
+		                type = annex_everything
+	        	}
+
+			JOR = {
+				every_owned_state = {
+				    add_claim_by = SAU
 				}
-				OMA = {
-					every_core_state = {
-						add_core_of = SAU
-					}
-				}
+			}
 		}
 	}
  }

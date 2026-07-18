@@ -76,9 +76,8 @@ focus_tree = {
 		id = HEJ_invade_uae
 		text="Invade Hassa"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = HEJ_invade_saudi focus = HEJ_take_hail }
-		x = 1
-		y = 1
+		x = 5
+		y = 0
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -107,47 +106,14 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEJ_invade_ikhwan
-		text="Invade Iraq"
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = HEJ_invade_saudi focus = HEJ_take_hail }
-		x = 3
-		y = 1
-		cost = 5
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
-		}
-		
-		bypass = {
-			   NOT = { country_exists = IRQ }
-		}
-
-		completion_reward = {
-			add_stability = 0.15 
-			add_political_power = 100
-
-	        	create_wargoal = {
-		                target = IRQ
-		                type = annex_everything
-	        	}
-
-			IRQ = {
-				every_owned_state = {
-				    add_claim_by = HEJ
-				}
-			}	
-		}
-	}
-
-	focus = {
 		id = HEJ_invade_oman
 		text="Invade Oman"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = HEJ_invade_ikhwan }
+		prerequisite = { focus = HEJ_invade_saudi }
+		prerequisite = { focus = HEJ_take_hail }
 		prerequisite = { focus = HEJ_invade_uae }
-		x = 1
-		y = 2
+		x = 2
+		y = 1
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -155,7 +121,6 @@ focus_tree = {
 		}
 		available = {
 			   NOT = { country_exists = SAU }
-			   NOT = { country_exists = IRQ }
 			   NOT = { country_exists = UAE }
 			   NOT = { country_exists = JSH }
 		}
@@ -183,9 +148,10 @@ focus_tree = {
 		id = HEJ_invade_yemen
 		text="Invade Yemen"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = HEJ_invade_ikhwan }
+		prerequisite = { focus = HEJ_invade_saudi }
+		prerequisite = { focus = HEJ_take_hail }
 		prerequisite = { focus = HEJ_invade_uae }
-		x = 3
+		x = 4
 		y = 2
 		cost = 5
 		available_if_capitulated = yes
@@ -194,7 +160,6 @@ focus_tree = {
 		}
 		available = {
 			   NOT = { country_exists = SAU }
-			   NOT = { country_exists = IRQ }
 			   NOT = { country_exists = UAE }
 			   NOT = { country_exists = JSH }
 		}
@@ -224,7 +189,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_invade_yemen }
 		prerequisite = { focus = HEJ_invade_oman }
-		x = 2
+		x = 3
 		y = 3
 		cost = 5
 		available_if_capitulated = yes
@@ -266,12 +231,36 @@ focus_tree = {
 		}
 	}
 
+#### Beyond the Gulf states ####
+
 	focus = {
-		id = HEJ_invite_msq
-		text="Take Near Orient"
+		id = HEJ_invite_ARA
+		text="ask Hashemite friends"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_arabia }
-		x = 3
+		x = 2
+		y = 4
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+		
+		bypass = {
+			   NOT = { country_exists = JOR }
+		}
+
+		completion_reward = {
+			HEJ = { days = 1 country_event = arabia.1 }
+		}
+	}
+
+	focus = {
+		id = HEJ_invade_Mesopotamia
+		text="ask Hashemite friends"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = HEJ_arabia }
+		x = 2
 		y = 4
 		cost = 5
 		available_if_capitulated = yes
@@ -281,11 +270,11 @@ focus_tree = {
 		
 		bypass = {
 			   NOT = { country_exists = SYR }
-			   NOT = { country_exists = JOR }
+			   NOT = { country_exists = LEB }
 		}
 
 		completion_reward = {
-				
+			
 	        	create_wargoal = {
 		                target = SYR
 		                type = annex_everything
@@ -295,22 +284,26 @@ focus_tree = {
 				every_owned_state = {
 				    add_claim_by = HEJ
 				}
-			}
+			}	
+	        	create_wargoal = {
+		                target = IRQ
+		                type = annex_everything
+	        	}
 
-			JOR = {
+			IRQ = {
 				every_owned_state = {
 				    add_claim_by = HEJ
 				}
-			}
+			}	
 		}
 	}
 
 	focus = {
-		id = HEJ_invite_krd
-		text="Invade Kurdistan and Assyria"
+		id = HEJ_take_KUR
+		text="Invade Kurdistan"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = HEJ_arabia }
-		x = 1
+		prerequisite = { focus = HEJ_invite_ARA }
+		x = 4
 		y = 4
 		cost = 5
 		available_if_capitulated = yes
@@ -330,26 +323,18 @@ focus_tree = {
 				    add_claim_by = HEJ
 				}
 			}	
-	        	create_wargoal = {
-		                target = MSQ
-		                type = annex_everything
-	        	}
-
-			MSQ = {
-				every_owned_state = {
-				    add_claim_by = HEJ
-				}
-			}
 		}
 	}
+
+#### Arabian Entente ####
 
 	focus = {
 		id = HEJ_join_entente
 		text="Join The Entente"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = HEJ_invite_krd }
-		prerequisite = { focus = HEJ_invite_msq }
-		x = 2
+		prerequisite = { focus = HEJ_take_KUR }
+		prerequisite = { focus = HEJ_invade_Mesopotamia }
+		x = 3
 		y = 5
 		cost = 5
 		available_if_capitulated = yes
@@ -363,11 +348,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = HEJ_invite_egypt
-		text="Invite Egypt"
+		id = HEJ_invade_egypt
+		text="Invade Egypt"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_join_entente }
-		x = 2
+		x = 3
 		y = 6
 		cost = 5
 		available_if_capitulated = yes

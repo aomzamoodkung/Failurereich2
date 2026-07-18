@@ -4,13 +4,13 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 10
-			tag = UAE
+			tag = JSH
 		}
 	}
 
 	focus = {
-		id = UAE_take_hail
-		text="Invade Hail region"
+		id = JSH_take_hassa
+		text="Invade Hassa region"
 		icon = GFX_goal_generic_military_sphere
 		x = 3
 		y = 0
@@ -29,19 +29,19 @@ focus_tree = {
 			add_political_power = 100
 
 	        	create_wargoal = {
-		                target = JSH
+		                target = UAE
 		                type = annex_everything
 	        	}	
-			JSH = {
+			UAE = {
 				every_owned_state = {
-				    add_claim_by = UAE
+				    add_claim_by = JSH
 				}
 			}
 		}
 	}
 
 	focus = {
-		id = UAE_invade_saudi
+		id = JSH_invade_saudi
 		text="Invade Saudi"
 		icon = GFX_goal_generic_military_sphere
 		x = 1
@@ -67,14 +67,14 @@ focus_tree = {
 
 			SAU = {
 				every_owned_state = {
-				    add_claim_by = UAE
+				    add_claim_by = JSH
 				}
 			}	
 		}
 	}
 
 	focus = {
-		id = UAE_invade_hejaz
+		id = JSH_invade_hejaz
 		text="Invade Holy earth"
 		icon = GFX_goal_generic_military_sphere
 		x = 5
@@ -100,19 +100,19 @@ focus_tree = {
 
 			HEJ = {
 				every_owned_state = {
-				    add_claim_by = UAE
+				    add_claim_by = JSH
 				}
 			}	
 		}
 	}
 
 	focus = {
-		id = UAE_invade_oman
+		id = JSH_invade_oman
 		text="Invade Oman"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = UAE_invade_hejaz }
-		prerequisite = { focus = UAE_invade_saudi }
-		prerequisite = { focus = UAE_take_hail }
+		prerequisite = { focus = JSH_invade_hejaz }
+		prerequisite = { focus = JSH_invade_saudi }
+		prerequisite = { focus = JSH_take_hassa }
 		x = 2
 		y = 1
 		cost = 5
@@ -121,7 +121,7 @@ focus_tree = {
 		available = {
 			   NOT = { country_exists = SAU }
 			   NOT = { country_exists = HEJ }
-			   NOT = { country_exists = JSH }
+			   NOT = { country_exists = UAE }
 		}
 
 		ai_will_do = {
@@ -148,12 +148,12 @@ focus_tree = {
 	}
 
 	focus = {
-		id = UAE_invade_yemen
+		id = JSH_invade_yemen
 		text="Invade Yemen"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = UAE_invade_hejaz }
-		prerequisite = { focus = UAE_invade_saudi }
-		prerequisite = { focus = UAE_take_hail }
+		prerequisite = { focus = JSH_invade_hejaz }
+		prerequisite = { focus = JSH_invade_saudi }
+		prerequisite = { focus = JSH_take_hassa }
 		x = 4
 		y = 1
 		cost = 5
@@ -165,7 +165,7 @@ focus_tree = {
 		available = {
 			   NOT = { country_exists = SAU }
 			   NOT = { country_exists = HEJ }
-			   NOT = { country_exists = JSH }
+			   NOT = { country_exists = UAE }
 		}
 
 		bypass = {
@@ -179,7 +179,7 @@ focus_tree = {
 		                type = annex_everything
 	        	}
 
-			UAE = {
+			JSH = {
 				every_owned_state = {
 				    add_claim_by = YEM
 				}
@@ -188,11 +188,11 @@ focus_tree = {
 	}
 
 	focus = {
-		id = UAE_arabia
-		text= "Create The United Emirates"
+		id = JSH_arabia
+		text= "Create Rashid Arabia"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = UAE_invade_yemen } 
-		prerequisite = { focus = UAE_invade_oman }
+		prerequisite = { focus = JSH_invade_yemen } 
+		prerequisite = { focus = JSH_invade_oman }
 		x = 2
 		y = 3
 		cost = 5
@@ -210,7 +210,77 @@ focus_tree = {
 		}
 
 		completion_reward = {
-	        	set_cosmetic_tag = UAE_arabia
+	        	set_cosmetic_tag = JSH_arabia
+		}
+	}
+
+#### Arabian Alliance ####
+
+	focus = {
+		id = JSH_join_central
+		text="Join The Central powers"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = JSH_arabia }
+		x = 3
+		y = 5
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {
+	        	WGR = { add_to_faction = JSH }
+		}
+	}
+
+	focus = {
+		id = JSH_Mesopotamia 
+		text="Invade the rivers"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = JSH_join_central }
+		x = 3
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {	
+	        	create_wargoal = {
+		                target = IRQ
+		                type = annex_everything
+	        	}
+	        	create_wargoal = {
+		                target = SYR
+		                type = annex_everything
+	        	}
+	        	create_wargoal = {
+		                target = JOR
+		                type = annex_everything
+	        	}
+		}
+	}
+
+	focus = {
+		id = JSH_invade_turkey
+		text="Take the Turkish Commune"
+		icon = GFX_goal_generic_military_sphere
+		prerequisite = { focus = JSH_Mesopotamia }
+		x = 3
+		y = 6
+		cost = 5
+		available_if_capitulated = yes
+		ai_will_do = {
+			factor = 1
+		}
+
+		completion_reward = {	
+	        	create_wargoal = {
+		                target = TUR 
+		                type = annex_everything
+	        	}
 		}
 	}
  }

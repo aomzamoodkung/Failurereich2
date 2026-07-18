@@ -689,7 +689,7 @@ focus = {
 	focus = {
 		id = AFR_general4
 		icon = GFX_focus_focus_fra_border
-		text = "Invade Middle East"
+		text = "Invade the Levant"
 		prerequisite = {
 			focus = AFR_Libya
 			focus = AFR_Morocco
@@ -704,10 +704,37 @@ focus = {
 		}
 		completion_reward = {
 			create_wargoal = {
-   				target = MSQ
+   				target = SYR
    				type = annex_everything
 			}
-			MSQ = {
+			SYR = {
+				every_owned_state = {
+				    add_claim_by = AFR
+				}
+			}
+			create_wargoal = {
+   				target = LEB
+   				type = annex_everything
+			}
+			LEB = {
+				every_owned_state = {
+				    add_claim_by = AFR
+				}
+			}
+			create_wargoal = {
+   				target = JOR
+   				type = annex_everything
+			}
+			JOR = {
+				every_owned_state = {
+				    add_claim_by = AFR
+				}
+			}
+			create_wargoal = {
+   				target = ISR
+   				type = annex_everything
+			}
+			ISR = {
 				every_owned_state = {
 				    add_claim_by = AFR
 				}

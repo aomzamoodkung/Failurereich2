@@ -74,10 +74,6 @@ country_event = {
 		                type = annex_everything
 	        }	
 	        create_wargoal  = {
-		                target = MSQ
-		                type = annex_everything
-	        }	
-	        create_wargoal  = {
 		                target = SYR
 		                type = annex_everything
 	        }	
