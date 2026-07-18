@@ -37,8 +37,8 @@ country_event = {
 		}
 
 		every_owned_state = {
-			add_core_of = WUR
-			add_claim_by = WUR
+			add_core_of = RHI
+			add_claim_by = RHI
 			teleport_armies = {
 				to_state_array = owned_controlled_states
 			}
@@ -51,36 +51,40 @@ country_event = {
 			}
 		}
 
-		BAY = { set_cosmetic_tag = Ultranat_GER }
+		BAY = { set_cosmetic_tag = Ultranat_GER_PROV }
 		BAY = { set_politics = { ruling_party = fascism } }
 		BAY = {
 			set_popularities = {
 				fascism = 100
 			}
+			load_oob = "BAY_CW"
 		}
 
-		WUR = { set_cosmetic_tag = Democrat_GER } 
-		WUR = { set_politics = { ruling_party = democratic } }
-		WUR = {
+		RHI = { set_cosmetic_tag = Democrat_GER_PROV } 
+		RHI = { set_politics = { ruling_party = democratic } }
+		RHI = {
 			set_popularities = {
 				democratic = 100
 			}
+			load_oob = "RHI_CW"
 		}
 
-		HAN = { set_cosmetic_tag = NazBol_GER }
+		HAN = { set_cosmetic_tag = NazBol_GER_PROV }
 		HAN = { set_politics = { ruling_party = vanguardism } }
 		HAN = {
 			set_popularities = {
 				vanguardism = 100
 			}
+			load_oob = "HAN_CW"
 		}
 
-		PRE = { set_cosmetic_tag = Strato_GER }
+		PRE = { set_cosmetic_tag = Strato_GER_PROV }
 		PRE = { set_politics = { ruling_party = reactionary } }
 		PRE = {
 			set_popularities = {
 				reactionary = 100
 			}
+			load_oob = "PRE_CW"
 		}
 
 		GER = {
@@ -104,7 +108,7 @@ country_event = {
 		                type = annex_everything
 	        }
 	        declare_war_on = {
-		                target = WUR
+		                target = RHI
 		                type = annex_everything
 	        }	
 		BAY = {
@@ -117,7 +121,7 @@ country_event = {
 		                type = annex_everything
 	        }	
 	        declare_war_on = {
-		                target = WUR
+		                target = RHI
 		                type = annex_everything
 	        }		
 		}
@@ -127,13 +131,13 @@ country_event = {
 		                type = annex_everything
 	        }	
 	        declare_war_on = {
-		                target = WUR
+		                target = RHI
 		                type = annex_everything
 	        }		
 		}
 		HAN= {	
 	        declare_war_on = {
-		                target = WUR
+		                target = RHI
 		                type = annex_everything
 	        }		
 		}
@@ -141,7 +145,7 @@ country_event = {
 		PRE = { create_faction = "Mittel Europa" }
 		HAN = { create_faction = "Nazbol Faction" }
 		BAY = { create_faction = "Anti Comintern" }
-		WUR = { create_faction = "European Union" }
+		RHI = { create_faction = "European Union" }
 
 		dismantle_faction = yes
 		
@@ -162,7 +166,7 @@ country_event = {
 		}
 		country_exists = GER
 		country_exists = PRE
-		country_exists = WUR
+		country_exists = RHI
 		country_exists = BAY
 		country_exists = HAN
         }
@@ -188,7 +192,7 @@ country_event = {
 	
 	option = {
 		name = "Democratic regime is preferable"
-	        WUR = { change_tag_from = ROOT }
+	        RHI = { change_tag_from = ROOT }
 	}
 	
 	option = {

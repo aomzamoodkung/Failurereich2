@@ -42,7 +42,7 @@ set_politics = {
 	election_frequency = 48
 	elections_allowed = no
 }
- recruit_charecters = AFR_gaulle_minister
+ recruit_characters = AFR_gaulle_minister
  add_ideas = AFR_military_colony
 
 

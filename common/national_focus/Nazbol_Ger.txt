@@ -39,6 +39,7 @@ focus_tree = {
 		completion_reward = {
 			set_capital = {state = 64}
 			add_manpower = 300000
+			set_cosmetic_tag = NazBol_GER
 		}
 	}
 

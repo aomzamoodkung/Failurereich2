@@ -24,7 +24,7 @@
  CAL_Pacific:0 "Pacific States"
  CAL_Pacific_DEF:0 "Western American States"
 
- Strato_GER:0 "Deutcher Militärstaat"
+ Strato_GER_:0 "Deutcher Militärstaat"
  Strato_GER_DEF:0 "German Military Council"
  NazBol_GER:0 "Deutsche Arbeiterrepublik"
  NazBol_GER_DEF:0 "German People's Worker Republic"
@@ -32,6 +32,15 @@
  Democrat_GER_DEF:0 "German Federal Republic"
  Ultranat_GER:0 "Deutscher Reich"
  Ultranat_GER_DEF:0 "German Social Republic"
+
+ Strato_GER_PROV:0 "Preubenish Staat"
+ Strato_GER_PROV_DEF:0 "Konigsberg Regency Council"
+ NazBol_GER_PROV:0 "Hannoverscher Arbeiterstaat"
+ NazBol_GER_PROV_DEF:0 "Hanover Worker League"
+ Democrat_GER_PROV:0 "Rheinland Bundesreich"
+ Democrat_GER_PROV_DEF:0 "Provisional government of Koln"
+ Ultranat_GER_PROV:0 "Bayernish Reich"
+ Ultranat_GER_PROV_DEF:0 "National Movement of Munich"
 
  BLR_volkskommissariat:0 "Volkskommissariat Ostland"
  UKR_volkskommissariat:0 "Volkskommissariat Ukraine"
