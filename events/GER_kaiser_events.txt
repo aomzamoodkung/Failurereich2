@@ -1,0 +1,22 @@
+add_namespace = gea_kaiser
+
+country_event = {
+    id = gea_kaiser.1
+    title = gea_kaiser.1.t
+    desc = gea_kaiser.1.d
+    picture = GFX_report_event_german_reichstag_gathering
+
+    is_triggered_only = yes
+
+    option = {
+        name = gea_kaiser.1.a
+        add_stability = 0.02
+        set_country_flag = GEA_constitutionalists_encouraged
+    }
+
+    option = {
+        name = gea_kaiser.1.b
+        add_war_support = 0.02
+        set_country_flag = GEA_absolutists_encouraged
+    }
+}

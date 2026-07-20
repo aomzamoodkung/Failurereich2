@@ -1,2024 +1,549 @@
 focus_tree = {
-	id = GEX_focus
-	
+	id = GEA_kaiser_in_exile
+
 	country = {
 		factor = 0
-		
+
 		modifier = {
-			add = 10
+			add = 100
 			tag = WGR
 		}
 	}
-	
+
 	default = no
-	continuous_focus_position = { x = 3500 y = 2000 }
+	continuous_focus_position = { x = 50 y = 1000 }
 
-### Monarchy ###
+	# =========================================================
+	# THE IMPERIAL COURT IN EXILE
+	# =========================================================
 
 	focus = {
-		id = GEX_wilhelm
-		icon = GFX_focus_ger_revive_kaiserreich
-		text = "Hand to the Kaiser"
-		x = 12
+		id = GEA_the_dar_es_salaam_court
+		icon = GFX_goal_generic_national_unity
+		x = 10
 		y = 0
-		cost = 5
+		cost = 2
 
 		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
 
-		mutually_exclusive = {
-		focus = GEX_goering_first
-		}
-		ai_will_do = {
-			factor = 1
-		}
 		completion_reward = {
-			add_manpower = 150000
-			add_resource = {
-			    type = oil
-			    amount = 50
-			    state = 546
-			}
-			add_stability = 0.1
+			add_political_power = 50
+			add_stability = 0.03
+			add_ideas = GEA_divided_imperial_court
 		}
 	}
-  
+
 	focus = {
-		id = GEX_new
-		icon = GFX_goal_generic_demand_territory
-		text = "Reinforce army"
-		x = 12
+		id = GEA_regularise_the_exile_administration
+		icon = GFX_goal_generic_political_pressure
+		x = 10
 		y = 1
-		cost = 5
-		
+		cost = 2
+
 		prerequisite = {
-		focus = GEX_wilhelm
+			focus = GEA_the_dar_es_salaam_court
 		}
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
 		completion_reward = {
-			add_manpower = 200000
+			add_political_power = 75
+			add_stability = 0.02
 		}
 	}
-	
+
 	focus = {
-		id = GEX_death
-		icon = GFX_goal_generic_occupy_start_war
-		text = "Death to the occupiers!"
-		x = 12
+		id = GEA_the_schnee_memorandum
+		icon = GFX_goal_generic_improve_relations
+		x = 10
 		y = 2
-		cost = 5
-		
+		cost = 2
+
 		prerequisite = {
-			focus = GEX_new
+			focus = GEA_regularise_the_exile_administration
 		}
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
 		completion_reward = {
-			add_manpower = 100000
-		}
-	}
-	
-	focus = {
-		id = GEX_kenya
-		icon = GFX_focus_generic_diplomatic_treaty
-		text = "Buy lost lands"
-		x = 12
-		y = 3
-		cost = 5
-		
-		prerequisite = {
-		focus = GEX_death
-		}
+			add_political_power = 50
 
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			transfer_state = 768
-			transfer_state = 769
-		}
-	}
-	
-	focus = {
-		id = GEX_integrate
-		icon = GFX_goal_generic_forceful_treaty
-		text = "Deutsch Rwanda-Urundi"
-		x = 9
-		y = 4
-		cost = 5
-		
-		prerequisite = {
-		focus = GEX_kenya
-		}
-		mutually_exclusive = {
-		focus = GEX_puppet
-		}	
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_state_core = 768
-			add_state_core = 769
-		}
-	}
-	
-	focus = {
-		id = GEX_puppet
-		icon = GFX_focus_ger_oppose_hitler
-		text = "Reichskolonie Rwanda-Urundi"
-		x = 15
-		y = 4
-		cost = 5
-		
-		prerequisite = {
-		focus = GEX_kenya
-		}
-		
-		mutually_exclusive = {
-		focus = GEX_integrate
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			release_puppet = RWA
-			RWA = { set_state_owner = 768 }
-			RWA = { set_state_owner = 769 }
-			RWA = {
-				set_cosmetic_tag = GER_RWA	
+			add_tech_bonus = {
+				name = GEA_schnee_administrative_bonus
+				bonus = 0.50
+				uses = 1
+				category = industry
 			}
 		}
 	}
-	
+
 	focus = {
-		id = GEX_entente
-		icon = GFX_focus_chi_british_cooperation
-		text = "Join Entente"
+		id = GEA_an_audience_with_the_old_lion
+		icon = GFX_goal_generic_army_doctrines
+		x = 10
+		y = 3
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_the_schnee_memorandum
+		}
+
+		completion_reward = {
+			army_experience = 10
+			add_war_support = 0.03
+			add_ideas = GEA_lettow_vorbecks_legacy
+		}
+	}
+
+	focus = {
+		id = GEA_bind_the_askari_to_the_crown
+		icon = GFX_goal_generic_small_arms
+		x = 10
+		y = 4
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_an_audience_with_the_old_lion
+		}
+
+		completion_reward = {
+			add_manpower = 5000
+			add_war_support = 0.03
+
+			add_equipment_to_stockpile = {
+				type = infantry_equipment_0
+				amount = 500
+				producer = ROOT
+			}
+		}
+	}
+
+	focus = {
+		id = GEA_the_imperial_conference_of_1936
+		icon = GFX_goal_generic_propaganda
 		x = 10
 		y = 5
-		cost = 5
-		
-		prerequisite = {
-		focus = GEX_puppet
-		focus = GEX_integrate
-		}
-		
-		mutually_exclusive = {
-		focus = GEX_ownpath
-		}
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
+		cost = 2
 
-		ai_will_do = {
-			factor = 1
+		prerequisite = {
+			focus = GEA_bind_the_askari_to_the_crown
 		}
+
 		completion_reward = {
-			CAN = {
-				add_to_faction = WGR
-			}
+			add_political_power = 100
+			add_stability = 0.03
 		}
 	}
-	
-	focus = {
-		id = GEX_ownpath
-		icon = GFX_goal_anschluss
-		text = "New Central power"
-		x = 14
-		y = 5
-		cost = 5
-		
-		prerequisite = {
-		focus = GEX_puppet
-		focus = GEX_integrate
-		}
-		
-		mutually_exclusive = {
-		focus = GEX_entente
-		}
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
 
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			create_faction = "Homeland Reclamation Front"
-			}
-		}
-	
-### Entente German Empire ###
-	
 	focus = {
-		id = GEX_italia
-		icon = GFX_focus_attack_italy
-		text = "Coup in Italy"
-		x = 11
+		id = GEA_the_question_of_royal_prerogative
+		icon = GFX_goal_support_neutrality
+		x = 10
 		y = 6
-		cost = 5
-		
-		prerequisite = {
-		focus = GEX_entente
-		}
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
+		cost = 2
 
-		ai_will_do = {
-			factor = 1
+		prerequisite = {
+			focus = GEA_the_imperial_conference_of_1936
 		}
+
 		completion_reward = {
-			ITA = {	
-				start_civil_war = {
-					ruling_party = reactionary
-					ideology = fascism
-					size = 0.5
-					only_own_territory = no
-					capital = 117
-					states = {
-						158 117
-					}
-				}
-				create_country_leader = {
-					name = "Victor Emmanuel III"
-					desc = "POLITICS_VICTOR_EMMANUEL_III_DESC"
-					picture = "GFX_portrait_italy_victor_emmanuel_iii"
-					expire = "1965.1.1"
-					ideology = despotism
-					traits = {
-						dictator
-						}
-					}
-			}
+		    country_event = { id = gea_kaiser.1 }
 		}
 	}
-	
+
+	# =========================================================
+	# CONSTITUTIONAL MONARCHIST BRANCH
+	# Wilhelm Solf - Heinrich Schnee - Civil Administration
+	# =========================================================
+
 	focus = {
-		id = GEX_hungary
-		icon = GFX_goal_generic_production
-		text = "Coup Hungary"
-		x = 11
+		id = GEA_solfs_imperial_charter
+		icon = GFX_goal_support_democracy
+		x = 7
 		y = 7
-		cost = 5
-		
+		cost = 2
+
 		prerequisite = {
-		focus = GEX_italia
+			focus = GEA_the_question_of_royal_prerogative
 		}
 		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
+		available = {
+		    has_country_flag = GEA_constitutionalists_encouraged
 		}
-		completion_reward = {
-			HUN = {
-				release = SLO
-				release = TRA
-				start_civil_war = {
-					ruling_party = reactionary
-					ideology = communism
-					size = 0.5
-					only_own_territory = no
-					capital = 155
-					states = {
-						155 884
-					}
-				}
-				create_wargoal= { 
-					type = annex_everything 
-					target = TRA
-				}
-				create_wargoal= { 
-					type = annex_everything 
-					target = SLO
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = GEX_natlib
-		icon = GFX_focus_RAJ_lions_of_the_great_war
-		text = "War of National Liberation"
-		x = 9
-		y = 6
-		cost = 5
-		
-		prerequisite = {
-			focus = GEX_entente
-		}
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			create_wargoal = {
-				target = GER
-				type = annex_everything
-			}
-		}
-	}
-	
-	focus = {
-		id = GEX_sweeppol
-		icon = GFX_goal_poland_goal
-		text = "Sweep into Poland"
-		x = 9
-		y = 7
-		cost = 5
-		
-		prerequisite = {
-		focus = GEX_natlib
-		}
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			create_wargoal = {
-				target = POL
-				type = annex_everything
-			}
-		}
-	}
-	
-### Alliance German Empire ###
-	
-	focus = {
-		id = GEX_austria
-		icon = GFX_goal_anschluss
-		text = "Help Franz"
-		x = 15
-		y = 6
-		cost = 5
-		
-		prerequisite = {
-		focus = GEX_ownpath
-		}
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-				add_to_faction = AUS
-		}
-	}
-	
-	focus = {
-		id = GEX_Bukhara
-		icon = GFX_goal_anschluss
-		text = "Cooperate with Turkestan"
-		x = 15
-		y = 7
-		cost = 5
-		
-		prerequisite = {
-		focus = GEX_austria
-		}
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-				add_to_faction = BUK
-		}
-	}
-	
-	focus = {
-		id = GEX_yugoslavia
-		icon = GFX_goal_generic_production
-		text = "Coup Yugoslavia"
-		x = 13
-		y = 6
-		cost = 5
-		
-		prerequisite = {
-		focus = GEX_ownpath
-		}
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		bypass = {
-			YUG = { is_puppet = yes }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			YUG = {
-				release = MAC
-
-				declare_war_on = {
-   					target = MAC
-   				 	type = annex_everything
-				}
-			}
-
-			YUG = {
-				start_civil_war = {
-					ruling_party = reactionary
-					ideology = fascism
-					size = 0.4
-					only_own_territory = no
-					capital = 103
-					states = {
-						103 104 109 163 804
-					}
-				}
-			}
-		}
-	}
-	
-	focus = {
-		id = GEX_greece
-		icon = GFX_goal_generic_production
-		text = "Coup Greece"
-		x = 13
-		y = 7
-		cost = 5
-		
-		prerequisite = {
-		focus = GEX_yugoslavia
-		}
-		
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		bypass = {
-			GRE = { is_puppet = yes }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			GRE = {
-				start_civil_war = {
-					ruling_party = reactionary
-					ideology = fascism
-					size = 0.4
-					only_own_territory = no
-					capital = 731
-					states = {
-						731 862
-					}
-				}
-			
-			}
-		}
-	}
-
-#### Republic or Goering ####
-
-	focus = {
-		id = GEX_goering_first
-		icon = GFX_goal_generic_demand_territory
-		text = "Force Kaiser addicate"
-		x = 6
-		y = 0
-		cost = 5
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
 
 		mutually_exclusive = {
-		focus = GEX_wilhelm
+			focus = GEA_the_royal_household_party
 		}
-		ai_will_do = {
-			factor = 1
-		}
+
 		completion_reward = {
-                        WGR_wilhelm_ii = {
-			    remove_country_leader_role = {
-				ideology = oligarchism
-                            }
-                        }
-			add_manpower = 200000
-			add_ideas = { GER_wilhelm_iii }
-		}
-	}
-	
-	focus = {
-		id = GEX_republic
-		icon = GFX_goal_generic_demand_territory
-		text = "Establish Republic"
-		x = 5
-		y = 1
-		cost = 5
-		
-		prerequisite = {
-			focus = GEX_goering_first
-		}
-		mutually_exclusive = {
-			focus = GEX_goering_second
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_stability = -0.05
-			remove_ideas = { GER_wilhelm_iii }
-			set_politics = {
-				ruling_party = neutrality
-			}
-			add_popularity = {
-				    ideology = neutrality
-				    popularity = 0.3
-			}	
-		}
-	}
-
-	focus = {
-		id = GEX_goering_second
-		icon = GFX_goal_generic_demand_territory
-		text = "Goering as Chancellor"
-		x = 8
-		y = 1
-		cost = 5
-		
-		prerequisite = {
-			focus = GEX_goering_first
-		}
-		
-		mutually_exclusive = {
-			focus = GEX_republic
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
+			remove_ideas = GEA_divided_imperial_court
+			add_ideas = GEA_charter_monarchy
 			add_stability = 0.05
 		}
 	}
 
 	focus = {
-		id = GEX_alliance_somalia
-		icon = GFX_focus_ETH_protector_of_the_somalis
-		text = "Rally Somalia"
-		x = 4
-		y = 2
-		cost = 5
-
-		
-		prerequisite = {
-			focus = GEX_goering_second
-			focus = GEX_republic
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_manpower = 10000
-			add_to_faction = SOM
-		}
-	}
-
-	focus = {
-		id = GEX_alliance_senussi
-		icon = GFX_focus_generic_develop_libya
-		text = "Rally Senussi"
-		x = 8
-		y = 2
-		cost = 5
-
-		
-		prerequisite = {
-		focus = GEX_goering_second
-		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_manpower = 10000
-			add_to_faction = LBA
-		}
-	}
-
-	focus = {
-		id = GEX_reinforce_army
-		icon = GFX_focus_generic_diplomatic_treaty
-		text = "Develop military"
-		x = 6
-		y = 3
-		cost = 5
+		id = GEA_restore_the_reichstag_tradition
+		icon = GFX_goal_generic_political_pressure
+		x = 7
+		y = 8
+		cost = 2
 
 		prerequisite = {
-		focus = GEX_alliance_somalia
-		focus = GEX_alliance_senussi
+			focus = GEA_solfs_imperial_charter
 		}
-
-		available_if_capitulated = yes
-		search_filters = { FOCUS_FILTER_POLITICAL } 
-
-		ai_will_do = {
-			factor = 1
-		}
-		completion_reward = {
-			add_building_construction = {
-			    type = arms_factory
-			    level = 5
-			    instant_build = yes	
-			}
-		}
-	}
-
-
-#############################
-###### ARMY AND RESEARCH ####
-#############################
-
-	focus = {
-		id = WGR_land_effort
-		icon = GFX_goal_generic_allies_build_infantry
-		text = "Built Kaiser Army"
-		x = 30
-		y = 0
-		cost = 10
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 10
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
+			add_political_power = 100
+			add_stability = 0.03
 		}
 	}
 
 	focus = {
-		id = WGR_armament_effort
-		icon = GFX_goal_generic_small_arms
-		prerequisite = { focus = WGR_land_effort }
-		text = "Built Artillery"
-		x = 30
-		y = 1
-		cost = 10
+		id = GEA_schnees_civil_ministry
+		icon = GFX_goal_generic_improve_relations
+		x = 7
+		y = 9
+		cost = 2
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
+		prerequisite = {
+			focus = GEA_restore_the_reichstag_tradition
+		}
 
 		completion_reward = {
+			add_ideas = GEA_reformed_colonial_service
+			add_political_power = 50
+		}
+	}
+
+	focus = {
+		id = GEA_recognise_the_native_councils
+		icon = GFX_goal_generic_national_unity
+		x = 7
+		y = 10
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_schnees_civil_ministry
+		}
+
+		completion_reward = {
+			add_stability = 0.07
+			add_manpower = 3000
+		}
+	}
+
+	focus = {
+		id = GEA_the_imperial_civil_service_statute
+		icon = GFX_goal_generic_construct_civilian
+		x = 7
+		y = 11
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_recognise_the_native_councils
+		}
+
+		completion_reward = {
+			add_political_power = 75
+
 			add_tech_bonus = {
-				name = infantry_artillery_bonus
-				bonus = 2.0
+				name = GEA_civil_service_bonus
+				bonus = 0.50
 				uses = 1
-				category = infantry_weapons
-				category = artillery
+				category = electronics
 			}
 		}
 	}
 
 	focus = {
-		id = WGR_motorization_effort
-		icon = GFX_goal_generic_army_motorized
-		prerequisite = { focus = WGR_armament_effort }
-		text = "Kaiser Motorization"
-		x = 32
-		y = 2
+		id = GEA_the_crown_beneath_the_law
+		icon = GFX_goal_generic_forceful_treaty
+		x = 7
+		y = 12
+		cost = 2
 
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = motorized_bonus
-				bonus = 2.0
-				technology = motorised_infantry
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_rote_doctrine
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = WGR_motorization_effort }
-		text = "Kaiser Doctrine"
-		x = 32
-		y = 3
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 5
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_equipment_effort_2
-		icon = GFX_goal_generic_army_artillery
-		prerequisite = { focus = WGR_armament_effort }
-		text = "Improve Equipment"
-		x = 28
-		y = 2
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = infantry_artillery_bonus
-				bonus = 2.0
-				uses = 1
-				category = infantry_weapons
-				category = artillery
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_mechanization_effort
-		icon = GFX_goal_generic_build_tank
-		prerequisite = { focus = WGR_motorization_effort }
-		text = "Mechanization"
-		x = 28
-		y = 3
-		cost = 10
-		
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = motorized_bonus
-				ahead_reduction = 2
-				uses = 1
-				category = motorized_equipment
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_doctrine_effort_2
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = WGR_doctrine_effort }
-		text = "Improve Land doctrine"
-		x = 30
-		y = 3
-		relative_position_id = WGR_doctrine_effort
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 5
-			add_doctrine_cost_reduction = {
-				name = land_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_equipment_effort_3
-		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = WGR_equipment_effort_2 }
-		text = "Artillery upgrade"
-		x = 30
-		y = 3
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = infantry_artillery_bonus
-				ahead_reduction = 2
-				uses = 1
-				category = infantry_weapons
-				category = artillery
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_armor_effort
-		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = WGR_mechanization_effort }
-		text = "Panzer in OstAfrica"
-		x = 30
-		y = 3
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = armor_bonus
-				bonus = 1.0
-				uses = 1
-				category = armor
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_special_forces
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = WGR_equipment_effort_3 }
-		prerequisite = { focus = WGR_doctrine_effort_2 }
-		prerequisite = { focus = WGR_rote_doctrine }
-		text = "Special forces"
-		x = 30
-		y = 4
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = special_forces
-			add_tech_bonus = {
-				name = special_forces_bonus
-				bonus = 1.0
-				uses = 1
-				technology = paratroopers
-				technology = paratroopers2
-				technology = marines
-				technology = marines2
-				technology = tech_mountaineers
-				technology = tech_mountaineers2
-			}
-		}
-	}
-
-#################
-### AIR FORCE ###
-#################
-
-	focus = {
-		id = WGR_aviation_effort
-		icon = GFX_goal_generic_build_airforce
-		text = "Luftfahrt"
-		x = 36
-		y = 0
-		cost = 10
-		
-		search_filters = {   FOCUS_FILTER_RESEARCH }
-
-		available_if_capitulated = yes
-
-
-		complete_tooltip = {
-			air_experience = 20
-			if = { limit = { has_country_flag = aviation_effort_AB }
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}			
-			add_doctrine_cost_reduction = {
-				name = air_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}			
+		prerequisite = {
+			focus = GEA_the_imperial_civil_service_statute
 		}
 
 		completion_reward = {
-			air_experience = 20
-
-			if = {
-				limit = {
-					capital_scope = {
-						NOT = {
-							free_building_slots = {
-								building = air_base
-								size > 1
-							}
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					ROOT = { set_country_flag = aviation_effort_AB }
-				}
-			}
-			if = {
-				limit = {
-					capital_scope = {
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
-				}
-				capital_scope = {
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					ROOT = { set_country_flag = aviation_effort_AB }
-				}
-			}
-			add_doctrine_cost_reduction = {
-				name = air_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
+			add_stability = 0.08
+			add_political_power = 75
 		}
 	}
 
 	focus = {
-		id = WGR_fighter_focus
-		icon = GFX_goal_generic_air_fighter
-		prerequisite = { focus = WGR_aviation_effort }
-		text = "Air fight"
-		x = 34
-		y = 1
-		cost = 10
+		id = GEA_a_responsible_imperial_ministry
+		icon = GFX_goal_generic_national_unity
+		x = 7
+		y = 13
+		cost = 2
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
+		prerequisite = {
+			focus = GEA_the_crown_beneath_the_law
+		}
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = fighter_bonus
-				bonus = 1.0
-				uses = 2
-				category = light_fighter
-				category = cat_heavy_fighter
-			}
+			add_stability = 0.10
+			add_political_power = 100
+			add_ideas = GEA_responsible_government
 		}
 	}
 
-	focus = {
-		id = WGR_bomber_focus
-		icon = GFX_goal_generic_air_bomber
-		prerequisite = { focus = WGR_aviation_effort }
-		text = "Bomber project"
-		x = 38
-		y = 1
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = bomber_bonus
-				bonus = 1.0
-				uses = 2
-				category = cat_strategic_bomber
-				category = tactical_bomber
-			}
-		}
-	}
+	# =========================================================
+	# ABSOLUTE MONARCHIST BRANCH
+	# Royal Household - Prussian Officers - Military Government
+	# =========================================================
 
 	focus = {
-		id = WGR_aviation_effort_2
-		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = WGR_fighter_focus }
-		text = "Built Air base"
-		x = 34
-		y = 2
-		cost = 10
+		id = GEA_the_royal_household_party
+		icon = GFX_goal_generic_major_war
+		x = 13
+		y = 7
+		cost = 2
 
-		search_filters = {   FOCUS_FILTER_RESEARCH }
+		prerequisite = {
+			focus = GEA_the_question_of_royal_prerogative
+		}
 		
-		available_if_capitulated = yes
-
-
-		complete_tooltip = {
-			air_experience = 25
-			if = { limit = { has_country_flag = aviation_effort_2_AB }
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-			}
-			add_doctrine_cost_reduction = {
-				name =  air_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-		}
-		completion_reward = {
-			air_experience = 25
-			if = {
-				limit = {
-					capital_scope = {
-						OR = {
-							NOT = { is_controlled_by = ROOT }
-							NOT = {
-								free_building_slots = {
-									building = air_base
-									size > 1
-								}
-							}
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}
-					ROOT = { set_country_flag = aviation_effort_2_AB }
-				}
-			}
-			if = {
-				limit = {
-					capital_scope = {
-						is_controlled_by = ROOT
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
-				}
-				capital_scope = {
-					add_building_construction = {
-						type = air_base
-						level = 2
-						instant_build = yes
-					}				
-					ROOT = { set_country_flag = aviation_effort_2_AB }
-				}
-			}
-			add_doctrine_cost_reduction = {
-				name =  air_doc_bonus
-				cost_reduction = 0.5
-				uses = 1
-				category = air_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_rocket_effort
-		icon = GFX_focus_rocketry
-		prerequisite = { focus = WGR_bomber_focus }
-		text = "Rocket effort"
-		x = 38
-		y = 2
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = jet_rocket_bonus
-				ahead_reduction = 2
-				uses = 2
-				category = rocketry
-				category = jet_technology
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.25
-				always = yes
-			}
-		}
-	}
-
-	focus = {
-		id = CAS_effort
-		icon = GFX_goal_generic_CAS
-		prerequisite = { focus = WGR_aviation_effort_2 }
-		prerequisite = { focus = WGR_motorization_effort }
-		prerequisite = { focus = WGR_rocket_effort }
-		text = "CAS for the Kaiser"
-		x = 36
-		y = 3
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = CAS_bonus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = cas_bomber
-			}
-		}
-	}
-
-##################
-### NAVY FORCE ###
-##################
-
-	focus = {
-		id = WGR_naval_effort
-		icon = GFX_goal_generic_construct_naval_dockyard
-		x = 44
-		y = 0
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_INDUSTRY }
-		
-		available_if_capitulated = yes
-
-
 		available = {
-			any_state = {
-				is_coastal = yes
-				is_controlled_by = ROOT
-			}
+		    has_country_flag = GEA_absolutists_encouraged
 		}
 
-		complete_tooltip = {
-			navy_experience = 25
-			add_extra_state_shared_building_slots = 3
-			add_building_construction = {
-				type = dockyard
-				level = 3
-				instant_build = yes
-			}
+		mutually_exclusive = {
+			focus = GEA_solfs_imperial_charter
 		}
-		
+
 		completion_reward = {
-			navy_experience = 25
-			if = {
-				limit = {
-					NOT = {
-						any_owned_state = {
-							dockyard > 0
-							free_building_slots = {
-								building = dockyard
-								size > 2
-								include_locked = yes
-							}
-						}
-					}
-					any_owned_state = {
-						is_coastal = yes
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						is_coastal = yes
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
-					}
-				}
-				set_country_flag = naval_effort_built
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = naval_effort_built }
-					any_owned_state = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-				}
-				random_owned_controlled_state = {
-					limit = {
-						dockyard > 0
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
-					}
-				}
-				set_country_flag = naval_effort_built
-			}
-			if = {
-				limit = {
-					NOT = { has_country_flag = naval_effort_built }
-					NOT = {
-						any_owned_state = {
-							free_building_slots = {
-								building = dockyard
-								size > 2
-								include_locked = yes
-							}
-						}
-					}
-				}
-				random_state = {
-					limit = {
-						controller = { tag = ROOT }
-						free_building_slots = {
-							building = dockyard
-							size > 2
-							include_locked = yes
-						}
-					}
-					add_extra_state_shared_building_slots = 3
-					add_building_construction = {
-						type = dockyard
-						level = 3
-						instant_build = yes
-					}
-				}
-			}			
+			remove_ideas = GEA_divided_imperial_court
+			add_ideas = GEA_personal_rule
+			add_war_support = 0.05
 		}
 	}
 
 	focus = {
-		id = WGR_flexible_navy
-		icon = GFX_goal_generic_build_navy
-		prerequisite = { focus = WGR_naval_effort }
-		mutually_exclusive = { focus = WGR_large_navy }
-		x = 42
-		y = 1
-		cost = 10
-		
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		id = GEA_the_imperial_emergency_ordinance
+		icon = GFX_goal_generic_forceful_treaty
+		x = 13
+		y = 8
+		cost = 2
 
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
+		prerequisite = {
+			focus = GEA_the_royal_household_party
 		}
 
 		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = sub_op_bonus
-				cost_reduction = 0.5
-				uses = 2
-				technology = convoy_interdiction_ti
-				technology = unrestricted_submarine_warfare
-				technology = wolfpacks
-				technology = advanced_submarine_warfare
-				technology = combined_operations_raiding
-			}
+			add_political_power = 150
+			add_stability = -0.02
+			add_war_support = 0.05
 		}
 	}
 
 	focus = {
-		id = WGR_NAV_effort
-		icon = GFX_goal_generic_air_naval_bomber
-		prerequisite = { focus = WGR_flexible_navy }
-		x = 42
-		y = 2
-		cost = 10
+		id = GEA_an_oath_to_the_kaisers_person
+		icon = GFX_goal_generic_military_sphere
+		x = 13
+		y = 9
+		cost = 2
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
+		prerequisite = {
+			focus = GEA_the_imperial_emergency_ordinance
+		}
 
 		completion_reward = {
+			add_war_support = 0.08
+			army_experience = 10
+		}
+	}
+
+	focus = {
+		id = GEA_the_prussian_military_cabinet
+		icon = GFX_goal_generic_position_armies
+		x = 13
+		y = 10
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_an_oath_to_the_kaisers_person
+		}
+
+		completion_reward = {
+			add_political_power = 75
+
 			add_tech_bonus = {
-				name = nav_bomber_bonus
-				bonus = 1.0
-				ahead_reduction = 2
+				name = GEA_prussian_staff_bonus
+				bonus = 0.50
 				uses = 1
-				category = naval_bomber
+				category = land_doctrine
 			}
 		}
 	}
 
 	focus = {
-		id = WGR_large_navy
-		icon = GFX_goal_generic_navy_doctrines_tactics
-		prerequisite = { focus = WGR_naval_effort }
-		mutually_exclusive = { focus = WGR_large_navy }
-		x = 46
-		y = 1
-		cost = 10
-		
-		search_filters = {   FOCUS_FILTER_RESEARCH }
+		id = GEA_government_by_governors_decree
+		icon = GFX_goal_generic_demand_territory
+		x = 13
+		y = 11
+		cost = 2
 
-		available_if_capitulated = yes
+		prerequisite = {
+			focus = GEA_the_prussian_military_cabinet
+		}
 
+		completion_reward = {
+			add_political_power = 125
+			add_stability = 0.03
+		}
+	}
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
+	focus = {
+		id = GEA_break_the_constitutional_clubs
+		icon = GFX_goal_generic_political_pressure
+		x = 13
+		y = 12
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_government_by_governors_decree
+		}
+
+		completion_reward = {
+			add_stability = -0.03
+			add_war_support = 0.07
+			add_political_power = 100
+		}
+	}
+
+	focus = {
+		id = GEA_the_imperial_cabinet_government
+		icon = GFX_goal_support_neutrality
+		x = 13
+		y = 13
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_break_the_constitutional_clubs
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_war_support = 0.10
+			add_political_power = 125
+			add_ideas = GEA_cabinet_absolutism
+		}
+	}
+
+	# =========================================================
+	# RECONSTRUCTION AND IMPERIAL CONTINUITY
+	# Both political branches converge here
+	# =========================================================
+
+	focus = {
+		id = GEA_the_east_african_reconstruction_act
+		icon = GFX_goal_generic_construct_civilian
+		x = 10
+		y = 14
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_a_responsible_imperial_ministry
+			focus = GEA_the_imperial_cabinet_government
+		}
+
+		completion_reward = {
+			capital_scope = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
-
-		completion_reward = {
-			add_doctrine_cost_reduction = {
-				name = fleet_in_being_bonus
-				cost_reduction = 0.25
-				uses = 2
-				category = fleet_in_being_tree
-			}
-		}
 	}
 
 	focus = {
-		id = WGR_submarine_effort
-		icon = GFX_goal_generic_navy_submarine
-		prerequisite = { focus = WGR_large_navy }
-		x = 46
-		y = 2
-		cost = 10
-		
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
+		id = GEA_establish_the_colonial_treasury
+		icon = GFX_goal_generic_construct_civilian
+		x = 10
+		y = 15
+		cost = 2
 
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
+		prerequisite = {
+			focus = GEA_the_east_african_reconstruction_act
 		}
 
 		completion_reward = {
+			add_political_power = 75
+			add_stability = 0.03
+
 			add_tech_bonus = {
-				name = ss_bonus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = ss_tech
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_cruiser_effort
-		icon = GFX_goal_generic_navy_cruiser
-		prerequisite = { focus = WGR_NAV_effort }
-		x = 42
-		y = 3
-		cost = 10
-		
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = cr_bonus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = cl_tech
-				category = ca_tech
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_destroyer_effort
-		icon = GFX_goal_generic_wolf_pack
-		prerequisite = { focus = WGR_submarine_effort }
-		x = 46
-		y = 3
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = dd_bonus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = dd_tech
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_capital_ships_effort
-		icon = GFX_goal_generic_navy_battleship
-		prerequisite = { focus = WGR_cruiser_effort focus = WGR_destroyer_effort }
-		x = 44
-		y = 4
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0
-				all_owned_state = {
-					OR = {
-						is_coastal = no
-						dockyard < 1
-					}
-				}
-			}
-		}
-
-		completion_reward = {
-			navy_experience = 25
-			add_tech_bonus = {
-				name = capital_ships_bonus
-				bonus = 1.0
-				ahead_reduction = 2
-				uses = 1
-				category = bc_tech
-				category = bb_tech
-				category = cv_tech
-			}
-		}
-	}
-
-##################
-### INDUSTRIAL ###
-##################
-
-	focus = {
-		id = WGR_industrial_effort
-		icon = GFX_goal_generic_production
-		text = "Tanzanian factory"
-		x = 50
-		y = 0
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = industrial_bonus
-				bonus = 1.0
+				name = GEA_treasury_bonus
+				bonus = 0.50
 				uses = 1
 				category = industry
 			}
 		}
-
-		ai_will_do = {
-			factor = 3
-			modifier = {
-				factor = 0
-				date < 1939.1.1			
-			}
-		}
 	}
 
 	focus = {
-		id = WGR_construction_effort
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = WGR_industrial_effort }
-		x = -1
-		y = 1
-		relative_position_id = WGR_industrial_effort
-		text = "Build Industrial complex"
-		cost = 10
+		id = GEA_the_sisal_export_board
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 10
+		y = 16
+		cost = 2
 
-		search_filters = { FOCUS_FILTER_INDUSTRY  }
-		
-		available_if_capitulated = yes
-
-
-		
-		ai_will_do = {
-			factor = 2
-		}
-
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = construction_effort_tt
-				all_owned_state = {
-					free_building_slots = {
-						building = industrial_complex
-						size < 1
-						include_locked = yes
-					}					
-				}
-			}
-		}
-
-		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}			
+		prerequisite = {
+			focus = GEA_establish_the_colonial_treasury
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
+			add_political_power = 50
+			add_stability = 0.02
 		}
 	}
 
 	focus = {
-		id = WGR_production_effort
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = WGR_industrial_effort }
-		x = 1
-		y = 1
-		relative_position_id = WGR_industrial_effort
-		text = "Improve Industry"
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY  }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 2			
-		}
-
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = production_effort_tt
-				all_owned_state = {
-					free_building_slots = {
-						building = arms_factory
-						size < 1
-						include_locked = yes
-					}
-				}
-			}
-		}
-
-		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_construction_effort_2
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = WGR_construction_effort }
-		x = 0
-		y = 1
-		relative_position_id = WGR_construction_effort
-		text = "Nationalize buildings"
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY  }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = construction_effort_tt
-				all_owned_state = {
-					free_building_slots = {
-						building = industrial_complex
-						size < 1
-						include_locked = yes
-					}
-				}
-			}
-		}
-
-		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = industrial_complex
-				level = 1
-				instant_build = yes
-			}
-		}		
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_production_effort_2
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = WGR_production_effort }
-		x = 0
-		y = 1
-		relative_position_id = WGR_production_effort
-		text = "Nationalize lands"
-		cost = 10
-		
-		search_filters = { FOCUS_FILTER_INDUSTRY  }
-
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = production_effort_tt
-				all_owned_state = {
-					free_building_slots = {
-						building = arms_factory
-						size < 1
-						include_locked = yes
-					}
-				}
-			}
-		}
-
-		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}		
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_infrastructure_effort
+		id = GEA_repair_the_central_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = WGR_construction_effort_2 }
-		x = 0
-		y = 1
-		relative_position_id = WGR_construction_effort_2
-		text = "Built New infrastructures"
-		cost = 10
+		x = 10
+		y = 17
+		cost = 2
 
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		
-		available_if_capitulated = yes
-
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = infrastructure_effort_tt
-				all_owned_state = {			
-					free_building_slots = {
-						building = infrastructure
-						size < 1
-					}
-				}
-			}
-		}
-
-		complete_tooltip = {
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
+		prerequisite = {
+			focus = GEA_the_sisal_export_board
 		}
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
+			capital_scope = {
 				add_building_construction = {
 					type = infrastructure
 					level = 1
 					instant_build = yes
 				}
 			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 1
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
+
+			add_tech_bonus = {
+				name = GEA_railway_bonus
+				bonus = 0.50
+				uses = 1
+				category = construction_tech
+			}
+		}
+	}
+
+	focus = {
+		id = GEA_expand_dar_es_salaam_harbour
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 10
+		y = 18
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_repair_the_central_railway
+		}
+
+		completion_reward = {
+			capital_scope = {
 				add_building_construction = {
-					type = infrastructure
-					level = 2
+					type = dockyard
+					level = 1
 					instant_build = yes
 				}
 			}
@@ -2026,356 +551,195 @@ focus_tree = {
 	}
 
 	focus = {
-		id = WGR_production_effort_3
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = WGR_production_effort_2 }
-		x = 0
-		y = 1
-		relative_position_id = WGR_production_effort_2
-		text = "Effort for production"
-		cost = 10
+		id = GEA_the_askari_veterans_settlement
+		icon = GFX_goal_generic_national_unity
+		x = 10
+		y = 19
+		cost = 2
 
-		search_filters = { FOCUS_FILTER_INDUSTRY  }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 2
+		prerequisite = {
+			focus = GEA_expand_dar_es_salaam_harbour
 		}
-
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = production_effort_tt
-				all_owned_state = {
-					free_building_slots = {
-						building = arms_factory
-						size < 1
-						include_locked = yes
-					}					
-				}
-			}
-		}
-
-		complete_tooltip = {
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = arms_factory
-				level = 1
-				instant_build = yes
-			}
-		}		
 
 		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = arms_factory
-										size > 0
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 1
+			add_manpower = 7000
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = GEA_the_dar_es_salaam_arsenal
+		icon = GFX_goal_generic_construct_military
+		x = 10
+		y = 20
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_the_askari_veterans_settlement
+		}
+
+		completion_reward = {
+			capital_scope = {
 				add_building_construction = {
 					type = arms_factory
 					level = 1
 					instant_build = yes
 				}
 			}
-		}
-	}
 
-	focus = {
-		id = WGR_infrastructure_effort_2
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = WGR_infrastructure_effort }
-		x = 0
-		y = 1
-		relative_position_id = WGR_infrastructure_effort
-		text = "Build improved Buildings"
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		
-		available_if_capitulated = yes
-
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = infrastructure_effort_tt
-				all_owned_state = {			
-					free_building_slots = {
-						building = infrastructure
-						size < 1
-					}
-				}
-			}
-		}
-
-		complete_tooltip = {
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-			add_building_construction = {
-				type = infrastructure
-				level = 1
-				instant_build = yes
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 0
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 0
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = infrastructure
-						size > 1
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = infrastructure
-										size > 1
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_building_construction = {
-					type = infrastructure
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_construction_effort_3
-		icon = GFX_goal_generic_construct_civ_factory
-		prerequisite = { focus = WGR_infrastructure_effort }
-		x = 2
-		y = 1
-		relative_position_id = WGR_infrastructure_effort
-		text = "Build advanced Factories"
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_INDUSTRY  }
-		
-		available_if_capitulated = yes
-
-
-		ai_will_do = {
-			factor = 2
-		}
-
-		bypass = {
-			custom_trigger_tooltip = {
-				tooltip = construction_effort_tt
-				all_owned_state = {
-					free_building_slots = {
-						building = industrial_complex
-						size < 2
-						include_locked = yes
-					}
-				}
-			}
-		}
-
-		complete_tooltip = {
-			add_extra_state_shared_building_slots = 2
-			add_building_construction = {
-				type = industrial_complex
-				level = 2
-				instant_build = yes
-			}
-		}
-
-		completion_reward = {
-			random_owned_controlled_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
-					}
-					OR = {
-						is_in_home_area = yes
-						NOT = {
-							owner = {
-								any_owned_state = {
-									free_building_slots = {
-										building = industrial_complex
-										size > 1
-										include_locked = yes
-									}
-									is_in_home_area = yes
-								}
-							}
-						}
-					}
-				}
-				add_extra_state_shared_building_slots = 2
-				add_building_construction = {
-					type = industrial_complex
-					level = 2
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = WGR_nuclear_effort
-		icon = GFX_focus_wonderweapons
-		prerequisite = { focus = WGR_infrastructure_effort_2 }
-		text = "Make Germany greater"
-		x = -2
-		y = 1
-		relative_position_id = WGR_infrastructure_effort_2
-		cost = 10
-		
-		search_filters = { FOCUS_FILTER_RESEARCH } 
-
-		available_if_capitulated = yes
-
-		completion_reward = {
 			add_tech_bonus = {
-				name = nuclear_bonus
-				ahead_reduction = 2
-				category = nuclear
-			}
-		}
-
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.25
-				always = yes
+				name = GEA_arsenal_bonus
+				bonus = 0.50
+				uses = 1
+				category = infantry_weapons
 			}
 		}
 	}
 
 	focus = {
-		id = WGR_extra_tech_slot
-		icon = GFX_focus_research
-		prerequisite = { focus = WGR_infrastructure_effort_2 }
-		text = "Kaiser and technology"
-		x = 0
-		y = 1
-		relative_position_id = WGR_infrastructure_effort_2
-		cost = 10
+		id = GEA_reconstitute_the_general_staff
+		icon = GFX_goal_generic_army_doctrines
+		x = 10
+		y = 21
+		cost = 2
 
-		search_filters = { FOCUS_FILTER_RESEARCH } 
-		
-		available_if_capitulated = yes
+		prerequisite = {
+			focus = GEA_the_dar_es_salaam_arsenal
+		}
 
 		completion_reward = {
-			add_research_slot = 1
-		}
-	}
-	
-	focus = {
-		id = WGR_extra_tech_slot_2
-		icon = GFX_focus_research
-		prerequisite = { focus = WGR_extra_tech_slot }
-		text = "Advanced technology"
-		available = {
-			num_of_factories > 50
-		}
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		x = 0
-		y = 1
-		relative_position_id = WGR_extra_tech_slot
-		cost = 10
+			army_experience = 15
 
-		search_filters = { FOCUS_FILTER_RESEARCH } 
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_research_slot = 1
-		}
-	}	
-
-	focus = {
-		id = WGR_secret_weapons
-		icon = GFX_goal_generic_secret_weapon
-		prerequisite = { focus = WGR_infrastructure_effort_2 }
-		text = "Das Rocket"
-		x = 2
-		y = 1
-		relative_position_id = WGR_infrastructure_effort_2
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH } 
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
 			add_tech_bonus = {
-				name = secret_bonus
-				bonus = 1.0
-				uses = 4
+				name = GEA_general_staff_bonus
+				bonus = 0.50
+				uses = 1
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = GEA_the_imperial_wireless_service
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 10
+		y = 22
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_reconstitute_the_general_staff
+		}
+
+		completion_reward = {
+			add_political_power = 50
+
+			add_tech_bonus = {
+				name = GEA_wireless_bonus
+				bonus = 0.75
+				uses = 1
 				category = electronics
-				category = nuclear
-				category = rocketry
 			}
 		}
+	}
 
-		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 0.25
-				always = yes
+	focus = {
+		id = GEA_address_the_german_diaspora
+		icon = GFX_goal_generic_propaganda
+		x = 10
+		y = 23
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_the_imperial_wireless_service
+		}
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.03
+			add_manpower = 3000
+		}
+	}
+
+	focus = {
+		id = GEA_review_the_mittelafrika_designs
+		icon = GFX_goal_generic_demand_territory
+		x = 10
+		y = 24
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_address_the_german_diaspora
+		}
+
+		completion_reward = {
+			add_war_support = 0.05
+			add_political_power = 75
+		}
+	}
+
+	focus = {
+		id = GEA_an_east_african_compact
+		icon = GFX_goal_generic_improve_relations
+		x = 10
+		y = 25
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_review_the_mittelafrika_designs
+		}
+
+		completion_reward = {
+			add_stability = 0.05
+			add_manpower = 5000
+		}
+	}
+
+	focus = {
+		id = GEA_claim_the_mantle_of_the_reich
+		icon = GFX_goal_generic_major_war
+		x = 10
+		y = 26
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_an_east_african_compact
+		}
+
+		completion_reward = {
+			add_political_power = 150
+			add_war_support = 0.08
+		}
+	}
+
+	focus = {
+		id = GEA_proclaim_imperial_continuity
+		icon = GFX_goal_generic_national_unity
+		x = 10
+		y = 27
+		cost = 2
+
+		prerequisite = {
+			focus = GEA_claim_the_mantle_of_the_reich
+		}
+
+		completion_reward = {
+			add_ideas = GEA_imperial_continuity
+			add_stability = 0.10
+			add_war_support = 0.10
+			add_political_power = 200
+
+			if = {
+				limit = {
+					has_idea = GEA_responsible_government
+				}
+				add_stability = 0.05
+			}
+
+			if = {
+				limit = {
+					has_idea = GEA_cabinet_absolutism
+				}
+				add_war_support = 0.05
 			}
 		}
 	}

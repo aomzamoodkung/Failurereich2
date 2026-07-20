@@ -1,0 +1,74 @@
+﻿l_english:
+
+ # =========================================================
+ # FOCUS NAMES AND DESCRIPTIONS
+ # =========================================================
+
+ GEA_the_dar_es_salaam_court:0 "The Dar es Salaam Court"
+ GEA_the_dar_es_salaam_court_desc:0 "Far from Berlin, the exiled Kaiser Wilhelm II presides over a diminished court on the shores of the Indian Ocean. Princes, officers, colonial officials and refugees all claim to represent the legitimate German Reich, yet none agree on what that Reich should become."
+
+ GEA_regularise_the_exile_administration:0 "Regularise the Exile Administration"
+ GEA_regularise_the_exile_administration_desc:0 "The imperial household currently governs through an improvised collection of military orders, colonial regulations and personal decrees. A functioning administration must be established if the court is to become more than a gathering of nostalgic exiles."
+
+ GEA_the_schnee_memorandum:0 "The Schnee Memorandum"
+ GEA_the_schnee_memorandum_desc:0 "Heinrich Schnee, the last governor of German East Africa, has submitted a detailed memorandum on the reconstruction of the colonial administration. He argues that civilian institutions, fiscal discipline and cooperation with local authorities are essential to the survival of the exiled Reich."
+
+ GEA_an_audience_with_the_old_lion:0 "An Audience with the Old Lion"
+ GEA_an_audience_with_the_old_lion_desc:0 "Paul von Lettow-Vorbeck remains the most respected German soldier in Africa. The old commander is sceptical of court intrigue, but his presence would unite the surviving Schutztruppe officers and the Askari veterans who once followed him through the East African bush."
+
+ GEA_bind_the_askari_to_the_crown:0 "Bind the Askari to the Crown"
+ GEA_bind_the_askari_to_the_crown_desc:0 "The former Askari remember both the hardships of the Great War and the loyalty that bound their units together. Pensions, land grants and renewed military contracts will transform that memory into service to the imperial government."
+
+ GEA_the_imperial_conference_of_1936:0 "The Imperial Conference of 1936"
+ GEA_the_imperial_conference_of_1936_desc:0 "Wilhelm II has summoned the princes, colonial officials, army officers and representatives of the settler communities to Dar es Salaam. The conference must decide whether the exile government will preserve the constitutional customs of the old Reich or restore the unrestricted authority of the Crown."
+
+ GEA_the_question_of_royal_prerogative:0 "The Question of Royal Prerogative"
+ GEA_the_question_of_royal_prerogative_desc:0 "Germany fell while divided between revolution and military paralysis. The constitutionalists claim that lawful government alone can prevent another catastrophe. The royal household insists that only an unrestrained Kaiser can restore the nation. His Majesty must now choose."
+
+ # Constitutional branch
+
+ GEA_solfs_imperial_charter:0 "Solf's Imperial Charter"
+ GEA_solfs_imperial_charter_desc:0 "Wilhelm Solf has drafted a charter reconciling the monarchy with responsible government. The Kaiser will remain the sacred symbol of imperial continuity, but taxation, legislation and ministerial authority will be regulated by law rather than personal favour."
+
+ GEA_restore_the_reichstag_tradition:0 "Restore the Reichstag Tradition"
+ GEA_restore_the_reichstag_tradition_desc:0 "A true Reichstag cannot yet be assembled in Africa, but an Imperial Advisory Assembly can preserve its traditions. Officials, settlers, veterans and recognised African councils will send delegates to advise the Crown and approve extraordinary taxation."
+
+ GEA_schnees_civil_ministry:0 "Schnee's Civil Ministry"
+ GEA_schnees_civil_ministry_desc:0 "Heinrich Schnee will organise a professional ministry independent of the imperial household. Although still a conservative colonial administrator, Schnee believes that orderly civilian government must take precedence over the ambitions of princes and generals."
+
+ GEA_recognise_the_native_councils:0 "Recognise the Native Councils"
+ GEA_recognise_the_native_councils_desc:0 "No government in East Africa can survive by consulting only German settlers. Recognised local councils will be permitted to petition the administration, regulate communal affairs and nominate delegates to the Imperial Advisory Assembly."
+
+ GEA_the_imperial_civil_service_statute:0 "The Imperial Civil Service Statute"
+ GEA_the_imperial_civil_service_statute_desc:0 "Government appointments will be granted through examination and administrative experience rather than noble birth. The statute will also open junior offices to qualified African clerks, teachers and railway officials."
+
+ GEA_the_crown_beneath_the_law:0 "The Crown Beneath the Law"
+ GEA_the_crown_beneath_the_law_desc:0 "The Kaiser does not surrender his dignity by accepting the law. He strengthens it. Under the new settlement, imperial decrees must receive ministerial countersignature, while the ministers themselves remain answerable to the advisory assembly."
+
+ GEA_a_responsible_imperial_ministry:0 "A Responsible Imperial Ministry"
+ GEA_a_responsible_imperial_ministry_desc:0 "The constitutional settlement is complete. The Kaiser reigns as the living embodiment of Germany, while a responsible ministry conducts the daily work of government. The exile state may be small, but it can now claim a legality that the communist regime in Berlin does not possess."
+
+ # Absolute branch
+
+ GEA_the_royal_household_party:0 "The Royal Household Party"
+ GEA_the_royal_household_party_desc:0 "The princes and officers surrounding Wilhelm II argue that parliamentary weakness delivered Germany to revolution. Crown Prince Wilhelm, Prince Oskar and their allies demand that the imperial household become the unquestioned centre of the exile government."
+
+ GEA_the_imperial_emergency_ordinance:0 "The Imperial Emergency Ordinance"
+ GEA_the_imperial_emergency_ordinance_desc:0 "The loss of the homeland constitutes an emergency without precedent. By imperial ordinance, Wilhelm II will suspend all remaining constitutional restrictions until Berlin has been liberated and order restored throughout Germany."
+
+ GEA_an_oath_to_the_kaisers_person:0 "An Oath to the Kaiser's Person"
+ GEA_an_oath_to_the_kaisers_person_desc:0 "Soldiers and officials will no longer swear loyalty to an abstract constitution or distant state. Their oath will be made directly to Wilhelm II, German Emperor and King of Prussia, and to his lawful successors."
+
+ GEA_the_prussian_military_cabinet:0 "The Prussian Military Cabinet"
+ GEA_the_prussian_military_cabinet_desc:0 "The traditions of the Prussian Military Cabinet will be revived in Dar es Salaam. Senior officers will advise the Kaiser directly, supervise appointments and ensure that the needs of the army take precedence over civilian hesitation."
+
+ GEA_government_by_governors_decree:0 "Government by Governor's Decree"
+ GEA_government_by_governors_decree_desc:0 "Lengthy debate is a luxury the exiled Reich cannot afford. Provincial governors will receive broad authority to issue decrees, requisition supplies and suppress unrest in the name of the Kaiser."
+ 
+ gea_kaiser.1.t:0 "The Question of Imperial Authority"
+ gea_kaiser.1.d:0 "The chamber in Dar es Salaam fell silent as Heinrich Schnee completed his address. The former governor argued that the disasters of the Great War and the German Revolution had made a return to unrestricted imperial government impossible.\n\nAcross the chamber, Alfred Hugenberg denounced the proposal as a disguised surrender to republicanism. Franz von Papen quietly reminded the assembled delegates that the Kaiser had never abdicated and remained, in law and before God, the sovereign of the German Reich.\n\nPaul von Lettow-Vorbeck refused to commit himself immediately. The army would preserve order, he declared, but no army could decide what Germany was meant to become.\n\nAt the head of the chamber sat Wilhelm II, older and more isolated than the monarch who had once ruled from Berlin. Beside him, the Crown Prince waited for his father to speak."
+ gea_kaiser.1.a:0 "The Crown must endure by accepting the law."
+ gea_kaiser.1.b:0 "The Kaiser's authority cannot be divided."
+ 
+ GEA_constitutionalists_encouraged:0 "You choosed to support the constitution"
+ GEA_absolutists_encouraged:0 "You choosed to support Absolutist"
