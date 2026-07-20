@@ -113,10 +113,10 @@ focus_tree = {
 		text="Invade Oman"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = SAU_invade_hejaz }
-		prerequisite = { focus = HEJ_take_hail }
+		prerequisite = { focus = SAU_take_hail }
 		prerequisite = { focus = SAU_invade_uae }
 		x = 2
-		y = 2
+		y = 1
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -153,7 +153,7 @@ focus_tree = {
 		text="Invade Yemen"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = SAU_invade_hejaz }
-		prerequisite = { focus = HEJ_take_hail }
+		prerequisite = { focus = SAU_take_hail }
 		prerequisite = { focus = SAU_invade_uae }
 		x = 4
 		y = 1
@@ -193,8 +193,8 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = SAU_invade_yemen } 
 		prerequisite = { focus = SAU_invade_oman }
-		x = 2
-		y = 3
+		x = 3
+		y = 2
 		cost = 5
 		available_if_capitulated = yes
 
@@ -222,7 +222,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = SAU_arabia }
 		x = 3
-		y = 5
+		y = 4
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -240,7 +240,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = SAU_join_entente }
 		x = 3
-		y = 6
+		y = 5
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {

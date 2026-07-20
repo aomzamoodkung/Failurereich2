@@ -152,7 +152,7 @@ focus_tree = {
 		prerequisite = { focus = HEJ_take_hail }
 		prerequisite = { focus = HEJ_invade_uae }
 		x = 4
-		y = 2
+		y = 1
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -190,7 +190,7 @@ focus_tree = {
 		prerequisite = { focus = HEJ_invade_yemen }
 		prerequisite = { focus = HEJ_invade_oman }
 		x = 3
-		y = 3
+		y = 2
 		cost = 5
 		available_if_capitulated = yes
 
@@ -235,11 +235,11 @@ focus_tree = {
 
 	focus = {
 		id = HEJ_invite_ARA
-		text="ask Hashemite friends"
+		text="Hashemite friends"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_arabia }
-		x = 2
-		y = 4
+		x = 1
+		y = 3
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -257,11 +257,11 @@ focus_tree = {
 
 	focus = {
 		id = HEJ_invade_Mesopotamia
-		text="ask Hashemite friends"
+		text="Invade Middle East"
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_arabia }
-		x = 2
-		y = 4
+		x = 3
+		y = 3
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -302,9 +302,9 @@ focus_tree = {
 		id = HEJ_take_KUR
 		text="Invade Kurdistan"
 		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = HEJ_invite_ARA }
-		x = 4
-		y = 4
+		prerequisite = { focus = HEJ_arabia }
+		x = 5
+		y = 3
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -334,8 +334,9 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_take_KUR }
 		prerequisite = { focus = HEJ_invade_Mesopotamia }
+		prerequisite = { focus = HEJ_invite_ARA }
 		x = 3
-		y = 5
+		y = 4
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
@@ -353,7 +354,7 @@ focus_tree = {
 		icon = GFX_goal_generic_military_sphere
 		prerequisite = { focus = HEJ_join_entente }
 		x = 3
-		y = 6
+		y = 5
 		cost = 5
 		available_if_capitulated = yes
 		ai_will_do = {
