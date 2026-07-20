@@ -1,0 +1,117 @@
+ideas = {
+
+	country = {
+
+		GEA_divided_imperial_court = {
+			allowed = {
+				original_tag = WGR
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = -0.10
+				stability_factor = -0.10
+			}
+		}
+
+		GEA_lettow_vorbecks_legacy = {
+			allowed = {
+				original_tag = WGR
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				army_experience_gain_factor = 0.10
+				war_support_factor = 0.05
+				division_defence_factor = 0.05
+			}
+		}
+
+		GEA_charter_monarchy = {
+			allowed = {
+				original_tag = WGR
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.10
+				stability_factor = 0.10
+				drift_defence_factor = 0.20
+			}
+		}
+
+		GEA_reformed_colonial_service = {
+			allowed = {
+				original_tag = WGR
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.05
+				production_speed_buildings_factor = 0.05
+			}
+		}
+
+		GEA_responsible_government = {
+			allowed = {
+				original_tag = WGR
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.10
+				political_power_gain = 0.10
+				consumer_goods_factor = -0.03
+			}
+		}
+
+		GEA_personal_rule = {
+			allowed = {
+				original_tag = WGR
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.15
+				war_support_factor = 0.10
+				stability_factor = -0.03
+			}
+		}
+
+		GEA_cabinet_absolutism = {
+			allowed = {
+				original_tag = WGR
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				political_power_gain = 0.15
+				war_support_factor = 0.10
+				division_attack_factor = 0.03
+				division_defence_factor = 0.03
+			}
+		}
+
+		GEA_imperial_continuity = {
+			allowed = {
+				original_tag = WGR
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				stability_factor = 0.10
+				war_support_factor = 0.10
+				recruitable_population_factor = 0.05
+				factory_output = 0.05
+			}
+		}
+	}
+}
