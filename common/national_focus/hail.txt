@@ -1,285 +1,558 @@
 focus_tree = {
 	id = rashid_focus
+
 	country = {
-		factor = 0
+		base = 0
 		modifier = {
-			add = 10
-			tag = JSH
+			add = 100
+			original_tag = JSH
 		}
 	}
+
+	continuous_focus_position = { x = 100 y = 500 }
+
 	focus = {
 		id = JSH_take_hassa
-		text="Invade Hassa region"
-		icon = GFX_goal_generic_military_sphere
-		x = 3
+		icon = GFX_generic_military_sphere
+		text = "Invade Hassa region"
+		x = 10
 		y = 0
 		cost = 5
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
-		}
-		
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		bypass = {
-			   NOT = { country_exists = JSH }
+			NOT = { country_exists = JSH }
 		}
+		available_if_capitulated = yes
 
 		completion_reward = {
 			add_stability = 0.15 
-			add_political_power = 100
+					add_political_power = 100
+			
+			        	create_wargoal = {
+				                target = UAE
+				                type = annex_everything
+			        	}	
+					UAE = {
+						every_owned_state = {
+						    add_claim_by = JSH
+						}
+					}
+		}
 
-	        	create_wargoal = {
-		                target = UAE
-		                type = annex_everything
-	        	}	
-			UAE = {
-				every_owned_state = {
-				    add_claim_by = JSH
-				}
-			}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
 	focus = {
 		id = JSH_invade_saudi
-		text="Invade Saudi"
-		icon = GFX_goal_generic_military_sphere
-		x = 1
+		icon = generic_military_sphere
+		text = "Invade Saudi"
+		x = 8
 		y = 0
 		cost = 5
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
-		}
-		
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		bypass = {
-			   NOT = { country_exists = SAU }
+			NOT = { country_exists = SAU }
 		}
+		available_if_capitulated = yes
 
 		completion_reward = {
 			add_stability = 0.15 
-			add_political_power = 100
+					add_political_power = 100
+			
+			        	create_wargoal = {
+				                target = SAU
+				                type = annex_everything
+			        	}
+			
+					SAU = {
+						every_owned_state = {
+						    add_claim_by = JSH
+						}
+					}
+		}
 
-	        	create_wargoal = {
-		                target = SAU
-		                type = annex_everything
-	        	}
-
-			SAU = {
-				every_owned_state = {
-				    add_claim_by = JSH
-				}
-			}	
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
 	focus = {
 		id = JSH_invade_hejaz
-		text="Invade Holy earth"
-		icon = GFX_goal_generic_military_sphere
-		x = 5
+		icon = generic_military_sphere
+		text = "Invade Holy earth"
+		x = 12
 		y = 0
 		cost = 5
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
-		}
-		
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		bypass = {
-			   NOT = { country_exists = HEJ }
+			NOT = { country_exists = HEJ }
 		}
+		available_if_capitulated = yes
 
 		completion_reward = {
 			add_stability = 0.15 
-			add_political_power = 100
+					add_political_power = 100
+			
+			        	create_wargoal = {
+				                target = HEJ
+				                type = annex_everything
+			        	}
+			
+					HEJ = {
+						every_owned_state = {
+						    add_claim_by = JSH
+						}
+					}
+		}
 
-	        	create_wargoal = {
-		                target = HEJ
-		                type = annex_everything
-	        	}
-
-			HEJ = {
-				every_owned_state = {
-				    add_claim_by = JSH
-				}
-			}	
+		ai_will_do = {
+			factor = 1
 		}
 	}
 
 	focus = {
 		id = JSH_invade_oman
-		text="Invade Oman"
-		icon = GFX_goal_generic_military_sphere
+		icon = generic_military_sphere
+		text = "Invade Oman"
+		x = 9
+		y = 1
+		cost = 5
 		prerequisite = { focus = JSH_invade_hejaz }
 		prerequisite = { focus = JSH_invade_saudi }
 		prerequisite = { focus = JSH_take_hassa }
-		x = 2
-		y = 1
-		cost = 5
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			NOT = { country_exists = SAU }
+						NOT = { country_exists = HEJ }
+						NOT = { country_exists = UAE }
+						manpower < 150000
+		}
+		bypass = {
+			NOT = { country_exists = OMA }
+		}
 		available_if_capitulated = yes
 
-		available = {
-			   NOT = { country_exists = SAU }
-			   NOT = { country_exists = HEJ }
-			   NOT = { country_exists = UAE }
+		completion_reward = {
+			create_wargoal = {
+							                target = OMA
+							                type = annex_everything
+						        	}
+						
+								OMA = {
+									every_owned_state = {
+									    add_claim_by = OMA 
+									}
+								}
 		}
 
 		ai_will_do = {
 			factor = 1
-		}
-		
-		bypass = {
-			   NOT = { country_exists = OMA }
-		}
-
-		completion_reward = {
-
-	        	create_wargoal = {
-		                target = OMA
-		                type = annex_everything
-	        	}
-
-			OMA = {
-				every_owned_state = {
-				    add_claim_by = OMA 
-				}
-			}	
 		}
 	}
 
 	focus = {
-		id = JSH_invade_yemen
-		text="Invade Yemen"
-		icon = GFX_goal_generic_military_sphere
+		id = JSH_invade_yemen 
+		icon = GFX_focus_political_pressure
+		text = "Invade Yemen"
+		x = 11
+		y = 1
+		cost = 10
 		prerequisite = { focus = JSH_invade_hejaz }
 		prerequisite = { focus = JSH_invade_saudi }
 		prerequisite = { focus = JSH_take_hassa }
-		x = 4
-		y = 1
-		cost = 5
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
-		}
-		
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
-			   NOT = { country_exists = SAU }
+			NOT = { country_exists = SAU }
 			   NOT = { country_exists = HEJ }
 			   NOT = { country_exists = UAE }
 		}
-
 		bypass = {
-			   NOT = { country_exists = YEM }
+			NOT = { country_exists = YEM }
 		}
+		available_if_capitulated = yes
 
 		completion_reward = {
+			# add effects here
+		}
 
-	        	create_wargoal = {
-		                target = YEM
-		                type = annex_everything
-	        	}
-
-			JSH = {
-				every_owned_state = {
-				    add_claim_by = YEM
-				}
-			}	
+		ai_will_do = {
+			base = 1
 		}
 	}
 
 	focus = {
 		id = JSH_arabia
-		text= "Create Rashid Arabia"
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = JSH_invade_yemen } 
-		prerequisite = { focus = JSH_invade_oman }
-		x = 2
-		y = 3
+		icon = GFX_focus_IRQ_unite_mashriq
+		text = "Create Rashid Arabia"
+		x = 10
+		y = 2
 		cost = 5
-		available_if_capitulated = yes
-
+		prerequisite = { focus = JSH_invade_oman }
+		prerequisite = { focus = JSH_invade_yemen }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		available = {
 			owns_state = 679
 			owns_state = 857
 			owns_state = 859
 			owns_state = 292
 		}
+		available_if_capitulated = yes
+
+		completion_reward = {
+			set_cosmetic_tag = JSH_arabia
+		}
 
 		ai_will_do = {
 			factor = 1
 		}
-
-		completion_reward = {
-	        	set_cosmetic_tag = JSH_arabia
-		}
 	}
-
-#### Arabian Alliance ####
 
 	focus = {
 		id = JSH_join_central
-		text="Join The Central powers"
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = JSH_arabia }
-		x = 3
-		y = 5
+		icon = generic_military_sphere
+		text = "Join The Central powers"
+		x = 10
+		y = 3
 		cost = 5
+		prerequisite = { focus = JSH_arabia }
+		search_filters = { FOCUS_FILTER_POLITICAL }
 		available_if_capitulated = yes
+
+		completion_reward = {
+			WGR = { add_to_faction = JSH }
+			diplomatic_relation = {
+				country = WGR
+				relation = guarantee
+				active = yes
+			}
+			add_relation_modifier = {
+				target = WGR
+				modifier = alliance_diplomacy
+			}
+		}
+
 		ai_will_do = {
 			factor = 1
+		}
+	}
+
+	focus = {
+		id = JSH_Mesopotamia
+		icon = generic_military_sphere
+		text = "Invade the rivers"
+		x = 11
+		y = 4
+		cost = 5
+		prerequisite = { focus = JSH_join_central }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available_if_capitulated = yes
+
+		completion_reward = {
+			create_wargoal = {
+				                target = IRQ
+				                type = annex_everything
+			        	}
+			        	create_wargoal = {
+				                target = SYR
+				                type = annex_everything
+			        	}
+			        	create_wargoal = {
+				                target = JOR
+				                type = annex_everything
+			        	}
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	focus = {
+		id = JSH_take_kurdistan
+		icon = generic_political_pressure
+		x = 9
+		y = 4
+		cost = 10
+		prerequisite = { focus = JSH_join_central }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JSH_take_kurdistan"
+			create_wargoal = {
+				type = annex_everything
+				target = KUR
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = JSH_liberate_turkey
+		icon = generic_political_pressure
+		x = 10
+		y = 5
+		cost = 10
+		prerequisite = { focus = JSH_Mesopotamia }
+		prerequisite = { focus = JSH_take_kurdistan }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JSH_liberate_turkey"
+			create_wargoal = {
+				type = topple_government
+				target = TUR
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+#### Industry and army ####
+
+	focus = {
+		id = JSH_improve_industry
+		icon = GFX_focus_focus_AFG_a_modern_economy
+		x = 21
+		y = 0
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			NOT = { country_exists = SAU }
+						NOT = { country_exists = HEJ }
+						NOT = { country_exists = UAE }
 		}
 
 		completion_reward = {
-	        	WGR = { add_to_faction = JSH }
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = no
+			}
+			add_resource = {
+				type = steel
+				amount = 5
+			}
+		}
+
+		ai_will_do = {
+			base = 1
 		}
 	}
 
 	focus = {
-		id = JSH_Mesopotamia 
-		text="Invade the rivers"
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = JSH_join_central }
-		x = 3
-		y = 6
-		cost = 5
+		id = JSH_improve_land_army
+		icon = GFX_focus_focus_AFG_adopt_nufus
+		x = 17
+		y = 0
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+		available = {
+			NOT = { country_exists = SAU }
+						NOT = { country_exists = HEJ }
+						NOT = { country_exists = UAE }
+		}
+		bypass = {
+			NOT = { country_exists = YEM }
+		}
 		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
+
+		completion_reward = {
+			army_experience = 25
 		}
 
-		completion_reward = {	
-	        	create_wargoal = {
-		                target = IRQ
-		                type = annex_everything
-	        	}
-	        	create_wargoal = {
-		                target = SYR
-		                type = annex_everything
-	        	}
-	        	create_wargoal = {
-		                target = JOR
-		                type = annex_everything
-	        	}
+		ai_will_do = {
+			base = 1
 		}
 	}
 
 	focus = {
-		id = JSH_invade_turkey
-		text="Take the Turkish Commune"
-		icon = GFX_goal_generic_military_sphere
-		prerequisite = { focus = JSH_Mesopotamia }
-		x = 3
-		y = 6
-		cost = 5
-		available_if_capitulated = yes
-		ai_will_do = {
-			factor = 1
+		id = JSH_northen_lands
+		icon = focus_focus_IRQ_greater_iraq
+		x = 16
+		y = 1
+		cost = 10
+		prerequisite = { focus = JSH_improve_land_army }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			division_template = {
+				name = "North_army"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+				}
+			}
 		}
 
-		completion_reward = {	
-	        	create_wargoal = {
-		                target = TUR 
-		                type = annex_everything
-	        	}
+		ai_will_do = {
+			base = 1
 		}
 	}
- }
+
+	focus = {
+		id = JSH_southern_landforces
+		icon = generic_political_pressure
+		x = 18
+		y = 1
+		cost = 10
+		prerequisite = { focus = JSH_improve_land_army }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			division_template = {
+				name = "South_army"
+				regiments = {
+					infantry = { x = 0 y = 0 }
+				}
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = JSH_prepare_for_war
+		icon = generic_political_pressure
+		x = 17
+		y = 2
+		cost = 10
+		prerequisite = { focus = JSH_northen_lands }
+		prerequisite = { focus = JSH_southern_landforces }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_manpower = 50000
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = JSH_military_industry
+		icon = generic_political_pressure
+		x = 20
+		y = 1
+		cost = 10
+		prerequisite = { focus = JSH_improve_industry }
+		mutually_exclusive = { focus = JSH_civil_industry }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JSH_military_industry"
+			add_equipment_bonus = {
+				equipment = fighter_equipment
+				bonus_type = reliability_factor
+				value = 0.1
+				temporary = no
+			}
+			add_equipment_production = {
+				type = south_industry
+				requested_factories = 1
+				progress = 0.2
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = JSH_civil_industry
+		icon = generic_political_pressure
+		x = 22
+		y = 1
+		cost = 10
+		prerequisite = { focus = JSH_improve_industry }
+		mutually_exclusive = { focus = JSH_military_industry }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus JSH_civil_industry"
+			build_railway = {
+				level = 1
+				path = { 1 2 3 }
+			}
+			add_building_construction = {
+				type = industrial_complex
+				level = 1
+				instant_build = no
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = JSH_support
+		text = "External support"
+		icon = generic_political_pressure
+		x = 19
+		y = 3
+		cost = 10
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_political_power = 100
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = JSH_Turkestan
+		icon = generic_political_pressure
+		x = 18
+		y = 4
+		cost = 5
+		prerequisite = { focus = JSH_support }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_relation_modifier = {
+				target = BUK
+				modifier = alliance_diplomacy
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	focus = {
+		id = JSH_approach_somalia
+		icon = generic_political_pressure
+		x = 20
+		y = 4
+		cost = 10
+		prerequisite = { focus = JSH_support }
+		search_filters = { FOCUS_FILTER_POLITICAL }
+
+		completion_reward = {
+			add_relation_modifier = {
+				target = SOM
+				modifier = alliance_diplomacy
+			}
+		}
+
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+}
