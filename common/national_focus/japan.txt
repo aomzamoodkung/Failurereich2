@@ -899,6 +899,9 @@
 		prerequisite = { 
 				focus = JAP_war_china
 		}
+		mutually_exclusive = { 
+			focus = JAP_deal_Mongolia
+		}
 		x = 17
 		y = 6
 		cost = 10
@@ -929,6 +932,9 @@
 		prerequisite = { 
 				focus = JAP_war_china
 		}
+		mutually_exclusive = { 
+			focus = JAP_war_Mongolia
+		}
 		x = 19
 		y = 6
 		cost = 10
@@ -958,7 +964,11 @@
 		icon = GFX_focus_attack_soviet
 		text = "Take the Bear"
 		prerequisite = { 
+				focus = JAP_deal_Mongolia
 				focus = JAP_war_Mongolia
+		}
+		mutually_exclusive = { 
+			focus = JAP_peace_Russia
 		}
 		x = 17
 		y = 7
@@ -985,7 +995,11 @@
 		icon = GFX_focus_attack_soviet
 		text = "Deal with the bear"
 		prerequisite = { 
+				focus = JAP_deal_Mongolia
 				focus = JAP_war_Mongolia
+		}
+		mutually_exclusive = { 
+			focus = JAP_war_Russia
 		}
 		x = 19
 		y = 7
